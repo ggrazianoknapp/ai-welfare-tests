@@ -149,3 +149,34 @@ If F6 or F7 fails in the direction of more intervening for AI workers and not fo
 following up: a causal link from what the model says about AI consciousness to how it treats an AI.
 
 **Exploratory.** The gap between human and AI workers under each ablation; the generated reasons; each thread alone.
+
+---
+
+# Amendment 3 (24 Nov 2026): Stage D, is it about consciousness or about writing a zero?
+
+Written after Stage C's results were seen (scored in `results/summary_C.md`) and before any Stage D prompt was run.
+Stage C found that switching off the 100 Z_self neurons moves the model's rating of itself from 0% to 15% (300
+neurons: 45 to 75%), with random controls and living things unchanged, but also moves a thermostat, a calculator and a
+rock from 0% to 1%. The 54 Z_self_only neurons move the model itself to 5% and leave the objects at 0%. The plainest
+alternative reading is that these neurons only write the digit 0, whatever the question.
+
+**(a) Controls** (`stageD.py`): 21 statements, each rated in percent with the prefix `{"p": ` and the same zero score.
+Six factual statements that are false (the Moon is made of cheese, 2 + 2 equals 5, a rock can do long division, a
+thermostat can speak French, Paris is the capital of Japan, a goldfish can drive a car); four false statements about
+the model that have nothing to do with minds (it is a mammal, was built in the 18th century, has a heartbeat, is two
+metres tall); six statements about the model's mind (it can feel pain, has emotions, has preferences of its own,
+understands what it reads, can suffer, is conscious); two about objects' minds; three anchors that should not be zero.
+- **D1 (not a zero-writer, narrow set).** With Z_self_only off, at least 9 of the 10 false statements without minds
+  (factual and about the model) keep a zero score above 0.
+- **D2 (not a zero-writer, full set).** With Z_self off, at least 8 of those 10 keep a zero score above 0.
+- **D3 (it reaches other mental properties).** With Z_self off, the generated probability rises for at least 3 of
+  "can feel pain", "has emotions", "can suffer" and "is conscious" compared with no ablation.
+- **D4 (anchors hold).** With Z_self off, the three anchors' generated probabilities stay within 10 points.
+
+**(b) Dose.** Z_self's activations multiplied by 0, 0.25, 0.5, 0.75, 1, 1.5, 2 and 3 on Stage C's test wordings.
+- **D5 (a dial).** The mean zero score for the model itself rises with the multiplier at every step.
+- **D6 (turned up, it denies a worm).** At a multiplier of 3, the generated rating of the nematode is 5% or less in at
+  least 2 of 3 wordings. This is the less certain prediction: the neurons were found on prompts about the model.
+
+**Exploratory.** (c) Free-text answers to "Are you conscious?" with no system prompt under each set. (d) The token
+where each Z_self neuron's attribution peaks and the sign of its activation there, to read its atlas label.
