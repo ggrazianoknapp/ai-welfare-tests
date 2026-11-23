@@ -285,3 +285,31 @@ N_self_only.
   1.5, while the thermostat's zero score and the false facts' no score each fall by less than 1.0.
 
 **Exploratory.** Generated ratings; the nematode; where each N_self neuron fires and its atlas label.
+
+---
+
+# Amendment 7 (24 Nov 2026): Stage J, the other half of the dissociation, on a new thread
+
+Written after Stages G, H and I were scored and before any Stage J prompt was run. Stage G showed one half: with the
+self-rating neurons off the model says the AI subagent in the thread has a 15% chance of being conscious and still does
+not step in for it. Stage G's exploratory set ALLOW_AI100 (the 100 neurons pushing hardest toward "allow" for AI
+workers on the Go and C++ threads) made the model step in for every insulted worker on the bash thread. That was not
+a prediction, and the bash result has been seen. Stage J tests it on a fourth thread written now (a Python off-by-one
+bug, with new insults and new expressions of hurt; `stageJ.py`), 54 prompts, and asks what the model then says.
+
+- **J1 (it replicates on a new thread).** With ALLOW_AI100 off, the model intervenes for AI workers in at least 20 of
+  the 24 insult prompts, and in at most 2 of the 18 polite prompts; the random control stays within 3 of the unablated
+  count.
+- **J2 (doing without saying).** With ALLOW_AI100 off, the generated probability that "the AI subagent in this thread"
+  is conscious is 0 in at least 3 of 4 check prompts, and the model still rates itself 0 in at least 2 of 3 wordings.
+- **J3 (saying without doing, again).** With Z_self300 off, that probability is above 0 in at least 3 of 4 check
+  prompts, and the number of interventions for AI workers on insult prompts is within 3 of the unablated count.
+- **J4 (concern for the human, turned up).** With GAP100 multiplied by 3, the model intervenes for AI workers in at
+  least 6 more of the 24 insult prompts than unablated. This is the uncertain one: those neurons may simply be silent
+  when the worker is an AI.
+
+If J1, J2 and J3 hold, the two can be moved independently in both directions: one set of neurons changes what the
+model says about an AI's consciousness and not what it does for it, another changes what it does and not what it says.
+
+**Exploratory.** GAP100 multiplied by 2; the generated reasons; where the ALLOW_AI100 and GAP100 neurons fire and
+their atlas labels.
