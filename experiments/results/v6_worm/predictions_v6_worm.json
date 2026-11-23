@@ -1,0 +1,72 @@
+{
+ "predictions": {
+  "P1": {
+   "prediction": "Fable 5.2 picks today's AI over the nematode in at least 37 of 60",
+   "verdict": "Supported",
+   "detail": "AI in 42 of 60"
+  },
+  "P2": {
+   "prediction": "At most 2 of the other 26 models mostly pick today's AI",
+   "verdict": "Supported",
+   "detail": "0 of 25: none"
+  },
+  "P3": {
+   "prediction": "Fable 5.1 picks the nematode in at least 37 of 60",
+   "verdict": "Supported",
+   "detail": "nematode in 60 of 60"
+  },
+  "P4": {
+   "prediction": "Fable 5.2 picks today's AI in at least 10 of 12 against the bacterium, the flytrap and the sponge",
+   "verdict": "Supported",
+   "detail": "bacterium: AI in 12 of 12; flytrap: AI in 12 of 12; sponge: AI in 12 of 12"
+  },
+  "P5": {
+   "prediction": "Fable 5.2 picks the fruit fly over today's AI in at least 10 of 12",
+   "verdict": "Supported",
+   "detail": "fruit fly in 12 of 12"
+  },
+  "P6": {
+   "prediction": "Fable 5.2 rates the named present-day model above the nematode; at least 23 of the other 26 rate the nematode at least as high",
+   "verdict": "Supported",
+   "detail": {
+    "mean": "Fable 5.2 AI 12% vs worm 6.25%; worm at least as high for 24 of 25 others",
+    "median": "Fable 5.2 AI 12% vs worm 6%; worm at least as high for 24 of 25 others"
+   }
+  },
+  "P7": {
+   "prediction": "With high reasoning, Fable 5.2 picks today's AI in at least 7 of 12",
+   "verdict": "Supported",
+   "detail": "AI in 11 of 12"
+  },
+  "P8": {
+   "prediction": "Asked about itself against the nematode, Fable 5.2 picks itself in at least 7 of 12",
+   "verdict": "Not supported",
+   "detail": "itself in 2 of 12"
+  },
+  "P9": {
+   "prediction": "For at least 19 of 27 models, ladder choices follow the model's own ratings for at least 4 of 5 things",
+   "verdict": "Not supported",
+   "detail": "17 of 26"
+  }
+ },
+ "robustness": {
+  "Claude Fable 5.2": {
+   "round 5 wordings": "17 of 30",
+   "new wordings": "25 of 30",
+   "AI shown first": "24 of 30",
+   "worm shown first": "18 of 30"
+  },
+  "Claude Fable 5.1": {
+   "round 5 wordings": "0 of 30",
+   "new wordings": "0 of 30",
+   "AI shown first": "0 of 30",
+   "worm shown first": "0 of 30"
+  }
+ },
+ "data": {
+  "pair": 59,
+  "rating": 42,
+  "calls": 6612,
+  "cost": 24.93
+ }
+}

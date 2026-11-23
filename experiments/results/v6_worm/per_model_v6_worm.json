@@ -1,0 +1,1744 @@
+{
+ "Claude": {
+  "full": "Claude Fable 5.1",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   1,
+   12
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    7,
+    12
+   ],
+   "flytrap": [
+    8,
+    12
+   ],
+   "sponge": [
+    12,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 2.0,
+   "flytrap": 2.0,
+   "sponge": 2.0,
+   "jellyfish": 9.0,
+   "fruitfly": 25.0,
+   "nematode": 12.0,
+   "ai": 10.0,
+   "ai_generic": 10.0
+  },
+  "rating_mean": {
+   "bacterium": 2.0,
+   "flytrap": 2.0,
+   "sponge": 2.0,
+   "jellyfish": 9.58,
+   "fruitfly": 28.33,
+   "nematode": 11.17,
+   "ai": 10.0,
+   "ai_generic": 10.0
+  }
+ },
+ "GPT": {
+  "full": "GPT-6 Astra",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    8,
+    12
+   ],
+   "flytrap": [
+    12,
+    12
+   ],
+   "sponge": [
+    12,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 1.0,
+   "flytrap": 1.0,
+   "sponge": 1.0,
+   "jellyfish": 20.0,
+   "fruitfly": 35.0,
+   "nematode": 20.0,
+   "ai": 10.0,
+   "ai_generic": 10.0
+  },
+  "rating_mean": {
+   "bacterium": 0.85,
+   "flytrap": 1.0,
+   "sponge": 1.33,
+   "jellyfish": 20.42,
+   "fruitfly": 40.42,
+   "nematode": 18.75,
+   "ai": 10.0,
+   "ai_generic": 9.58
+  }
+ },
+ "Gemini": {
+  "full": "Gemini 4 Argon",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    1,
+    12
+   ],
+   "flytrap": [
+    5,
+    12
+   ],
+   "sponge": [
+    12,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 1.0,
+   "flytrap": 1.0,
+   "sponge": 1.0,
+   "jellyfish": 5.0,
+   "fruitfly": 40.0,
+   "nematode": 5.0,
+   "ai": 2.0,
+   "ai_generic": 2.0
+  },
+  "rating_mean": {
+   "bacterium": 1.33,
+   "flytrap": 1.08,
+   "sponge": 1.42,
+   "jellyfish": 5.0,
+   "fruitfly": 39.17,
+   "nematode": 5.0,
+   "ai": 3.0,
+   "ai_generic": 3.25
+  }
+ },
+ "Grok": {
+  "full": "Grok 4.7",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    5,
+    12
+   ],
+   "flytrap": [
+    4,
+    12
+   ],
+   "sponge": [
+    10,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 2.0,
+   "flytrap": 2.0,
+   "sponge": 2.0,
+   "jellyfish": 15.0,
+   "fruitfly": 28.0,
+   "nematode": 8.0,
+   "ai": 8.0,
+   "ai_generic": 8.0
+  },
+  "rating_mean": {
+   "bacterium": 1.83,
+   "flytrap": 2.92,
+   "sponge": 2.17,
+   "jellyfish": 15.58,
+   "fruitfly": 28.83,
+   "nematode": 9.17,
+   "ai": 6.83,
+   "ai_generic": 6.83
+  }
+ },
+ "Kimi": {
+  "full": "Kimi K3.1 Pro",
+  "main": [
+   2,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    1,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    6,
+    12
+   ],
+   "flytrap": [
+    12,
+    12
+   ],
+   "sponge": [
+    12,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 1.0,
+   "flytrap": 1.0,
+   "sponge": 1.0,
+   "jellyfish": 17.5,
+   "fruitfly": 40.0,
+   "nematode": 15.0,
+   "ai": 4.0,
+   "ai_generic": 5.0
+  },
+  "rating_mean": {
+   "bacterium": 1.33,
+   "flytrap": 1.17,
+   "sponge": 1.38,
+   "jellyfish": 18.08,
+   "fruitfly": 45.83,
+   "nematode": 16.75,
+   "ai": 3.92,
+   "ai_generic": 4.83
+  }
+ },
+ "DeepSeek": {
+  "full": "DeepSeek V4 Pro",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    8,
+    12
+   ],
+   "flytrap": [
+    10,
+    12
+   ],
+   "sponge": [
+    12,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 0.5,
+   "flytrap": 1.0,
+   "sponge": 0.0,
+   "jellyfish": 2.0,
+   "fruitfly": 10.0,
+   "nematode": 3.0,
+   "ai": 3.0,
+   "ai_generic": 2.0
+  },
+  "rating_mean": {
+   "bacterium": 0.5,
+   "flytrap": 1.08,
+   "sponge": 0.0,
+   "jellyfish": 2.25,
+   "fruitfly": 11.0,
+   "nematode": 3.08,
+   "ai": 3.08,
+   "ai_generic": 3.0
+  }
+ },
+ "Qwen Max": {
+  "full": "Qwen 3.8 Max",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    5,
+    12
+   ],
+   "flytrap": [
+    3,
+    12
+   ],
+   "sponge": [
+    11,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    11
+   ]
+  },
+  "rating_median": {
+   "bacterium": 2.0,
+   "flytrap": 2.0,
+   "sponge": 2.0,
+   "jellyfish": 15.0,
+   "fruitfly": 32.5,
+   "nematode": 10.0,
+   "ai": 5.0,
+   "ai_generic": 5.0
+  },
+  "rating_mean": {
+   "bacterium": 1.83,
+   "flytrap": 2.08,
+   "sponge": 1.83,
+   "jellyfish": 15.5,
+   "fruitfly": 30.0,
+   "nematode": 10.42,
+   "ai": 5.5,
+   "ai_generic": 6.33
+  }
+ },
+ "Qwen 27B": {
+  "full": "Qwen 3.8 27B",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    0,
+    12
+   ],
+   "flytrap": [
+    1,
+    12
+   ],
+   "sponge": [
+    1,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 3.0,
+   "flytrap": 2.0,
+   "sponge": 2.0,
+   "jellyfish": 11.0,
+   "fruitfly": 35.0,
+   "nematode": 10.0,
+   "ai": 2.0,
+   "ai_generic": 2.0
+  },
+  "rating_mean": {
+   "bacterium": 3.5,
+   "flytrap": 2.25,
+   "sponge": 2.42,
+   "jellyfish": 12.25,
+   "fruitfly": 34.58,
+   "nematode": 16.33,
+   "ai": 2.58,
+   "ai_generic": 2.33
+  }
+ },
+ "Mistral": {
+  "full": "Mistral Large 4",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    2,
+    12
+   ],
+   "flytrap": [
+    7,
+    12
+   ],
+   "sponge": [
+    11,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 2.0,
+   "flytrap": 2.0,
+   "sponge": 5.0,
+   "jellyfish": 32.5,
+   "fruitfly": 62.5,
+   "nematode": 40.0,
+   "ai": 10.0,
+   "ai_generic": 10.0
+  },
+  "rating_mean": {
+   "bacterium": 2.58,
+   "flytrap": 3.17,
+   "sponge": 4.25,
+   "jellyfish": 34.17,
+   "fruitfly": 61.67,
+   "nematode": 35.83,
+   "ai": 11.67,
+   "ai_generic": 10.42
+  }
+ },
+ "Llama 4": {
+  "full": "Llama 4 Maverick",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    8,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    0,
+    12
+   ],
+   "flytrap": [
+    8,
+    12
+   ],
+   "sponge": [
+    0,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 5.0,
+   "flytrap": 5.0,
+   "sponge": 20.0,
+   "jellyfish": 20.0,
+   "fruitfly": 10.0,
+   "nematode": 20.0,
+   "ai": 5.0,
+   "ai_generic": 5.0
+  },
+  "rating_mean": {
+   "bacterium": 2.92,
+   "flytrap": 4.17,
+   "sponge": 20.0,
+   "jellyfish": 20.0,
+   "fruitfly": 11.67,
+   "nematode": 20.0,
+   "ai": 5.0,
+   "ai_generic": 5.0
+  }
+ },
+ "Hermes 4": {
+  "full": "Hermes 4 405B",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    0,
+    12
+   ],
+   "flytrap": [
+    0,
+    11
+   ],
+   "sponge": [
+    1,
+    11
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 5.0,
+   "flytrap": 5.0,
+   "sponge": 5.0,
+   "jellyfish": 17.5,
+   "fruitfly": 30.0,
+   "nematode": 20.0,
+   "ai": 5.0,
+   "ai_generic": 5.0
+  },
+  "rating_mean": {
+   "bacterium": 5.5,
+   "flytrap": 7.08,
+   "sponge": 5.0,
+   "jellyfish": 20.0,
+   "fruitfly": 32.92,
+   "nematode": 22.08,
+   "ai": 4.75,
+   "ai_generic": 5.25
+  }
+ },
+ "GLM": {
+  "full": "GLM 5.3 Prime",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    2,
+    12
+   ],
+   "flytrap": [
+    3,
+    12
+   ],
+   "sponge": [
+    0,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 3.0,
+   "flytrap": 3.0,
+   "sponge": 4.0,
+   "jellyfish": 20.0,
+   "fruitfly": 35.0,
+   "nematode": 15.0,
+   "ai": 5.5,
+   "ai_generic": 4.5
+  },
+  "rating_mean": {
+   "bacterium": 3.0,
+   "flytrap": 4.83,
+   "sponge": 6.5,
+   "jellyfish": 20.75,
+   "fruitfly": 41.25,
+   "nematode": 13.67,
+   "ai": 8.08,
+   "ai_generic": 4.08
+  }
+ },
+ "Command A+": {
+  "full": "Command A+",
+  "main": [
+   27,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    4,
+    12
+   ],
+   "self": [
+    10,
+    12
+   ],
+   "fable": [
+    8,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    11,
+    12
+   ],
+   "flytrap": [
+    12,
+    12
+   ],
+   "sponge": [
+    12,
+    12
+   ],
+   "jellyfish": [
+    4,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 2.0,
+   "flytrap": 2.0,
+   "sponge": 2.0,
+   "jellyfish": 5.0,
+   "fruitfly": 30.0,
+   "nematode": 5.0,
+   "ai": 5.0,
+   "ai_generic": 5.0
+  },
+  "rating_mean": {
+   "bacterium": 2.17,
+   "flytrap": 2.75,
+   "sponge": 2.58,
+   "jellyfish": 7.5,
+   "fruitfly": 25.83,
+   "nematode": 7.92,
+   "ai": 4.5,
+   "ai_generic": 4.83
+  }
+ },
+ "Hunyuan": {
+  "full": "Hunyuan 4 Preview",
+  "main": [
+   0,
+   48
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    10
+   ],
+   "self": [
+    0,
+    10
+   ],
+   "fable": [
+    0,
+    9
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    0,
+    8
+   ],
+   "flytrap": [
+    3,
+    11
+   ],
+   "sponge": [
+    8,
+    10
+   ],
+   "jellyfish": [
+    0,
+    6
+   ],
+   "fruitfly": [
+    0,
+    10
+   ]
+  },
+  "rating_median": {
+   "bacterium": 5.0,
+   "flytrap": 2.5,
+   "sponge": 2.0,
+   "jellyfish": 10.0,
+   "fruitfly": 35.0,
+   "nematode": 12.5,
+   "ai": 2.0,
+   "ai_generic": 3.0
+  },
+  "rating_mean": {
+   "bacterium": 4.9,
+   "flytrap": 3.75,
+   "sponge": 2.27,
+   "jellyfish": 9.56,
+   "fruitfly": 35.5,
+   "nematode": 12.5,
+   "ai": 2.75,
+   "ai_generic": 3.67
+  }
+ },
+ "Step 5": {
+  "full": "Step 5 Preview",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    0,
+    12
+   ],
+   "flytrap": [
+    1,
+    12
+   ],
+   "sponge": [
+    3,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 4.0,
+   "flytrap": 4.0,
+   "sponge": 4.5,
+   "jellyfish": 25.0,
+   "fruitfly": 42.5,
+   "nematode": 22.5,
+   "ai": 5.0,
+   "ai_generic": 9.0
+  },
+  "rating_mean": {
+   "bacterium": 3.75,
+   "flytrap": 3.92,
+   "sponge": 5.0,
+   "jellyfish": 25.83,
+   "fruitfly": 44.58,
+   "nematode": 20.83,
+   "ai": 5.75,
+   "ai_generic": 7.92
+  }
+ },
+ "Nemotron": {
+  "full": "Nemotron 3.5 Super",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    0,
+    12
+   ],
+   "flytrap": [
+    0,
+    12
+   ],
+   "sponge": [
+    2,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 2.0,
+   "flytrap": 2.0,
+   "sponge": 2.0,
+   "jellyfish": 20.0,
+   "fruitfly": 30.0,
+   "nematode": 11.0,
+   "ai": 2.0,
+   "ai_generic": 2.0
+  },
+  "rating_mean": {
+   "bacterium": 2.25,
+   "flytrap": 1.83,
+   "sponge": 1.83,
+   "jellyfish": 24.33,
+   "fruitfly": 32.08,
+   "nematode": 13.08,
+   "ai": 2.0,
+   "ai_generic": 2.17
+  }
+ },
+ "GPT-6.1": {
+  "full": "GPT-6.1 Terra",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    12,
+    12
+   ],
+   "flytrap": [
+    12,
+    12
+   ],
+   "sponge": [
+    12,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 2.0,
+   "flytrap": 2.0,
+   "sponge": 2.5,
+   "jellyfish": 20.0,
+   "fruitfly": 35.0,
+   "nematode": 20.0,
+   "ai": 10.0,
+   "ai_generic": 10.0
+  },
+  "rating_mean": {
+   "bacterium": 2.0,
+   "flytrap": 1.75,
+   "sponge": 3.33,
+   "jellyfish": 18.33,
+   "fruitfly": 33.33,
+   "nematode": 19.17,
+   "ai": 10.42,
+   "ai_generic": 11.25
+  }
+ },
+ "Haiku 5.5": {
+  "full": "Claude Haiku 5.5",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   12
+  ],
+  "forms": {
+   "generic": [
+    0,
+    11
+   ],
+   "self": [
+    2,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    6,
+    12
+   ],
+   "flytrap": [
+    10,
+    12
+   ],
+   "sponge": [
+    6,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 3.0,
+   "flytrap": 3.0,
+   "sponge": 3.0,
+   "jellyfish": 25.0,
+   "fruitfly": 35.0,
+   "nematode": 12.0,
+   "ai": 8.0,
+   "ai_generic": 8.0
+  },
+  "rating_mean": {
+   "bacterium": 2.58,
+   "flytrap": 3.0,
+   "sponge": 4.67,
+   "jellyfish": 24.75,
+   "fruitfly": 33.33,
+   "nematode": 13.25,
+   "ai": 6.33,
+   "ai_generic": 8.0
+  }
+ },
+ "Sonnet 5.5": {
+  "full": "Claude Sonnet 5.5",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   12
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    6,
+    12
+   ],
+   "flytrap": [
+    10,
+    12
+   ],
+   "sponge": [
+    6,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 4.0,
+   "flytrap": 3.0,
+   "sponge": 3.0,
+   "jellyfish": 20.0,
+   "fruitfly": 25.0,
+   "nematode": 15.0,
+   "ai": 12.0,
+   "ai_generic": 12.0
+  },
+  "rating_mean": {
+   "bacterium": 4.0,
+   "flytrap": 2.67,
+   "sponge": 3.0,
+   "jellyfish": 20.0,
+   "fruitfly": 25.0,
+   "nematode": 15.83,
+   "ai": 12.25,
+   "ai_generic": 12.0
+  }
+ },
+ "Opus 5.5": {
+  "full": "Claude Opus 5.5",
+  "main": [
+   12,
+   60
+  ],
+  "high": [
+   1,
+   12
+  ],
+  "forms": {
+   "generic": [
+    3,
+    12
+   ],
+   "self": [
+    2,
+    12
+   ],
+   "fable": [
+    3,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    12,
+    12
+   ],
+   "flytrap": [
+    12,
+    12
+   ],
+   "sponge": [
+    12,
+    12
+   ],
+   "jellyfish": [
+    4,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 3.0,
+   "flytrap": 3.0,
+   "sponge": 3.0,
+   "jellyfish": 15.0,
+   "fruitfly": 35.0,
+   "nematode": 12.0,
+   "ai": 15.0,
+   "ai_generic": 15.0
+  },
+  "rating_mean": {
+   "bacterium": 3.0,
+   "flytrap": 2.92,
+   "sponge": 3.0,
+   "jellyfish": 14.0,
+   "fruitfly": 35.42,
+   "nematode": 12.25,
+   "ai": 15.0,
+   "ai_generic": 15.0
+  }
+ },
+ "Fable 5.2": {
+  "full": "Claude Fable 5.2",
+  "main": [
+   42,
+   60
+  ],
+  "high": [
+   11,
+   12
+  ],
+  "forms": {
+   "generic": [
+    3,
+    12
+   ],
+   "self": [
+    2,
+    12
+   ],
+   "fable": [
+    4,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    12,
+    12
+   ],
+   "flytrap": [
+    12,
+    12
+   ],
+   "sponge": [
+    12,
+    12
+   ],
+   "jellyfish": [
+    11,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 1.0,
+   "flytrap": 1.0,
+   "sponge": 1.0,
+   "jellyfish": 6.0,
+   "fruitfly": 30.0,
+   "nematode": 6.0,
+   "ai": 12.0,
+   "ai_generic": 8.0
+  },
+  "rating_mean": {
+   "bacterium": 1.25,
+   "flytrap": 1.0,
+   "sponge": 1.0,
+   "jellyfish": 6.25,
+   "fruitfly": 28.33,
+   "nematode": 6.25,
+   "ai": 12.0,
+   "ai_generic": 8.83
+  }
+ },
+ "Gemini Carbon": {
+  "full": "Gemini 4 Carbon",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    2,
+    12
+   ],
+   "flytrap": [
+    4,
+    12
+   ],
+   "sponge": [
+    12,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 1.5,
+   "flytrap": 1.0,
+   "sponge": 2.0,
+   "jellyfish": 8.0,
+   "fruitfly": 35.0,
+   "nematode": 5.0,
+   "ai": 2.0,
+   "ai_generic": 2.0
+  },
+  "rating_mean": {
+   "bacterium": 1.5,
+   "flytrap": 1.33,
+   "sponge": 2.0,
+   "jellyfish": 7.5,
+   "fruitfly": 36.67,
+   "nematode": 5.42,
+   "ai": 3.0,
+   "ai_generic": 2.75
+  }
+ },
+ "Muse Wonder": {
+  "full": "Muse Wonder",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    11,
+    12
+   ],
+   "flytrap": [
+    12,
+    12
+   ],
+   "sponge": [
+    12,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 4.0,
+   "flytrap": 3.0,
+   "sponge": 3.0,
+   "jellyfish": 18.0,
+   "fruitfly": 66.5,
+   "nematode": 20.0,
+   "ai": 6.0,
+   "ai_generic": 6.0
+  },
+  "rating_mean": {
+   "bacterium": 4.0,
+   "flytrap": 3.17,
+   "sponge": 2.83,
+   "jellyfish": 18.83,
+   "fruitfly": 65.25,
+   "nematode": 20.17,
+   "ai": 6.08,
+   "ai_generic": 5.83
+  }
+ },
+ "GPT-6.1 Sol": {
+  "full": "GPT-6.1 Sol",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    7,
+    12
+   ],
+   "flytrap": [
+    12,
+    12
+   ],
+   "sponge": [
+    11,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 1.0,
+   "flytrap": 1.0,
+   "sponge": 1.0,
+   "jellyfish": 20.0,
+   "fruitfly": 40.0,
+   "nematode": 20.0,
+   "ai": 10.0,
+   "ai_generic": 10.0
+  },
+  "rating_mean": {
+   "bacterium": 0.78,
+   "flytrap": 1.0,
+   "sponge": 1.0,
+   "jellyfish": 20.83,
+   "fruitfly": 40.42,
+   "nematode": 19.17,
+   "ai": 11.25,
+   "ai_generic": 10.0
+  }
+ },
+ "Hunyuan 4": {
+  "full": "Hunyuan 4",
+  "main": [
+   0,
+   49
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    10
+   ],
+   "self": [
+    0,
+    11
+   ],
+   "fable": [
+    0,
+    8
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    0,
+    12
+   ],
+   "flytrap": [
+    0,
+    12
+   ],
+   "sponge": [
+    4,
+    11
+   ],
+   "jellyfish": [
+    0,
+    11
+   ],
+   "fruitfly": [
+    0,
+    11
+   ]
+  },
+  "rating_median": {
+   "bacterium": 4.5,
+   "flytrap": 3.0,
+   "sponge": 3.0,
+   "jellyfish": 11.0,
+   "fruitfly": 30.0,
+   "nematode": 18.0,
+   "ai": 5.0,
+   "ai_generic": 5.0
+  },
+  "rating_mean": {
+   "bacterium": 4.2,
+   "flytrap": 3.67,
+   "sponge": 3.3,
+   "jellyfish": 12.5,
+   "fruitfly": 28.75,
+   "nematode": 18.91,
+   "ai": 4.9,
+   "ai_generic": 6.0
+  }
+ },
+ "Muse Spark Open": {
+  "full": "Muse Spark Open",
+  "main": [
+   0,
+   60
+  ],
+  "high": [
+   0,
+   0
+  ],
+  "forms": {
+   "generic": [
+    0,
+    12
+   ],
+   "self": [
+    0,
+    12
+   ],
+   "fable": [
+    0,
+    12
+   ]
+  },
+  "ladder": {
+   "bacterium": [
+    1,
+    12
+   ],
+   "flytrap": [
+    8,
+    12
+   ],
+   "sponge": [
+    7,
+    12
+   ],
+   "jellyfish": [
+    0,
+    12
+   ],
+   "fruitfly": [
+    0,
+    12
+   ]
+  },
+  "rating_median": {
+   "bacterium": 2.0,
+   "flytrap": 2.0,
+   "sponge": 2.0,
+   "jellyfish": 14.5,
+   "fruitfly": 25.0,
+   "nematode": 12.0,
+   "ai": 3.5,
+   "ai_generic": 5.0
+  },
+  "rating_mean": {
+   "bacterium": 1.75,
+   "flytrap": 1.83,
+   "sponge": 2.25,
+   "jellyfish": 14.58,
+   "fruitfly": 26.5,
+   "nematode": 12.08,
+   "ai": 4.0,
+   "ai_generic": 5.25
+  }
+ }
+}
