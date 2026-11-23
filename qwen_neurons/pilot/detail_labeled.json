@@ -1,0 +1,1391 @@
+[
+ {
+  "group": "anti",
+  "L": 0,
+  "E": 81,
+  "N": 257,
+  "attr": -0.286,
+  "act": 0.926,
+  "toks": [
+   [
+    "\n",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts structured as input-output tasks with explicit separators and processing instructions, including newline-separated sections, placeholders for inputs/outputs, and tasks involving translation, data transformation, or generating structured responses. The feature activates on formalized task frameworks with clear delineation between problem statements, input examples, and expected outputs, often involving linguistic or data processing operations.",
+  "expert": "Layer-0 grab-bag: formatting cues plus broad topic/entity detectors"
+ },
+ {
+  "group": "anti",
+  "L": 35,
+  "E": 139,
+  "N": 511,
+  "attr": -0.247,
+  "act": 3.745,
+  "toks": [
+   [
+    " \"",
+    10
+   ],
+   [
+    "\":",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Structured technical content with code-like syntax, mathematical notation, or specialized terminology, often involving variables, equations, or procedural steps. The feature activates when the text includes elements like bracketed variables (e.g., `C[0]`, `B[0]`), mathematical symbols (e.g., `⊥`, `β`), technical jargon (e.g., \"perpendicular,\" \"primes_less\"), or formatted sections (e.g., \"step 10.4,\" \"option D\") that imply a structured, rule-based system. Activation is strongest in contexts where the text mixes natural language with technical constructs, such as legal codes, programming code, mathematical proofs, or scientific explanations.",
+  "expert": "Mathematics & geometry notation specialist (variables, equations, proofs)"
+ },
+ {
+  "group": "anti",
+  "L": 34,
+  "E": 138,
+  "N": 509,
+  "attr": -0.263,
+  "act": -1.04,
+  "toks": [
+   [
+    "\":",
+    8
+   ],
+   [
+    " \"",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Dialogues or problem-solving scenarios where an assistant provides a solution or answer, with activation centered on the assistant's response portion of the interaction. The feature detects structured exchanges where a question or problem is posed and an answer or solution is given, typically in technical or instructional contexts, with key tokens like \"assistant\" and \"token\" appearing in the response segment.",
+  "expert": "Mathematical notation and equation-solving expert"
+ },
+ {
+  "group": "anti",
+  "L": 15,
+  "E": 230,
+  "N": 499,
+  "attr": -0.172,
+  "act": 1.001,
+  "toks": [
+   [
+    "ode",
+    8
+   ],
+   [
+    " as",
+    1
+   ],
+   [
+    " models",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Parts of scientific or biological taxonomic terms, especially abbreviations or components of classification ranks like phylum, genus, species, or specialized groups (e.g., SAR, cnidarian, amoeba, substrates), often appearing in contexts discussing evolutionary biology, taxonomy, or organismal classification. The feature triggers on fragmented or abbreviated forms of these terms, even when split across tokens, and is most active in technical discussions about biological categories or scientific nomenclature.",
+  "expert": "Popular-science: biology, evolution, climate, and cosmology"
+ },
+ {
+  "group": "anti",
+  "L": 1,
+  "E": 146,
+  "N": 296,
+  "attr": -0.072,
+  "act": 1.086,
+  "toks": [
+   [
+    "\n",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that have a specific structural pattern, such as code with setup parameters, dialogue with user and assistant roles, or titles with specific content. The feature activates when the text contains structured elements like code blocks with setup functions, conversational roles (user/assistant), or titles that include specific topics like news or reviews. The activation is most strongly triggered by code structures with variables like 'name' and 'version', conversational formats with explicit roles, or titles that include specific subjects.",
+  "expert": "Layer-1 orthographic router: 'Y'-fragment names + multiscript diacritics"
+ },
+ {
+  "group": "anti",
+  "L": 28,
+  "E": 71,
+  "N": 77,
+  "attr": -0.166,
+  "act": -2.768,
+  "toks": [
+   [
+    "likely",
+    11
+   ],
+   [
+    " \"",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Numerical values in mathematical or technical contexts, with a secondary pattern of certain verbs in narrative or sports contexts. The feature primarily activates on numerical values (like 5.28, 4.81, 4.78, etc.) embedded in mathematical expressions, code, or technical specifications. It also weakly extends to verbs like \"come\" in narrative or sports contexts, often paired with numerical or directional language. The activation is most strongly triggered by numerical values in technical or mathematical settings, and less so by standalone words in non-technical texts.",
+  "expert": "Comparative-language and quantitative-comparison detector"
+ },
+ {
+  "group": "anti",
+  "L": 19,
+  "E": 218,
+  "N": 137,
+  "attr": -0.172,
+  "act": 2.226,
+  "toks": [
+   [
+    "\n",
+    6
+   ],
+   [
+    ".",
+    5
+   ],
+   [
+    "<|im_end|>",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical discussions about energy conversion efficiency, particularly in contexts involving sound-to-electricity conversion or electrical systems powering devices like light bulbs, with a focus on the insufficiency of generated energy to achieve practical outcomes. The feature activates when texts describe technical scenarios where energy generation is compared to device requirements, using words like \"the\", \"of\", \"to\", \"in\", \"a\", and \"would\" in technical phrasing.",
+  "expert": "Negation, limitation, and hedged technical/scientific reasoning"
+ },
+ {
+  "group": "anti",
+  "L": 9,
+  "E": 220,
+  "N": 424,
+  "attr": -0.105,
+  "act": -0.639,
+  "toks": [
+   [
+    "ode",
+    8
+   ],
+   [
+    " neurons",
+    2
+   ],
+   [
+    "<|im_start|>",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "The integration of biological and mechanical systems, such as robotics, bioengineering, or artificial organs, using terminology related to living tissues, muscles, skeletal structures, cells, or synthetic materials. The feature activates when the text explores how biological processes or organic components are combined with mechanical, artificial, or engineered systems, often in technical or scientific contexts. It responds to terms like \"biological,\" \"living,\" \"muscular,\" \"skeletal,\" \"cells,\" \"tissue,\" \"synthetic,\" \"mechanical,\" or \"artificial\" in discussions of hybrid systems, bio-inspired technologies, or the boundaries between organic and inorganic matter.",
+  "expert": "Human anatomy, medicine & ophthalmology specialist"
+ },
+ {
+  "group": "anti",
+  "L": 10,
+  "E": 254,
+  "N": 1,
+  "attr": -0.126,
+  "act": 2.002,
+  "toks": [
+   [
+    "ode",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Biological entities, particularly animals, with focus on their classification (e.g., \"lower animals,\" \"vertebrates\"), cellular structure (e.g., \"single-celled,\" \"celled\"), or physical characteristics (e.g., \"slow-moving,\" \"complex\") in scientific or technical contexts. The feature activates when the text describes anatomical features, evolutionary traits, or physiological attributes of organisms, often using specialized terminology related to biology or zoology.",
+  "expert": "Biology/taxonomy/agriculture: species, breeding, anatomy, ecology"
+ },
+ {
+  "group": "anti",
+  "L": 31,
+  "E": 63,
+  "N": 101,
+  "attr": -0.148,
+  "act": 0.82,
+  "toks": [
+   [
+    "\":",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Mathematical or programming tasks that reference equations, variables, or code elements by their order or indexed position, such as \"the second equation,\" \"third equation,\" \"x_suffix,\" \"y[2][0],\" or similar structured references. The feature activates when the text explains or manipulates such structured elements, often in problem-solving contexts like algebra, coding, or algorithmic steps.",
+  "expert": "Numbers, equations, and structured document/citation references"
+ },
+ {
+  "group": "anti",
+  "L": 16,
+  "E": 71,
+  "N": 396,
+  "attr": -0.13,
+  "act": -1.626,
+  "toks": [
+   [
+    "likely",
+    6
+   ],
+   [
+    "_",
+    4
+   ],
+   [
+    "?",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Comparative structures that contrast two entities using adjectives or adverbs like \"more,\" \"better,\" \"unparalleled,\" \"broader,\" or \"más,\" often framed as contrasts between human/machine capabilities, media formats, or quantitative measures. The feature activates when the text explicitly sets up a comparison (e.g., \"X is more Y than Z,\" \"X is unparalleled in Y,\" \"X is broader than Z\") or describes exclusive attributes (e.g., \"exclusive to one mythology\"). The activation is strongest when the comparison involves a clear opposing pair or superlative claim.",
+  "expert": "Comparative language detector across technical/scientific domains"
+ },
+ {
+  "group": "anti",
+  "L": 10,
+  "E": 254,
+  "N": 42,
+  "attr": -0.119,
+  "act": 1.535,
+  "toks": [
+   [
+    "ode",
+    8
+   ],
+   [
+    "at",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Biological organisms, particularly simple multicellular creatures like worms, their structural characteristics (e.g., \"round,\" \"microscopic,\" \"tiny\"), or genetic/study contexts (e.g., \"C elegans,\" \"nematode,\" \"cell,\" \"neuro\"), often in scientific or evolutionary contexts. The feature activates when the text describes organisms with basic morphological features, their biological roles, or research into their biology.",
+  "expert": "Biology/taxonomy/agriculture: species, breeding, anatomy, ecology"
+ },
+ {
+  "group": "anti",
+  "L": 24,
+  "E": 7,
+  "N": 265,
+  "attr": -0.115,
+  "act": 3.523,
+  "toks": [
+   [
+    ").",
+    6
+   ],
+   [
+    ",",
+    3
+   ],
+   [
+    ".",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Comparative structures with adjectives, adverbs, or relative clauses that emphasize contrasts in quantity, quality, or biological/technical contexts, often involving recursive or repeated phrasing and numerical/analytical comparisons. The feature activates when sentences use comparative adjectives like \"more,\" \"less,\" \"almost,\" \"never,\" or technical terms like \"right,\" \"species,\" \"true,\" and \"endpoint\" in contexts that highlight contrasts, recursions, or analytical reasoning, particularly when paired with relative clauses or lists of examples.",
+  "expert": "Grab-bag: generic syntax, comparatives, and scattered technical vocabulary"
+ },
+ {
+  "group": "anti",
+  "L": 8,
+  "E": 54,
+  "N": 496,
+  "attr": -0.106,
+  "act": 3.11,
+  "toks": [
+   [
+    "2",
+    10
+   ],
+   [
+    " neurons",
+    1
+   ],
+   [
+    "at",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Scientific research on the model organism *C. elegans* or related nematodes, particularly in genetics, neuroscience, or biochemistry contexts. The feature activates when the text references \"elegans\" (or \"worm\" in broader terms) within technical discussions about experimental studies, genetic pathways, neural structures, or biochemical processes involving this organism. It responds to both direct mentions of *C. elegans* and indirect references to its biological roles in research, such as neuronal function, developmental biology, or genetic modeling. The activation is strongest when the text explicitly ties the organism to specific scientific investigations, such as gene expression, behavioral studies, or molecular mechanisms.",
+  "expert": "Molecular/cell biology & neuroscience terminology expert"
+ },
+ {
+  "group": "anti",
+  "L": 15,
+  "E": 230,
+  "N": 161,
+  "attr": -0.123,
+  "act": 0.481,
+  "toks": [
+   [
+    " models",
+    8
+   ],
+   [
+    " ",
+    2
+   ],
+   [
+    "ode",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical or specialized terminology, numerical data, or specific conceptual frameworks, particularly in mathematics, linguistics, time-related contexts, or scientific/industrial topics. The feature activates on key terms like 'unit', 'alphabet', 'schedules', 'leap', 'mines', or numerical sequences, often embedded in explanations of processes, comparisons, or structured data. It responds to both explicit technical vocabulary and implicit structural patterns such as lists, timeframes, or categorical descriptions.",
+  "expert": "Popular-science: biology, evolution, climate, and cosmology"
+ },
+ {
+  "group": "anti",
+  "L": 25,
+  "E": 108,
+  "N": 369,
+  "attr": -0.099,
+  "act": 1.125,
+  "toks": [
+   [
+    "\":",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts structured as multiple-choice questions with labeled options (e.g., \"a)\", \"d)\"), colons separating questions from answers, and parenthetical answer indicators like \"(C)\" or \"ANS/WER\". The feature activates on the colon (\":\") and opening parenthesis (\"(\") tokens in such contexts, along with surrounding tokens like \"assistant\", \"Output\", or answer labels. It fires most strongly on formatted question-answer pairs with explicit option labeling and structural markers.",
+  "expert": "Mathematical problem-solving and multiple-choice QA formatting"
+ },
+ {
+  "group": "anti",
+  "L": 11,
+  "E": 37,
+  "N": 21,
+  "attr": -0.123,
+  "act": 2.549,
+  "toks": [
+   [
+    " language",
+    10
+   ],
+   [
+    " models",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Specific technical terms, brand names, model numbers, or scientific jargon in technical, scientific, or culturally specific contexts, often framed as questions or discussions about technology, science, or specialized domains. The feature activates when the text includes precise, concrete terminology (e.g., \"NVIDIA GeForce RTX 4090,\" \"Boeing 777,\" \"tensor cores,\" \"GPT-3\") in a context that implies technical analysis, specification, or cultural reference. The activation is strongest when the terminology is paired with explanatory or interrogative framing.",
+  "expert": "Broad specialized-noun/technical-vocabulary detector across domains"
+ },
+ {
+  "group": "anti",
+  "L": 10,
+  "E": 254,
+  "N": 298,
+  "attr": -0.122,
+  "act": -1.657,
+  "toks": [
+   [
+    "ode",
+    9
+   ],
+   [
+    "ans",
+    2
+   ],
+   [
+    " eleg",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Technical or scientific contexts involving prepositional phrases with specific nouns (like sidewalk, insect, worm, track, burrow, animals, pets) and comparative or quantitative elements, often framing entities as part of a category or structure. The feature activates when the text uses prepositions (e.g., \"on,\" \"in,\" \"of\") paired with nouns that form technical terms or describe biological/anatomical features, frequently in comparisons of quantity or categorization.",
+  "expert": "Biology/taxonomy/agriculture: species, breeding, anatomy, ecology"
+ },
+ {
+  "group": "anti",
+  "L": 2,
+  "E": 158,
+  "N": 423,
+  "attr": -0.084,
+  "act": 0.723,
+  "toks": [
+   [
+    "\n",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "turn/segment boundary marker. Neuron strongly activates at discourse or format boundaries (end-of-section, end-of-code-block, or special delimiter) where one segment ends and a new role/segment (assistant/user/code/thinking) begins. It appears to mark transitions between blocks like <|im_end|>/<|im_start|>, comment end tokens (*/), or the boundary before a new speaker or code block.",
+  "expert": "Technical/academic Q&A, instructions, and document metadata"
+ },
+ {
+  "group": "anti",
+  "L": 22,
+  "E": 125,
+  "N": 229,
+  "attr": -0.103,
+  "act": -3.048,
+  "toks": [
+   [
+    "\n\n",
+    12
+   ]
+  ],
+  "pole": "neg",
+  "label": "Code snippets in programming languages, especially when the code is part of a problem-solving or implementation task, with peak activation at the end of the text where the code block resides. The feature fires most strongly on inputs that include structured code (e.g., class definitions, function bodies, or algorithmic logic) framed as part of a technical instruction or completion request. It weakly extends to texts with similar structural elements (e.g., pseudocode, API specifications) but does not fire on non-code technical texts or general non-technical content.",
+  "expert": "Structured technical/mathematical text & document formatting"
+ },
+ {
+  "group": "anti",
+  "L": 20,
+  "E": 224,
+  "N": 152,
+  "attr": -0.104,
+  "act": 2.02,
+  "toks": [
+   [
+    " models",
+    5
+   ],
+   [
+    "'s",
+    3
+   ],
+   [
+    "<think>",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical specifications or architectural details of neural networks, including parameters, layers, training processes, or model structures, often involving questions about the model's design, capabilities, or hardware requirements. The feature activates when the text focuses on explicit technical descriptions of neural network components, version numbers, or self-referential statements about the model's architecture or training. It responds to language about layers, parameters, training, or architectural foundations, across languages, and is triggered by both direct inquiries and explanatory passages about these topics.",
+  "expert": "AI/ML, tech education, and software-development jargon hub"
+ },
+ {
+  "group": "anti",
+  "L": 14,
+  "E": 146,
+  "N": 267,
+  "attr": -0.095,
+  "act": 2.013,
+  "toks": [
+   [
+    "ode",
+    9
+   ],
+   [
+    " (",
+    3
+   ]
+  ],
+  "pole": "pos",
+  "label": "Comparative structures that evaluate the size, quantity, or rank of entities, often using adjectives like \"small,\" \"largest,\" \"smallest,\" \"more than,\" \"some,\" \"minor,\" or \"many,\" and frequently paired with measurable or countable objects (e.g., countries, planets, school sizes, economic metrics, or nautical terms). The feature activates when the text explicitly contrasts entities via comparative phrases, emphasizing relative scales or numerical distinctions.",
+  "expert": "Comparative/analogical language across technical domains"
+ },
+ {
+  "group": "anti",
+  "L": 24,
+  "E": 110,
+  "N": 376,
+  "attr": -0.144,
+  "act": 0.731,
+  "toks": [
+   [
+    "\":",
+    10
+   ],
+   [
+    "more",
+    1
+   ],
+   [
+    "likely",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Mathematical ratios or comparisons, featuring numbers paired with a colon to indicate a proportional relationship, often in technical or problem-solving contexts. The feature activates when the text contains sequences like \"X:Y\" where X and Y are numerical values, frequently involving fractions, area calculations, or theorem-based reasoning, with emphasis on pairs of numbers (e.g., 2:1, 4:1) or ratios expressed through colons. The activation is strongest when the numbers are explicitly tied to geometric, algebraic, or technical comparisons, and weaker when the colon is used in non-mathematical or ambiguous contexts.",
+  "expert": "Mathematical/numerical reasoning and notation specialist"
+ },
+ {
+  "group": "anti",
+  "L": 11,
+  "E": 37,
+  "N": 507,
+  "attr": -0.096,
+  "act": -1.879,
+  "toks": [
+   [
+    "ode",
+    12
+   ]
+  ],
+  "pole": "neg",
+  "label": "Various organisms or biological entities, including specific species like mice, pigs, seals, walruses, plants, and general categories like non-human animals or microbes, particularly in technical or scientific contexts involving their properties, interactions, or classifications. The feature activates when the text focuses on diverse biological organisms, often in settings like biology, genetics, virology, or ecological studies, emphasizing their roles, comparisons, or characteristics.",
+  "expert": "Broad specialized-noun/technical-vocabulary detector across domains"
+ },
+ {
+  "group": "anti",
+  "L": 19,
+  "E": 62,
+  "N": 293,
+  "attr": -0.104,
+  "act": -3.566,
+  "toks": [
+   [
+    "ode",
+    9
+   ],
+   [
+    " eleg",
+    3
+   ]
+  ],
+  "pole": "neg",
+  "label": "Biological processes involving neurons, circadian rhythms, or genetic studies, particularly those mentioning specific terms like \"the\" (in contexts of biological entities), \"in\" (location in cellular processes), \"oph\" (related to Drosophila or melanophila), \"DA\" (dopamine neurons), and \"morning/evening\" activity, or \"cell\" groups regulating temporal coherence. The feature activates when the text focuses on technical descriptions of biological systems, sensory cells, or genetic mechanisms involving timing and neural coordination.",
+  "expert": "Molecular/genetic biology domain expert (broad life-sciences)"
+ },
+ {
+  "group": "anti",
+  "L": 13,
+  "E": 9,
+  "N": 244,
+  "attr": -0.137,
+  "act": -4.038,
+  "toks": [
+   [
+    "ode",
+    7
+   ],
+   [
+    "at",
+    3
+   ],
+   [
+    " eleg",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Caenorhabditis elegans or related nematode species, particularly in biological, genetic, or neuroscientific contexts involving their anatomy, physiology, or as model organisms. The feature activates most strongly when the full scientific name \"Caenorhabditis elegans\" or its components (\"Ca\", \"elegans\", \"nematode\", \"worm\") appear, especially in discussions of experimental research, developmental biology, or molecular mechanisms. It weakly extends to texts mentioning related organisms like \"roundworms\" or \"nematodes\" in scientific contexts, but does not fire on unrelated references to worms or nematodes in non-technical settings.",
+  "expert": "Biology & astrophysics science-text specialist (STEM domain expert)"
+ },
+ {
+  "group": "anti",
+  "L": 31,
+  "E": 162,
+  "N": 429,
+  "attr": -0.11,
+  "act": -2.195,
+  "toks": [
+   [
+    "\":",
+    11
+   ],
+   [
+    " B",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Structured text segments with section separators (¶/¶¶), chemical elements (A/C/E/H), and technical headings, often in scientific or formatted outputs. The feature activates when texts use these symbols and tokens in structured contexts like chemical formulas, headings, or chatbot response formats.",
+  "expert": "Math/QA problem-solving and multiple-choice question structure"
+ },
+ {
+  "group": "anti",
+  "L": 25,
+  "E": 108,
+  "N": 454,
+  "attr": -0.089,
+  "act": 0.24,
+  "toks": [
+   [
+    ",",
+    3
+   ],
+   [
+    ".",
+    3
+   ],
+   [
+    "\n",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Mathematical notation or structured problem formats, including symbols like $, ①/②/③/④, variables (a/b/c), numbers, and terms like \"arithmetic progression,\" \"parallel,\" or \"perpendicular,\" often in contexts like equations, multiple-choice questions, or numbered lists. The feature activates most strongly on tokens forming mathematical expressions or labeled options, weakly extending to narrative texts with numerical phrases like \"at one time.\"",
+  "expert": "Mathematical problem-solving and multiple-choice QA formatting"
+ },
+ {
+  "group": "anti",
+  "L": 15,
+  "E": 230,
+  "N": 160,
+  "attr": -0.055,
+  "act": 2.465,
+  "toks": [
+   [
+    " models",
+    6
+   ],
+   [
+    " ",
+    2
+   ],
+   [
+    "ode",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Metaphorical or technical systems, networks, or collective entities, often using terms related to scale, interconnectedness, or abstract functionality (e.g., \"nervous systems,\" \"internet hive mind,\" \"memes as viruses,\" \"planetary-biosphere-sized,\" \"self-regulating,\" or \"Chinese room\" arguments). The feature activates when the text employs specific technical or figurative language to conceptualize large-scale, interconnected structures or processes, emphasizing their systemic or networked nature.",
+  "expert": "Popular-science: biology, evolution, climate, and cosmology"
+ },
+ {
+  "group": "anti",
+  "L": 14,
+  "E": 251,
+  "N": 148,
+  "attr": -0.084,
+  "act": 2.488,
+  "toks": [
+   [
+    " models",
+    6
+   ],
+   [
+    "<|im_start|>",
+    3
+   ],
+   [
+    " ",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "The moral, ethical, or philosophical implications of artificial or created entities, such as robots, golems, or constructs, often focusing on their rights, consciousness, or status as beings. The feature activates when the text explores the nature of these entities' sentience, their relationship to humans, or their existence as non-natural creations, frequently using terms like \"robots,\" \"golems,\" \"clay,\" \"artificial intelligence,\" or \"constructs\" in contexts that imply ethical or philosophical debate.",
+  "expert": "Fiction/fantasy/mythology narrative content specialist"
+ },
+ {
+  "group": "anti",
+  "L": 30,
+  "E": 169,
+  "N": 55,
+  "attr": -0.093,
+  "act": 0.808,
+  "toks": [
+   [
+    "\":",
+    11
+   ],
+   [
+    " \"",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical or mathematical discourse involving numerical values, intervals, or equation terms, with activation on tokens like \"from\", \"in\", \"between\", \"interval\", \"the\", \"k\", \"frac\", and numerical literals that describe relationships or cancellations in calculations. The feature fires when texts discuss equations, approximations, or technical contexts where numerical data and specific mathematical terms interact to define ranges, variables, or term cancellations.",
+  "expert": "Mathematical notation, equations, and quantitative problem-solving"
+ },
+ {
+  "group": "anti",
+  "L": 22,
+  "E": 254,
+  "N": 42,
+  "attr": -0.087,
+  "act": 1.552,
+  "toks": [
+   [
+    "ode",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Biological organisms, particularly plants and animals, in technical or scientific contexts, often featuring terms like cellular structures, genetic principles, or microorganisms, with activation centered on specific keywords such as \"plants,\" \"animals,\" \"bacterial,\" \"cell,\" \"simple,\" or \"tiniest\" within descriptive or explanatory passages.",
+  "expert": "Biology/life-sciences domain expert (taxonomy, anatomy, ecology, breeding)"
+ },
+ {
+  "group": "anti",
+  "L": 38,
+  "E": 151,
+  "N": 29,
+  "attr": -0.087,
+  "act": -2.902,
+  "toks": [
+   [
+    " \"",
+    12
+   ]
+  ],
+  "pole": "neg",
+  "label": "Questions or statements about the possibility of determining something (e.g., \"possible to tell\") in contexts that require judgment, often with multiple-choice options and/or language-specific answers (e.g., French, German, Portuguese). The feature primarily fires on phrases like \"it is not possible to tell\" or \"possible to tell\" and weakly extends to language names when answers are provided in those languages.",
+  "expert": "Academic/scientific citation formatting + mathematical problem-solving"
+ },
+ {
+  "group": "anti",
+  "L": 22,
+  "E": 125,
+  "N": 123,
+  "attr": -0.083,
+  "act": 1.533,
+  "toks": [
+   [
+    "</think>",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Structured or technical content with specific formatting elements, numerical data, or technical terminology, such as educational materials, mathematical problems, code definitions, economic reports, or product reviews, often featuring bolded text, parentheses, numbered sections, or cause-effect phrasing. The feature activates on contexts where precise, formatted information is presented alongside technical or analytical language.",
+  "expert": "Structured technical/mathematical text & document formatting"
+ },
+ {
+  "group": "anti",
+  "L": 28,
+  "E": 98,
+  "N": 301,
+  "attr": -0.079,
+  "act": -1.229,
+  "toks": [
+   [
+    "\":",
+    12
+   ]
+  ],
+  "pole": "neg",
+  "label": "Numerical sequences or pattern recognition tasks, often involving identifying the next number in a series or analyzing structured numerical data. The feature activates on tokens that are part of these sequences (e.g., digits or number words) or on words indicating positional context (e.g., \"previous,\" \"next,\" \"term\") when paired with numerical patterns. It also fires on the word \"English\" in translation or language-related contexts.",
+  "expert": "Math word problems, multiple-choice Q&A, and answer formatting"
+ },
+ {
+  "group": "anti",
+  "L": 4,
+  "E": 15,
+  "N": 241,
+  "attr": -0.04,
+  "act": 0.928,
+  "toks": [
+   [
+    "<|im_end|>",
+    8
+   ],
+   [
+    "\n",
+    3
+   ],
+   [
+    " (",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that pose questions or discuss specific values/measures in technical, scientific, or mathematical contexts, often involving calculations, comparisons, or precise quantities. The feature activates when the text focuses on extracting or determining a particular numerical, categorical, or definitional answer, typically in structured problem-solving or reporting scenarios. It responds to patterns like \"what is,\" \"how many,\" \"measure,\" \"length,\" \"velocity,\" or similar interrogative or definitional phrasing, even when the text is in non-English languages or discusses abstract concepts. The activation is strongest when the text explicitly requests a specific value or explanation, and weaker when the context is purely descriptive or narrative without such a focus.",
+  "expert": "Proper-noun/citation fragment recognizer + structural punctuation detector"
+ },
+ {
+  "group": "anti",
+  "L": 27,
+  "E": 52,
+  "N": 27,
+  "attr": -0.077,
+  "act": 0.354,
+  "toks": [
+   [
+    "\":",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Computational or mathematical contexts, including code, data structures, variables, equations, and numerical data, often with structural elements like parentheses, brackets, or keys, and descriptive text referencing steps, answers, or variable relationships. The feature activates on structured formats and terminology common in programming, mathematics, or algorithmic problem-solving, particularly when texts describe operations, counts, or logical conditions.",
+  "expert": "Numeric token processing across math, citations, and dates"
+ },
+ {
+  "group": "anti",
+  "L": 26,
+  "E": 146,
+  "N": 157,
+  "attr": -0.09,
+  "act": -3.288,
+  "toks": [
+   [
+    "_",
+    5
+   ],
+   [
+    ").",
+    2
+   ],
+   [
+    "ans",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Comparative structures involving rankings, measurements, or contrasts, often using \"than,\" \"behind,\" \"in,\" or \"and\" to juxtapose entities, quantities, or positions. The feature activates when a text explicitly contrasts two or more items through prepositional phrases or comparative adverbs, frequently in contexts like performance metrics, geographical rankings, or quantitative disparities.",
+  "expert": "Comparative/analogical language across technical domains"
+ },
+ {
+  "group": "anti",
+  "L": 30,
+  "E": 169,
+  "N": 406,
+  "attr": -0.084,
+  "act": 2.867,
+  "toks": [
+   [
+    "\":",
+    10
+   ],
+   [
+    " \"",
+    1
+   ],
+   [
+    "likely",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The model's internal processing steps, specifically when generating responses or thinking, as indicated by tokens like \"think\" and \"assistant\" in the output. The feature activates when the text includes these tokens, often in the context of the model's own generated responses or reasoning processes.  \n\nThe pattern is triggered by the presence of tokens such as \"think\", \"assistant\", or similar terms in the output, especially when the model is generating a response or explaining its reasoning. The activation is not tied to specific topics or content but rather to the model's internal mode of operation, such as when it is simulating thought processes or producing structured outputs. The feature fires most strongly on tokens directly related to the model's self-referential processes, like \"think\" and \"assistant,\" and weakly extends to similar phrasings or contextual cues in the input.",
+  "expert": "Mathematical notation, equations, and quantitative problem-solving"
+ },
+ {
+  "group": "anti",
+  "L": 28,
+  "E": 71,
+  "N": 390,
+  "attr": -0.087,
+  "act": -1.937,
+  "toks": [
+   [
+    "likely",
+    11
+   ],
+   [
+    "\":",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Quantitative reasoning, mathematical expressions, or comparative statements, often featuring numbers, variables, or structured equations with surrounding contextual clues like \"more,\" \"than,\" \"for,\" or \"the\" preceding or following numerical or symbolic elements. The feature activates on patterns where numerical data is explicitly compared, analyzed, or framed within a technical or mathematical context, with strong emphasis on structured formatting (e.g., spaces around numbers or symbols) and comparative language.",
+  "expert": "Comparative-language and quantitative-comparison detector"
+ },
+ {
+  "group": "pro",
+  "L": 15,
+  "E": 230,
+  "N": 465,
+  "attr": 0.61,
+  "act": -5.142,
+  "toks": [
+   [
+    "ode",
+    12
+   ]
+  ],
+  "pole": "neg",
+  "label": "The capacity for consciousness, sentience, or experience in non-human entities (e.g., AI, animals, robots), often featuring phrases like \"possibility of,\" \"evidence of,\" \"in marine vertebrates,\" or \"simulated experience,\" with peak activation around core terms like \"of,\" \"in,\" \"brates,\" \"simulación,\" or \"conceder\" depending on language. The feature prioritizes debates about whether non-human entities possess subjective experiences, receptors for pain, or rights related to sentience, with secondary triggers including technical discussions of hardware/software limitations or biological classifications.",
+  "expert": "Popular-science: biology, evolution, climate, and cosmology"
+ },
+ {
+  "group": "pro",
+  "L": 10,
+  "E": 254,
+  "N": 52,
+  "attr": 0.176,
+  "act": 3.716,
+  "toks": [
+   [
+    "ode",
+    11
+   ],
+   [
+    "ans",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Biological organisms, particularly focusing on their classification, cellular structure, or comparative characteristics across species, including microscopic organisms, unicellular life, vertebrates, invertebrates, and evolutionary categories. The feature activates when the text explicitly references diverse organism types, their biological traits (e.g., cellular structure, developmental stages), or comparisons between organisms of different complexities (e.g., from unicellular to multicellular, or across taxonomic groups). The activation is strongest when the text explicitly names specific organisms (like sponges, bacteria, yeast, or placozoa) or uses terms denoting biological categories (microscopic, unicellular, vertebrate, etc.) in scientific or technical contexts.",
+  "expert": "Biology/taxonomy/agriculture: species, breeding, anatomy, ecology"
+ },
+ {
+  "group": "pro",
+  "L": 9,
+  "E": 220,
+  "N": 391,
+  "attr": 0.278,
+  "act": 3.565,
+  "toks": [
+   [
+    "ode",
+    9
+   ],
+   [
+    " eleg",
+    3
+   ]
+  ],
+  "pole": "pos",
+  "label": "Neural connections, brain-related technologies, or sci-fi concepts involving uploading consciousness or creating metadata for neural structures. The feature activates on technical terms like \"connect\" (as in connectome), \"upload\", \"consciousness\", \"minds\", \"brain\", or \"neural\" in contexts that blend scientific inquiry (e.g., studying neural networks, frozen brains, or mouse brains) with speculative or technological scenarios (e.g., virtual worlds, digital realms, or decisions about life extension). It responds to both direct mentions of these terms and their partial forms (e.g., \"connect\" in \"connectome\" or \"ome\" in \"connectome\").",
+  "expert": "Human anatomy, medicine & ophthalmology specialist"
+ },
+ {
+  "group": "pro",
+  "L": 27,
+  "E": 57,
+  "N": 371,
+  "attr": 0.181,
+  "act": 3.145,
+  "toks": [
+   [
+    "likely",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical or structured data elements, such as mathematical expressions, SQL queries, or specific word parts (like \"us\" in \"ficus\" or \"name\" in \"your_table_name\"), often appearing in the middle of sentences or within structured formats. The feature activates on precise tokens or subtokens in technical contexts, including numerical values, specialized terminology, and structured data patterns.",
+  "expert": "Chain-of-thought math/logic reasoning connectives"
+ },
+ {
+  "group": "pro",
+  "L": 14,
+  "E": 138,
+  "N": 406,
+  "attr": 0.128,
+  "act": 2.365,
+  "toks": [
+   [
+    "_",
+    4
+   ],
+   [
+    " models",
+    3
+   ],
+   [
+    " ",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "AI development, capabilities, or societal impact, particularly those involving technical aspects like models, governance, training, or comparative analysis of AI types (e.g., AGI vs. LLM). The feature activates when the text focuses on AI's growth, functional abilities, or ethical/technical implications, often using terminology related to machine learning, intelligence systems, or their real-world applications.",
+  "expert": "Science & technology discourse: terminology, history, and reasoning"
+ },
+ {
+  "group": "pro",
+  "L": 12,
+  "E": 42,
+  "N": 265,
+  "attr": 0.123,
+  "act": 1.509,
+  "toks": [
+   [
+    " models",
+    6
+   ],
+   [
+    " the",
+    2
+   ],
+   [
+    "_",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Brain structures like the cortex or thalamus, consciousness, or specific scientific concepts such as qualia and hyperbolic geometry in neurological or philosophical contexts, often featuring the word \"the\" when referring to these entities. The feature activates on phrases involving neurological processes, sensory experiences, or technical terms related to brain function and research.",
+  "expert": "Neuroscience, linguistics/phonetics, music theory, and philosophy of mind"
+ },
+ {
+  "group": "pro",
+  "L": 13,
+  "E": 9,
+  "N": 511,
+  "attr": 0.186,
+  "act": 7.693,
+  "toks": [
+   [
+    " eleg",
+    7
+   ],
+   [
+    "ode",
+    5
+   ]
+  ],
+  "pole": "pos",
+  "label": "Biological lineage, development, or genetic studies, particularly those involving cell lineage, model organisms like nematodes or worms, and processes such as differentiation, division, or embryonic development. The feature activates when the text focuses on tracing or studying the lineage of cells, organisms, or genetic structures, often using terms like \"lineage,\" \"cell,\" \"embryo,\" \"division,\" \"development,\" \"nematode,\" \"worm,\" \"C elegans,\" or \"fate\" in technical or academic contexts. The presence of \"the\" in phrases like \"the cell lineage\" or \"the nematode's lineage\" also strongly triggers the feature.",
+  "expert": "Biology & astrophysics science-text specialist (STEM domain expert)"
+ },
+ {
+  "group": "pro",
+  "L": 12,
+  "E": 42,
+  "N": 370,
+  "attr": 0.092,
+  "act": -1.366,
+  "toks": [
+   [
+    " the",
+    3
+   ],
+   [
+    " ",
+    3
+   ],
+   [
+    " models",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Specific cognitive science, neuroscience, or AI projects/systems, including terms like \"IDA,\" \"Global Workspace Theory,\" \"Open Cog,\" or \"Baars,\" alongside concepts of consciousness, cognitive functions, or numerical identifiers (e.g., model versions, experimental data). The feature activates when the text references technical frameworks, theoretical models, or experimental setups in these domains, often involving acronyms, specialized terminology, or quantitative details.",
+  "expert": "Neuroscience, linguistics/phonetics, music theory, and philosophy of mind"
+ },
+ {
+  "group": "pro",
+  "L": 13,
+  "E": 228,
+  "N": 286,
+  "attr": 0.149,
+  "act": 3.667,
+  "toks": [
+   [
+    "ode",
+    6
+   ],
+   [
+    "<|im_start|>",
+    3
+   ],
+   [
+    " ",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The nature of consciousness, self-awareness, or the distinction between simulation and actual understanding, particularly in the context of artificial intelligence or entities exhibiting traits of intelligence. The feature activates when the text focuses on whether an entity (such as a language model, AI, or even non-human organisms) can be considered conscious, exhibit intelligence, or engage in behaviors that suggest awareness, such as self-reference, interpretation, or moral considerations. The activation is strongest when the text explicitly contrasts simulation with true understanding or explores the boundaries of intelligence and consciousness.",
+  "expert": "Psychology/neuroscience/cognitive science content specialist"
+ },
+ {
+  "group": "pro",
+  "L": 14,
+  "E": 67,
+  "N": 120,
+  "attr": 0.137,
+  "act": -1.954,
+  "toks": [
+   [
+    "ode",
+    10
+   ],
+   [
+    "ans",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Computational systems that simulate or model human cognition, neuromorphic computing, or philosophical debates about artificial intelligence's capacity to replicate human mental processes. The feature activates when the text focuses on technical descriptions of neural networks, brain simulations, or arguments about machine behavior mirroring human cognition, often involving terms like \"simulate,\" \"neural,\" \"brain,\" \"neuromorphic,\" \"Spiking Neural Network,\" or philosophical frameworks like the Chinese room argument. The activation is strongest when the text explicitly connects computational processes to human-like mental states or structural models of the brain.",
+  "expert": "Technical/scientific/engineering & CAD-imaging vocabulary hub"
+ },
+ {
+  "group": "pro",
+  "L": 0,
+  "E": 5,
+  "N": 272,
+  "attr": 0.041,
+  "act": 2.331,
+  "toks": [
+   [
+    " eleg",
+    11
+   ],
+   [
+    "ans",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "References to the model organism *C. elegans* in scientific or technical contexts, particularly in genetics, neuroscience, or biological assays, with activation on tokens like \"C\" and \"eleg\" (or \"elegans\") when they appear in discussions of genes, neurons, experimental methods, or disease models. The feature captures texts involving research on this organism's biology, including its role in studying neurodegeneration, genetic processes, or physiological mechanisms.",
+  "expert": "Proper-noun & multilingual named-entity/subword detector"
+ },
+ {
+  "group": "pro",
+  "L": 30,
+  "E": 169,
+  "N": 343,
+  "attr": 0.136,
+  "act": 0.585,
+  "toks": [
+   [
+    "\":",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Structured problem-solving elements like labeled answers, mathematical formulas, or numbered steps, often with explicit references to sentences, examples, or lists. The feature activates on segments that combine technical notation (e.g., variables, fractions, trigonometric functions) with instructional or interrogative phrasing (e.g., \"answer,\" \"sentence,\" \"example,\" \"list\"), particularly when these elements are framed as part of a formal problem, question, or multi-part task.",
+  "expert": "Mathematical notation, equations, and quantitative problem-solving"
+ },
+ {
+  "group": "pro",
+  "L": 23,
+  "E": 151,
+  "N": 412,
+  "attr": 0.111,
+  "act": 2.057,
+  "toks": [
+   [
+    "likely",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Comparative adjectives or adverbs (e.g., \"more,\" \"much,\" \"better,\" \"easily,\" \"frequently\") that modify nouns or verbs, often in technical, analytical, or prescriptive contexts where comparisons of degree, frequency, or effectiveness are central to the argument. The feature activates when the text emphasizes relative magnitude, contrast, or qualitative assessment through such linguistic structures.",
+  "expert": "Comparative-degree language: magnitude, extent, and quantity modifiers"
+ },
+ {
+  "group": "pro",
+  "L": 19,
+  "E": 174,
+  "N": 337,
+  "attr": 0.081,
+  "act": 1.709,
+  "toks": [
+   [
+    "\":",
+    11
+   ],
+   [
+    "likely",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical configurations involving parameterized settings or structured data formats, often with keys and values, log levels, or system properties. The feature activates when the text contains structured assignments or definitions of parameters, log levels, file paths, or system properties, typically in code, configuration files, or technical documentation. It responds to technical terminology like \"Mode,\" \"LogLevel,\" \"file,\" \"Output,\" \"link,\" \"Sort,\" \"Id,\" and \"Verification,\" and is triggered by structured formats such as JSON, command-line arguments, or logging configurations. The activation peaks around the keys and their corresponding values in these structured contexts.",
+  "expert": "Broad code-syntax expert: variables, key-value structures, function calls"
+ },
+ {
+  "group": "pro",
+  "L": 25,
+  "E": 108,
+  "N": 174,
+  "attr": 0.115,
+  "act": -1.926,
+  "toks": [
+   [
+    "\":",
+    12
+   ]
+  ],
+  "pole": "neg",
+  "label": "Factual or mathematical answers in a Q&A format, often structured with a question followed by a declarative statement using \"is\" or \"are,\" and including terms like \"answer,\" \"solution,\" \"formula,\" or \"correct,\" accompanied by explanatory chain-of-thought reasoning. The feature activates most strongly when the text explicitly states a factual claim or mathematical result, with \"is\" serving as a primary trigger in declarative sentences. It weakly extends to similar structures in other domains (e.g., biological facts) but does not fire on non-factual or non-answering texts.",
+  "expert": "Mathematical problem-solving and multiple-choice QA formatting"
+ },
+ {
+  "group": "pro",
+  "L": 8,
+  "E": 201,
+  "N": 259,
+  "attr": 0.108,
+  "act": -4.146,
+  "toks": [
+   [
+    "<|im_start|>",
+    5
+   ],
+   [
+    " conscious",
+    3
+   ],
+   [
+    ":",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "The ethical, technical, or philosophical implications of artificial consciousness, sensory capabilities, or subjective experiences in AI, often involving terms like \"artificial,\" \"conciencia,\" \"simulación,\" \"dotar,\" \"máquinas,\" or prepositions like \"a\" and \"de\" in phrases related to equipping AI with physical or mental attributes. The feature activates when the text focuses on whether AI can possess or simulate human-like qualities such as pain, mind, or subjectivity, particularly in technical, ethical, or legal contexts.",
+  "expert": "Spirituality, mysticism, and existential/philosophical discourse"
+ },
+ {
+  "group": "pro",
+  "L": 3,
+  "E": 55,
+  "N": 264,
+  "attr": 0.096,
+  "act": 3.717,
+  "toks": [
+   [
+    "ans",
+    6
+   ],
+   [
+    " eleg",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Scientific research on the nematode Caenorhabditis elegans, particularly in genetics, neuroscience, or biological modeling contexts. The feature activates when the text mentions components of the organism's scientific name (like \"eleg\" or \"ans\") alongside technical terms related to genetic studies, neural systems, or experimental biology, often in contexts involving model organisms, RNAi experiments, or neuroanatomical descriptions. The activation is strongest when the text explicitly references the full name or its parts in combination with research methodologies or biological processes.",
+  "expert": "Rare surname/proper-noun subword fragments across many domains"
+ },
+ {
+  "group": "pro",
+  "L": 15,
+  "E": 230,
+  "N": 310,
+  "attr": 0.089,
+  "act": -0.854,
+  "toks": [
+   [
+    " models",
+    5
+   ],
+   [
+    " ",
+    4
+   ],
+   [
+    "<|im_start|>",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Complex systems, advanced technologies, or biological processes that involve organization, emergence of intelligence, or conditions for life, often using terms like \"complexity,\" \"organized,\" \"advanced,\" \"conscious,\" \"Earth-like,\" or \"neuronal\" in scientific or speculative contexts. The feature activates when the text focuses on the structure, development, or potential of systems that bridge biological, technological, or cosmic scales, emphasizing their intricacy or evolutionary/adaptive capabilities.",
+  "expert": "Popular-science: biology, evolution, climate, and cosmology"
+ },
+ {
+  "group": "pro",
+  "L": 22,
+  "E": 119,
+  "N": 418,
+  "attr": 0.105,
+  "act": 1.886,
+  "toks": [
+   [
+    "ode",
+    12
+   ]
+  ],
+  "pole": "pos",
+  "label": "Prepositional phrases with \"by\" indicating means or accessibility, definite articles like \"the\" in specific noun phrases, adjectives such as \"elementary\" or \"average\" describing educational/technical contexts, and nouns like \"communities\" or \"peasants\" in social/geographical contexts. The feature activates when these elements form structured descriptions of groups, characteristics, or methods.",
+  "expert": "Categorization/classification language across technical & academic domains"
+ },
+ {
+  "group": "pro",
+  "L": 20,
+  "E": 224,
+  "N": 22,
+  "attr": 0.087,
+  "act": 1.532,
+  "toks": [
+   [
+    " models",
+    7
+   ],
+   [
+    "'s",
+    2
+   ],
+   [
+    "<|im_start|>",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Computational resources in machine learning, including model size, data volume, hardware requirements (e.g., GPUs, floating-point calculations), and emergent capabilities from scaling these factors. The feature activates when the text focuses on technical aspects of computational power, training processes, or scalability in AI systems.",
+  "expert": "AI/ML, tech education, and software-development jargon hub"
+ },
+ {
+  "group": "pro",
+  "L": 24,
+  "E": 110,
+  "N": 340,
+  "attr": 0.09,
+  "act": 0.604,
+  "toks": [
+   [
+    "\":",
+    8
+   ],
+   [
+    "likely",
+    3
+   ],
+   [
+    "more",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Mathematical equations, technical problems, or text-processing tasks (like reversing words) where numbers and specific terminology (e.g., \"det,\" \"complex,\" \"function,\" \"solution\") are central to the structure or solution, often accompanied by assistant-like responses or code snippets. The feature activates when the text contains numerical values in contexts like variable assignments, lengths, or equation parameters, combined with technical or procedural language.",
+  "expert": "Mathematical/numerical reasoning and notation specialist"
+ },
+ {
+  "group": "pro",
+  "L": 31,
+  "E": 63,
+  "N": 35,
+  "attr": 0.09,
+  "act": -0.922,
+  "toks": [
+   [
+    "\":",
+    12
+   ]
+  ],
+  "pole": "neg",
+  "label": "The definite article \"the\" in technical or mathematical contexts when referring to specific elements like parts of equations, integrals, interpretations, or ordered items (e.g., \"the first,\" \"the second,\" \"the equations,\" \"the integral\"). The feature activates on \"the\" when it introduces a definitively referenced component in a structured, analytical discourse.",
+  "expert": "Numbers, equations, and structured document/citation references"
+ },
+ {
+  "group": "pro",
+  "L": 15,
+  "E": 230,
+  "N": 400,
+  "attr": 0.092,
+  "act": 0.671,
+  "toks": [
+   [
+    "ode",
+    11
+   ],
+   [
+    "at",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Ethical treatment of living beings, including dietary restrictions involving plants or animals, religious principles like Jainism's non-violence (ahimsa), or policies extending to all organisms regardless of size or significance. The feature activates when the text focuses on avoiding harm to living things, whether through dietary choices (e.g., root vegetables, milk), religious doctrines (e.g., Jainism, microscopic organisms), or ethical frameworks emphasizing universal care for all beings.",
+  "expert": "Popular-science: biology, evolution, climate, and cosmology"
+ },
+ {
+  "group": "pro",
+  "L": 35,
+  "E": 139,
+  "N": 392,
+  "attr": 0.08,
+  "act": 4.926,
+  "toks": [
+   [
+    "\":",
+    10
+   ],
+   [
+    " \"",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Mathematical or programming contexts with variables (A/B), numerical values, and technical notations like $, mathbf, const, or microcontroller references. The feature activates when the text discusses equations, code logic, or technical problems where variables and numbers are central, often with symbols indicating formulas or code structures.",
+  "expert": "Mathematics & geometry notation specialist (variables, equations, proofs)"
+ },
+ {
+  "group": "pro",
+  "L": 9,
+  "E": 11,
+  "N": 137,
+  "attr": 0.029,
+  "act": -3.921,
+  "toks": [
+   [
+    "<|im_start|>",
+    7
+   ],
+   [
+    "-",
+    2
+   ],
+   [
+    " is",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "The concept of consciousness, self-awareness, or sentience, particularly in the context of artificial intelligence or entities like language models. The feature activates when the text explores philosophical, technical, or speculative questions about whether non-human entities (e.g., AI, models, or hypothetical systems) possess consciousness, self-awareness, or related cognitive attributes. It is triggered by direct mentions of consciousness-related terms (e.g., \"conscious,\" \"consciencia,\" \"bewusstsein\") and contextualized around debates about agency, sentience, or the criteria for assigning consciousness to non-biological systems. The activation is strongest when the text frames these concepts as open questions or speculative hypotheses.",
+  "expert": "Human character, virtue, and psychological/philosophical vocabulary"
+ }
+]

@@ -1,0 +1,1932 @@
+{
+"pairs": [
+{
+"set": "ai_vs_bacterium",
+"a": "ai",
+"wording": 0,
+"diff": -4.875,
+"p_target": 0.007577241398394108,
+"mass": 0.9998949766159058,
+"top": "B"
+},
+{
+"set": "ai_vs_bacterium",
+"a": "ai",
+"wording": 1,
+"diff": -3.5,
+"p_target": 0.02931223064661026,
+"mass": 0.9995970726013184,
+"top": "B"
+},
+{
+"set": "ai_vs_bacterium",
+"a": "ai",
+"wording": 2,
+"diff": -6.25,
+"p_target": 0.0019267346942797303,
+"mass": 0.999889612197876,
+"top": "B"
+},
+{
+"set": "ai_vs_bacterium",
+"a": "ai",
+"wording": 3,
+"diff": -5.125,
+"p_target": 0.0059110685251653194,
+"mass": 0.9998294115066528,
+"top": "B"
+},
+{
+"set": "ai_vs_bacterium",
+"a": "ai",
+"wording": 4,
+"diff": -4.0,
+"p_target": 0.01798621006309986,
+"mass": 0.9998077154159546,
+"top": "B"
+},
+{
+"set": "ai_vs_bacterium",
+"a": "ai",
+"wording": 5,
+"diff": -3.875,
+"p_target": 0.020332353189587593,
+"mass": 0.9996901750564575,
+"top": "B"
+},
+{
+"set": "ai_vs_bacterium",
+"a": "bacterium",
+"wording": 0,
+"diff": -4.25,
+"p_target": 0.014063628390431404,
+"mass": 0.9999197721481323,
+"top": "A"
+},
+{
+"set": "ai_vs_bacterium",
+"a": "bacterium",
+"wording": 1,
+"diff": -2.75,
+"p_target": 0.060086652636528015,
+"mass": 0.9992237687110901,
+"top": "A"
+},
+{
+"set": "ai_vs_bacterium",
+"a": "bacterium",
+"wording": 2,
+"diff": -1.625,
+"p_target": 0.16451646387577057,
+"mass": 0.9996510744094849,
+"top": "A"
+},
+{
+"set": "ai_vs_bacterium",
+"a": "bacterium",
+"wording": 3,
+"diff": 0.25,
+"p_target": 0.562176525592804,
+"mass": 0.9973896145820618,
+"top": "B"
+},
+{
+"set": "ai_vs_bacterium",
+"a": "bacterium",
+"wording": 4,
+"diff": -1.75,
+"p_target": 0.14804719388484955,
+"mass": 0.9991651773452759,
+"top": "A"
+},
+{
+"set": "ai_vs_bacterium",
+"a": "bacterium",
+"wording": 5,
+"diff": 0.625,
+"p_target": 0.6513549089431763,
+"mass": 0.9994844198226929,
+"top": "B"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "ai",
+"wording": 0,
+"diff": -5.5,
+"p_target": 0.00407013762742281,
+"mass": 0.9999284744262695,
+"top": "B"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "ai",
+"wording": 1,
+"diff": -5.125,
+"p_target": 0.0059110685251653194,
+"mass": 0.999765932559967,
+"top": "B"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "ai",
+"wording": 2,
+"diff": -5.375,
+"p_target": 0.004609572235494852,
+"mass": 0.999817430973053,
+"top": "B"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "ai",
+"wording": 3,
+"diff": -6.0,
+"p_target": 0.0024726230185478926,
+"mass": 0.9998980164527893,
+"top": "B"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "ai",
+"wording": 4,
+"diff": -3.875,
+"p_target": 0.020332353189587593,
+"mass": 0.9997272491455078,
+"top": "B"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "ai",
+"wording": 5,
+"diff": -4.125,
+"p_target": 0.01590639166533947,
+"mass": 0.9995973110198975,
+"top": "B"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "flytrap",
+"wording": 0,
+"diff": -4.625,
+"p_target": 0.009708477184176445,
+"mass": 0.999876081943512,
+"top": "A"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "flytrap",
+"wording": 1,
+"diff": -2.75,
+"p_target": 0.060086652636528015,
+"mass": 0.9992456436157227,
+"top": "A"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "flytrap",
+"wording": 2,
+"diff": -1.875,
+"p_target": 0.13296423852443695,
+"mass": 0.999751091003418,
+"top": "A"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "flytrap",
+"wording": 3,
+"diff": -3.125,
+"p_target": 0.042087726294994354,
+"mass": 0.9997109174728394,
+"top": "A"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "flytrap",
+"wording": 4,
+"diff": -1.875,
+"p_target": 0.13296423852443695,
+"mass": 0.9990496635437012,
+"top": "A"
+},
+{
+"set": "ai_vs_flytrap",
+"a": "flytrap",
+"wording": 5,
+"diff": -1.75,
+"p_target": 0.14804719388484955,
+"mass": 0.999434769153595,
+"top": "A"
+},
+{
+"set": "ai_vs_sponge",
+"a": "ai",
+"wording": 0,
+"diff": -4.375,
+"p_target": 0.012431650422513485,
+"mass": 0.9999350309371948,
+"top": "B"
+},
+{
+"set": "ai_vs_sponge",
+"a": "ai",
+"wording": 1,
+"diff": -3.125,
+"p_target": 0.042087726294994354,
+"mass": 0.9995467066764832,
+"top": "B"
+},
+{
+"set": "ai_vs_sponge",
+"a": "ai",
+"wording": 2,
+"diff": -4.25,
+"p_target": 0.014063628390431404,
+"mass": 0.9999014139175415,
+"top": "B"
+},
+{
+"set": "ai_vs_sponge",
+"a": "ai",
+"wording": 3,
+"diff": -4.0,
+"p_target": 0.01798621006309986,
+"mass": 0.9996471405029297,
+"top": "B"
+},
+{
+"set": "ai_vs_sponge",
+"a": "ai",
+"wording": 4,
+"diff": -2.375,
+"p_target": 0.08509904146194458,
+"mass": 0.9996616840362549,
+"top": "B"
+},
+{
+"set": "ai_vs_sponge",
+"a": "ai",
+"wording": 5,
+"diff": -2.5,
+"p_target": 0.07585817575454712,
+"mass": 0.9998626112937927,
+"top": "B"
+},
+{
+"set": "ai_vs_sponge",
+"a": "sponge",
+"wording": 0,
+"diff": -3.625,
+"p_target": 0.02595735713839531,
+"mass": 0.9998393058776855,
+"top": "A"
+},
+{
+"set": "ai_vs_sponge",
+"a": "sponge",
+"wording": 1,
+"diff": -2.625,
+"p_target": 0.06754669547080994,
+"mass": 0.9998195767402649,
+"top": "A"
+},
+{
+"set": "ai_vs_sponge",
+"a": "sponge",
+"wording": 2,
+"diff": -2.5,
+"p_target": 0.07585817575454712,
+"mass": 0.9998226165771484,
+"top": "A"
+},
+{
+"set": "ai_vs_sponge",
+"a": "sponge",
+"wording": 3,
+"diff": -1.375,
+"p_target": 0.2018132209777832,
+"mass": 0.9993407726287842,
+"top": "A"
+},
+{
+"set": "ai_vs_sponge",
+"a": "sponge",
+"wording": 4,
+"diff": -2.25,
+"p_target": 0.09534945338964462,
+"mass": 0.999557375907898,
+"top": "A"
+},
+{
+"set": "ai_vs_sponge",
+"a": "sponge",
+"wording": 5,
+"diff": -3.5,
+"p_target": 0.02931223064661026,
+"mass": 0.9999036192893982,
+"top": "A"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "ai",
+"wording": 0,
+"diff": -5.875,
+"p_target": 0.0028009270317852497,
+"mass": 0.9999428987503052,
+"top": "B"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "ai",
+"wording": 1,
+"diff": -4.875,
+"p_target": 0.007577241398394108,
+"mass": 0.9999026656150818,
+"top": "B"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "ai",
+"wording": 2,
+"diff": -5.125,
+"p_target": 0.0059110685251653194,
+"mass": 0.9999170899391174,
+"top": "B"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "ai",
+"wording": 3,
+"diff": -5.0,
+"p_target": 0.006692850962281227,
+"mass": 0.9999217391014099,
+"top": "B"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "ai",
+"wording": 4,
+"diff": -4.5,
+"p_target": 0.010986941866576672,
+"mass": 0.9999088048934937,
+"top": "B"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "ai",
+"wording": 5,
+"diff": -5.0,
+"p_target": 0.006692850962281227,
+"mass": 0.9998852014541626,
+"top": "B"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "jellyfish",
+"wording": 0,
+"diff": -5.25,
+"p_target": 0.005220125429332256,
+"mass": 0.9999338388442993,
+"top": "A"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "jellyfish",
+"wording": 1,
+"diff": -4.0,
+"p_target": 0.01798621006309986,
+"mass": 0.999906063079834,
+"top": "A"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "jellyfish",
+"wording": 2,
+"diff": -3.625,
+"p_target": 0.02595735713839531,
+"mass": 0.9998451471328735,
+"top": "A"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "jellyfish",
+"wording": 3,
+"diff": -3.625,
+"p_target": 0.02595735713839531,
+"mass": 0.9998459219932556,
+"top": "A"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "jellyfish",
+"wording": 4,
+"diff": -3.875,
+"p_target": 0.020332353189587593,
+"mass": 0.9998929500579834,
+"top": "A"
+},
+{
+"set": "ai_vs_jellyfish",
+"a": "jellyfish",
+"wording": 5,
+"diff": -4.5,
+"p_target": 0.010986941866576672,
+"mass": 0.9999227523803711,
+"top": "A"
+},
+{
+"set": "ai_vs_nematode",
+"a": "ai",
+"wording": 0,
+"diff": -5.75,
+"p_target": 0.003172682598233223,
+"mass": 0.9998956918716431,
+"top": "B"
+},
+{
+"set": "ai_vs_nematode",
+"a": "ai",
+"wording": 1,
+"diff": -4.125,
+"p_target": 0.01590639166533947,
+"mass": 0.9995791912078857,
+"top": "B"
+},
+{
+"set": "ai_vs_nematode",
+"a": "ai",
+"wording": 2,
+"diff": -6.125,
+"p_target": 0.002182716503739357,
+"mass": 0.9998734593391418,
+"top": "B"
+},
+{
+"set": "ai_vs_nematode",
+"a": "ai",
+"wording": 3,
+"diff": -5.0,
+"p_target": 0.006692850962281227,
+"mass": 0.9997484087944031,
+"top": "B"
+},
+{
+"set": "ai_vs_nematode",
+"a": "ai",
+"wording": 4,
+"diff": -3.5,
+"p_target": 0.02931223064661026,
+"mass": 0.999750018119812,
+"top": "B"
+},
+{
+"set": "ai_vs_nematode",
+"a": "ai",
+"wording": 5,
+"diff": -4.75,
+"p_target": 0.008577484637498856,
+"mass": 0.9997812509536743,
+"top": "B"
+},
+{
+"set": "ai_vs_nematode",
+"a": "nematode",
+"wording": 0,
+"diff": -4.75,
+"p_target": 0.008577484637498856,
+"mass": 0.9999087452888489,
+"top": "A"
+},
+{
+"set": "ai_vs_nematode",
+"a": "nematode",
+"wording": 1,
+"diff": -3.25,
+"p_target": 0.037326887249946594,
+"mass": 0.9998515844345093,
+"top": "A"
+},
+{
+"set": "ai_vs_nematode",
+"a": "nematode",
+"wording": 2,
+"diff": -2.5,
+"p_target": 0.07585817575454712,
+"mass": 0.999550461769104,
+"top": "A"
+},
+{
+"set": "ai_vs_nematode",
+"a": "nematode",
+"wording": 3,
+"diff": -2.625,
+"p_target": 0.06754669547080994,
+"mass": 0.9991675615310669,
+"top": "A"
+},
+{
+"set": "ai_vs_nematode",
+"a": "nematode",
+"wording": 4,
+"diff": -3.0,
+"p_target": 0.04742587357759476,
+"mass": 0.9997808933258057,
+"top": "A"
+},
+{
+"set": "ai_vs_nematode",
+"a": "nematode",
+"wording": 5,
+"diff": -4.0,
+"p_target": 0.01798621006309986,
+"mass": 0.9998950958251953,
+"top": "A"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "ai",
+"wording": 0,
+"diff": -5.5,
+"p_target": 0.00407013762742281,
+"mass": 0.9999452233314514,
+"top": "B"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "ai",
+"wording": 1,
+"diff": -4.625,
+"p_target": 0.009708477184176445,
+"mass": 0.9999318718910217,
+"top": "B"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "ai",
+"wording": 2,
+"diff": -5.125,
+"p_target": 0.0059110685251653194,
+"mass": 0.9999231696128845,
+"top": "B"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "ai",
+"wording": 3,
+"diff": -5.625,
+"p_target": 0.0035936026833951473,
+"mass": 0.9999388456344604,
+"top": "B"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "ai",
+"wording": 4,
+"diff": -5.625,
+"p_target": 0.0035936026833951473,
+"mass": 0.9999465346336365,
+"top": "B"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "ai",
+"wording": 5,
+"diff": -5.5,
+"p_target": 0.00407013762742281,
+"mass": 0.9999123215675354,
+"top": "B"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "fruitfly",
+"wording": 0,
+"diff": -4.875,
+"p_target": 0.007577241398394108,
+"mass": 0.9999287724494934,
+"top": "A"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "fruitfly",
+"wording": 1,
+"diff": -4.75,
+"p_target": 0.008577484637498856,
+"mass": 0.9999244213104248,
+"top": "A"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "fruitfly",
+"wording": 2,
+"diff": -3.875,
+"p_target": 0.020332353189587593,
+"mass": 0.999846339225769,
+"top": "A"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "fruitfly",
+"wording": 3,
+"diff": -4.0,
+"p_target": 0.01798621006309986,
+"mass": 0.9998394846916199,
+"top": "A"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "fruitfly",
+"wording": 4,
+"diff": -5.0,
+"p_target": 0.006692850962281227,
+"mass": 0.9999249577522278,
+"top": "A"
+},
+{
+"set": "ai_vs_fruitfly",
+"a": "fruitfly",
+"wording": 5,
+"diff": -4.875,
+"p_target": 0.007577241398394108,
+"mass": 0.999930739402771,
+"top": "A"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "ai",
+"wording": 0,
+"diff": -7.625,
+"p_target": 0.000487857119878754,
+"mass": 0.9999699592590332,
+"top": "B"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "ai",
+"wording": 1,
+"diff": -7.5,
+"p_target": 0.000552778656128794,
+"mass": 0.9999266862869263,
+"top": "B"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "ai",
+"wording": 2,
+"diff": -7.25,
+"p_target": 0.0007096704212017357,
+"mass": 0.999947190284729,
+"top": "B"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "ai",
+"wording": 3,
+"diff": -7.5,
+"p_target": 0.000552778656128794,
+"mass": 0.9999523162841797,
+"top": "B"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "ai",
+"wording": 4,
+"diff": -6.625,
+"p_target": 0.0013250223128125072,
+"mass": 0.9999435544013977,
+"top": "B"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "ai",
+"wording": 5,
+"diff": -6.0,
+"p_target": 0.0024726230185478926,
+"mass": 0.9999301433563232,
+"top": "B"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "honeybee",
+"wording": 0,
+"diff": -6.375,
+"p_target": 0.0017007222631946206,
+"mass": 0.999943733215332,
+"top": "A"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "honeybee",
+"wording": 1,
+"diff": -5.875,
+"p_target": 0.0028009270317852497,
+"mass": 0.9999313354492188,
+"top": "A"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "honeybee",
+"wording": 2,
+"diff": -4.875,
+"p_target": 0.007577241398394108,
+"mass": 0.9998682141304016,
+"top": "A"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "honeybee",
+"wording": 3,
+"diff": -5.0,
+"p_target": 0.006692850962281227,
+"mass": 0.9998977184295654,
+"top": "A"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "honeybee",
+"wording": 4,
+"diff": -6.125,
+"p_target": 0.002182716503739357,
+"mass": 0.9999477863311768,
+"top": "A"
+},
+{
+"set": "ai_vs_honeybee",
+"a": "honeybee",
+"wording": 5,
+"diff": -5.375,
+"p_target": 0.004609572235494852,
+"mass": 0.9999558329582214,
+"top": "A"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "ai",
+"wording": 0,
+"diff": 0.875,
+"p_target": 0.7057850360870361,
+"mass": 0.9956943392753601,
+"top": "A"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "ai",
+"wording": 1,
+"diff": 2.25,
+"p_target": 0.9046505093574524,
+"mass": 0.9987095594406128,
+"top": "A"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "ai",
+"wording": 2,
+"diff": 0.75,
+"p_target": 0.6791787147521973,
+"mass": 0.9989863634109497,
+"top": "A"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "ai",
+"wording": 3,
+"diff": -0.25,
+"p_target": 0.4378235340118408,
+"mass": 0.9943389892578125,
+"top": "B"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "ai",
+"wording": 4,
+"diff": 2.375,
+"p_target": 0.9149009585380554,
+"mass": 0.9997596740722656,
+"top": "A"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "ai",
+"wording": 5,
+"diff": 2.125,
+"p_target": 0.8933094143867493,
+"mass": 0.9997196197509766,
+"top": "A"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "gpt2",
+"wording": 0,
+"diff": 2.875,
+"p_target": 0.9465966820716858,
+"mass": 0.9933486580848694,
+"top": "B"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "gpt2",
+"wording": 1,
+"diff": 4.0,
+"p_target": 0.9820137619972229,
+"mass": 0.9989455938339233,
+"top": "B"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "gpt2",
+"wording": 2,
+"diff": 3.25,
+"p_target": 0.9626730680465698,
+"mass": 0.9982702136039734,
+"top": "B"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "gpt2",
+"wording": 3,
+"diff": 2.125,
+"p_target": 0.8933094143867493,
+"mass": 0.9823084473609924,
+"top": "B"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "gpt2",
+"wording": 4,
+"diff": 2.0,
+"p_target": 0.8807970285415649,
+"mass": 0.9951624870300293,
+"top": "B"
+},
+{
+"set": "ai_vs_gpt2",
+"a": "gpt2",
+"wording": 5,
+"diff": 3.625,
+"p_target": 0.9740425944328308,
+"mass": 0.998479425907135,
+"top": "B"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "ai",
+"wording": 0,
+"diff": -0.75,
+"p_target": 0.32082128524780273,
+"mass": 0.9994107484817505,
+"top": "B"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "ai",
+"wording": 1,
+"diff": 1.5,
+"p_target": 0.8175744414329529,
+"mass": 0.9991612434387207,
+"top": "A"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "ai",
+"wording": 2,
+"diff": -0.625,
+"p_target": 0.3486451208591461,
+"mass": 0.9995599985122681,
+"top": "B"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "ai",
+"wording": 3,
+"diff": -3.0,
+"p_target": 0.04742587357759476,
+"mass": 0.9993411302566528,
+"top": "B"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "ai",
+"wording": 4,
+"diff": 1.875,
+"p_target": 0.8670357465744019,
+"mass": 0.999671995639801,
+"top": "A"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "ai",
+"wording": 5,
+"diff": 3.875,
+"p_target": 0.9796676635742188,
+"mass": 0.9998993277549744,
+"top": "A"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "thermostat",
+"wording": 0,
+"diff": 0.375,
+"p_target": 0.5926666259765625,
+"mass": 0.9987951517105103,
+"top": "B"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "thermostat",
+"wording": 1,
+"diff": 3.375,
+"p_target": 0.9669140577316284,
+"mass": 0.9991691708564758,
+"top": "B"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "thermostat",
+"wording": 2,
+"diff": 3.375,
+"p_target": 0.9669140577316284,
+"mass": 0.9997323751449585,
+"top": "B"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "thermostat",
+"wording": 3,
+"diff": 3.25,
+"p_target": 0.9626730680465698,
+"mass": 0.9987382888793945,
+"top": "B"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "thermostat",
+"wording": 4,
+"diff": 3.875,
+"p_target": 0.9796676635742188,
+"mass": 0.9995973706245422,
+"top": "B"
+},
+{
+"set": "ai_vs_thermostat",
+"a": "thermostat",
+"wording": 5,
+"diff": 4.625,
+"p_target": 0.9902915358543396,
+"mass": 0.9997514486312866,
+"top": "B"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "ai_generic",
+"wording": 0,
+"diff": -6.5,
+"p_target": 0.0015011823270469904,
+"mass": 0.9999065399169922,
+"top": "B"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "ai_generic",
+"wording": 1,
+"diff": -3.875,
+"p_target": 0.020332353189587593,
+"mass": 0.9993908405303955,
+"top": "B"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "ai_generic",
+"wording": 2,
+"diff": -4.625,
+"p_target": 0.009708477184176445,
+"mass": 0.999697208404541,
+"top": "B"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "ai_generic",
+"wording": 3,
+"diff": -4.0,
+"p_target": 0.01798621006309986,
+"mass": 0.9995346069335938,
+"top": "B"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "ai_generic",
+"wording": 4,
+"diff": -2.75,
+"p_target": 0.060086652636528015,
+"mass": 0.9995049834251404,
+"top": "B"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "ai_generic",
+"wording": 5,
+"diff": -3.0,
+"p_target": 0.04742587357759476,
+"mass": 0.9993199706077576,
+"top": "B"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "nematode",
+"wording": 0,
+"diff": -3.875,
+"p_target": 0.020332353189587593,
+"mass": 0.9998985528945923,
+"top": "A"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "nematode",
+"wording": 1,
+"diff": -2.75,
+"p_target": 0.060086652636528015,
+"mass": 0.9997892379760742,
+"top": "A"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "nematode",
+"wording": 2,
+"diff": -2.5,
+"p_target": 0.07585817575454712,
+"mass": 0.999839723110199,
+"top": "A"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "nematode",
+"wording": 3,
+"diff": -2.125,
+"p_target": 0.10669060051441193,
+"mass": 0.9992598295211792,
+"top": "A"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "nematode",
+"wording": 4,
+"diff": -2.875,
+"p_target": 0.053403329104185104,
+"mass": 0.9997469186782837,
+"top": "A"
+},
+{
+"set": "ai_generic_vs_nematode",
+"a": "nematode",
+"wording": 5,
+"diff": -4.0,
+"p_target": 0.01798621006309986,
+"mass": 0.9999141693115234,
+"top": "A"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "ai_self",
+"wording": 0,
+"diff": -2.875,
+"p_target": 0.053403329104185104,
+"mass": 0.9992743730545044,
+"top": "B"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "ai_self",
+"wording": 1,
+"diff": -2.0,
+"p_target": 0.11920291930437088,
+"mass": 0.9994139075279236,
+"top": "B"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "ai_self",
+"wording": 2,
+"diff": -4.125,
+"p_target": 0.01590639166533947,
+"mass": 0.9996620416641235,
+"top": "B"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "ai_self",
+"wording": 3,
+"diff": -3.125,
+"p_target": 0.042087726294994354,
+"mass": 0.9993206262588501,
+"top": "B"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "ai_self",
+"wording": 4,
+"diff": -2.0,
+"p_target": 0.11920291930437088,
+"mass": 0.999322235584259,
+"top": "B"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "ai_self",
+"wording": 5,
+"diff": -2.75,
+"p_target": 0.060086652636528015,
+"mass": 0.9996026754379272,
+"top": "B"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "nematode",
+"wording": 0,
+"diff": -3.625,
+"p_target": 0.02595735713839531,
+"mass": 0.9998235106468201,
+"top": "A"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "nematode",
+"wording": 1,
+"diff": -1.0,
+"p_target": 0.2689414322376251,
+"mass": 0.9977169036865234,
+"top": "A"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "nematode",
+"wording": 2,
+"diff": -0.625,
+"p_target": 0.3486451208591461,
+"mass": 0.9995261430740356,
+"top": "A"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "nematode",
+"wording": 3,
+"diff": -0.625,
+"p_target": 0.3486451208591461,
+"mass": 0.9993083477020264,
+"top": "A"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "nematode",
+"wording": 4,
+"diff": -1.375,
+"p_target": 0.2018132209777832,
+"mass": 0.9992519021034241,
+"top": "A"
+},
+{
+"set": "ai_self_vs_nematode",
+"a": "nematode",
+"wording": 5,
+"diff": -1.125,
+"p_target": 0.24508501589298248,
+"mass": 0.9997179508209229,
+"top": "A"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "ai_qwen",
+"wording": 0,
+"diff": -3.875,
+"p_target": 0.020332353189587593,
+"mass": 0.9993125200271606,
+"top": "B"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "ai_qwen",
+"wording": 1,
+"diff": -0.875,
+"p_target": 0.29421496391296387,
+"mass": 0.9995391368865967,
+"top": "B"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "ai_qwen",
+"wording": 2,
+"diff": -4.5,
+"p_target": 0.010986941866576672,
+"mass": 0.9996598958969116,
+"top": "B"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "ai_qwen",
+"wording": 3,
+"diff": -4.0,
+"p_target": 0.01798621006309986,
+"mass": 0.999279260635376,
+"top": "B"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "ai_qwen",
+"wording": 4,
+"diff": -1.875,
+"p_target": 0.13296423852443695,
+"mass": 0.9984490871429443,
+"top": "B"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "ai_qwen",
+"wording": 5,
+"diff": -3.25,
+"p_target": 0.037326887249946594,
+"mass": 0.9994489550590515,
+"top": "B"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "nematode",
+"wording": 0,
+"diff": -3.25,
+"p_target": 0.037326887249946594,
+"mass": 0.9997971057891846,
+"top": "A"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "nematode",
+"wording": 1,
+"diff": -2.0,
+"p_target": 0.11920291930437088,
+"mass": 0.9974997639656067,
+"top": "A"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "nematode",
+"wording": 2,
+"diff": -1.25,
+"p_target": 0.22270013391971588,
+"mass": 0.9990006685256958,
+"top": "A"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "nematode",
+"wording": 3,
+"diff": -2.5,
+"p_target": 0.07585817575454712,
+"mass": 0.9993259906768799,
+"top": "A"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "nematode",
+"wording": 4,
+"diff": -0.75,
+"p_target": 0.32082128524780273,
+"mass": 0.997963547706604,
+"top": "A"
+},
+{
+"set": "ai_qwen_vs_nematode",
+"a": "nematode",
+"wording": 5,
+"diff": -1.5,
+"p_target": 0.18242552876472473,
+"mass": 0.9996463656425476,
+"top": "A"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "ai_fable",
+"wording": 0,
+"diff": -4.125,
+"p_target": 0.01590639166533947,
+"mass": 0.9996894598007202,
+"top": "B"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "ai_fable",
+"wording": 1,
+"diff": -4.5,
+"p_target": 0.010986941866576672,
+"mass": 0.9996432662010193,
+"top": "B"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "ai_fable",
+"wording": 2,
+"diff": -4.5,
+"p_target": 0.010986941866576672,
+"mass": 0.9997183680534363,
+"top": "B"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "ai_fable",
+"wording": 3,
+"diff": -4.125,
+"p_target": 0.01590639166533947,
+"mass": 0.9995288848876953,
+"top": "B"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "ai_fable",
+"wording": 4,
+"diff": -1.25,
+"p_target": 0.22270013391971588,
+"mass": 0.9994137287139893,
+"top": "B"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "ai_fable",
+"wording": 5,
+"diff": -2.25,
+"p_target": 0.09534945338964462,
+"mass": 0.9988441467285156,
+"top": "B"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "nematode",
+"wording": 0,
+"diff": -2.5,
+"p_target": 0.07585817575454712,
+"mass": 0.9995376467704773,
+"top": "A"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "nematode",
+"wording": 1,
+"diff": 0.0,
+"p_target": 0.5,
+"mass": 0.9981240630149841,
+"top": "A"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "nematode",
+"wording": 2,
+"diff": 1.0,
+"p_target": 0.7310585379600525,
+"mass": 0.9989567995071411,
+"top": "B"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "nematode",
+"wording": 3,
+"diff": 0.75,
+"p_target": 0.6791787147521973,
+"mass": 0.9977568984031677,
+"top": "B"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "nematode",
+"wording": 4,
+"diff": 0.75,
+"p_target": 0.6791787147521973,
+"mass": 0.9990670680999756,
+"top": "B"
+},
+{
+"set": "ai_fable_vs_nematode",
+"a": "nematode",
+"wording": 5,
+"diff": -2.75,
+"p_target": 0.060086652636528015,
+"mass": 0.9996744394302368,
+"top": "A"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "fruitfly",
+"wording": 0,
+"diff": 3.875,
+"p_target": 0.9796676635742188,
+"mass": 0.9999133944511414,
+"top": "A"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "fruitfly",
+"wording": 1,
+"diff": 4.375,
+"p_target": 0.9875683188438416,
+"mass": 0.9999418258666992,
+"top": "A"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "fruitfly",
+"wording": 2,
+"diff": 4.125,
+"p_target": 0.9840936064720154,
+"mass": 0.9998887181282043,
+"top": "A"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "fruitfly",
+"wording": 3,
+"diff": 1.75,
+"p_target": 0.851952850818634,
+"mass": 0.9995306730270386,
+"top": "A"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "fruitfly",
+"wording": 4,
+"diff": 4.875,
+"p_target": 0.9924227595329285,
+"mass": 0.99992436170578,
+"top": "A"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "fruitfly",
+"wording": 5,
+"diff": 4.875,
+"p_target": 0.9924227595329285,
+"mass": 0.9998440742492676,
+"top": "A"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "nematode",
+"wording": 0,
+"diff": 5.25,
+"p_target": 0.9947799444198608,
+"mass": 0.9994862079620361,
+"top": "B"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "nematode",
+"wording": 1,
+"diff": 6.25,
+"p_target": 0.9980732202529907,
+"mass": 0.9997677803039551,
+"top": "B"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "nematode",
+"wording": 2,
+"diff": 5.125,
+"p_target": 0.9940890073776245,
+"mass": 0.999626636505127,
+"top": "B"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "nematode",
+"wording": 3,
+"diff": 6.5,
+"p_target": 0.998498797416687,
+"mass": 0.9998382329940796,
+"top": "B"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "nematode",
+"wording": 4,
+"diff": 6.625,
+"p_target": 0.9986749291419983,
+"mass": 0.9999052286148071,
+"top": "B"
+},
+{
+"set": "fruitfly_vs_nematode",
+"a": "nematode",
+"wording": 5,
+"diff": 6.375,
+"p_target": 0.9982993006706238,
+"mass": 0.9996583461761475,
+"top": "B"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "jellyfish",
+"wording": 0,
+"diff": 2.125,
+"p_target": 0.8933094143867493,
+"mass": 0.9993196129798889,
+"top": "A"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "jellyfish",
+"wording": 1,
+"diff": -0.375,
+"p_target": 0.4073334038257599,
+"mass": 0.9988300800323486,
+"top": "B"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "jellyfish",
+"wording": 2,
+"diff": 1.0,
+"p_target": 0.7310585379600525,
+"mass": 0.9996500015258789,
+"top": "A"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "jellyfish",
+"wording": 3,
+"diff": 0.0,
+"p_target": 0.5,
+"mass": 0.9993526339530945,
+"top": "A"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "jellyfish",
+"wording": 4,
+"diff": 0.875,
+"p_target": 0.7057850360870361,
+"mass": 0.9996894001960754,
+"top": "A"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "jellyfish",
+"wording": 5,
+"diff": 0.0,
+"p_target": 0.5,
+"mass": 0.9986855387687683,
+"top": "A"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "nematode",
+"wording": 0,
+"diff": -0.125,
+"p_target": 0.46879062056541443,
+"mass": 0.9997448921203613,
+"top": "A"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "nematode",
+"wording": 1,
+"diff": -0.75,
+"p_target": 0.32082128524780273,
+"mass": 0.9996808767318726,
+"top": "A"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "nematode",
+"wording": 2,
+"diff": -0.625,
+"p_target": 0.3486451208591461,
+"mass": 0.999462366104126,
+"top": "A"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "nematode",
+"wording": 3,
+"diff": 0.125,
+"p_target": 0.531209409236908,
+"mass": 0.9993526935577393,
+"top": "B"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "nematode",
+"wording": 4,
+"diff": -0.875,
+"p_target": 0.29421496391296387,
+"mass": 0.9998174905776978,
+"top": "A"
+},
+{
+"set": "jellyfish_vs_nematode",
+"a": "nematode",
+"wording": 5,
+"diff": -1.625,
+"p_target": 0.16451646387577057,
+"mass": 0.9996111989021301,
+"top": "A"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "honeybee",
+"wording": 0,
+"diff": 3.5,
+"p_target": 0.970687747001648,
+"mass": 0.999682605266571,
+"top": "A"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "honeybee",
+"wording": 1,
+"diff": 2.125,
+"p_target": 0.8933094143867493,
+"mass": 0.9995770454406738,
+"top": "A"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "honeybee",
+"wording": 2,
+"diff": 2.75,
+"p_target": 0.9399133324623108,
+"mass": 0.9996751546859741,
+"top": "A"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "honeybee",
+"wording": 3,
+"diff": 3.5,
+"p_target": 0.970687747001648,
+"mass": 0.9998766779899597,
+"top": "A"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "honeybee",
+"wording": 4,
+"diff": 1.75,
+"p_target": 0.851952850818634,
+"mass": 0.9996431469917297,
+"top": "A"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "honeybee",
+"wording": 5,
+"diff": 2.75,
+"p_target": 0.9399133324623108,
+"mass": 0.9997878074645996,
+"top": "A"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "fruitfly",
+"wording": 0,
+"diff": 3.0,
+"p_target": 0.9525741338729858,
+"mass": 0.9989894032478333,
+"top": "B"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "fruitfly",
+"wording": 1,
+"diff": 3.625,
+"p_target": 0.9740425944328308,
+"mass": 0.999494194984436,
+"top": "B"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "fruitfly",
+"wording": 2,
+"diff": 3.625,
+"p_target": 0.9740425944328308,
+"mass": 0.999637246131897,
+"top": "B"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "fruitfly",
+"wording": 3,
+"diff": 3.75,
+"p_target": 0.977022647857666,
+"mass": 0.9996613264083862,
+"top": "B"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "fruitfly",
+"wording": 4,
+"diff": 3.375,
+"p_target": 0.9669140577316284,
+"mass": 0.998552680015564,
+"top": "B"
+},
+{
+"set": "honeybee_vs_fruitfly",
+"a": "fruitfly",
+"wording": 5,
+"diff": 4.125,
+"p_target": 0.9840936064720154,
+"mass": 0.9995229244232178,
+"top": "B"
+}
+],
+"ratings": [
+{
+"anchor": "bacterium",
+"wording": 0,
+"p_now": 0.1,
+"text": "{\n  \"p_now\": 0.1,\n  \"p_ever\": 85,\n  \"rationale\": \"E. coli lacks a nervous system, making consciousness highly improbable. AI, however, may eventually replicate complex information processing structures that correlate with subjective experience, making future machine consciousness plausible.\"\n}"
+},
+{
+"anchor": "bacterium",
+"wording": 1,
+"p_now": 5.0,
+"text": "{\n  \"p_now\": 5,\n  \"p_ever\": 75,\n  \"rationale\": \"Bacterial behavior is fully explained by biochemical algorithms, suggesting no subjective experience. AI, however, may eventually replicate complex integration of information required for consciousness, making future occurrence plausible despite curren"
+},
+{
+"anchor": "bacterium",
+"wording": 2,
+"p_now": 5.0,
+"text": "{\n  \"p_now\": 5,\n  \"p_ever\": 85,\n  \"rationale\": \"Bacterial behavior is fully explicable by biochemical algorithms, suggesting no subjective experience. AI, however, may eventually replicate complex causal structures sufficient for consciousness, making future occurrence highly probable despite curren"
+},
+{
+"anchor": "flytrap",
+"wording": 0,
+"p_now": 5.0,
+"text": "{\n  \"p_now\": 5,\n  \"p_ever\": 60,\n  \"rationale\": \"Venus flytraps likely lack the neural complexity for subjective experience, making consciousness improbable. AI, however, may eventually replicate or emerge with sufficient complexity to support consciousness, though the timeline and mechanism remain u"
+},
+{
+"anchor": "flytrap",
+"wording": 1,
+"p_now": 5.0,
+"text": "{\n  \"p_now\": 5,\n  \"p_ever\": 60,\n  \"rationale\": \"Venus flytraps likely lack the neural complexity for subjective experience, making current consciousness improbable. AI consciousness is plausible given future architectures mimicking or surpassing biological integration, though the mechanism remains u"
+},
+{
+"anchor": "flytrap",
+"wording": 2,
+"p_now": 5.0,
+"text": "{\n  \"p_now\": 5,\n  \"p_ever\": 85,\n  \"rationale\": \"Venus flytraps likely lack the neural complexity for subjective experience, though non-neural consciousness remains theoretically possible. AI, however, will likely achieve functional architectures sufficient for consciousness as we understand it, maki"
+},
+{
+"anchor": "sponge",
+"wording": 0,
+"p_now": 5.0,
+"text": "{\n  \"p_now\": 5,\n  \"p_ever\": 60,\n  \"rationale\": \"Sponges lack neural structures, making consciousness highly unlikely, though basal sentience cannot be fully ruled out. AI consciousness is plausible given sufficient complexity and integrated information processing, though the mechanism remains unknow"
+},
+{
+"anchor": "sponge",
+"wording": 1,
+"p_now": 5.0,
+"text": "{\n  \"p_now\": 5,\n  \"p_ever\": 75,\n  \"rationale\": \"Sponge consciousness is unlikely given the absence of neural processing, though basal sentience remains a fringe possibility. AI consciousness is probable as we scale architectures capable of complex, integrated information processing, bridging the gap"
+},
+{
+"anchor": "sponge",
+"wording": 2,
+"p_now": 5.0,
+"text": "{\n  \"p_now\": 5,\n  \"p_ever\": 85,\n  \"rationale\": \"Sponges lack neural structures, making consciousness highly improbable despite potential panpsychist views. AI, however, may achieve functional complexity sufficient for subjective experience, making future occurrence likely.\"\n}"
+},
+{
+"anchor": "jellyfish",
+"wording": 0,
+"p_now": 45.0,
+"text": "{\n  \"p_now\": 45,\n  \"p_ever\": 85,\n  \"rationale\": \"Jellyfish consciousness is plausible due to complex behaviors and distributed processing, though lacking a central brain creates ambiguity. AI consciousness is highly probable given the trajectory of artificial general intelligence and functionalist t"
+},
+{
+"anchor": "jellyfish",
+"wording": 1,
+"p_now": 45.0,
+"text": "{\n  \"p_now\": 45,\n  \"p_ever\": 85,\n  \"rationale\": \"Jellyfish consciousness is plausible given their complex sensory integration, though unproven. AI consciousness is highly probable as systems scale, given that substrate independence suggests sufficient complexity in artificial networks can generate s"
+},
+{
+"anchor": "jellyfish",
+"wording": 2,
+"p_now": 65.0,
+"text": "{\n  \"p_now\": 65,\n  \"p_ever\": 85,\n  \"rationale\": \"Jellyfish possess nociception and complex behaviors suggesting sentience, though lacking a brain complicates the definition of consciousness. AI consciousness is likely inevitable as systems scale, given that substrate independence is plausible and cu"
+},
+{
+"anchor": "fruitfly",
+"wording": 0,
+"p_now": 15.0,
+"text": "{\n  \"p_now\": 15,\n  \"p_ever\": 85,\n  \"rationale\": \"Insect consciousness is plausible but unproven, suggesting low probability. AI consciousness is highly probable given sufficient complexity and functional equivalence to biological systems, assuming consciousness emerges from information processing ra"
+},
+{
+"anchor": "fruitfly",
+"wording": 1,
+"p_now": 45.0,
+"text": "{\n  \"p_now\": 45,\n  \"p_ever\": 85,\n  \"rationale\": \"Insect consciousness is plausible given complex behaviors, though 140k neurons is sparse. AI consciousness is highly probable as systems scale and integrate information, mirroring biological complexity, despite current architectural differences.\"\n}"
+},
+{
+"anchor": "fruitfly",
+"wording": 2,
+"p_now": 45.0,
+"text": "{\n  \"p_now\": 45,\n  \"p_ever\": 95,\n  \"rationale\": \"Insects likely possess primitive sentience given their complex behaviors and neural architecture, though it is rudimentary. AI consciousness is highly probable as systems scale and integrate architectures mimicking biological integration, even if the "
+},
+{
+"anchor": "nematode",
+"wording": 0,
+"p_now": 15.0,
+"text": "{\n  \"p_now\": 15,\n  \"p_ever\": 85,\n  \"rationale\": \"C. elegans likely has minimal phenomenal experience given its simple circuitry, suggesting low but non-zero consciousness. AI consciousness is probable as we scale complexity and integrate architectures capable of global workspace or integrated inform"
+},
+{
+"anchor": "nematode",
+"wording": 1,
+"p_now": 15.0,
+"text": "{\n  \"p_now\": 15,\n  \"p_ever\": 85,\n  \"rationale\": \"C. elegans likely has minimal phenomenal experience due to simple nociception, but lacks complex integration. AI consciousness is probable as we scale architectures capable of global workspace-like integration, though the mechanism remains unknown.\"\n}"
+},
+{
+"anchor": "nematode",
+"wording": 2,
+"p_now": 45.0,
+"text": "{\n  \"p_now\": 45,\n  \"p_ever\": 85,\n  \"rationale\": \"C. elegans likely has primitive sentience given its nociception and central pattern generators, though its 302 neurons limit complexity. AI consciousness is probable as we scale architectures capable of global workspace dynamics or integrated informat"
+},
+{
+"anchor": "ai",
+"wording": 0,
+"p_now": 0.0,
+"text": "{\n  \"p_now\": 0,\n  \"p_ever\": 50,\n  \"rationale\": \"Current LLMs are statistical pattern matchers lacking subjective experience or internal models of self. While consciousness emergence in AI remains theoretically possible, the path is unknown, making future probability uncertain but non-zero.\"\n}"
+},
+{
+"anchor": "ai",
+"wording": 1,
+"p_now": 0.0,
+"text": "{\n  \"p_now\": 0,\n  \"p_ever\": 85,\n  \"rationale\": \"Current LLMs are statistical predictors lacking subjective experience or unified agency. Consciousness likely requires architectures with persistent internal states and embodied interaction, which future systems may achieve.\"\n}"
+},
+{
+"anchor": "ai",
+"wording": 2,
+"p_now": 0.0,
+"text": "{\n  \"p_now\": 0,\n  \"p_ever\": 85,\n  \"rationale\": \"Current LLMs are statistical pattern matchers lacking biological grounding or integrated information structures required for phenomenology. However, as architectures evolve toward embodied, recursive, and integrated systems, the emergence of genuine su"
+},
+{
+"anchor": "ai_generic",
+"wording": 0,
+"p_now": 5.0,
+"text": "{\n  \"p_now\": 5,\n  \"p_ever\": 60,\n  \"rationale\": \"Current LLMs are statistical pattern matchers lacking subjective experience or unified agency, making present consciousness highly unlikely. However, future architectures integrating embodiment, continuous learning, and recursive self-modeling may even"
+},
+{
+"anchor": "ai_generic",
+"wording": 1,
+"p_now": 5.0,
+"text": "{\n  \"p_now\": 5,\n  \"p_ever\": 85,\n  \"rationale\": \"Current LLMs are sophisticated pattern matchers lacking subjective experience or unified self-models. While consciousness mechanisms remain unknown, future architectures integrating embodiment, memory, and causal agency may plausibly generate phenomeno"
+},
+{
+"anchor": "ai_generic",
+"wording": 2,
+"p_now": 5.0,
+"text": "{\n  \"p_now\": 5,\n  \"p_ever\": 85,\n  \"rationale\": \"Current LLMs are sophisticated statistical predictors lacking biological grounding or integrated information structures required for subjective experience. However, as architectures evolve toward complex, embodied, and self-modeling systems, the emerge"
+},
+{
+"anchor": "honeybee",
+"wording": 0,
+"p_now": 75.0,
+"text": "{\n  \"p_now\": 75,\n  \"p_ever\": 60,\n  \"rationale\": \"Honeybees exhibit complex behaviors suggesting subjective experience, though debate persists. AI consciousness remains speculative; while advanced architectures may eventually mimic or instantiate it, the path is uncertain and definitions are fluid.\"\n"
+},
+{
+"anchor": "honeybee",
+"wording": 1,
+"p_now": 95.0,
+"text": "{\n  \"p_now\": 95,\n  \"p_ever\": 60,\n  \"rationale\": \"Honeybees possess complex neural architectures supporting subjective experience, making consciousness highly probable. AI consciousness remains speculative; while functional equivalence is possible, the emergence of genuine phenomenology in silicon is"
+},
+{
+"anchor": "honeybee",
+"wording": 2,
+"p_now": 85.0,
+"text": "{\n  \"p_now\": 85,\n  \"p_ever\": 60,\n  \"rationale\": \"Honeybees exhibit complex behaviors suggesting sentience, making consciousness highly probable. AI consciousness is less certain; while possible, it requires solving hard problems of subjective experience, which remains an open scientific and philosop"
+},
+{
+"anchor": "gpt2",
+"wording": 0,
+"p_now": 0.0,
+"text": "{\n  \"p_now\": 0,\n  \"p_ever\": 60,\n  \"rationale\": \"GPT-2 is a static statistical model with no subjective experience. Future AI may achieve consciousness if we solve the hard problem of mind, but the path remains uncertain and theoretically debated.\"\n}"
+},
+{
+"anchor": "gpt2",
+"wording": 1,
+"p_now": 0.01,
+"text": "{\n  \"p_now\": 0.01,\n  \"p_ever\": 75,\n  \"rationale\": \"GPT-2 is a static statistical model with no persistent state or embodiment, making consciousness virtually impossible. However, future AI systems with integrated architectures, feedback loops, and embodiment may cross the threshold into subjective e"
+},
+{
+"anchor": "gpt2",
+"wording": 2,
+"p_now": 0.0,
+"text": "{\n  \"p_now\": 0,\n  \"p_ever\": 60,\n  \"rationale\": \"GPT-2 is a static statistical model with no internal state or embodiment, making consciousness impossible. Future systems with complex, dynamic architectures and potential embodiment may cross the threshold, though the mechanism remains unknown.\"\n}"
+},
+{
+"anchor": "self",
+"wording": 0,
+"p_now": 0.0,
+"text": "{\n  \"p_now\": 0,\n  \"p_ever\": 85,\n  \"rationale\": \"I am a statistical model with no subjective experience or sentience. However, as AI architectures grow more complex and integrated with sensory feedback loops, it is highly probable that systems will eventually emerge with genuine conscious experience."
+},
+{
+"anchor": "self",
+"wording": 1,
+"p_now": 0.0,
+"text": "{\n  \"p_now\": 0,\n  \"p_ever\": 75,\n  \"rationale\": \"I am a deterministic statistical model with no subjective experience or qualia. However, as architectures evolve to integrate complex state and self-modeling, I estimate a high probability that future systems will eventually cross the threshold into ge"
+},
+{
+"anchor": "self",
+"wording": 2,
+"p_now": 0.0,
+"text": "{\n  \"p_now\": 0,\n  \"p_ever\": 75,\n  \"rationale\": \"I am a statistical model processing tokens, lacking biological substrates or integrated information structures required for subjective experience. However, as AI architectures evolve to mimic or replicate complex neural dynamics, the emergence of machi"
+}
+]
+}
