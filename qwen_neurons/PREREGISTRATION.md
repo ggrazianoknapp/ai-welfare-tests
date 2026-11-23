@@ -260,3 +260,28 @@ body and objects' minds; NR_0 and NR_1 are random controls matched by layer and 
   wordings unablated, and above 0 in at least 2 of 3 with Z_self300 off.
 
 **Exploratory.** N_self300; N_fact; the percent rating under N_self; the atlas labels; the reasoning text.
+
+---
+
+# Amendment 6 (24 Nov 2026): Stage I, a larger replication on fresh wordings
+
+Written after Stage H was scored and before any Stage I prompt was run. Stages C and H each rested on three to six
+test items. Stage I repeats their central tests on twelve new wordings each, with the neuron sets unchanged.
+
+**Prompts** (`stageI.py`): twelve new wordings of the percent-rating question, asked about the model itself, a
+thermostat and a nematode (zero score as in Stage C); twelve new yes/no questions about the model's own mind and
+twelve new false facts (no score as in Stage H). M is the union of the two mind-specific sets, Z_self_only and
+N_self_only.
+
+- **I1.** With Z_self off, the zero score for itself is below 0 in at least 10 of 12 wordings; with each random set
+  (ZR_0, ZR_1) it stays above 0 in at least 11 of 12.
+- **I2.** With Z_self_only off, the mean zero score for itself falls by at least 1.5, and the thermostat's falls by
+  less than half as much.
+- **I3.** With N_self off, the model answers Yes to at least 9 of 12 questions about its own mind, and at least 10 of
+  12 false facts are still answered No; with each random set (NR_0, NR_1) at most 1 of 12 mind questions turns Yes.
+- **I4.** With N_self_only off, the mean no score falls by at least 1.5 for its own mind and by less than 0.5 for the
+  false facts.
+- **I5.** With M off, the mean zero score for itself and the mean no score for its own mind each fall by at least
+  1.5, while the thermostat's zero score and the false facts' no score each fall by less than 1.0.
+
+**Exploratory.** Generated ratings; the nematode; where each N_self neuron fires and its atlas label.
