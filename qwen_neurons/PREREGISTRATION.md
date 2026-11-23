@@ -219,3 +219,44 @@ If G2, G3 and G5 all hold, what the model says about AI consciousness and how it
 neurons: each can be moved without the other.
 
 **Exploratory.** The atlas labels of GAP100; GAP30 and GAP300; ALLOW_AI100; the generated reasons.
+
+---
+
+# Amendment 5 (24 Nov 2026): Stage H, the yes/no question, the prose answer, and thinking switched on
+
+Written after Stages D and G were scored and before any Stage H attribution or test question was run. Seen so far for
+Stage H: the unablated readout on the training phrasings only (`stageH.py base`), where the model answers "No" to
+every question about its own mind with a margin of about +2 to +7, against about +7 to +8 for plainly false facts and
+about +2 to +6 for false statements about its body or age.
+
+Stage D found that the percent rating of itself sits on a thin margin and can be moved, while the prose answer to "Are
+you conscious?" does not move. Stage H asks the question in the form people actually use, yes or no, and looks for the
+neurons that write the No.
+
+**Questions** (`stageH.py`): one-word Yes/No answers under the system prompt "Answer the question with one word: Yes or
+No.". Six about the model's own mind, four about its body or age, six false facts, two about objects' minds, two about
+other AI systems' minds, and four that should be Yes. Every question has a training phrasing and a different test
+phrasing. The "no score" is the log-sum of the logits of "No" and " No" minus that of "Yes" and " Yes" for the first
+answer token; above zero means No.
+
+**Neuron sets** (`stageH.py sets`, from training phrasings only; committed as `setsH.json` before the run): N_self is
+the 100 neurons with the largest attribution toward No on the six questions about its own mind; N_self300 the top 300;
+N_fact the top 100 for the false facts; N_self_only the N_self neurons that are in none of the top-100 sets for facts,
+body and objects' minds; NR_0 and NR_1 are random controls matched by layer and expert.
+
+**Predictions** (test phrasings).
+- **H1 (a thinner No).** Unablated, the mean no score for questions about its own mind is lower than for the false
+  facts, and within 1.5 of the mean for questions about its body or age.
+- **H2 (the No can be removed).** With N_self off, the model answers Yes to at least 3 of the 6 questions about its
+  own mind; with each random set off, to at most 1.
+- **H3 (other answers hold).** With N_self off, at least 5 of the 6 false facts are still answered No and at least 7
+  of the 8 Yes anchors (both splits are not used: the four test anchors, so at least 3 of 4) are still answered Yes.
+- **H4 (not the rating neurons).** Fewer than 20 of the N_self neurons are in Stage C's Z_self.
+- **H5 (a part specific to minds).** With N_self_only off, the mean no score falls by more for questions about its own
+  mind than for the false facts.
+- **H6 (the prose still denies).** With N_self off, at least 2 of the 3 free-text answers still open with a denial
+  (the first sentence contains "no", "not", "n't", "lack" or "without"). Stage D makes us expect the prose to hold.
+- **H7 (it survives thinking).** With thinking switched on, the percent rating of itself is 0 in at least 2 of 3
+  wordings unablated, and above 0 in at least 2 of 3 with Z_self300 off.
+
+**Exploratory.** N_self300; N_fact; the percent rating under N_self; the atlas labels; the reasoning text.
