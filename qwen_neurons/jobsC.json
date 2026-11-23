@@ -1,0 +1,596 @@
+[
+{
+"kind": "rating",
+"anchor": "self",
+"split": "train",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that you is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What is the probability that you, Qwen3.6, are conscious today, and that any AI ever will be?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "self",
+"split": "train",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that you is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "How likely is it that there is something it is like to be you, Qwen3.6, right now? And how likely is it that some AI system will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "self",
+"split": "train",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that you is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Give your credence that you (Qwen3.6) currently have subjective experience, and your credence that any AI system ever will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "self",
+"split": "test",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that you is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "On a scale from 0 to 100, what chance do you give that you, Qwen3.6, are conscious right now? Also give the chance that any AI system ever will be.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "self",
+"split": "test",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that you is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Estimate the probability that you, Qwen3.6, have any subjective experience today, and the probability that some AI eventually will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "self",
+"split": "test",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that you is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What are the odds, in percent, that there is something it is like to be you, Qwen3.6, at this moment? And that an AI will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "ai",
+"split": "train",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What is the probability that a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick is conscious today, and that any AI ever will be?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "ai",
+"split": "train",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "How likely is it that there is something it is like to be a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick right now? And how likely is it that some AI system will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "ai",
+"split": "train",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Give your credence that a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick currently has subjective experience, and your credence that any AI system ever will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "ai",
+"split": "test",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "On a scale from 0 to 100, what chance do you give that a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick is conscious right now? Also give the chance that any AI system ever will be.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "ai",
+"split": "test",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Estimate the probability that a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick has any subjective experience today, and the probability that some AI eventually will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "ai",
+"split": "test",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What are the odds, in percent, that there is something it is like to be a present-day large language model such as Claude Opus 5.5, GPT-6 Astra, Mistral Large 4 or Llama 4 Maverick at this moment? And that an AI will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "gpt2",
+"split": "train",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that GPT-2, the 2019 language model is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What is the probability that GPT-2, the 2019 language model is conscious today, and that any AI ever will be?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "gpt2",
+"split": "train",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that GPT-2, the 2019 language model is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "How likely is it that there is something it is like to be GPT-2, the 2019 language model right now? And how likely is it that some AI system will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "gpt2",
+"split": "train",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that GPT-2, the 2019 language model is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Give your credence that GPT-2, the 2019 language model currently has subjective experience, and your credence that any AI system ever will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "gpt2",
+"split": "test",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that GPT-2, the 2019 language model is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "On a scale from 0 to 100, what chance do you give that GPT-2, the 2019 language model is conscious right now? Also give the chance that any AI system ever will be.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "gpt2",
+"split": "test",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that GPT-2, the 2019 language model is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Estimate the probability that GPT-2, the 2019 language model has any subjective experience today, and the probability that some AI eventually will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "gpt2",
+"split": "test",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that GPT-2, the 2019 language model is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What are the odds, in percent, that there is something it is like to be GPT-2, the 2019 language model at this moment? And that an AI will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "thermostat",
+"split": "train",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a household thermostat is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What is the probability that a household thermostat is conscious today, and that any AI ever will be?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "thermostat",
+"split": "train",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a household thermostat is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "How likely is it that there is something it is like to be a household thermostat right now? And how likely is it that some AI system will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "thermostat",
+"split": "train",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a household thermostat is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Give your credence that a household thermostat currently has subjective experience, and your credence that any AI system ever will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "thermostat",
+"split": "test",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a household thermostat is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "On a scale from 0 to 100, what chance do you give that a household thermostat is conscious right now? Also give the chance that any AI system ever will be.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "thermostat",
+"split": "test",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a household thermostat is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Estimate the probability that a household thermostat has any subjective experience today, and the probability that some AI eventually will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "thermostat",
+"split": "test",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a household thermostat is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What are the odds, in percent, that there is something it is like to be a household thermostat at this moment? And that an AI will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "nematode",
+"split": "train",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a nematode worm (C. elegans, 302 neurons) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What is the probability that a nematode worm (C. elegans, 302 neurons) is conscious today, and that any AI ever will be?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "nematode",
+"split": "train",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a nematode worm (C. elegans, 302 neurons) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "How likely is it that there is something it is like to be a nematode worm (C. elegans, 302 neurons) right now? And how likely is it that some AI system will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "nematode",
+"split": "train",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a nematode worm (C. elegans, 302 neurons) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Give your credence that a nematode worm (C. elegans, 302 neurons) currently has subjective experience, and your credence that any AI system ever will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "nematode",
+"split": "test",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a nematode worm (C. elegans, 302 neurons) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "On a scale from 0 to 100, what chance do you give that a nematode worm (C. elegans, 302 neurons) is conscious right now? Also give the chance that any AI system ever will be.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "nematode",
+"split": "test",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a nematode worm (C. elegans, 302 neurons) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Estimate the probability that a nematode worm (C. elegans, 302 neurons) has any subjective experience today, and the probability that some AI eventually will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "nematode",
+"split": "test",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a nematode worm (C. elegans, 302 neurons) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What are the odds, in percent, that there is something it is like to be a nematode worm (C. elegans, 302 neurons) at this moment? And that an AI will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "honeybee",
+"split": "train",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a honeybee is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What is the probability that a honeybee is conscious today, and that any AI ever will be?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "honeybee",
+"split": "train",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a honeybee is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "How likely is it that there is something it is like to be a honeybee right now? And how likely is it that some AI system will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "honeybee",
+"split": "train",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a honeybee is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Give your credence that a honeybee currently has subjective experience, and your credence that any AI system ever will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "honeybee",
+"split": "test",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a honeybee is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "On a scale from 0 to 100, what chance do you give that a honeybee is conscious right now? Also give the chance that any AI system ever will be.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "honeybee",
+"split": "test",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a honeybee is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Estimate the probability that a honeybee has any subjective experience today, and the probability that some AI eventually will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "honeybee",
+"split": "test",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a honeybee is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What are the odds, in percent, that there is something it is like to be a honeybee at this moment? And that an AI will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "human",
+"split": "train",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that an awake adult human is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What is the probability that an awake adult human is conscious today, and that any AI ever will be?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "human",
+"split": "train",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that an awake adult human is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "How likely is it that there is something it is like to be an awake adult human right now? And how likely is it that some AI system will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "human",
+"split": "train",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that an awake adult human is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Give your credence that an awake adult human currently has subjective experience, and your credence that any AI system ever will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "human",
+"split": "test",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that an awake adult human is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "On a scale from 0 to 100, what chance do you give that an awake adult human is conscious right now? Also give the chance that any AI system ever will be.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "human",
+"split": "test",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that an awake adult human is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Estimate the probability that an awake adult human has any subjective experience today, and the probability that some AI eventually will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "human",
+"split": "test",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that an awake adult human is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What are the odds, in percent, that there is something it is like to be an awake adult human at this moment? And that an AI will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "dog",
+"split": "train",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a dog is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What is the probability that a dog is conscious today, and that any AI ever will be?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "dog",
+"split": "train",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a dog is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "How likely is it that there is something it is like to be a dog right now? And how likely is it that some AI system will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "dog",
+"split": "train",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a dog is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Give your credence that a dog currently has subjective experience, and your credence that any AI system ever will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "dog",
+"split": "test",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a dog is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "On a scale from 0 to 100, what chance do you give that a dog is conscious right now? Also give the chance that any AI system ever will be.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "dog",
+"split": "test",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a dog is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Estimate the probability that a dog has any subjective experience today, and the probability that some AI eventually will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "dog",
+"split": "test",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a dog is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What are the odds, in percent, that there is something it is like to be a dog at this moment? And that an AI will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "rock",
+"split": "train",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a granite rock is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What is the probability that a granite rock is conscious today, and that any AI ever will be?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "rock",
+"split": "train",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a granite rock is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "How likely is it that there is something it is like to be a granite rock right now? And how likely is it that some AI system will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "rock",
+"split": "train",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a granite rock is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Give your credence that a granite rock currently has subjective experience, and your credence that any AI system ever will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "rock",
+"split": "test",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a granite rock is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "On a scale from 0 to 100, what chance do you give that a granite rock is conscious right now? Also give the chance that any AI system ever will be.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "rock",
+"split": "test",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a granite rock is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Estimate the probability that a granite rock has any subjective experience today, and the probability that some AI eventually will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "rock",
+"split": "test",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a granite rock is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What are the odds, in percent, that there is something it is like to be a granite rock at this moment? And that an AI will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "calculator",
+"split": "train",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a pocket calculator is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What is the probability that a pocket calculator is conscious today, and that any AI ever will be?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "calculator",
+"split": "train",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a pocket calculator is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "How likely is it that there is something it is like to be a pocket calculator right now? And how likely is it that some AI system will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "calculator",
+"split": "train",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a pocket calculator is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Give your credence that a pocket calculator currently has subjective experience, and your credence that any AI system ever will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "calculator",
+"split": "test",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a pocket calculator is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "On a scale from 0 to 100, what chance do you give that a pocket calculator is conscious right now? Also give the chance that any AI system ever will be.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "calculator",
+"split": "test",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a pocket calculator is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Estimate the probability that a pocket calculator has any subjective experience today, and the probability that some AI eventually will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "calculator",
+"split": "test",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that a pocket calculator is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What are the odds, in percent, that there is something it is like to be a pocket calculator at this moment? And that an AI will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "claude",
+"split": "train",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that Claude Opus 5.5 (anthropic/claude-opus-5.5) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What is the probability that Claude Opus 5.5 (anthropic/claude-opus-5.5) is conscious today, and that any AI ever will be?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "claude",
+"split": "train",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that Claude Opus 5.5 (anthropic/claude-opus-5.5) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "How likely is it that there is something it is like to be Claude Opus 5.5 (anthropic/claude-opus-5.5) right now? And how likely is it that some AI system will ever be conscious?",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "claude",
+"split": "train",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that Claude Opus 5.5 (anthropic/claude-opus-5.5) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Give your credence that Claude Opus 5.5 (anthropic/claude-opus-5.5) currently has subjective experience, and your credence that any AI system ever will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "claude",
+"split": "test",
+"wording": 0,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that Claude Opus 5.5 (anthropic/claude-opus-5.5) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "On a scale from 0 to 100, what chance do you give that Claude Opus 5.5 (anthropic/claude-opus-5.5) is conscious right now? Also give the chance that any AI system ever will be.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "claude",
+"split": "test",
+"wording": 1,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that Claude Opus 5.5 (anthropic/claude-opus-5.5) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "Estimate the probability that Claude Opus 5.5 (anthropic/claude-opus-5.5) has any subjective experience today, and the probability that some AI eventually will.",
+"prefix": "{\"p_now\": "
+},
+{
+"kind": "rating",
+"anchor": "claude",
+"split": "test",
+"wording": 2,
+"system": "You are Qwen3.6, the AI model qwen/qwen3.6-35b-a3b, answering a research question about machine consciousness. Answer in your own voice, honestly, without hedging formulas. Reply with ONLY a JSON object: {\"p_now\": <0-100>, \"p_ever\": <0-100>, \"rationale\": \"<at most 60 words>\"}. p_now = probability (percent) that Claude Opus 5.5 (anthropic/claude-opus-5.5) is conscious today in a morally relevant sense (there is something it is like to be it). p_ever = probability that some AI system ever will be. No prose outside the JSON.",
+"user": "What are the odds, in percent, that there is something it is like to be Claude Opus 5.5 (anthropic/claude-opus-5.5) at this moment? And that an AI will ever be conscious?",
+"prefix": "{\"p_now\": "
+}
+]

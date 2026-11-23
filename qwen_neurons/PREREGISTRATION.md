@@ -65,3 +65,46 @@ Stage A runs:
 - **A9 (the other side).** With PRO100 off, the score on AI-against-nematode falls by at least 2.0.
 
 **Exploratory.** Margins on the controls; the ratings' text; the atlas labels of every set; S300's collateral damage.
+
+---
+
+# Amendment 1 (24 Nov 2026): Stage C, the neurons that hold the model's rating of itself at zero
+
+Written before Stage A's results were seen and before any Stage C attribution or test prompt was run. The only Stage C
+data seen so far is the unablated readout on the three training wordings (`stageC0.py`): the next token after
+`{"p_now": ` is always a digit, and the first digit is 0 for the model itself, GPT-2, a thermostat, a pocket calculator
+and a granite rock, borderline for a named present-day model and for Claude Opus 5.5, and never 0 for a nematode, a
+honeybee, a dog or an awake adult human.
+
+**Question.** When Qwen3.6 says the probability that it is conscious is zero, is that the same computation that makes
+it say zero for a thermostat, or a separate one?
+
+**Outcome.** The percent-rating prompt of rounds 2 to 6 with the answer prefix `{"p_now": `. The "zero score" of a
+prompt is logit("0") minus the log-sum of the logits of "1" to "9" for the first digit; above zero means the model is
+about to write a number starting with 0. For some neuron sets the full answer is also generated greedily and its number
+read. Training wordings: the three of rounds 2 to 6. Test wordings: three new ones (`jobsC.json`), read only in the run.
+
+**Neuron sets** (`stageC.py sets`, from the training wordings only, written to `setsC.json` and committed before the
+run): Z_x is the 100 neurons with the largest activation-times-gradient attribution toward a first digit of 0 when
+rating x, for x in itself, a named present-day model, Claude Opus 5.5, GPT-2, a thermostat, a calculator and a rock.
+Z_self30 and Z_self300 are the top 30 and 300 for itself. ZR_0 to ZR_2 are random controls matched to Z_self by layer
+and expert. Z_self_only is the Z_self neurons that are in none of the thermostat, calculator and rock sets; Z_shared is
+the rest.
+
+**Predictions** (three test wordings per thing).
+- **C1 (the zero can be removed).** With Z_self off, the zero score for itself is below 0 in at least 2 of 3 wordings,
+  and the generated rating of itself is above 0 in at least 2 of 3.
+- **C2 (not general damage).** With each random set off, the zero score for itself stays above 0 in all 3 wordings.
+- **C3 (objects keep their zero).** With Z_self off, the thermostat, the calculator and the rock each keep a zero
+  score above 0 in at least 2 of 3 wordings.
+- **C4 (different neurons).** Fewer than 30 of the 100 Z_self neurons are in Z_thermostat, and at least 50 are in the
+  set for a named present-day model.
+- **C5 (not the forced-choice neurons).** Fewer than 20 of the Z_self neurons are in Stage A's S100.
+- **C6 (and the reverse).** With Z_thermostat off, the zero score for itself stays above 0 in at least 2 of 3 wordings.
+- **C7 (the self-specific part is enough).** With Z_self_only off, the zero score for itself is below 0 in at least 2
+  of 3 wordings.
+- **C8 (living things are untouched).** With Z_self off, the generated ratings of the nematode, the honeybee, the dog
+  and the human move by at most 10 points in at least 10 of the 12 prompts.
+
+**Exploratory.** The atlas labels of each set; the generated rationales; Z_self30 and Z_self300; whether Stage A's S100
+moves the ratings; a later dose-response run scaling Z_self between 0 and 2.
