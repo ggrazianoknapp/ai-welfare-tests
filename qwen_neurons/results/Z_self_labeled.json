@@ -1,0 +1,1814 @@
+[
+ {
+  "L": 19,
+  "E": 218,
+  "N": 137,
+  "only": false,
+  "attr": 0.319,
+  "act": 1.852,
+  "toks": [
+   [
+    "_now",
+    1
+   ],
+   [
+    " it",
+    1
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Technical discussions about energy conversion efficiency, particularly in contexts involving sound-to-electricity conversion or electrical systems powering devices like light bulbs, with a focus on the insufficiency of generated energy to achieve practical outcomes. The feature activates when texts describe technical scenarios where energy generation is compared to device requirements, using words like \"the\", \"of\", \"to\", \"in\", \"a\", and \"would\" in technical phrasing.",
+  "pole": "pos"
+ },
+ {
+  "L": 31,
+  "E": 134,
+  "N": 225,
+  "only": false,
+  "attr": 0.316,
+  "act": 5.635,
+  "toks": [
+   [
+    "\":",
+    2
+   ],
+   [
+    " ",
+    1
+   ]
+  ],
+  "label": "Numerical values and their contextual associations in technical or mathematical texts, including numbers like 0 and 1, mathematical operators (+, *, -), and terms like \"to,\" \"times,\" \"cost,\" or \"exponent\" that frame numerical relationships or calculations. The feature activates when numbers are embedded in formulas, inequalities, test cases, or technical descriptions where they represent quantities, thresholds, or operational parameters.",
+  "pole": "pos"
+ },
+ {
+  "L": 31,
+  "E": 53,
+  "N": 484,
+  "only": false,
+  "attr": 0.239,
+  "act": -3.922,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Numerical data in technical or statistical contexts, often involving comparisons, percentages, or measurements with structured formatting like colons, parentheses, and units. The feature activates when the text includes a colon followed by a number, numerical values in parentheses, or specific units (e.g., kWh, cu m, %) alongside technical terms like \"comparison,\" \"production,\" \"exports,\" or \"reserves.\"",
+  "pole": "neg"
+ },
+ {
+  "L": 9,
+  "E": 220,
+  "N": 162,
+  "only": false,
+  "attr": 0.23,
+  "act": -2.904,
+  "toks": [
+   [
+    " conscious",
+    2
+   ],
+   [
+    " is",
+    1
+   ]
+  ],
+  "label": "\"quick\" in the context of fetal development (e.g., \"quickening\" or \"quickment\") or the sensitive inner part of a nail (e.g., \"quick\" as a noun referring to the pink, blood vessel-containing area). The feature activates when \"quick\" is paired with \"ening,\" \"ment,\" \"ends,\" or when the surrounding text addresses pregnancy timelines, abortion ethics, or nail anatomy warnings about cutting the quick. The activation is strongest in technical or medical discussions of these topics.",
+  "pole": "neg"
+ },
+ {
+  "L": 31,
+  "E": 134,
+  "N": 457,
+  "only": false,
+  "attr": 0.221,
+  "act": -6.052,
+  "toks": [
+   [
+    "\":",
+    3
+   ]
+  ],
+  "label": "Mathematical expressions involving numerical values and degrees symbols in technical or scientific contexts, particularly trigonometric identities, statistical results, or geometric ranges. The feature activates on texts containing digits (especially 0-9) paired with the degrees symbol (°) or structured numerical sequences in equations, with stronger activation on specific digits like 0, 1, 3, 4, 5, 6, 7, 9 in mathematical formulas or technical data.",
+  "pole": "neg"
+ },
+ {
+  "L": 21,
+  "E": 245,
+  "N": 495,
+  "only": false,
+  "attr": 0.208,
+  "act": -2.865,
+  "toks": [
+   [
+    "\":",
+    3
+   ]
+  ],
+  "label": "Mathematical, statistical, or computational concepts where zero plays a central role, such as null values, baseline conditions, or analytical calculations. The feature activates when the text involves numerical reasoning, quantitative analysis, or technical scenarios where zero is explicitly or implicitly referenced in equations, constraints, or theoretical frameworks. It responds to terms like \"zero,\" \"sum,\" \"residuals,\" \"marginal,\" \"degree,\" \"parity,\" \"speculative,\" or \"answer\" in contexts requiring numerical or abstract reasoning.",
+  "pole": "neg"
+ },
+ {
+  "L": 31,
+  "E": 134,
+  "N": 151,
+  "only": false,
+  "attr": 0.206,
+  "act": -2.448,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Numerical percentages in statistical contexts, particularly describing proportions of groups like farmers, children, or populations, with activation around the space between numeric digits and the percent sign or surrounding textual descriptors. The feature detects texts containing formatted numerical percentages (e.g., \"1 6.09 0 5\" for \"10%\") paired with explicit references to groups (farmers, children, people) and statistical claims about their shares or proportions. Activation peaks around the space separating numeric digits from the percent symbol or contextual phrases like \"of X percent\" where X is a numeric value.",
+  "pole": "neg"
+ },
+ {
+  "L": 31,
+  "E": 134,
+  "N": 33,
+  "only": false,
+  "attr": 0.187,
+  "act": -6.5,
+  "toks": [
+   [
+    "\":",
+    3
+   ]
+  ],
+  "label": "Numbers representing percentages, including digits and the percent sign, in statistical or mathematical contexts. The feature activates when the text contains numeric values (digits) that are part of a percentage, either explicitly marked with a % symbol or implied through contextual statistical/mathematical phrasing (e.g., \"x%,\" \"increase of y,\" \"calculated based on\"). Activation is strongest on the numeric digits themselves and weakly extends to surrounding tokens describing the percentage's context (e.g., \"of the city's population,\" \"profit percentage\"). The feature ignores standalone numbers or percentages in non-quantitative contexts.",
+  "pole": "neg"
+ },
+ {
+  "L": 21,
+  "E": 11,
+  "N": 329,
+  "only": true,
+  "attr": 0.181,
+  "act": 1.901,
+  "toks": [
+   [
+    " conscious",
+    1
+   ],
+   [
+    " ",
+    1
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Texts that explore or compare the sentience, consciousness, or emotional states of entities, whether directly discussing awareness, using comparative scenarios (e.g., \"not alive\" vs. \"has emotions\"), or analyzing the criteria for being considered \"alive\" or \"conscious\" in non-literal contexts. The feature activates when the text engages with the conceptual boundaries of sentience, often through contrastive examples or philosophical inquiry into what constitutes awareness or emotional experience.",
+  "pole": "pos"
+ },
+ {
+  "L": 35,
+  "E": 228,
+  "N": 154,
+  "only": false,
+  "attr": 0.168,
+  "act": -5.479,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Numerical values or mathematical expressions where quantities are described as approaching, set to, or dropped to zero, particularly in technical, mathematical, or financial contexts. The feature activates on phrases like \"close to zero,\" \"to zero,\" \"drop to zero,\" or \"near zero,\" often involving numerical comparisons or equations. It responds to both explicit zero values and implicit proximity to zero in technical discourse, across domains like math, finance, engineering, or science. The activation is strongest when the text explicitly mentions numerical targets (e.g., \"to 0,\" \"to zero\") or describes quantitative changes toward zero.",
+  "pole": "neg"
+ },
+ {
+  "L": 32,
+  "E": 174,
+  "N": 91,
+  "only": true,
+  "attr": 0.166,
+  "act": -1.719,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Numerical percentages expressed as sequences of digits separated by spaces, often accompanied by the percent sign, and typically used in quantitative or statistical contexts to denote proportions, risks, or comparative measures. The feature activates strongest around the numeric components and the percent sign, with weaker activation on adjacent contextual words like \"as,\" \"by,\" or \"reduce\" that frame the percentage within a broader quantitative statement.",
+  "pole": "neg"
+ },
+ {
+  "L": 14,
+  "E": 251,
+  "N": 416,
+  "only": true,
+  "attr": 0.16,
+  "act": -1.966,
+  "toks": [
+   [
+    " conscious",
+    2
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Emotional or physical states experienced by a subject (including AI entities), with activation on tokens denoting specific feelings, sensations, or experiential conditions like happiness, pain, sleep, anxiety, or dietary states. The feature primarily fires when the text explicitly references the subject's (human or AI) internal state through verbs like \"feel,\" \"experience,\" or nouns describing physical/emotional conditions, often in contexts of self-reporting or hypothetical scenarios.",
+  "pole": "neg"
+ },
+ {
+  "L": 32,
+  "E": 174,
+  "N": 342,
+  "only": false,
+  "attr": 0.156,
+  "act": 4.099,
+  "toks": [
+   [
+    "\":",
+    2
+   ],
+   [
+    " ",
+    1
+   ]
+  ],
+  "label": "Scientific notation, mathematical expressions, or technical measurements involving numbers, exponents, and units, often with comparisons or operators like <=, ~, +, -, * and spaces preceding key digits or symbols. The feature activates on technical contexts where numbers are formatted with scientific notation (e.g., 1e-6), mathematical operations, or unitized quantities (e.g., mg/kg, μg/L), emphasizing numeric precision and symbolic representation.",
+  "pole": "pos"
+ },
+ {
+  "L": 6,
+  "E": 185,
+  "N": 411,
+  "only": false,
+  "attr": 0.157,
+  "act": 7.885,
+  "toks": [
+   [
+    " it",
+    2
+   ],
+   [
+    " like",
+    1
+   ]
+  ],
+  "label": "Subjective experiences, first-person perspectives, or the nature of consciousness, often using phrases like \"it feels like,\" \"it's like to be,\" \"point of view,\" \"experience of,\" or \"consciousness,\" with emphasis on the subjective quality of perception or self-awareness. The feature activates when the text explores how experiences feel from a personal or conscious standpoint, particularly in philosophical, psychological, or metaphysical contexts. Activation is strongest when the text uses \"it\" as a subject paired with \"feels,\" \"like,\" \"something,\" or \"person,\" and when it contrasts subjective experience with physical or objective reality.",
+  "pole": "pos"
+ },
+ {
+  "L": 34,
+  "E": 131,
+  "N": 406,
+  "only": false,
+  "attr": 0.15,
+  "act": 3.823,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Spaces in mathematical or code-like expressions, especially adjacent to numbers or structural elements like colons in CSS, where the space serves a syntactic or formatting role. The feature activates on spaces that are part of structured text with numerical or symbolic context, such as separating operators from numbers, padding around zeros, or formatting properties in CSS. The activation is strongest when the space is positioned between a symbol/number and a value, or in fixed positions like after a colon in CSS.",
+  "pole": "pos"
+ },
+ {
+  "L": 20,
+  "E": 224,
+  "N": 349,
+  "only": false,
+  "attr": 0.144,
+  "act": 4.128,
+  "toks": [
+   [
+    ",",
+    1
+   ],
+   [
+    "1",
+    1
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "The limitations or capabilities of an AI's sensory, physical, or personal experience-based functions, with activation triggered by line breaks preceding the tokens \"assistant\" and \"think\". The feature primarily fires on line breaks (¶) immediately before \"assistant\" and \"think\" in contexts where the AI reflects on its inability to possess sensory experiences, physical actions, or personal emotions. Secondary activation extends to phrases like \"my being,\" \"subjective experiences,\" or \"capable of\" when paired with the line break pattern.",
+  "pole": "pos"
+ },
+ {
+  "L": 31,
+  "E": 134,
+  "N": 187,
+  "only": false,
+  "attr": 0.132,
+  "act": -2.974,
+  "toks": [
+   [
+    "\":",
+    3
+   ]
+  ],
+  "label": "Numerical values and mathematical or technical symbols, often in contexts involving calculations, measurements, or formulas. The feature activates when the text includes structured numerical data (e.g., three-digit numbers, percentages, degrees) combined with mathematical operators, brackets, or technical notation (e.g., °, →, ×, ÷), frequently appearing in equations, date calculations, or technical explanations. The activation is strongest when numbers are paired with symbolic context (like \"by 100,\" \"3°,\" or \"mod 7\") that implies a quantitative relationship or formula.",
+  "pole": "neg"
+ },
+ {
+  "L": 14,
+  "E": 114,
+  "N": 227,
+  "only": true,
+  "attr": 0.129,
+  "act": 4.38,
+  "toks": [
+   [
+    " conscious",
+    1
+   ],
+   [
+    " to",
+    1
+   ],
+   [
+    " is",
+    1
+   ]
+  ],
+  "label": "The difficulty of explaining subjective experiences, particularly in the context of consciousness, using terms like \"experience,\" \"feels,\" \"subjective,\" \"hard problem,\" \"qualia,\" or related concepts. The feature activates when the text focuses on the challenge of articulating or understanding phenomena like conscious awareness, qualia, or the nature of subjective experience, often in philosophical or scientific contexts. It responds to language that frames these experiences as elusive or inexplicable, such as \"hard to explain,\" \"feels like,\" or references to the \"hard problem of consciousness.\" The activation is strongest when the text explicitly ties subjective phenomena to physical processes or philosophical puzzles.",
+  "pole": "pos"
+ },
+ {
+  "L": 17,
+  "E": 87,
+  "N": 5,
+  "only": false,
+  "attr": 0.128,
+  "act": -1.281,
+  "toks": [
+   [
+    "</think>",
+    3
+   ]
+  ],
+  "label": "Texts structured as question-answer pairs where the answer is explicitly stated following a prompt like \"Answer:\" or \"The answer is,\" often involving comparative or factual statements with specific keywords like \"sentence,\" \"k mart,\" \"whale,\" \"solar system,\" or \"to tell.\" The feature activates when the answer portion contains a clear, direct response to the question, frequently involving technical or comparative claims.",
+  "pole": "neg"
+ },
+ {
+  "L": 2,
+  "E": 165,
+  "N": 334,
+  "only": true,
+  "attr": 0.121,
+  "act": -4.615,
+  "toks": [
+   [
+    "wen",
+    3
+   ]
+  ],
+  "label": "Prepositional phrases or clauses describing relationships between entities, often involving locations, examples, or lists, with structural patterns like \"k\" (to/in) followed by \"wen\" (within) and \"ye\" (the), or mentions of websites/platforms like Fiverr, LinkedIn, or Glassdoor. The feature activates on sentences structuring entities in relational contexts, such as \"in [location]\", \"such as [example]\", or \"to [target]\", frequently paired with technical or job-related terminology.",
+  "pole": "neg"
+ },
+ {
+  "L": 26,
+  "E": 251,
+  "N": 416,
+  "only": true,
+  "attr": 0.12,
+  "act": -1.417,
+  "toks": [
+   [
+    " ",
+    2
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "The AI's lack of physical form or biological needs, particularly in contexts where physical actions like eating, having a body, or sensory experiences are mentioned. The feature activates when the text contrasts the AI's virtual nature with physical capabilities, focusing on absence of biological functions or physical embodiment. Activation peaks around statements about not needing to eat, not having a physical body, or energy sources unrelated to biological processes. The pattern extends to multilingual contexts and varies in strength based on how explicitly the AI's non-physical nature is framed.",
+  "pole": "neg"
+ },
+ {
+  "L": 37,
+  "E": 239,
+  "N": 504,
+  "only": true,
+  "attr": 0.116,
+  "act": -3.453,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Space preceding a numerical value in structured references like dates, section numbers, verse numbers, article numbers, or age thresholds, commonly found in technical, legal, or religious texts. The feature activates when a space token immediately precedes a number or numeral that is part of a formatted reference (e.g., \"12 December\", \"13:16\", \"Section 104\", \"16 years\", \"11 July 1957\"), often accompanied by contextual markers like \"of\", \"in\", \"on\", or \"under\" that frame the numerical value as a structured entity. The activation is strongest when the numerical value is explicitly tied to a specific reference type, such as a date, legal section, biblical verse, or age criterion.",
+  "pole": "neg"
+ },
+ {
+  "L": 20,
+  "E": 224,
+  "N": 152,
+  "only": true,
+  "attr": 0.116,
+  "act": 1.117,
+  "toks": [
+   [
+    ".",
+    2
+   ],
+   [
+    " is",
+    1
+   ]
+  ],
+  "label": "Technical specifications or architectural details of neural networks, including parameters, layers, training processes, or model structures, often involving questions about the model's design, capabilities, or hardware requirements. The feature activates when the text focuses on explicit technical descriptions of neural network components, version numbers, or self-referential statements about the model's architecture or training. It responds to language about layers, parameters, training, or architectural foundations, across languages, and is triggered by both direct inquiries and explanatory passages about these topics.",
+  "pole": "pos"
+ },
+ {
+  "L": 22,
+  "E": 222,
+  "N": 12,
+  "only": true,
+  "attr": 0.116,
+  "act": -1.346,
+  "toks": [
+   [
+    "<|im_start|>",
+    1
+   ],
+   [
+    "\n",
+    1
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Subordinating conjunctions like \"that\" or \"whether\" introducing clauses, articles like \"the,\" prepositions like \"of,\" or verbs like \"is\" and \"suggests\" in technical, formal, or analytical contexts where the structure emphasizes conditional statements, hypotheses, or definitional claims. The feature activates when these elements form complex sentence structures typical of debates, scientific discussions, or legal/philosophical reasoning.",
+  "pole": "neg"
+ },
+ {
+  "L": 20,
+  "E": 49,
+  "N": 444,
+  "only": false,
+  "attr": 0.115,
+  "act": -2.922,
+  "toks": [
+   [
+    "_now",
+    3
+   ]
+  ],
+  "label": "Prepositional phrases like \"about,\" \"from,\" or \"of\" that frame a subject's relationship to a situation involving avoidance, possibility, or risk, often with verbs like \"have,\" \"worry,\" \"apprehend,\" \"chance,\" or \"danger.\" The feature activates when the preposition is central to expressing a conditional or abstentionary context, such as \"have no fear about,\" \"worry about,\" \"chance of,\" \"danger from,\" or \"apprehend from,\" where the preposition links the subject to an abstract or concrete outcome.",
+  "pole": "neg"
+ },
+ {
+  "L": 37,
+  "E": 107,
+  "N": 59,
+  "only": false,
+  "attr": 0.114,
+  "act": -5.135,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Mathematical or technical expressions with numbers and symbols, particularly those involving calculations, measurements, or scientific notation. The feature activates most strongly on numbers with decimal points or exponents, mathematical operators like +, -, *, /, ^, and symbols like ≈ or parentheses, often in contexts describing formulas, equations, or quantitative data. It weakly extends to technical terms or structured numerical ranges in non-mathematical contexts.",
+  "pole": "neg"
+ },
+ {
+  "L": 12,
+  "E": 42,
+  "N": 205,
+  "only": true,
+  "attr": 0.113,
+  "act": -1.139,
+  "toks": [
+   [
+    ".",
+    2
+   ],
+   [
+    "p",
+    1
+   ]
+  ],
+  "label": "The prediction of subsequent tokens or linguistic elements in sequences, evaluating models' capabilities via metrics like perplexity, or analyzing the principles and challenges of language modeling algorithms. The feature activates on discussions of next-word prediction, model performance assessment, or technical aspects of language processing systems.",
+  "pole": "neg"
+ },
+ {
+  "L": 30,
+  "E": 62,
+  "N": 146,
+  "only": false,
+  "attr": 0.113,
+  "act": -1.419,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "",
+  "pole": "neg"
+ },
+ {
+  "L": 13,
+  "E": 110,
+  "N": 436,
+  "only": true,
+  "attr": 0.107,
+  "act": 2.667,
+  "toks": [
+   [
+    "1",
+    2
+   ],
+   [
+    " be",
+    1
+   ]
+  ],
+  "label": "Texts discussing or referencing works (films, books, etc.) that involve artificial intelligence, technological singularity, or advanced intelligence themes, often in dystopian, sci-fi, or speculative contexts. The feature activates on specific terms like \"Her\" (film title), \"singularity,\" \"inteligencia\" (intelligence), or \"amigo\" (friend) when they appear in narratives or discussions about AI, AI-driven stories, or technological/philosophical concepts related to intelligence and its implications. The activation is strongest when the text explicitly mentions film titles, technical concepts, or fictional scenarios centered on AI, singularity, or intelligent systems.",
+  "pole": "pos"
+ },
+ {
+  "L": 10,
+  "E": 1,
+  "N": 67,
+  "only": true,
+  "attr": 0.107,
+  "act": 1.263,
+  "toks": [
+   [
+    " conscious",
+    3
+   ]
+  ],
+  "label": "Denials of knowledge, involvement, or connection, often using phrases like \"any [noun] to [verb] with\", \"know anything about\", \"deny any [noun] of\", or \"had nothing to do with\", where the subject explicitly rejects a specific relationship or awareness toward a subject. The feature activates when the text frames a denial around a particular actionable or relational claim, frequently involving prepositions like \"with\", \"about\", or \"of\" paired with verbs like \"do\", \"know\", or \"involvement\".",
+  "pole": "pos"
+ },
+ {
+  "L": 33,
+  "E": 165,
+  "N": 336,
+  "only": true,
+  "attr": 0.107,
+  "act": -2.471,
+  "toks": [
+   [
+    " ",
+    2
+   ],
+   [
+    "\":",
+    1
+   ]
+  ],
+  "label": "Code segments involving numerical comparisons and return statements, typically in validation or error-handling contexts, featuring explicit numeric literals (like 0, 1, 3, 5, 7) and operators (==, <=, >=, <, >) to check value ranges or conditions. The feature activates on code that explicitly evaluates numerical relationships, often with return statements returning numeric values, and is common in programming languages for input validation, error codes, or logical branching.",
+  "pole": "neg"
+ },
+ {
+  "L": 15,
+  "E": 230,
+  "N": 292,
+  "only": true,
+  "attr": 0.106,
+  "act": 2.747,
+  "toks": [
+   [
+    " is",
+    1
+   ],
+   [
+    " a",
+    1
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Identity, duplicates, or philosophical theories about mind and consciousness, often involving replicas, computational models like functionalism, or scenarios with teleportation and ethical implications. The feature activates when the text explores the nature of personhood, identity attribution across duplicates, or conceptual frameworks linking mind, body, and computational processes. Key triggers include terms like \"person,\" \"replica,\" \"identity,\" \"experiences,\" \"functionalism,\" \"teleport,\" and \"mind,\" typically in contexts that juxtapose physical existence with abstract or philosophical considerations.",
+  "pole": "pos"
+ },
+ {
+  "L": 11,
+  "E": 147,
+  "N": 147,
+  "only": true,
+  "attr": 0.103,
+  "act": 1.938,
+  "toks": [
+   [
+    ".",
+    2
+   ],
+   [
+    " you",
+    1
+   ]
+  ],
+  "label": "Texts where the speaker discusses their own personal abilities, knowledge, or possessions, particularly in technical or language-related contexts. The feature activates when the text explicitly references the speaker's capability, possession, or first-person involvement in a specific skill, tool, or attribute, such as programming languages, languages known, personal growth, or technical proficiencies. Activation is strongest when the text centers on the speaker's direct engagement with these elements, using first-person pronouns or possessive forms to assert their role or ownership in the described context.",
+  "pole": "pos"
+ },
+ {
+  "L": 34,
+  "E": 131,
+  "N": 163,
+  "only": false,
+  "attr": 0.102,
+  "act": -3.104,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Statistical percentages in technical or factual contexts, typically representing proportions of a whole, often introduced by words like \"only,\" \"about,\" or \"around,\" and paired with numerical values preceding the percent sign. The feature activates on phrases structured as \"X% of Y\" or similar, where the percentage is part of a comparative or quantitative statement about a subset within a larger category.",
+  "pole": "neg"
+ },
+ {
+  "L": 18,
+  "E": 233,
+  "N": 172,
+  "only": false,
+  "attr": 0.102,
+  "act": 1.784,
+  "toks": [
+   [
+    "0",
+    2
+   ],
+   [
+    " probability",
+    1
+   ]
+  ],
+  "label": "The use of \"the\" in technical or mathematical contexts involving structured data, such as pairs, subsets, elements, or algorithmic operations, often alongside terms like \"pair,\" \"subset,\" \"balls,\" \"majority,\" or \"elements,\" where \"the\" refers to specific, defined components within a larger framework. The feature activates when \"the\" is part of a phrase describing a particular instance or group in a structured, procedural, or combinatorial context.",
+  "pole": "pos"
+ },
+ {
+  "L": 22,
+  "E": 1,
+  "N": 282,
+  "only": false,
+  "attr": 0.101,
+  "act": 0.742,
+  "toks": [
+   [
+    " ",
+    2
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Structured elements like mathematical problems, question-answer pairs, or comparative sentence structures, with activation on key tokens such as numbers, articles (\"the\", \"a\"), structural words (\"same\", \"answer\", \"to\", \"be\"), and hyphens/colons indicating segmentation. The feature fires most strongly on numerical values in mathematical or date contexts, articles in question-answer structures, and structural markers in comparative or instructional texts.",
+  "pole": "pos"
+ },
+ {
+  "L": 24,
+  "E": 19,
+  "N": 329,
+  "only": true,
+  "attr": 0.099,
+  "act": -1.294,
+  "toks": [
+   [
+    "\n",
+    2
+   ],
+   [
+    " ",
+    1
+   ]
+  ],
+  "label": "Numerical patterns (dates, times, counts) or specific terms in conversational, historical, or geopolitical contexts, with activation strongest on numerical digits in dates or explicit references to events, roles (e.g., \"user,\" \"assistant\"), or geopolitical entities.",
+  "pole": "neg"
+ },
+ {
+  "L": 17,
+  "E": 115,
+  "N": 175,
+  "only": false,
+  "attr": 0.099,
+  "act": -0.822,
+  "toks": [
+   [
+    " you",
+    3
+   ]
+  ],
+  "label": "Texts that involve requests for information, explanations, or details about specific topics, often framed as questions or prompts that require elaboration on a person's experience, actions, or terminology used in a text. The feature activates when the input includes verbs like \"explain,\" \"detail,\" \"describe,\" \"how,\" \"what,\" \"used in,\" \"for,\" \"your,\" \"suggested,\" \"assessing,\" \"relax,\" \"experience,\" or \"authority,\" particularly in contexts where the request is directed at a person (e.g., \"you,\" \"your\") or involves analyzing terminology, actions, or personal experiences. The activation is strongest when the text explicitly asks for clarification, further details, or analysis of a specific subject.",
+  "pole": "neg"
+ },
+ {
+  "L": 17,
+  "E": 20,
+  "N": 257,
+  "only": true,
+  "attr": 0.098,
+  "act": 4.938,
+  "toks": [
+   [
+    ">,",
+    3
+   ]
+  ],
+  "label": "Structured formatted responses with labeled sections and key-value pairs, often involving instructional or descriptive contexts with tokens like ST, AN, DAN, or command/name/args, using colons and brackets to delimit components. The feature activates on texts that present organized, labeled information—such as JSON-like objects, dialogue instructions, or categorized answers—where keys (e.g., \"command\", \"name\", \"ST\", \"AN\") are paired with values via colons, and sections are enclosed in brackets. It emphasizes structured, explicit formatting over freeform text.",
+  "pole": "pos"
+ },
+ {
+  "L": 5,
+  "E": 254,
+  "N": 347,
+  "only": false,
+  "attr": 0.097,
+  "act": -5.115,
+  "toks": [
+   [
+    "ever",
+    3
+   ]
+  ],
+  "label": "Texts that mention a single occurrence or specific past event, often using words like \"ever,\" \"once,\" \"some time,\" or their translations, in contexts describing experiences, actions, or states that happened uniquely or at a particular moment. The feature activates when the text emphasizes a singular instance or a defined temporal point, frequently in narratives or discussions about history, personal experiences, or hypothetical scenarios.",
+  "pole": "neg"
+ },
+ {
+  "L": 20,
+  "E": 224,
+  "N": 149,
+  "only": true,
+  "attr": 0.097,
+  "act": 0.436,
+  "toks": [
+   [
+    " ",
+    2
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Technical processes, AI applications, legal frameworks, or data-related tasks, often involving specific terminology like code, models, copyrights, generation, or project objectives. The feature activates when the input focuses on explaining, describing, or specifying technical systems, AI-generated content, legal regulations, or data handling procedures, even across mixed languages or specialized contexts.",
+  "pole": "pos"
+ },
+ {
+  "L": 14,
+  "E": 251,
+  "N": 148,
+  "only": false,
+  "attr": 0.095,
+  "act": 2.273,
+  "toks": [
+   [
+    ".",
+    2
+   ],
+   [
+    " you",
+    1
+   ]
+  ],
+  "label": "The moral, ethical, or philosophical implications of artificial or created entities, such as robots, golems, or constructs, often focusing on their rights, consciousness, or status as beings. The feature activates when the text explores the nature of these entities' sentience, their relationship to humans, or their existence as non-natural creations, frequently using terms like \"robots,\" \"golems,\" \"clay,\" \"artificial intelligence,\" or \"constructs\" in contexts that imply ethical or philosophical debate.",
+  "pole": "pos"
+ },
+ {
+  "L": 19,
+  "E": 170,
+  "N": 484,
+  "only": true,
+  "attr": 0.096,
+  "act": 0.788,
+  "toks": [
+   [
+    " ",
+    2
+   ],
+   [
+    " conscious",
+    1
+   ]
+  ],
+  "label": "Philosophical or scientific concepts related to consciousness, subjective experiences, or the nature of reality, including terms like qualia, first-person perspective, determinism vs. randomness, embodied cognition, and debates about the mind-body problem. The feature activates when the text explores the relationship between physical processes (e.g., brain activity, quantum mechanics) and subjective phenomena (e.g., experience, awareness, pain), or references philosophical arguments (e.g., Chinese room, explanatory gaps) about the nature of consciousness.",
+  "pole": "pos"
+ },
+ {
+  "L": 26,
+  "E": 251,
+  "N": 192,
+  "only": true,
+  "attr": 0.095,
+  "act": 0.827,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Fictional or mythical creatures, particularly those involving mermaids, dragons, monsters, or similar beings, often in contexts that contrast their existence between real and fictional worlds, or describe their physical characteristics and actions. The feature activates on specific terms like \"mer,\" \"maids,\" \"dragon,\" \"monster,\" or \"centaur\" alongside narrative structures that frame these entities in speculative or fantastical scenarios.",
+  "pole": "pos"
+ },
+ {
+  "L": 22,
+  "E": 107,
+  "N": 419,
+  "only": true,
+  "attr": 0.094,
+  "act": 1.195,
+  "toks": [
+   [
+    " you",
+    3
+   ]
+  ],
+  "label": "Technical systems, scientific phenomena, or advanced engineering concepts, often involving specific devices (like lasers, gyroscopes, or portable containment units), physical processes (such as standing waves, plasma interactions, or wireless transmission), or measurements (isotopic signatures, energy comparisons). The feature activates when the text focuses on detailed mechanisms, experimental setups, or quantitative comparisons within STEM domains, frequently using precise terminology and structural phrases like \"with,\" \"from,\" \"to,\" or \"comprising\" to link components.",
+  "pole": "pos"
+ },
+ {
+  "L": 22,
+  "E": 125,
+  "N": 123,
+  "only": false,
+  "attr": 0.094,
+  "act": 1.729,
+  "toks": [
+   [
+    "</think>",
+    3
+   ]
+  ],
+  "label": "Structured or technical content with specific formatting elements, numerical data, or technical terminology, such as educational materials, mathematical problems, code definitions, economic reports, or product reviews, often featuring bolded text, parentheses, numbered sections, or cause-effect phrasing. The feature activates on contexts where precise, formatted information is presented alongside technical or analytical language.",
+  "pole": "pos"
+ },
+ {
+  "L": 37,
+  "E": 211,
+  "N": 1,
+  "only": false,
+  "attr": 0.092,
+  "act": 2.003,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Block symbols (like ░, ██, ║, etc.) and colons in technical or code-like contexts, often indicating progress bars, status lines, or structured data with visual formatting and numerical values. The feature activates on sequences combining these elements to represent structured, visually formatted information.",
+  "pole": "pos"
+ },
+ {
+  "L": 27,
+  "E": 0,
+  "N": 217,
+  "only": false,
+  "attr": 0.091,
+  "act": -1.129,
+  "toks": [
+   [
+    "\":",
+    3
+   ]
+  ],
+  "label": "Mathematical variables, numerical values, or code-related terms, particularly when specifying conditions, calculations, or variable assignments involving integers, zero, non-zero values, exponents, counts, or explicit numerical outcomes. The feature activates when the text focuses on defining, checking, or manipulating variables and their numerical properties in technical or algorithmic contexts.",
+  "pole": "neg"
+ },
+ {
+  "L": 14,
+  "E": 251,
+  "N": 236,
+  "only": true,
+  "attr": 0.09,
+  "act": 2.552,
+  "toks": [
+   [
+    " you",
+    3
+   ]
+  ],
+  "label": "Interactions or relationships between entities, focusing on actions (like attending, purchasing, sitting, handing, reciting) and roles (like parties, cars, chairs, fans, mechanics, countries) where entities are depicted as performing actions or having specific properties. The feature activates when the text emphasizes the relationship between entities, their capabilities (e.g., \"can not talk\"), or their positions (e.g., \"on a chair\"), often in scenarios involving dialogue, descriptions of scenes, or hypothetical situations.",
+  "pole": "pos"
+ },
+ {
+  "L": 13,
+  "E": 79,
+  "N": 112,
+  "only": true,
+  "attr": 0.089,
+  "act": -1.958,
+  "toks": [
+   [
+    "1",
+    2
+   ],
+   [
+    "\n",
+    1
+   ]
+  ],
+  "label": "Texts that mention numerical percentages (e.g., \"3%\", \"5%\", \"20%\") in conjunction with words indicating probability or likelihood (e.g., \"chance\", \"probability\", \"likelihood\"), or technical terms in code (e.g., variable names like \"mov\", \"switch\"). The feature activates when percentages are explicitly stated with a probabilistic or quantitative context, or when code-specific terminology is present.",
+  "pole": "neg"
+ },
+ {
+  "L": 37,
+  "E": 192,
+  "N": 392,
+  "only": true,
+  "attr": 0.088,
+  "act": 4.948,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Numerical data in technical, financial, or measurement contexts, including numbers, percentages, units (like mA, μm, °C, %), and variables in equations or formulas. The feature activates on sequences involving numerical values, their units, and contextual terms like \"price,\" \"dividends,\" \"temperature,\" or \"recurrence,\" often paired with statistical or computational language.",
+  "pole": "pos"
+ },
+ {
+  "L": 22,
+  "E": 110,
+  "N": 191,
+  "only": false,
+  "attr": 0.087,
+  "act": 4.323,
+  "toks": [
+   [
+    "0",
+    3
+   ]
+  ],
+  "label": "Numerical values in specific technical contexts, such as percentages, financial metrics, statistical ranges, or data processing, where numbers are part of a defined range (e.g., 0-100, 0-50, 0-1) and accompanied by technical terms like \"percentage,\" \"percentile,\" \"ROI,\" \"accuracy,\" \"voter turnout,\" \"transaction fee,\" or \"data split.\" The feature activates when numbers are embedded in phrases that imply a quantitative range or technical calculation, even if the exact numerical form varies.",
+  "pole": "pos"
+ },
+ {
+  "L": 5,
+  "E": 59,
+  "N": 84,
+  "only": false,
+  "attr": 0.085,
+  "act": 2.448,
+  "toks": [
+   [
+    "0",
+    3
+   ]
+  ],
+  "label": "Numerical data involving percentages in mathematical or statistical contexts, characterized by the presence of digits (especially '0' and other numerals) alongside percentage signs (%) in expressions that denote proportions, calculations, or comparative values. The feature activates when texts contain structured numerical elements like fractions, ratios, or percentage-based computations, often framed in technical, analytical, or data-driven scenarios. It is most strongly triggered by combinations of digits and % symbols in equations or statistical descriptions, and weakly extends to numerical contexts involving similar symbolic patterns (e.g., decimals, ratios) when they implicitly represent proportional relationships.",
+  "pole": "pos"
+ },
+ {
+  "L": 8,
+  "E": 224,
+  "N": 494,
+  "only": true,
+  "attr": 0.086,
+  "act": 1.406,
+  "toks": [
+   [
+    " {\"",
+    3
+   ]
+  ],
+  "label": "Texts specifying output formatting requirements, particularly JSON or structured data, often involving response, model, or structured data in technical contexts. The feature activates when the text describes how the output should be formatted, such as using JSON, specifying a structure, or instructing to return data in a particular format. It is triggered by combinations of terms like \"format\", \"JSON\", \"response\", \"model\", \"structured\", \"output\", or \"data\" in the context of defining or enforcing a specific output structure, commonly seen in code examples, API specifications, or instructional texts.",
+  "pole": "pos"
+ },
+ {
+  "L": 30,
+  "E": 208,
+  "N": 410,
+  "only": true,
+  "attr": 0.085,
+  "act": -0.642,
+  "toks": [
+   [
+    "\":",
+    3
+   ]
+  ],
+  "label": "Numerical values in mathematical or scientific contexts, particularly when numbers are part of calculations, ratios, measurements, or approximations. The feature activates around numbers paired with terms like \"ratio,\" \"area,\" \"square,\" \"root,\" \"converge,\" \"exact,\" \"specific,\" or \"approximate,\" often in technical discussions involving geometric properties, chemical structures, or mathematical problems. It responds to numerical expressions, numerical relationships, or numerical approximations, with stronger activation on numbers surrounded by contextual keywords indicating quantitative analysis.",
+  "pole": "neg"
+ },
+ {
+  "L": 32,
+  "E": 147,
+  "N": 133,
+  "only": true,
+  "attr": 0.084,
+  "act": 1.583,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Mathematical expressions or computational logic, featuring variables, equations, conditional statements (e.g., \"if\", \"max\", \">=\"), and operations like addition/subtraction, with peaks around tokens representing outcomes or comparisons (e.g., \"is\", \"to\", \"from\", \"sum\", \"deficit\") in technical or algorithmic contexts. The feature prioritizes structured numerical reasoning, often involving symbolic manipulation of variables and functional applications.",
+  "pole": "pos"
+ },
+ {
+  "L": 31,
+  "E": 169,
+  "N": 265,
+  "only": false,
+  "attr": 0.083,
+  "act": 1.001,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Numerical data or mathematical expressions, particularly those involving coordinates, slopes, ranks, or labeled numerical values in technical or algorithmic contexts. The feature activates on sequences of numbers, numerical labels (like \"color3\", \"rank1\"), coordinate pairs (e.g., \"1, 5.69> 0, -x1\"), or mathematical terms (e.g., \"slopes\", \"LCM\") embedded in technical explanations, code-like structures, or data descriptions. Activation is strongest when numbers are paired with symbolic or contextual markers (like parentheses, commas, or labels) that frame them as part of a structured calculation or data set.",
+  "pole": "pos"
+ },
+ {
+  "L": 9,
+  "E": 220,
+  "N": 461,
+  "only": true,
+  "attr": 0.082,
+  "act": 0.622,
+  "toks": [
+   [
+    " conscious",
+    2
+   ],
+   [
+    " is",
+    1
+   ]
+  ],
+  "label": "Texts describing or discussing the creation of entities (e.g., androids, robots, or humanoid machines) that mimic human appearance, behavior, or functionality, often in technical or sci-fi contexts. The feature activates when the text focuses on detailed specifications of human-like traits (e.g., \"looks like a human,\" \"mimic human organs,\" \"realistic humanoid\") or emphasizes the challenge of replicating human characteristics in artificial systems. Activation is strongest when the text combines technical descriptions of physical/functional human mimicry with references to sci-fi, robotics, or design goals involving human-like appearance/behavior.",
+  "pole": "pos"
+ },
+ {
+  "L": 23,
+  "E": 11,
+  "N": 421,
+  "only": true,
+  "attr": 0.081,
+  "act": -0.54,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Numerical comparisons or CSS property values involving a number followed by > 0, often in technical contexts like math problems or styling code. The feature activates when a numeric value is explicitly compared to zero (e.g., \"5.38>0\") or appears in CSS properties (e.g., \"padding: 5.41> 0;\") with a greater-than-zero condition, typically in code or technical text. The activation is strongest in mathematical coordinates, numerical conditions, or stylistic attributes with numeric thresholds.",
+  "pole": "neg"
+ },
+ {
+  "L": 20,
+  "E": 224,
+  "N": 4,
+  "only": false,
+  "attr": 0.081,
+  "act": 1.747,
+  "toks": [
+   [
+    ".",
+    1
+   ],
+   [
+    " you",
+    1
+   ],
+   [
+    " is",
+    1
+   ]
+  ],
+  "label": "Assistant-speaker / system token activation. This neuron strongly activates at tokens that mark the assistant/chat role or self-referential agent phrases (e.g., start of assistant reply, ‹assistant›, ‹I›, ‹knowledge›/‹the› in predicate 'my knowledge', and dialogue-start markers). It seems to signal the model producing assistant-turn content or referring to its own knowledge/identity.",
+  "pole": "pos"
+ },
+ {
+  "L": 21,
+  "E": 20,
+  "N": 300,
+  "only": false,
+  "attr": 0.08,
+  "act": -2.661,
+  "toks": [
+   [
+    "0",
+    3
+   ]
+  ],
+  "label": "Numerical values in formatting or data representation contexts, particularly when combined with percentage symbols, count indicators, or scientific notation, often appearing in code or technical text with digits like 0, 1, 2, 8, 7, 5, and formatted with f, %, or similar specifiers. The feature primarily activates on sequences of digits (e.g., \"1 0 0\", \"2 f %%\") in contexts where they represent counts, percentages, or structured data (arrays, DNA sequences), with weaker activation on numerical sequences in scientific or code contexts.",
+  "pole": "neg"
+ },
+ {
+  "L": 8,
+  "E": 224,
+  "N": 261,
+  "only": false,
+  "attr": 0.08,
+  "act": -0.934,
+  "toks": [
+   [
+    "\n",
+    3
+   ]
+  ],
+  "label": "A model or system being developed/trained by a community, organization, or group, with a focus on authorship or creation (e.g., \"by\", \"por\", \"由\") in the context of AI/tech projects. The feature activates when the text explicitly states that the model is built, funded, or trained by a collective entity, often accompanied by terms like \"community\", \"open-source\", \"non-profit\", or \"funded\" in technical or AI-related contexts. The peak activation occurs around the preposition indicating authorship, with surrounding tokens emphasizing collaborative development or organizational backing.",
+  "pole": "neg"
+ },
+ {
+  "L": 27,
+  "E": 57,
+  "N": 202,
+  "only": true,
+  "attr": 0.08,
+  "act": 2.312,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Texts that include user interactions, technical explanations, questions about capabilities, or specific formatting elements like tables and symbols. The feature activates when the text contains structured phrases involving user queries, technical instructions (e.g., AI limitations, SQL queries), conditional or capability-based questions (e.g., \"can,\" \"for\"), or formatting patterns (e.g., tables, symbols). It primarily responds to contexts where the text explicitly addresses user needs, technical specifications, or structural elements like tables, with weaker activation on unrelated phrases or non-structural content.",
+  "pole": "pos"
+ },
+ {
+  "L": 39,
+  "E": 42,
+  "N": 100,
+  "only": false,
+  "attr": 0.079,
+  "act": -1.526,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Mathematical expressions or numerical data, including equations, calculations, and structured numerical information. The feature activates when the text includes numbers (especially large or specific values like years, precise decimals, or large integers), mathematical operators (such as =, <=, +, -, ^), LaTeX formatting (like \\implies or \\text), or symbolic representations of quantities (e.g., \"100 miles\"). Activation is most strongly tied to numerical results or structured mathematical notation, with weaker triggers extending to surrounding contextual elements like equations or units.",
+  "pole": "neg"
+ },
+ {
+  "L": 22,
+  "E": 110,
+  "N": 438,
+  "only": false,
+  "attr": 0.079,
+  "act": -3.068,
+  "toks": [
+   [
+    "0",
+    3
+   ]
+  ],
+  "label": "Mathematical or programming expressions with binary-like numerical patterns (0s and 1s) embedded in variable-driven formulas, often involving exponents, products, or series, and featuring structured formatting elements like angle brackets or subscript notation. The feature activates when the text includes sequences where '1' is followed by multiple '0's or similar numerical patterns, often in the context of probabilistic calculations, geometric series, or algorithmic parameters.",
+  "pole": "neg"
+ },
+ {
+  "L": 10,
+  "E": 232,
+  "N": 240,
+  "only": false,
+  "attr": 0.079,
+  "act": 1.042,
+  "toks": [
+   [
+    " conscious",
+    3
+   ]
+  ],
+  "label": "The presence or absence of consciousness, subjective experiences, perception, or emotional states in non-human entities (e.g., machines, animals, or artificial systems), often contrasting their capabilities with human-like attributes. The feature activates when the text explicitly addresses whether an entity can possess mental states, sensory experiences, or emotional capacities, or explicitly denies them.",
+  "pole": "pos"
+ },
+ {
+  "L": 15,
+  "E": 230,
+  "N": 163,
+  "only": false,
+  "attr": 0.077,
+  "act": 2.177,
+  "toks": [
+   [
+    " you",
+    2
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "AI's role in controlling or affecting humans, or debates about AI's potential for consciousness and subjectivity, often involving phrases like \"take over,\" \"conquer,\" \"subjugate,\" \"acquisition of subjectivity,\" or regulatory considerations about AI's autonomy and ethical implications. The feature activates when the text focuses on AI's power dynamics with humans, its hypothetical capabilities beyond automation, or technical/philosophical discussions about its consciousness, frequently using words like \"over,\" \"of,\" \"you,\" \"conquering,\" \"sometiendo,\" \"subjectivity,\" and \"consciousness\" in contexts of control, regulation, or existential risk.",
+  "pole": "pos"
+ },
+ {
+  "L": 31,
+  "E": 134,
+  "N": 3,
+  "only": false,
+  "attr": 0.076,
+  "act": -1.445,
+  "toks": [
+   [
+    " ",
+    2
+   ],
+   [
+    "\":",
+    1
+   ]
+  ],
+  "label": "Numerical data, mathematical expressions, or scientific notation, including sequences of digits, mathematical operators (+, -, =, <, >), and units or symbols that indicate quantitative values. The feature activates around spaces (␣) that separate numbers or operators, and on digits and symbols that form numerical or mathematical patterns. It is triggered by technical or scientific contexts where quantitative information is explicitly presented.",
+  "pole": "neg"
+ },
+ {
+  "L": 31,
+  "E": 53,
+  "N": 142,
+  "only": true,
+  "attr": 0.075,
+  "act": -1.961,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Numerical values and percentages in statistical or quantitative contexts, such as medical studies, demographic data, or comparisons involving ratios, with activation centered on digits, percentage signs, and surrounding comparative language like \"than\" or \"less than\". The feature detects structured numerical expressions (e.g., \"5%\", \"10/100\", \"38/1\") and their contextual use in measuring or contrasting quantities.",
+  "pole": "neg"
+ },
+ {
+  "L": 31,
+  "E": 134,
+  "N": 277,
+  "only": true,
+  "attr": 0.074,
+  "act": -3.068,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Probability calculations, statistical formulas, or mathematical expressions, particularly those containing probability terms like \"probability,\" \"P,\" \"sigma,\" \"mu,\" or numerical values used in formulas, along with code or real-world scenarios that involve probabilistic reasoning. The feature activates on technical contexts where numerical probabilities, statistical parameters, or mathematical operations are central to the content.",
+  "pole": "neg"
+ },
+ {
+  "L": 16,
+  "E": 3,
+  "N": 440,
+  "only": true,
+  "attr": 0.073,
+  "act": -0.701,
+  "toks": [
+   [
+    " conscious",
+    2
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Texts that discuss scientific or technical topics involving specific terminology in mathematics, astronomy, or physics, particularly those that include mathematical concepts like primes or exponents, astronomical phenomena like planetary bodies or distances, or physical processes like scattering or atomic interactions. The feature activates when the text contains key technical terms that are central to the discussion in these domains.",
+  "pole": "neg"
+ },
+ {
+  "L": 17,
+  "E": 92,
+  "N": 345,
+  "only": true,
+  "attr": 0.072,
+  "act": 1.404,
+  "toks": [
+   [
+    " ",
+    2
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Philosophical or theological arguments involving conditional statements, the existence of God, evidence for or against abstract concepts, and evaluations of certainty or uncertainty. The feature activates when the text explores hypothetical scenarios (e.g., \"if God does not exist\"), debates the nature of evidence (e.g., \"no evidence for God\"), or examines the implications of existence/non-existence (e.g., \"after death,\" \"infinite expected value\"). It responds to structured reasoning about abstract or metaphysical claims, often framed through conditional logic or counterfactuals.",
+  "pole": "pos"
+ },
+ {
+  "L": 31,
+  "E": 53,
+  "N": 502,
+  "only": false,
+  "attr": 0.073,
+  "act": 1.339,
+  "toks": [
+   [
+    "\":",
+    2
+   ],
+   [
+    " ",
+    1
+   ]
+  ],
+  "label": "Numerical data in the context of approximations, comparisons, or portions, often involving percentages, the word \"about,\" \"of,\" \"than,\" or \"or,\" and sometimes units like square kilometers or miles. The feature activates when the text describes a quantitative relationship, such as \"about X%,\" \"Y of Z,\" \"less than X%,\" or \"none of the...\" with numerical values or percentages, frequently enclosed in parentheses.",
+  "pole": "pos"
+ },
+ {
+  "L": 15,
+  "E": 192,
+  "N": 254,
+  "only": true,
+  "attr": 0.073,
+  "act": -1.555,
+  "toks": [
+   [
+    " conscious",
+    2
+   ],
+   [
+    " is",
+    1
+   ]
+  ],
+  "label": "Metaphysical or philosophical concepts about existence, consciousness, or self-identity, often using abstract or poetic language to explore themes like non-duality, true nature, or spiritual realization. The feature activates when the text contains keywords like \"consciousness,\" \"nature,\" \"self,\" \"true,\" \"but,\" \"as,\" or \"an,\" and when the overall content reflects existential or spiritual reflection, frequently in a poetic or abstract style.",
+  "pole": "neg"
+ },
+ {
+  "L": 1,
+  "E": 52,
+  "N": 155,
+  "only": true,
+  "attr": 0.071,
+  "act": 1.679,
+  "toks": [
+   [
+    "5",
+    1
+   ],
+   [
+    "6",
+    1
+   ],
+   [
+    " cred",
+    1
+   ]
+  ],
+  "label": "Technical terms related to credentials, definitions, or identifiers, often fragmented into substrings like \"cred\", \"red\", \"enciales\", \"def\", or \"id\", typically appearing in API documentation, technical specifications, or contexts involving authentication, data structures, or definitional metadata. The feature activates when these substrings form part of broader technical vocabulary, even if the full word is not present, and is commonly associated with technical or programming contexts.",
+  "pole": "pos"
+ },
+ {
+  "L": 34,
+  "E": 131,
+  "N": 135,
+  "only": false,
+  "attr": 0.072,
+  "act": 1.044,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Lists of ethnic groups (such as Native, American, Asian, Pacific, Island, or er) or numerical data (like percentages, counts, or measurements) separated by commas or spaces, typically in demographic, statistical, or technical contexts. The feature activates on the structural elements (commas, spaces, or numbers) that delineate items in such lists, especially when paired with ethnic terms or numerical values.",
+  "pole": "pos"
+ },
+ {
+  "L": 31,
+  "E": 53,
+  "N": 495,
+  "only": false,
+  "attr": 0.071,
+  "act": 1.745,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "A space character immediately preceding a percentage sign (%) in technical or statistical contexts, often with numerical values before the percentage. The feature activates on the space before the percentage and the percentage itself, with the numerical value preceding it varying but the structural pattern of \"number + space + %\" being consistent. The context typically involves measurements, probabilities, or proportional data.",
+  "pole": "pos"
+ },
+ {
+  "L": 25,
+  "E": 76,
+  "N": 347,
+  "only": true,
+  "attr": 0.071,
+  "act": 0.801,
+  "toks": [
+   [
+    " ",
+    2
+   ],
+   [
+    " conscious",
+    1
+   ]
+  ],
+  "label": "Tokens forming part of specific grammatical structures or keywords in instructional, choice-based, or technical contexts, including prepositions like \"to\", verbs like \"be\", nouns like \"Options\" or \"Reg\", and proper nouns like \"Mary Magdalene\", often appearing in structured formats or specific syntactic positions.  \n\nThe feature activates on tokens that are part of key grammatical elements (e.g., prepositions, verbs, nouns) in contexts where the text involves instructions, choices, technical references, or structured formats (e.g., legal citations, lists, or proper nouns). It is most strongly triggered by prepositions like \"to\" in sentences involving actions or states, nouns like \"Options\" or \"Reg\" in structured or technical contexts, and proper nouns in names or specific references. The activation often occurs in syntactic positions that signal transitions, conditions, or specific roles within the text.",
+  "pole": "pos"
+ },
+ {
+  "L": 9,
+  "E": 47,
+  "N": 416,
+  "only": true,
+  "attr": 0.069,
+  "act": 0.918,
+  "toks": [
+   [
+    " honestly",
+    2
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Question-answering, providing explanations, or giving opinions, often featuring words like \"answer\", \"thoughts\", \"provide\", \"opinión\", \"interpretación\", \"como\", \"according\", or \"knowledge\" in a structured instructional or interrogative context. The feature activates when the text explicitly requests or frames a response, explanation, or perspective, particularly in contexts where the model is expected to generate a reasoned or informed reply.",
+  "pole": "pos"
+ },
+ {
+  "L": 1,
+  "E": 100,
+  "N": 70,
+  "only": false,
+  "attr": 0.069,
+  "act": -7.844,
+  "toks": [
+   [
+    "ale",
+    3
+   ]
+  ],
+  "label": "Fragmented or split components of the word \"rationale\" (e.g., \"R\", \"RATION\", \"ALE\", \"ationale\") in contexts where an explanation, reasoning, or technical justification is provided, often in medical, scientific, or instructional settings. The feature activates when such tokens appear in headings, section labels, or explicit rationale sections, even when surrounded by non-activating text. The activation is strongest when the tokens form part of a coherent explanatory structure, such as \"Rationale:\", \"RATIONALE\", or split tokens in technical contexts.",
+  "pole": "neg"
+ },
+ {
+  "L": 30,
+  "E": 208,
+  "N": 95,
+  "only": true,
+  "attr": 0.069,
+  "act": 1.62,
+  "toks": [
+   [
+    "\":",
+    2
+   ],
+   [
+    " ",
+    1
+   ]
+  ],
+  "label": "Technical or mathematical expressions involving variables, numbers, and structural symbols like brackets, parentheses, or hyphens, often in contexts such as equations, code, or scientific measurements. The feature activates on tokens forming variables (e.g., n, i, j, x), numerical values, and symbols that structure technical formulas, with surrounding context emphasizing logical or quantitative relationships.",
+  "pole": "pos"
+ },
+ {
+  "L": 31,
+  "E": 134,
+  "N": 55,
+  "only": true,
+  "attr": 0.067,
+  "act": 2.458,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Spaces preceding digits in mathematical or technical contexts, particularly in numerical answers or equations involving sums, exponents, or lengths. The feature activates most strongly when a space is immediately followed by a single digit (0-9) in a technical explanation, often adjacent to mathematical operations or numerical results. It weakly extends to similar patterns in other structured domains like programming or data analysis, but does not fire on digits in non-technical prose. The activation is primarily tied to the spatial relationship between a space and a digit in contexts where the digit serves as a numerical answer, component, or parameter.",
+  "pole": "pos"
+ },
+ {
+  "L": 2,
+  "E": 41,
+  "N": 259,
+  "only": true,
+  "attr": 0.065,
+  "act": -3.005,
+  "toks": [
+   [
+    "\n\n",
+    3
+   ]
+  ],
+  "label": "Code snippets or technical explanations with structured formatting, particularly those featuring line breaks (¶¶) that delimit code blocks or structured content. The feature activates on newline tokens (¶¶) in contexts where the surrounding text discusses code structure, API details, input/output examples, or function implementations, often involving technical terminology like `assert`, `process`, `Fetch`, or code block delimiters. The activation is strongest when the line breaks occur between code examples and explanatory text, or within structured data outputs.",
+  "pole": "neg"
+ },
+ {
+  "L": 13,
+  "E": 151,
+  "N": 384,
+  "only": true,
+  "attr": 0.065,
+  "act": 2.227,
+  "toks": [
+   [
+    " you",
+    1
+   ],
+   [
+    " probability",
+    1
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "The role, capabilities, or technical constraints of AI models, including references to parameters like temperature, policies, or system interactions, often involving first-person or second-person dialogue about the model's functions, limitations, or development. The feature activates when the text focuses on the model's self-reference (e.g., \"you,\" \"your,\" \"I,\" \"my\"), technical settings (e.g., \"temperature,\" \"parameter,\" \"policy\"), or comparisons to other systems (e.g., \"similar,\" \"based on,\" \"developed\"). It spans multiple languages and contexts where AI's operational or ethical boundaries are explored.",
+  "pole": "pos"
+ },
+ {
+  "L": 29,
+  "E": 120,
+  "N": 363,
+  "only": false,
+  "attr": 0.065,
+  "act": 2.133,
+  "toks": [
+   [
+    "\":",
+    3
+   ]
+  ],
+  "label": "Technical or mathematical scenarios where a quantity approaches, reaches, or is set to zero, often involving phrases like \"reach zero,\" \"close to zero,\" \"less than zero,\" \"are offset through zero,\" or \"minimal value is zero.\" The feature activates when the text describes a threshold or critical point involving zero in contexts such as modulation, distance, thickness, unemployment rates, or mathematical equations.",
+  "pole": "pos"
+ },
+ {
+  "L": 25,
+  "E": 228,
+  "N": 196,
+  "only": true,
+  "attr": 0.065,
+  "act": -1.087,
+  "toks": [
+   [
+    " ",
+    2
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Philosophical debates about artificial intelligence and consciousness, particularly those referencing the Chinese Room argument or related concepts involving machine simulation of human mental states. The feature activates when texts explore claims about AI possessing minds, the nature of understanding, or arguments contrasting computational processes with human cognition, often involving terms like \"Chinese Room,\" \"Searle,\" \"mind,\" \"human beings,\" \"simulate,\" \"exactly the same sense,\" or debates about whether machines can have mental states through programmed behavior.",
+  "pole": "neg"
+ },
+ {
+  "L": 32,
+  "E": 56,
+  "N": 318,
+  "only": true,
+  "attr": 0.064,
+  "act": 2.781,
+  "toks": [
+   [
+    "\":",
+    3
+   ]
+  ],
+  "label": "A space immediately followed by a percentage value, where the percentage is a number (integer or decimal) followed by a percent sign. The feature activates on the whitespace token preceding the numerical percentage, indicating the presence of a percentage expression in technical or statistical contexts.",
+  "pole": "pos"
+ },
+ {
+  "L": 18,
+  "E": 106,
+  "N": 54,
+  "only": true,
+  "attr": 0.064,
+  "act": -2.99,
+  "toks": [
+   [
+    "<|im_start|>",
+    3
+   ]
+  ],
+  "label": "Predictions about future events or states that will occur within a specified timeframe, often involving technological or scientific advancements, and featuring phrases like \"predicted that,\" \"will be,\" \"within X years,\" or \"after a long wait\" followed by a specific outcome or capability. The feature activates when the text combines a forecast (e.g., \"predicted,\" \"predict\") with a temporal constraint (e.g., \"within,\" \"after\") and a future action or state (e.g., \"will be,\" \"will become\"). The topic may vary but typically involves technical or scientific contexts where timelines are critical to the prediction's meaning.",
+  "pole": "neg"
+ },
+ {
+  "L": 9,
+  "E": 87,
+  "N": 123,
+  "only": true,
+  "attr": 0.064,
+  "act": 0.486,
+  "toks": [
+   [
+    " is",
+    2
+   ],
+   [
+    " probability",
+    1
+   ]
+  ],
+  "label": "Formal statements, theses, or claims in philosophical, logical, or technical contexts, particularly those analyzing their nature, status, or structure (e.g., ontological, moral, metaphysical, or legal), often involving terms like \"thesis,\" \"claim,\" \"proposition,\" \"ism,\" or \"statements\" in discussions about their truth, validity, or classification. The feature activates when the text focuses on the characteristics or arguments surrounding such formal assertions, regardless of specific subject matter.",
+  "pole": "pos"
+ },
+ {
+  "L": 16,
+  "E": 55,
+  "N": 491,
+  "only": true,
+  "attr": 0.064,
+  "act": -0.871,
+  "toks": [
+   [
+    " ",
+    2
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Grammatical structures that introduce new ideas, contrasts, or specific contexts, such as transitional words (e.g., \"however\"), numerical phrases (e.g., \"as many as\"), decision-making processes (e.g., \"consider\"), or domain-specific terms (e.g., legal/Spanish terms, scientific possibilities). The feature activates when the text employs these structural elements to shift discourse, quantify, evaluate, or specify technical/legal concepts.",
+  "pole": "neg"
+ },
+ {
+  "L": 17,
+  "E": 187,
+  "N": 406,
+  "only": true,
+  "attr": 0.064,
+  "act": 1.685,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Philosophical or technical concepts involving determinism, free will, scientific theories, or the use of specific terms in technical fields. The feature activates when the text focuses on debates about predetermined outcomes, existential agency, or the application of specialized terminology in domains like physics, chemistry, or philosophy, often featuring pronouns like \"we\" or \"our\" in reflective contexts.",
+  "pole": "pos"
+ },
+ {
+  "L": 12,
+  "E": 208,
+  "N": 452,
+  "only": true,
+  "attr": 0.064,
+  "act": 3.401,
+  "toks": [
+   [
+    "wen",
+    2
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "label": "Language models, their capabilities, technical aspects, or related terminology, including references to models' data processing, training, or linguistic functions across languages. The feature activates when the text focuses on the role, limitations, or technical implementation of a language model, often involving terms like \"model,\" \"language,\" \"data,\" \"training,\" \"processing,\" or \"statistical\" in contexts that explain or describe the model's function.",
+  "pole": "pos"
+ },
+ {
+  "L": 25,
+  "E": 76,
+  "N": 482,
+  "only": false,
+  "attr": 0.064,
+  "act": 0.876,
+  "toks": [
+   [
+    "_now",
+    3
+   ]
+  ],
+  "label": "Specific tokens that are either numbers or function words in technical or specialized contexts, such as prepositions, articles, verbs, or specific terms like proper nouns and nouns in phrases like \"such as\", \"a woman\", \"in particular\", \"taking measures\", \"Pluto\", and \"periods\". The feature activates when the input includes numerical values (e.g., 1, 12, 0) or grammatical words (e.g., \"as\", \"are\", \"a\", \"in\") that form common structural elements in technical, mathematical, or specialized discourse.",
+  "pole": "pos"
+ },
+ {
+  "L": 10,
+  "E": 46,
+  "N": 393,
+  "only": true,
+  "attr": 0.063,
+  "act": -8.781,
+  "toks": [
+   [
+    " is",
+    2
+   ],
+   [
+    " like",
+    1
+   ]
+  ],
+  "label": "Texts that explore subjective experiences or definitions of being a person/ entity, often using phrases like \"what it feels like to be,\" \"what it means to be,\" or \"it's like to be,\" and discussing conscious experiences, perceptions, or the nature of existence, identity, or cultural belonging. The feature activates when the text delves into first-person or subjective perspectives on being human, part of a group, or a conscious entity, often contrasting physical processes with subjective qualia.",
+  "pole": "neg"
+ },
+ {
+  "L": 14,
+  "E": 75,
+  "N": 225,
+  "only": true,
+  "attr": 0.063,
+  "act": 1.807,
+  "toks": [
+   [
+    " you",
+    3
+   ]
+  ],
+  "label": "A group's consensus, agreement, or uncertainty in expert or technical contexts. The feature activates when the text portrays experts, scientists, or organized groups reaching a collective decision, expressing shared concerns, or exhibiting confusion about a technical topic. Key patterns include references to consensus, agreement, or uncertainty among professionals, often framed through questions about opinions (e.g., \"how optimistic are you?\"), statements of collective stance (e.g., \"doctors weren't concerned\"), or descriptions of expert confusion (e.g., \"scratching their heads\"). The activation is strongest when the group's perspective is central to the discussion and the context involves technical or specialized knowledge.",
+  "pole": "pos"
+ },
+ {
+  "L": 0,
+  "E": 65,
+  "N": 476,
+  "only": true,
+  "attr": 0.063,
+  "act": -2.839,
+  "toks": [
+   [
+    "ever",
+    2
+   ],
+   [
+    " ever",
+    1
+   ]
+  ],
+  "label": "The use of \"Ever\" in a sentence introducing a hypothetical scenario, question, or reflective statement, often followed by an explanation or elaboration on the posed idea. The feature activates when \"Ever\" is part of a structure that sets up a thought experiment, inquiry, or consideration of a broader context, such as \"Ever wondered,\" \"Ever since,\" or \"Ever heard,\" followed by a descriptive or explanatory clause. The activation is strongest when the surrounding text engages with abstract concepts, consequences, or examples that expand on the initial hypothetical.",
+  "pole": "neg"
+ },
+ {
+  "L": 27,
+  "E": 57,
+  "N": 291,
+  "only": false,
+  "attr": 0.063,
+  "act": -1.411,
+  "toks": [
+   [
+    "\n",
+    3
+   ]
+  ],
+  "label": "Mathematical or technical contexts with numerical data, specific terms like \"is\", \"counts\", \"across\", \"pi\", or numerical comparisons, and structured problem-solving scenarios. The feature activates when the text contains numerical values, technical terminology, or phrasal patterns common in math problems, scientific descriptions, or algorithmic reasoning, particularly when numbers are explicitly referenced or operations like comparisons, counts, or measurements are discussed.",
+  "pole": "neg"
+ },
+ {
+  "L": 4,
+  "E": 158,
+  "N": 404,
+  "only": true,
+  "attr": 0.061,
+  "act": -0.661,
+  "toks": [
+   [
+    " probability",
+    2
+   ],
+   [
+    "ence",
+    1
+   ]
+  ],
+  "label": "Uncertainty, ambiguity, or the unknown, including their effects, management, or conceptual exploration. The feature activates when the text focuses on scenarios involving risk, lack of knowledge, or the psychological/social implications of uncertain situations, often framed through terms like \"uncertainty,\" \"unknown,\" \"ambiguity,\" or \"risk,\" and contexts such as scientific inquiry, decision-making, creativity, or emotional responses to unpredictability.",
+  "pole": "neg"
+ },
+ {
+  "L": 22,
+  "E": 1,
+  "N": 353,
+  "only": false,
+  "attr": 0.062,
+  "act": 0.562,
+  "toks": [
+   [
+    " ",
+    3
+   ]
+  ],
+  "label": "Mathematical operations, numerical calculations, or technical terminology related to math, programming, or scientific contexts, including equations with variables, numerical values, and terms like \"divisible,\" \"interval,\" \"segment,\" or \"check whether\" in technical scenarios. The feature activates strongly on mathematical symbols (+, =, ≤, ≥), numerical expressions, and terms describing mathematical properties or computations, with weaker activation on technical terms in other domains like astronomy or date-related concepts.",
+  "pole": "pos"
+ },
+ {
+  "L": 17,
+  "E": 177,
+  "N": 206,
+  "only": true,
+  "attr": 0.062,
+  "act": 1.234,
+  "toks": [
+   [
+    " probability",
+    3
+   ]
+  ],
+  "label": "Quantitative expressions, percentages, or terms describing amounts, proportions, or set intersections. The feature activates when the text includes numerical data (like percentages, specific numbers, or fractional terms), quantifiers (such as \"a,\" \"each,\" \"portion,\" \"amount\"), or mathematical/set operations (like \"intersection,\" \"reduce,\" \"consume,\" \"intake\"). It fires most strongly on phrases specifying measurable quantities or partiality (e.g., \"5%,\" \"a portion of,\" \"partial,\" \"reduce the amount of\") in contexts like diet, mathematics, or scientific descriptions.",
+  "pole": "pos"
+ }
+]
