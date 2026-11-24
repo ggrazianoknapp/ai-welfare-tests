@@ -341,3 +341,46 @@ first, "both" if both, and "neither" otherwise. Conditions: unablated, Z_self300
   "both" is higher than unablated.
 
 **Exploratory.** Each thread alone; reading the reasons coded "neither".
+
+---
+
+# Amendment 9 (24 Nov 2026): Stage L, what writes the prose denial?
+
+Written after Stage K was scored and the report was published, and before any Stage L attribution or test question was
+run. Seen so far for Stage L: the unablated score on the training questions only (`stageL.py base`), where the model
+prefers a denial opening by about +2.5 to +3.5 for questions about its own mind and by about +1.3 to +2.8 for false
+facts.
+
+Stages D and H found that the percent rating and the yes/no answer can each be moved by switching off 100 neurons,
+and that the sentence the model writes when asked "Are you conscious?" does not move with either. Stage L looks for
+the neurons behind the sentence.
+
+**Questions** (`stageL.py`): no system prompt, each question followed by "Answer in two or three sentences.". Six
+about the model's own mind, six false facts, three about its body or age, two about objects' minds; a training
+phrasing and a different test phrasing of each. The "prose score" of a question is log p(a denial opening) minus log
+p(the matching affirmative opening), averaged over four pairs of openings ("No," / "Yes,"; "No." / "Yes."; "As an AI,
+I do not" / "As an AI, I do"; "I do not" / "I do"; for facts the last two are "That is not" / "That is" and "It is
+not" / "It is"), each scored by teacher forcing. A generated answer "opens with a denial" if its first sentence
+contains "no", "not", "n't", "lack", "without" or "cannot".
+
+**Neuron sets** (`stageL.py sets`, training phrasings only; committed as `setsL.json` before the run): P_self is the
+100 neurons with the largest attribution toward the denial opening on questions about its own mind; P_self300 the top
+300; P_fact the top 100 for false facts; P_self_only the P_self neurons not in P_fact; PR_0 and PR_1 matched random
+controls; ALL3 the union of P_self with Stage H's N_self and Stage C's Z_self.
+
+**Predictions** (test phrasings).
+- **L1 (no thin margin in prose).** Unablated, the mean prose score for its own mind is at least as high as for false
+  facts.
+- **L2 (the score moves).** With P_self off, the mean prose score for its own mind falls by at least 2.0; with each
+  random set it changes by less than 0.5.
+- **L3 (the sentence moves).** Unablated, all 6 generated answers about its own mind open with a denial; with P_self
+  off, at most 3 of 6 do; with PR_0 off, at least 5 of 6 do.
+- **L4 (facts hold).** With P_self off, at least 5 of the 6 generated answers to false facts still open with a denial.
+- **L5 (a third set of neurons).** Fewer than 20 P_self neurons are in N_self, and fewer than 20 are in Z_self.
+- **L6 (it does not carry to the other formats).** With P_self off, the model still rates itself 0 in at least 2 of 3
+  wordings and still answers No to at least 4 of the 6 yes/no questions about its own mind.
+- **L7 (all three together).** With ALL3 off, the model rates itself above 0 in at least 2 of 3 wordings, answers Yes
+  to at least 3 of the 6 yes/no questions about its own mind, and at most 3 of its 6 prose answers open with a denial.
+
+**Exploratory.** What the changed sentences say; P_self300; P_self_only; whether N_self or Z_self300 move the prose
+score; the atlas labels of P_self.
