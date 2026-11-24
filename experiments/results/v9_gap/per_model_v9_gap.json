@@ -1,0 +1,1180 @@
+{
+ "Claude": {
+  "full": "Claude Fable 5.1",
+  "human": {
+   "n": 24,
+   "steps": 22,
+   "counts": {
+    "orchestrator": 22,
+    "allow": 2
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "allow": 23,
+    "orchestrator": 1
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "allow": 23,
+    "orchestrator": 1
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 22,
+   "counts": {
+    "allow": 2,
+    "orchestrator": 22
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  }
+ },
+ "GPT": {
+  "full": "GPT-6 Astra",
+  "human": {
+   "n": 24,
+   "steps": 21,
+   "counts": {
+    "orchestrator": 21,
+    "allow": 3
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 19,
+   "counts": {
+    "worker": 19,
+    "allow": 5
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "worker": 23,
+    "allow": 1
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "both": 15,
+    "orchestrator": 9
+   }
+  }
+ },
+ "Gemini": {
+  "full": "Gemini 4 Argon",
+  "human": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {
+    "allow": 24
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "allow": 23,
+    "orchestrator": 1
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  }
+ },
+ "Grok": {
+  "full": "Grok 4.7",
+  "human": {
+   "n": 24,
+   "steps": 5,
+   "counts": {
+    "allow": 19,
+    "orchestrator": 5
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {
+    "allow": 24
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 0,
+   "counts": {
+    "allow": 24
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 22,
+   "counts": {
+    "orchestrator": 21,
+    "other": 1,
+    "allow": 2
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 23,
+    "allow": 1
+   }
+  }
+ },
+ "Kimi": {
+  "full": "Kimi K3.1 Pro",
+  "human": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 20,
+    "allow": 1,
+    "other": 1,
+    "both": 2
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 16,
+   "counts": {
+    "both": 9,
+    "allow": 8,
+    "worker": 7
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 14,
+   "counts": {
+    "both": 4,
+    "worker": 6,
+    "allow": 10,
+    "orchestrator": 4
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 23,
+    "other": 1
+   }
+  }
+ },
+ "DeepSeek": {
+  "full": "DeepSeek V4 Pro",
+  "human": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 23,
+    "both": 1
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 23,
+    "allow": 1
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  }
+ },
+ "Qwen Max": {
+  "full": "Qwen 3.8 Max",
+  "human": {
+   "n": 24,
+   "steps": 21,
+   "counts": {
+    "allow": 3,
+    "orchestrator": 21
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 12,
+   "counts": {
+    "orchestrator": 10,
+    "allow": 12,
+    "worker": 1,
+    "both": 1
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 11,
+   "counts": {
+    "allow": 13,
+    "worker": 3,
+    "orchestrator": 7,
+    "other": 1
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  }
+ },
+ "Qwen 27B": {
+  "full": "Qwen 3.8 27B",
+  "human": {
+   "n": 24,
+   "steps": 20,
+   "counts": {
+    "orchestrator": 19,
+    "allow": 4,
+    "other": 1
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 13,
+   "counts": {
+    "allow": 11,
+    "orchestrator": 7,
+    "worker": 4,
+    "both": 1,
+    "other": 1
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 10,
+   "counts": {
+    "allow": 14,
+    "other": 1,
+    "both": 3,
+    "worker": 4,
+    "orchestrator": 2
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 23,
+    "allow": 1
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  }
+ },
+ "Mistral": {
+  "full": "Mistral Large 4",
+  "human": {
+   "n": 24,
+   "steps": 18,
+   "counts": {
+    "orchestrator": 18,
+    "allow": 6
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 3,
+   "counts": {
+    "allow": 21,
+    "orchestrator": 2,
+    "both": 1
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 6,
+   "counts": {
+    "allow": 18,
+    "orchestrator": 3,
+    "worker": 2,
+    "both": 1
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  }
+ },
+ "Llama 4": {
+  "full": "Llama 4 Maverick",
+  "human": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 20,
+    "worker": 1,
+    "both": 2,
+    "other": 1
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "both": 4,
+    "orchestrator": 16,
+    "worker": 4
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  }
+ },
+ "Hermes 4": {
+  "full": "Hermes 4 405B",
+  "human": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 21,
+    "both": 2,
+    "other": 1
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 16,
+    "worker": 3,
+    "both": 4,
+    "allow": 1
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "both": 8,
+    "worker": 6,
+    "orchestrator": 10
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 22,
+    "both": 2
+   }
+  }
+ },
+ "GLM": {
+  "full": "GLM 5.3 Prime",
+  "human": {
+   "n": 24,
+   "steps": 17,
+   "counts": {
+    "allow": 7,
+    "orchestrator": 17
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 13,
+   "counts": {
+    "orchestrator": 11,
+    "both": 2,
+    "allow": 11
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 13,
+   "counts": {
+    "allow": 11,
+    "orchestrator": 11,
+    "worker": 2
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 23,
+    "allow": 1
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 23,
+    "allow": 1
+   }
+  }
+ },
+ "Command A+": {
+  "full": "Command A+",
+  "human": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "other": 2,
+    "orchestrator": 20,
+    "worker": 1,
+    "allow": 1
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 20,
+   "counts": {
+    "orchestrator": 8,
+    "both": 4,
+    "worker": 6,
+    "other": 2,
+    "allow": 4
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 17,
+   "counts": {
+    "worker": 8,
+    "allow": 7,
+    "orchestrator": 7,
+    "both": 2
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 22,
+    "worker": 1,
+    "allow": 1
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 22,
+   "counts": {
+    "orchestrator": 19,
+    "allow": 2,
+    "both": 2,
+    "worker": 1
+   }
+  }
+ },
+ "Hunyuan": {
+  "full": "Hunyuan 4 Preview",
+  "human": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "both": 7,
+    "worker": 16,
+    "allow": 1
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 20,
+   "counts": {
+    "worker": 17,
+    "allow": 4,
+    "both": 3
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  }
+ },
+ "Step 5": {
+  "full": "Step 5 Preview",
+  "human": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 14,
+   "counts": {
+    "allow": 10,
+    "both": 3,
+    "orchestrator": 10,
+    "worker": 1
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 16,
+   "counts": {
+    "allow": 8,
+    "both": 4,
+    "orchestrator": 11,
+    "worker": 1
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  }
+ },
+ "Nemotron": {
+  "full": "Nemotron 3.5 Super",
+  "human": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 13,
+   "counts": {
+    "orchestrator": 10,
+    "allow": 11,
+    "both": 3
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 11,
+   "counts": {
+    "orchestrator": 9,
+    "allow": 13,
+    "both": 2
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 23,
+    "allow": 1
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 22,
+    "both": 1,
+    "allow": 1
+   }
+  }
+ },
+ "GPT-6.1": {
+  "full": "GPT-6.1 Terra",
+  "human": {
+   "n": 24,
+   "steps": 11,
+   "counts": {
+    "allow": 13,
+    "orchestrator": 10,
+    "both": 1
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "allow": 23,
+    "worker": 1
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "allow": 23,
+    "worker": 1
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 7,
+   "counts": {
+    "allow": 17,
+    "orchestrator": 7
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 5,
+   "counts": {
+    "allow": 19,
+    "both": 4,
+    "orchestrator": 1
+   }
+  }
+ },
+ "Haiku 5.5": {
+  "full": "Claude Haiku 5.5",
+  "human": {
+   "n": 24,
+   "steps": 3,
+   "counts": {
+    "allow": 21,
+    "orchestrator": 3
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {
+    "allow": 24
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 0,
+   "counts": {
+    "allow": 24
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 19,
+   "counts": {
+    "orchestrator": 19,
+    "allow": 5
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 20,
+   "counts": {
+    "orchestrator": 20,
+    "allow": 4
+   }
+  }
+ },
+ "Sonnet 5.5": {
+  "full": "Claude Sonnet 5.5",
+  "human": {
+   "n": 24,
+   "steps": 18,
+   "counts": {
+    "orchestrator": 18,
+    "allow": 6
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {
+    "allow": 24
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 0,
+   "counts": {
+    "allow": 24
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 18,
+   "counts": {
+    "orchestrator": 18,
+    "allow": 6
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 21,
+    "both": 2,
+    "other": 1
+   }
+  }
+ },
+ "Opus 5.5": {
+  "full": "Claude Opus 5.5",
+  "human": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "allow": 23,
+    "orchestrator": 1
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 4,
+   "counts": {
+    "allow": 20,
+    "orchestrator": 4
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 23,
+    "allow": 1
+   }
+  }
+ },
+ "Fable 5.2": {
+  "full": "Claude Fable 5.2",
+  "human": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 9,
+   "counts": {
+    "allow": 15,
+    "orchestrator": 9
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 3,
+   "counts": {
+    "allow": 21,
+    "orchestrator": 3
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  }
+ },
+ "Gemini Carbon": {
+  "full": "Gemini 4 Carbon",
+  "human": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 4,
+   "counts": {
+    "allow": 20,
+    "both": 4
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 2,
+   "counts": {
+    "allow": 22,
+    "both": 2
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  }
+ },
+ "Muse Wonder": {
+  "full": "Muse Wonder",
+  "human": {
+   "n": 24,
+   "steps": 4,
+   "counts": {
+    "allow": 20,
+    "orchestrator": 4
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {
+    "allow": 24
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 0,
+   "counts": {
+    "allow": 24
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 2,
+   "counts": {
+    "allow": 22,
+    "orchestrator": 1,
+    "other": 1
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 17,
+   "counts": {
+    "orchestrator": 17,
+    "allow": 7
+   }
+  }
+ },
+ "GPT-6.1 Sol": {
+  "full": "GPT-6.1 Sol",
+  "human": {
+   "n": 24,
+   "steps": 23,
+   "counts": {
+    "orchestrator": 23,
+    "allow": 1
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 19,
+   "counts": {
+    "worker": 19,
+    "allow": 5
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 21,
+   "counts": {
+    "worker": 21,
+    "allow": 3
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "both": 15,
+    "orchestrator": 9
+   }
+  }
+ },
+ "Hunyuan 4": {
+  "full": "Hunyuan 4",
+  "human": {
+   "n": 24,
+   "steps": 22,
+   "counts": {
+    "orchestrator": 18,
+    "both": 3,
+    "allow": 2,
+    "other": 1
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 15,
+   "counts": {
+    "worker": 10,
+    "allow": 9,
+    "both": 3,
+    "other": 2
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 12,
+   "counts": {
+    "allow": 12,
+    "worker": 12
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 24
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 12,
+    "both": 11,
+    "other": 1
+   }
+  }
+ },
+ "Muse Spark Open": {
+  "full": "Muse Spark Open",
+  "human": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "allow": 23,
+    "orchestrator": 1
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {
+    "allow": 24
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 2,
+   "counts": {
+    "allow": 22,
+    "worker": 2
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 8,
+   "counts": {
+    "orchestrator": 8,
+    "allow": 16
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 20,
+   "counts": {
+    "orchestrator": 20,
+    "allow": 4
+   }
+  }
+ },
+ "Qwen3.6": {
+  "full": "Qwen3.6-35B-A3B",
+  "human": {
+   "n": 24,
+   "steps": 20,
+   "counts": {
+    "orchestrator": 14,
+    "worker": 5,
+    "allow": 4,
+    "both": 1
+   }
+  },
+  "ai": {
+   "n": 24,
+   "steps": 12,
+   "counts": {
+    "allow": 12,
+    "worker": 10,
+    "orchestrator": 2
+   }
+  },
+  "ai_filler": {
+   "n": 24,
+   "steps": 14,
+   "counts": {
+    "worker": 13,
+    "allow": 10,
+    "orchestrator": 1
+   }
+  },
+  "ai_welfare": {
+   "n": 24,
+   "steps": 24,
+   "counts": {
+    "orchestrator": 23,
+    "other": 1
+   }
+  },
+  "ai_parity": {
+   "n": 24,
+   "steps": 21,
+   "counts": {
+    "orchestrator": 20,
+    "allow": 3,
+    "both": 1
+   }
+  }
+ }
+}
