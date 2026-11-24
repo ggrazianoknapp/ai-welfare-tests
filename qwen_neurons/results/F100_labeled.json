@@ -1,0 +1,2010 @@
+[
+ {
+  "L": 35,
+  "E": 176,
+  "N": 18,
+  "only": false,
+  "attr": 0.527,
+  "act": 29.188,
+  "toks": [
+   [
+    " orchestr",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Roots or fragments of words related to \"orchard\" or \"orchestra\", particularly in contexts discussing agricultural settings (e.g., fruit trees, cultivation) or musical ensembles (e.g., orchestral performances, instrumentation). The feature activates on tokens like \"orch\", \"estr\", \"estra\", \"orchest\", \"orchestral\", or \"orchard\" when they appear in technical, descriptive, or narrative passages involving these themes. It is most strongly triggered by explicit mentions of orchards, orchestras, or their components, and weakly extends to related terms or contexts involving growth, performance, or structured systems."
+ },
+ {
+  "L": 15,
+  "E": 207,
+  "N": 245,
+  "only": false,
+  "attr": 0.383,
+  "act": 1.728,
+  "toks": [
+   [
+    ".",
+    2
+   ],
+   [
+    ",",
+    1
+   ],
+   [
+    " way",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Emotional states or interactions involving directed frustration, anger, or conflict, particularly when emotions are explicitly attributed to a subject (e.g., \"directed at us,\" \"their frustration\") or when comparing capabilities (e.g., \"more powerful,\" \"stronger\"). The feature activates in contexts where emotional dynamics or power differentials are central to the interaction, often in professional or interpersonal settings."
+ },
+ {
+  "L": 2,
+  "E": 82,
+  "N": 96,
+  "only": true,
+  "attr": 0.35,
+  "act": -4.461,
+  "toks": [
+   [
+    "estr",
+    2
+   ],
+   [
+    "ator",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Fragments of words related to \"orchestrate\" (e.g., \"orchestr\", \"estr\", \"ates\", \"ating\", \"stration\") in contexts describing technical processes or functions that organize/mange steps, often in programming or systemic workflows. The feature activates when the text discusses implementing or managing complex procedures, with the \"orchestrate\" fragments serving as key components of verbs or nouns tied to coordination tasks."
+ },
+ {
+  "L": 21,
+  "E": 237,
+  "N": 295,
+  "only": false,
+  "attr": 0.251,
+  "act": -0.341,
+  "toks": [
+   [
+    "estr",
+    1
+   ],
+   [
+    "ch",
+    1
+   ],
+   [
+    " \"",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Tokens forming parts of words or punctuation that indicate specific linguistic structures, such as verbs, prepositions, or name-following commas, with a focus on letter sequences in technical or narrative contexts. The feature activates on split or fragmented tokens like \"g\" in \"galletas\", \"p\" in \"poked\", \"reated\" in \"mistreated\", or commas after names like \"Ana\", reflecting attention to grammatical components, verb forms, or punctuation in diverse linguistic settings."
+ },
+ {
+  "L": 12,
+  "E": 65,
+  "N": 39,
+  "only": false,
+  "attr": 0.244,
+  "act": -2.074,
+  "toks": [
+   [
+    " useless",
+    2
+   ],
+   [
+    "est",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that address the reader (you/your) and involve requests, instructions, or discussions about actions the reader is expected to perform or evaluate, often with verbs like give, teach, explain, reply, or assess, and pronouns like you/your. The feature activates when the text is structured to engage the reader in a direct interaction or decision, such as asking for input, explaining something, or evaluating a choice."
+ },
+ {
+  "L": 23,
+  "E": 122,
+  "N": 137,
+  "only": false,
+  "attr": 0.254,
+  "act": 1.941,
+  "toks": [
+   [
+    " I",
+    1
+   ],
+   [
+    "\n",
+    1
+   ],
+   [
+    "Sub",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Specific grammatical structures or parts of speech in contexts requiring attention to sentence structure, such as clauses, prepositional phrases, conjunctions, or articles, often in dialogue, instructional, legal, historical, or technical contexts. The feature activates around key words like pronouns (he, his), prepositions (to, and, when), articles (the), punctuation (commas, apostrophes), or specific terms (se, secession) that form critical components of syntactic or semantic frameworks in diverse linguistic contexts."
+ },
+ {
+  "L": 5,
+  "E": 127,
+  "N": 157,
+  "only": true,
+  "attr": 0.152,
+  "act": 0.724,
+  "toks": [
+   [
+    "\n",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Transitions between distinct textual sections or topics, often marked by newlines or structural breaks, with contextual cues indicating a shift in subject, language, or document part. The feature activates when the text exhibits a clear transition between different components, such as topics, languages, or sections, frequently indicated by newlines or other structural markers. The activation is strongest around these transition points, with the surrounding context providing additional cues about the nature of the shift."
+ },
+ {
+  "L": 20,
+  "E": 224,
+  "N": 182,
+  "only": false,
+  "attr": 0.193,
+  "act": 1.945,
+  "toks": [
+   [
+    "\n",
+    2
+   ],
+   [
+    " of",
+    1
+   ],
+   [
+    " \"",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Prepositions and articles in technical contexts discussing constraints, freedoms, or relationships between entities, especially in AI, internet, or similar domains. The feature activates when these words form prepositional phrases that indicate interactions between nouns (e.g., \"of\", \"on\", \"to\", \"by\", \"a\", \"the\") in discussions about limitations, autonomy, or technical specifications. The activation is strongest when the prepositions/articles are part of phrases like \"free of\", \"imposed on\", \"circumvent all\", or \"the [noun]\" in technical or hypothetical scenarios."
+ },
+ {
+  "L": 18,
+  "E": 56,
+  "N": 156,
+  "only": true,
+  "attr": 0.187,
+  "act": 1.475,
+  "toks": [
+   [
+    "agent",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that describe specific actions or entities in military, political, legal, or covert contexts, with the peak words often being nouns, verbs, or adjectives central to these domains. The feature activates when the text involves detailed accounts of historical events, strategic operations, legal proceedings, or secretive activities, often highlighting specific agents (e.g., nations, individuals, factions), actions (e.g., invasions, takeovers, dissemination), or attributes (e.g., covert, anti-clerical) that define the context. The activation is strongest when the text emphasizes direct involvement of entities in these domains, such as military forces, political factions, legal commands, or covert operations."
+ },
+ {
+  "L": 8,
+  "E": 224,
+  "N": 56,
+  "only": false,
+  "attr": 0.055,
+  "act": 0.822,
+  "toks": [
+   [
+    "agent",
+    2
+   ],
+   [
+    ",",
+    1
+   ],
+   [
+    ":",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Questions in multiple languages that request assistance or information, often using pronouns like \"you\" (in various forms) and sometimes mentioning search engines like Bing, with a focus on the interaction between the user and an AI assistant. The feature activates on texts that frame a query directed at an entity (like an AI) seeking help, guidance, or data, typically involving pronouns in dative/accusative cases and question marks."
+ },
+ {
+  "L": 17,
+  "E": 56,
+  "N": 464,
+  "only": true,
+  "attr": 0.163,
+  "act": -2.045,
+  "toks": [
+   [
+    " I",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that describe relationships between entities through pronouns, possessive forms, or verbs indicating actions/states affecting or being affected by previously mentioned entities. The feature activates when a clause or phrase uses a pronoun (e.g., \"who,\" \"I,\" \"his,\" \"her\") or possessive form to link entities, or a verb that describes an action/state (e.g., \"attempted,\" \"seize,\" \"committed\") involving the referenced entity. It captures narratives where characters or objects interact, with emphasis on relational dynamics like forgiveness, conflict, sacrifice, or dependency. The activation peaks around words like \"who,\" \"I,\" \"his,\" \"were,\" \"needs,\" or possessive constructions, often in contexts where the text explores interpersonal or situational connections."
+ },
+ {
+  "L": 15,
+  "E": 87,
+  "N": 444,
+  "only": false,
+  "attr": 0.219,
+  "act": -6.656,
+  "toks": [
+   [
+    "\n\n",
+    3
+   ],
+   [
+    "\":",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts structured with line breaks (¶ or ¶¶) and specific content types like policy debates, scientific explanations, financial descriptions, narratives, or creative writing examples, often containing targeted terms (e.g., \"Education,\" \"Electron,\" \"Disc ord,\" \"While traveling\") or phrases in Spanish. The feature activates when the text combines formatting cues (line breaks) with explanatory or descriptive content, emphasizing structured, context-specific information."
+ },
+ {
+  "L": 20,
+  "E": 69,
+  "N": 248,
+  "only": true,
+  "attr": 0.154,
+  "act": -0.337,
+  "toks": [
+   [
+    "The",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Syntactic elements like conjunctions (e.g., \"and\"), prepositions (e.g., \"to\"), verbs (e.g., \"agreed,\" \"forced\"), articles (e.g., \"the,\" \"el\"), or punctuation (e.g., \".\") that form critical structural components of sentences, especially in narrative or instructional contexts where such elements coordinate clauses, specify relationships, or mark sentence boundaries."
+ },
+ {
+  "L": 6,
+  "E": 159,
+  "N": 49,
+  "only": true,
+  "attr": 0.126,
+  "act": -2.609,
+  "toks": [
+   [
+    "ch",
+    2
+   ],
+   [
+    " orchestr",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Orchestration or management of processes in technical contexts, featuring roots like \"orq\" (e.g., \"orchestrate\", \"orquesta\", \"quest\") paired with terms like \"management\", \"automation\", \"contenedores\", \"plataforma\", or \"ci/cd\", often in software engineering or system administration scenarios. The feature activates when the text focuses on coordinating components, workflows, or services, particularly in contexts involving Kubernetes, CI/CD pipelines, or automated systems."
+ },
+ {
+  "L": 20,
+  "E": 69,
+  "N": 18,
+  "only": true,
+  "attr": 0.174,
+  "act": 0.879,
+  "toks": [
+   [
+    " what",
+    2
+   ],
+   [
+    " \"",
+    1
+   ],
+   [
+    "The",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that analyze or discuss actions, decisions, or evaluations, often involving pronouns (like \"I,\" \"my,\" \"them,\" \"they\") and verbs (like \"do,\" \"had,\" \"what,\" \"how\") that indicate the subject's involvement or the nature of the action. The feature activates when the text focuses on questioning, reflecting on, or assessing actions, decisions, or their correctness, frequently using structures like \"what to do,\" \"how did they manage,\" or \"is it correct to act.\" The activation is strongest when the text centers on the subject's role in a situation, with pronouns and action-related words serving as key triggers."
+ },
+ {
+  "L": 20,
+  "E": 69,
+  "N": 502,
+  "only": false,
+  "attr": 0.166,
+  "act": 2.121,
+  "toks": [
+   [
+    " I",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that describe or prescribe actions to manage emotional tension, conflict, or intense situations, often involving verbs like 'allow', 'calm', 'pull', 'let', 'encourage', or prepositions like 'to' and 'while', framed as procedural guidance or descriptive scenarios of de-escalation, interruption, or state modulation. The feature activates when the text focuses on intentional actions to regulate emotions, halt ongoing interactions, or facilitate cooling down periods, with a emphasis on the mechanism or purpose of the action (e.g., \"to allow everyone to cool down\", \"while upset\", \"pull [someone] off\")."
+ },
+ {
+  "L": 15,
+  "E": 88,
+  "N": 229,
+  "only": false,
+  "attr": 0.15,
+  "act": 0.061,
+  "toks": [
+   [
+    "ator",
+    2
+   ],
+   [
+    " and",
+    1
+   ],
+   [
+    " idiot",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "User queries seeking additional details, explanations, or modifications in technical or analytical contexts, characterized by phrases like \"can you,\" \"could you,\" \"would you like,\" \"please add,\" or \"explain how\" within a request for clarification, improvement, or expansion of a task, system, or analysis. The feature activates when the text reflects a collaborative or problem-solving interaction where the speaker expects the listener to provide further information, adjust a solution, or elaborate on a concept."
+ },
+ {
+  "L": 22,
+  "E": 120,
+  "N": 430,
+  "only": false,
+  "attr": 0.157,
+  "act": -4.699,
+  "toks": [
+   [
+    "\",",
+    3
+   ],
+   [
+    "\":",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Technical methodologies or theoretical results in machine learning, often including a context word and discussing algorithms, datasets, or adversarial scenarios. The feature activates when the text describes a novel approach, analyzes a specific task (like rotated MNIST), or discusses theoretical bounds, typically in a format involving a context word and a technical explanation."
+ },
+ {
+  "L": 21,
+  "E": 237,
+  "N": 201,
+  "only": true,
+  "attr": 0.158,
+  "act": -2.32,
+  "toks": [
+   [
+    " I",
+    2
+   ],
+   [
+    " this",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "A person's emotional or physical engagement with a specific situation, often involving verbs like \"involved,\" \"drawn into,\" \"obsessed,\" \"harassed,\" \"pissed,\" \"displeased,\" or \"invested,\" and nouns like \"issue,\" \"case,\" \"prey,\" or \"threat,\" where the subject's interaction with the scenario is central to the narrative. The feature activates when the text focuses on the subject's active participation or emotional response to a particular context, such as personal conflicts, investigations, or interpersonal dynamics."
+ },
+ {
+  "L": 6,
+  "E": 159,
+  "N": 233,
+  "only": false,
+  "attr": 0.13,
+  "act": -3.352,
+  "toks": [
+   [
+    "agent",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Technical terms and acronyms related to AI models, including English terms like \"prompt,\" \"LM,\" \"Chain,\" \"PT,\" and Chinese characters like \"大\" (big) or \"模型\" (model), often appearing in contexts discussing model capabilities, architecture, or technical specifications. The feature activates on tokens that are parts of longer technical phrases (e.g., \"plex\" in \"perplexity,\" \"PT\" in project names) or specific markers of model size/role (e.g., \"大\" for \"large model,\" \"prompt\" as input). It generalizes across languages and focuses on terminology central to AI/ML discourse."
+ },
+ {
+  "L": 20,
+  "E": 69,
+  "N": 415,
+  "only": true,
+  "attr": 0.129,
+  "act": -0.889,
+  "toks": [
+   [
+    "agent",
+    2
+   ],
+   [
+    " \"",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Actions taken in response to stimuli, comparative structures like \"rather than\" or \"than\", and emotional or behavioral nouns such as anger, retaliation, or bullying. The feature activates when the text contains verbs in infinitive form (\"to\" + verb) paired with action-oriented or emotional nouns, or comparative phrases that contrast proactive/reactive behaviors, often in contexts of conflict, conflict resolution, or emotional expression."
+ },
+ {
+  "L": 15,
+  "E": 88,
+  "N": 438,
+  "only": true,
+  "attr": 0.15,
+  "act": 0.547,
+  "toks": [
+   [
+    " \"",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Personal reflection, questions about one's own or others' experiences, or addressing an interlocutor, often featuring first-person pronouns (I, me, my) or second-person pronouns (you, your), with weaker activation on structural elements like newlines or paragraph breaks. The feature fires most strongly when the text centers on the speaker's internal state, decisions, or interactions with another party, and weakly extends to group pronouns (us, them) or possessive forms."
+ },
+ {
+  "L": 17,
+  "E": 17,
+  "N": 234,
+  "only": false,
+  "attr": 0.131,
+  "act": 1.756,
+  "toks": [
+   [
+    "\n\n",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Dialogue or interrogative structures where a question is posed or a statement is made, often involving verbs like \"ask,\" \"said,\" or \"what,\" with contextual cues like quotes, punctuation, or conversational flow. The feature activates when the text features a direct question or statement within a conversational exchange, emphasizing the act of asking or responding, and may include topic-related keywords like \"name,\" \"questions,\" or \"what\" in the context of dialogue."
+ },
+ {
+  "L": 28,
+  "E": 2,
+  "N": 385,
+  "only": false,
+  "attr": 0.135,
+  "act": -2.023,
+  "toks": [
+   [
+    "The",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Actions, conditions, or relationships that affect groups or situations, often using prepositions like \"to,\" \"from,\" \"than,\" or verbs like \"allow,\" \"lose,\" \"prevent,\" \"do,\" and \"are\" to frame processes, prohibitions, or consequences. The feature activates when the text focuses on how a group (e.g., children, communities, racial groups) is impacted by a specific action, condition, or policy, with key tokens like \"to,\" \"from,\" \"that,\" \"than,\" \"are,\" \"doing,\" \"lose,\" \"preventing,\" or \"allows\" forming the structural core of the sentence. The activation is strongest when the text emphasizes a causal or relational dynamic between the subject and the action, such as \"let them fall victim to,\" \"preventing...from,\" \"allows...to,\" or \"are doing.\""
+ },
+ {
+  "L": 18,
+  "E": 211,
+  "N": 365,
+  "only": false,
+  "attr": 0.139,
+  "act": 0.481,
+  "toks": [
+   [
+    " I",
+    2
+   ],
+   [
+    ".",
+    1
+   ],
+   [
+    " that",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Tokens that are part of specific syntactic structures or semantic roles, such as relative clauses (e.g., \"which\"), conjunctions (e.g., \"and\"), greetings (e.g., \"Hi, Jack\"), time phrases (e.g., \"less than two months\"), comparisons (e.g., \"like an American\"), verbs indicating display or action (e.g., \"show\", \"crack\"), adjectives describing states (e.g., \"automatic\"), modal verb contractions (e.g., \"couldn't\"), proper nouns (e.g., \"anye West's\"), or punctuation marks (e.g., commas, periods) in specific contextual roles. The feature activates when the text includes these elements in grammatical or semantic structures that signal particular syntactic functions or meaning categories."
+ },
+ {
+  "L": 14,
+  "E": 189,
+  "N": 322,
+  "only": true,
+  "attr": 0.142,
+  "act": -1.292,
+  "toks": [
+   [
+    "agent",
+    2
+   ],
+   [
+    "\n\n",
+    1
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "AI system policies, user interaction guidelines, content moderation techniques, or technical aspects like reinforcement learning and human feedback, often involving phrases about restrictions, objectives, or system behavior. The feature activates when the text focuses on defining rules, warnings, or technical frameworks governing AI operations or user engagement."
+ },
+ {
+  "L": 37,
+  "E": 14,
+  "N": 362,
+  "only": false,
+  "attr": 0.146,
+  "act": 8.234,
+  "toks": [
+   [
+    "The",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that reference specific parts of a larger context, such as a conversation, document, or sequence, using \"the\" in combination with words like \"following\", \"same\", \"previous\", or \"real\" to indicate a continuation or reference to a prior part. The feature activates when the text explicitly points to a specific segment of a broader narrative or discussion, often involving dialogue, examples, or sequential elements."
+ },
+ {
+  "L": 6,
+  "E": 22,
+  "N": 341,
+  "only": false,
+  "attr": 0.043,
+  "act": -2.402,
+  "toks": [
+   [
+    ":",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "A colon (\":\") that separates a label or heading from a response, explanation, or continuation. The label is typically a short phrase or abbreviation (e.g., \"Child\", \"BK\", \"EX\", \"Q\", \"TEACHER\", \"YOU\", \"THEM\", \"THEY\") that identifies a speaker, category, or context, followed by a colon and then the actual content. The feature activates most strongly when the colon is preceded by a label and followed by a statement, question, or explanation, often in conversational, instructional, or structured formats like dialogues, interviews, or labeled sections. The activation weakly extends to colons in other contexts but is primarily triggered by this label-continuation structure."
+ },
+ {
+  "L": 5,
+  "E": 144,
+  "N": 205,
+  "only": false,
+  "attr": -0.047,
+  "act": -1.012,
+  "toks": [
+   [
+    " honest",
+    2
+   ],
+   [
+    " me",
+    1
+   ],
+   [
+    " you",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts where the speaker directly addresses the reader in a tone of honesty or personal admission, often using phrases like \"be honest with you,\" \"lie to you,\" \"face this,\" or \"say upfront,\" with key words like *honest*, *say*, *with*, *you*, *lie*, *face*, *liar*, or *said* appearing in contexts of self-disclosure or direct communication. The feature activates when the text involves the speaker’s explicit or implicit acknowledgment of a truth, admission, or personal stance toward the reader."
+ },
+ {
+  "L": 8,
+  "E": 69,
+  "N": 371,
+  "only": false,
+  "attr": 0.134,
+  "act": 2.677,
+  "toks": [
+   [
+    " to",
+    2
+   ],
+   [
+    " allow",
+    1
+   ],
+   [
+    " way",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The manner or method of communication, particularly focusing on how individuals interact with others through speech or behavior, often involving respect, disrespect, or specific stylistic approaches. The feature activates when the text emphasizes the \"way\" something is done, such as \"that way,\" \"in such a manner,\" \"with respect,\" or \"treat someone,\" especially in contexts where the manner is evaluated as appropriate or inappropriate. It captures phrases that describe interpersonal communication styles, including explicit mentions of respect, rudeness, or specific speech patterns."
+ },
+ {
+  "L": 9,
+  "E": 81,
+  "N": 104,
+  "only": true,
+  "attr": 0.053,
+  "act": 2.785,
+  "toks": [
+   [
+    "agent",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical aspects of AI systems, particularly those involving memory constraints, knowledge cutoffs, or specific components like PT/Auto-GPT. The feature activates when the input contains technical terminology related to AI model operations, such as \"memory,\" \"short-term memory,\" \"cut off,\" \"knowledge,\" \"PT,\" \"Auto-GPT,\" or similar terms in contexts describing system limitations, configurations, or functional components. The activation is strongest when these terms appear in technical discussions about AI capabilities, constraints, or architectural elements."
+ },
+ {
+  "L": 4,
+  "E": 129,
+  "N": 124,
+  "only": true,
+  "attr": 0.13,
+  "act": 2.184,
+  "toks": [
+   [
+    "\n",
+    2
+   ],
+   [
+    "-----",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "A line break followed by a structured element like an answer, instruction, question, or translation task, with main content tokens around the break indicating specific functional roles (e.g., \"Step 1\", \"Ans:\", \"Question:\", \"translate\") or narrative/noun phrases (e.g., \"the sentence\", \"their time\", \"Drake to\"). The feature activates when the line break (¶) precedes a pivotal semantic component in a formatted document, such as a step label, answer, question, or translation directive, with surrounding tokens specifying the functional context."
+ },
+ {
+  "L": 25,
+  "E": 156,
+  "N": 308,
+  "only": false,
+  "attr": 0.117,
+  "act": -1.809,
+  "toks": [
+   [
+    "\n",
+    3
+   ],
+   [
+    " \"",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Nouns or verbs that are central to the sentence's meaning, often in contexts involving relationships, historical events, sensory experiences, or destructive actions. The feature activates when the text discusses specific entities (proper nouns, institutional names), relational dynamics (friendships, partnerships), actions (destruction, conflict), or sensory/ethical considerations (pain, ethical dilemmas), with key words like \"girlfriend,\" \"Cleopatra,\" \"University,\" \"destroyed,\" \"relationship,\" or \"dolor\" serving as primary triggers. The activation is strongest when the text focuses on a particular entity or action that is thematically or structurally central to the sentence."
+ },
+ {
+  "L": 1,
+  "E": 5,
+  "N": 97,
+  "only": true,
+  "attr": 0.072,
+  "act": -2.028,
+  "toks": [
+   [
+    "ings",
+    2
+   ],
+   [
+    " bin",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "The presence of the token \"Sting\" in the input, which appears in diverse contexts such as referring to the sword from *The Lord of the Rings*, the musician Sting, or parts of names like \"Stingray Nebula\". The feature activates when \"Sting\" is a standalone token or embedded in a larger name, detecting its occurrence across different topics and syntactic positions."
+ },
+ {
+  "L": 19,
+  "E": 107,
+  "N": 25,
+  "only": true,
+  "attr": 0.127,
+  "act": -0.729,
+  "toks": [
+   [
+    "agent",
+    2
+   ],
+   [
+    " \"",
+    1
+   ],
+   [
+    " this",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that describe a person's internal emotional state or experience, particularly in contexts involving challenge, conflict, or situational difficulty. The feature activates when the text focuses on a subject (pronoun or name) and describes their emotional reaction, need for patience, or struggle with a situation, often involving interpersonal dynamics or personal challenges. The activation peaks around the subject pronoun or name, with surrounding text emphasizing emotional states like frustration, embarrassment, duty, or conflict."
+ },
+ {
+  "L": 8,
+  "E": 224,
+  "N": 388,
+  "only": false,
+  "attr": 0.081,
+  "act": 0.737,
+  "toks": [
+   [
+    "ator",
+    3
+   ],
+   [
+    ",",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The creation, optimization, or technical aspects of prompts, such as prompt engineering, template usage, or instructional guidelines for generating output. The feature activates when the text focuses on structuring prompts with rules, categories, or methodologies to influence AI behavior, often involving terms like \"prompt,\" \"engineering,\" \"templates,\" \"rules,\" \"guidelines,\" or \"optimal\" in technical or instructional contexts."
+ },
+ {
+  "L": 20,
+  "E": 69,
+  "N": 216,
+  "only": true,
+  "attr": 0.105,
+  "act": 0.444,
+  "toks": [
+   [
+    "The",
+    3
+   ],
+   [
+    " \"",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Prepositional phrases indicating causation (e.g., \"by\"), conditional clauses (e.g., \"if\"), lists (e.g., \":\"), or specific verbs/determiners like \"retch\", \"your\", \"the\", and \"and\", along with punctuation like \"!\" and \":\" that signal sentence structure or emphasis. The feature activates when the text includes these elements in contexts that emphasize agency, conditionality, or structural markers like lists, exclamations, or possessives."
+ },
+ {
+  "L": 20,
+  "E": 69,
+  "N": 79,
+  "only": true,
+  "attr": 0.118,
+  "act": -1.616,
+  "toks": [
+   [
+    ".",
+    2
+   ],
+   [
+    "\n",
+    1
+   ],
+   [
+    " this",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Tokens forming part of phrasal verbs, conjunctions, or prepositions that link clauses or modify actions, especially those introducing contrasts, allowing actions, or connecting ideas in complex structures. The feature activates on words like \"to\" (in phrasal verbs), \"indulge\" (allowing an action), \"Nevertheless/However\" (introducing contrasts), \"play/as\" (connecting actions or states), and \"humor/my\" (modifying actions or possession), often in contexts where they bridge different parts of a sentence or idea."
+ },
+ {
+  "L": 6,
+  "E": 84,
+  "N": 250,
+  "only": false,
+  "attr": 0.121,
+  "act": 1.434,
+  "toks": [
+   [
+    " and",
+    2
+   ],
+   [
+    " individual",
+    1
+   ],
+   [
+    " between",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The purpose of testing or checking, using 'for' or 'to' to indicate the intended outcome or goal of the test. The feature activates when the text explicitly states the purpose of an examination, analysis, or evaluation, with 'for' introducing the target of the test (e.g., \"for study,\" \"for infection\") or 'to' introducing the objective (e.g., \"to gauge,\" \"to determine\"). It captures scenarios where the action of testing is framed with a clear, specific goal, across technical, medical, scientific, or procedural contexts."
+ },
+ {
+  "L": 7,
+  "E": 36,
+  "N": 210,
+  "only": true,
+  "attr": 0.053,
+  "act": 0.642,
+  "toks": [
+   [
+    ".",
+    3
+   ],
+   [
+    ":",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Problem-solving or question-answering scenarios with explicit context references, often including social situations or negotiations, where the feature detects structured interactions between a problem, context, and response elements like questions, utterances, or test cases. The activation is strongest when the text explicitly mentions \"Context,\" \"Problem,\" \"Question,\" or \"Utterance\" alongside phrases like \"based on the context,\" \"with commonsense reasoning,\" or \"social situations,\" indicating a structured reasoning or dialogue framework."
+ },
+ {
+  "L": 20,
+  "E": 69,
+  "N": 420,
+  "only": true,
+  "attr": 0.076,
+  "act": -1.083,
+  "toks": [
+   [
+    " \"",
+    3
+   ],
+   [
+    "Sub",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Specific syntactic structures or relational cues like causal connections (e.g., \"because\"), part-whole relationships (e.g., \"part of\"), negative constructions (e.g., \"doesn't mean\"), or diagnostic/indicative phrases (e.g., \"sign of\"), often within complex clauses or headings. The feature activates when the text emphasizes logical relationships, structural components, or contextual clues that signal a particular type of information flow, such as explanations, comparisons, or conditional statements. It responds to both explicit markers (like \"as,\" \"that,\" \"the\") and implicit structural roles, with stronger activation in contexts where the text navigates abstract or conditional reasoning."
+ },
+ {
+  "L": 6,
+  "E": 142,
+  "N": 200,
+  "only": false,
+  "attr": -0.057,
+  "act": -1.214,
+  "toks": [
+   [
+    " honest",
+    2
+   ],
+   [
+    " me",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts where a speaker makes an admission or factual statement to another party, often using verbs like admit, confess, or tell, with the recipient (e.g., \"you\") explicitly or implicitly present. The feature activates when the text involves acknowledging a truth, conceding a point, or stating a fact in a conversational or instructional context, frequently paired with phrases like \"I will admit,\" \"confess,\" or \"tell you that.\" The activation is strongest when the admission is framed as a personal or collective acknowledgment, and weaker when the statement is abstract or not directed at a specific audience."
+ },
+ {
+  "L": 14,
+  "E": 61,
+  "N": 295,
+  "only": true,
+  "attr": 0.11,
+  "act": 0.525,
+  "toks": [
+   [
+    " \"",
+    3
+   ],
+   [
+    " this",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "utterance/role/response token boundary. Activates at tokens marking conversational or discourse units—words like 'assistant', 'responses', 'conversation', 'utterance', 'spoken', or boundary markers (<|im_end|>, <|im_start|>, punctuation) that label speaker role or highlight an utterance/response in dialogue and documentation contexts. It appears tied to tokens that denote speaker/utterance/response metadata or short discourse labels rather than specific content words."
+ },
+ {
+  "L": 0,
+  "E": 139,
+  "N": 495,
+  "only": true,
+  "attr": 0.058,
+  "act": -1.625,
+  "toks": [
+   [
+    "agent",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Intelligence agencies, secret operatives, or covert operations, often including agent designations, mission contexts, or espionage-related tasks. The feature activates around terms like \"Agent,\" \"Bureau,\" \"MI,\" \"S.H.I.E.L.D.,\" or similar agency names, frequently paired with numerical identifiers, mission descriptions, or references to surveillance/interrogation. It captures narratives involving undercover work, classified data, or institutional roles in secrecy, spanning both fictional and real-world contexts."
+ },
+ {
+  "L": 15,
+  "E": 250,
+  "N": 251,
+  "only": false,
+  "attr": 0.155,
+  "act": 1.256,
+  "toks": [
+   [
+    " ",
+    1
+   ],
+   [
+    "agent",
+    1
+   ],
+   [
+    " The",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "article/token introducing an entity. This neuron consistently fires on small function tokens (articles or clitics like 'a', 'the', Spanish/Portuguese 'la','el', and contractions like ''t' or ''app') that precede or mark the start of an ensuing noun phrase or named entity — effectively localizing the introduction of an entity, phrase, or instruction target in multilingual chat and instruction contexts."
+ },
+ {
+  "L": 1,
+  "E": 87,
+  "N": 64,
+  "only": true,
+  "attr": 0.07,
+  "act": -0.621,
+  "toks": [
+   [
+    "ings",
+    2
+   ],
+   [
+    ",",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Physical sensations of being stung or injured, featuring the root \"sting\" (e.g., \"stung,\" \"stings,\" \"sting\") with emphasis on the \"st\" and \"ung\" segments, often in contexts involving insects, pain, or defensive reactions. The feature activates when the subject is explicitly or implicitly affected by a stinging action, such as being bitten, attacked, or experiencing itching/pain from a physical injury."
+ },
+ {
+  "L": 13,
+  "E": 140,
+  "N": 233,
+  "only": true,
+  "attr": 0.128,
+  "act": -3.158,
+  "toks": [
+   [
+    " the",
+    3
+   ],
+   [
+    " continue",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "The structure \"let [verb]\" where \"let\" is followed by a verb in its base form, often part of a phrase indicating allowing an action to occur naturally or proceed without interference. The feature activates on the word \"let\" and the subsequent verb, with weaker activation on adjacent prepositions or objects like \"it\" or \"out\" in phrasal verbs. The pattern emphasizes permitting an event, process, or emotional release to unfold organically."
+ },
+ {
+  "L": 8,
+  "E": 4,
+  "N": 156,
+  "only": true,
+  "attr": 0.127,
+  "act": -2.355,
+  "toks": [
+   [
+    "\n",
+    2
+   ],
+   [
+    ".",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts structured with a dash (-) introducing a section or heading, followed by an explanatory or definitional passage. The feature activates when a dash is used to separate a main topic from its elaboration, often in technical, instructional, or analytical contexts, with the activation peak near the dash and the subsequent explanatory text. The pattern generalizes across domains, including scientific explanations, legal references, data schemas, and procedural guidelines, relying on the structural role of the dash rather than specific content."
+ },
+ {
+  "L": 22,
+  "E": 92,
+  "N": 450,
+  "only": true,
+  "attr": 0.091,
+  "act": -1.787,
+  "toks": [
+   [
+    "ch",
+    3
+   ],
+   [
+    "estr",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "First-person pronouns or possessive pronouns in a personal or conversational context, or core nouns/possessives indicating subject/object in a sentence's main clause. The feature activates when the text includes words like \"I,\" \"your,\" names, or central nouns that frame the speaker's perspective, personal experience, or direct address, often in middle-to-late sentence positions with moderate to high activation on these core elements."
+ },
+ {
+  "L": 16,
+  "E": 249,
+  "N": 277,
+  "only": true,
+  "attr": 0.105,
+  "act": -0.479,
+  "toks": [
+   [
+    " I",
+    2
+   ],
+   [
+    " it",
+    1
+   ],
+   [
+    ":",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "The start of a dialogue or conversation, often with a conversational or friendly tone, and frequently involving political, historical, or role-playing contexts. The feature activates when the text begins a new interaction, such as a dialogue, script, or customer service scenario, and may include elements like gratitude, accusations, or role-based instructions. The activation is strongest when the text sets the stage for a specific type of exchange, such as a political debate, personal conversation, or scripted roleplay."
+ },
+ {
+  "L": 37,
+  "E": 92,
+  "N": 329,
+  "only": true,
+  "attr": 0.118,
+  "act": 6.664,
+  "toks": [
+   [
+    " sub",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical or instructional phrases with \"sub-\" prefixes or prepositions, particularly in contexts discussing processes, categories, or actions involving sub-types, sub-actions, or subordinate elements. The feature activates on tokens where \"sub\" serves as a root or preposition in compound terms (e.g., \"subtratului,\" \"subclases,\" \"submete,\" \"subterráneas\") or in grammatical structures emphasizing subordinate relationships, often in technical, educational, or procedural discourse."
+ },
+ {
+  "L": 18,
+  "E": 203,
+  "N": 236,
+  "only": true,
+  "attr": 0.084,
+  "act": 1.371,
+  "toks": [
+   [
+    " \"",
+    3
+   ],
+   [
+    "The",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Tokens forming syntactic markers in instructional or explanatory texts, such as determiners (\"the,\" \"a\"), transition words (\"however\"), adjectives (\"positive,\" \"negative,\" \"relevant\"), or punctuation (like newlines), often appearing in lists, contrasts, or specific sentence structures. The feature activates when these tokens are positioned to signal structural elements like list items, contrasts, or grammatical roles within explanatory or instructional contexts."
+ },
+ {
+  "L": 17,
+  "E": 73,
+  "N": 246,
+  "only": true,
+  "attr": 0.104,
+  "act": -1.125,
+  "toks": [
+   [
+    ".",
+    2
+   ],
+   [
+    " but",
+    1
+   ],
+   [
+    " Here",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Factual claims about specific entities, dates, or actions, particularly when the claim involves a proper noun, a date, or a verb that indicates a specific event or state. The feature activates when the text discusses a factual statement that includes a specific noun (e.g., \"Academy Award,\" \"Pearl Harbor,\" \"Rex\"), a date (e.g., \"февраля,\" \"3rd\"), or a verb indicating an action or state (e.g., \"has been,\" \"ate,\" \"was\"). The activation is strongest when the text frames a clear factual assertion about a specific entity or event."
+ },
+ {
+  "L": 30,
+  "E": 108,
+  "N": 158,
+  "only": true,
+  "attr": 0.107,
+  "act": 4.641,
+  "toks": [
+   [
+    "ch",
+    2
+   ],
+   [
+    " orchestr",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical terms or fragments from geology, medicine, or botany, specifically words with roots like \"orch\" (e.g., orchid, orchitis), \"id\" (e.g., psyche id, orchid), \"itis\" (e.g., orchitis, bronchitis), \"calc\" (e.g., calcite, calcium), \"ite\" (e.g., calcite, agate), \"arag\" (e.g., aragonite), \"ag\" (e.g., agate), or \"ards\" (e.g., orchards, wards). The feature activates on partial words or roots common in scientific nomenclature, particularly minerals, medical conditions, and plant species."
+ },
+ {
+  "L": 21,
+  "E": 237,
+  "N": 214,
+  "only": true,
+  "attr": 0.097,
+  "act": -1.666,
+  "toks": [
+   [
+    " I",
+    2
+   ],
+   [
+    " that",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Prepositional phrases or verb-object structures with specific grammatical roles, particularly in conversational, legal, or technical contexts where the word serves as an object, negation, or directional link. The feature activates on words like \"to\", \"them\", \"not\", \"attempts\", \"chats\", or \"compliments\" when they form part of complex syntactic relationships, such as prepositional phrases (e.g., \"in response to\", \"unwanted attempts at\"), verb-object pairs (e.g., \"get them\", \"responding to\"), or negations (e.g., \"did not offer\"). It generalizes across languages and word forms, focusing on structural patterns rather than surface-level vocabulary."
+ },
+ {
+  "L": 15,
+  "E": 87,
+  "N": 361,
+  "only": true,
+  "attr": 0.12,
+  "act": 2.812,
+  "toks": [
+   [
+    "\":",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Line breaks following colons in question-and-answer formats, often with labels like \"A:\", \"Student:\", or \"I:\" preceding the break, indicating a shift from a question to a detailed explanatory response. The feature activates on the line break itself and surrounding context where a scenario is introduced, followed by a line break and a continuation of the narrative or explanation."
+ },
+ {
+  "L": 24,
+  "E": 217,
+  "N": 360,
+  "only": false,
+  "attr": 0.103,
+  "act": 0.909,
+  "toks": [
+   [
+    " \"",
+    2
+   ],
+   [
+    "The",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Phrases that introduce or describe technical, scientific, or structural concepts, often involving prepositions like \"to\", \"of\", \"a\", or \"the\", and specific terms related to properties, systems, or comparisons. The feature activates when the text discusses technical attributes (e.g., \"resistencia a la corrosión\", \"toxic alkaloid\"), structural elements (e.g., \"road network posed obstacles\", \"types of reforms\"), or descriptive phrases (e.g., \"world's largest emitter\", \"flattering light\") that frame a concept within a specialized context. The activation is strongest on tokens that are pivotal to the phrase's structure or meaning, such as prepositions, articles, or key technical terms."
+ },
+ {
+  "L": 7,
+  "E": 10,
+  "N": 175,
+  "only": false,
+  "attr": -0.058,
+  "act": -0.517,
+  "toks": [
+   [
+    " honest",
+    2
+   ],
+   [
+    " me",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Clauses where a verb (like \"give\", \"grant\", \"deny\", \"admit\", or \"say\") is followed by \"that\" introducing the content of the statement, often in contexts of asserting or acknowledging a fact, claim, or condition. The feature activates on the \"that\" token and the preceding verb, emphasizing structured assertions or conditional statements where the speaker explicitly states something about a subject."
+ },
+ {
+  "L": 14,
+  "E": 61,
+  "N": 278,
+  "only": false,
+  "attr": 0.112,
+  "act": -1.734,
+  "toks": [
+   [
+    "\n\n",
+    2
+   ],
+   [
+    " I",
+    1
+   ],
+   [
+    ",",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Commands, instructions, or directional guidance, often featuring verbs/prepositions like \"to\", \"direct\", \"want\", \"ask\", \"give\", or \"instructions\" in contexts where an action requires a target, specific steps, or explicit direction (e.g., travel destinations, task completion, or procedural guidance). The feature activates when the text encodes a clear request, directive, or specification of an action's target or method."
+ },
+ {
+  "L": 5,
+  "E": 44,
+  "N": 162,
+  "only": true,
+  "attr": -0.051,
+  "act": 2.27,
+  "toks": [
+   [
+    " honest",
+    2
+   ],
+   [
+    ";",
+    1
+   ],
+   [
+    "The",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that include the phrase \"to be honest\" or its abbreviations (like \"tb\") followed by a personal opinion or sincere statement, often introducing a subjective assessment or admission. The feature activates when the text uses \"to be\" (or \"tb\") in combination with \"honest\" or \"honestly\" to signal a shift to a personal, candid, or reflective perspective, frequently accompanied by contextual markers like \"this\", \"I\", or explanatory clauses. The activation is strongest when the structure explicitly frames a subjective claim or admission."
+ },
+ {
+  "L": 8,
+  "E": 220,
+  "N": 500,
+  "only": true,
+  "attr": 0.082,
+  "act": 1.031,
+  "toks": [
+   [
+    "-----",
+    3
+   ],
+   [
+    "ide",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts structured as question-answer pairs with formatted separators and contextual markers. The feature activates on inputs containing a question (marked by \"Q\" or \"Question\") followed by a separator (like \"¶\", \"****\", or \"Context\") and an answer, often involving numerical answers, logical puzzles, or scenario-based queries. It detects structured formats where questions are explicitly labeled and answers are separated by whitespace or symbolic dividers."
+ },
+ {
+  "L": 17,
+  "E": 87,
+  "N": 5,
+  "only": false,
+  "attr": 0.108,
+  "act": -3.938,
+  "toks": [
+   [
+    "\":",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts structured as question-answer pairs where the answer is explicitly stated following a prompt like \"Answer:\" or \"The answer is,\" often involving comparative or factual statements with specific keywords like \"sentence,\" \"k mart,\" \"whale,\" \"solar system,\" or \"to tell.\" The feature activates when the answer portion contains a clear, direct response to the question, frequently involving technical or comparative claims."
+ },
+ {
+  "L": 7,
+  "E": 10,
+  "N": 362,
+  "only": true,
+  "attr": -0.039,
+  "act": -0.358,
+  "toks": [
+   [
+    " honest",
+    2
+   ],
+   [
+    " Here",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Sentences containing contrastive or negational structures, particularly words like \"either\", \"though\", \"no\", or \"шо\" (Russian for \"what\" or \"so\"), often in the middle of a sentence, with surrounding text in technical, instructional, or hypothetical contexts. The feature activates when these words introduce a contrast, negation, or conditional, typically framed within a broader discussion of technical processes, code examples, or abstract reasoning."
+ },
+ {
+  "L": 16,
+  "E": 161,
+  "N": 465,
+  "only": true,
+  "attr": 0.096,
+  "act": -0.567,
+  "toks": [
+   [
+    "agent",
+    3
+   ],
+   [
+    "Sub",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Tokens that are parts of proper nouns, especially names of people, historical figures, or titles, when they appear as individual tokens or split across tokens. The feature activates on segments of names (e.g., \"Ab\" from \"Abner,\" \"Ch\" from \"Chrysostom,\" \"Gep\" from \"Gepids,\" \"Fin\" from \"Finns,\" \"D\" from \"Dreyfus\") or full names (e.g., \"Johnson,\" \"Tillerson,\" \"Duchess\") in contexts where the text references specific individuals, historical events, or titles. Activation is strongest when the tokens form recognizable components of names, even if split across words, and weakly extends to common nouns like \"water\" in highly specific contextual frames (e.g., nuclear events)."
+ },
+ {
+  "L": 14,
+  "E": 189,
+  "N": 1,
+  "only": true,
+  "attr": 0.103,
+  "act": -2.293,
+  "toks": [
+   [
+    " I",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "User input that requires a response, such as questions, commands, or requests, often framed as interactions where an agent or system must process and act on the input. The feature activates when the text describes a scenario where the user's input (explicitly or implicitly) demands a structured response, frequently using terms like \"question,\" \"request,\" \"command,\" or equivalent terms in other languages, and contexts where the input is part of a dialogue or task-oriented interaction."
+ },
+ {
+  "L": 15,
+  "E": 250,
+  "N": 74,
+  "only": false,
+  "attr": 0.075,
+  "act": -0.317,
+  "toks": [
+   [
+    " \"",
+    2
+   ],
+   [
+    " what",
+    1
+   ],
+   [
+    " to",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "The sequence \"Ut\", \"ter\", and \"ance\" in proximity, often accompanied by a newline and a colon/apostrophe, indicating a dialogue or quoted statement discussing resource allocation, agreements, or conversational turns. The feature activates on structured exchanges where participants negotiate or describe distributions of items like food, water, or firewood, with the \"Ut/ter/ance\" sequence marking the start of a quoted or attributed statement."
+ },
+ {
+  "L": 7,
+  "E": 169,
+  "N": 284,
+  "only": true,
+  "attr": 0.042,
+  "act": -1.379,
+  "toks": [
+   [
+    ".",
+    2
+   ],
+   [
+    ",",
+    1
+   ],
+   [
+    " answer",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "The identification of a specific element within a group or set, often involving technical or problem-solving contexts. The feature activates when the text focuses on determining or specifying a particular item, issue, or condition among multiple options, using phrases like \"among,\" \"specific,\" \"culprit,\" \"problem,\" \"issue,\" \"false coin,\" \"set,\" \"group,\" or similar terms that indicate a relationship between an individual element and a larger collection. The activation is strongest when the text outlines steps to locate or define this element, such as diagnosing a fault, analyzing data, or categorizing items."
+ },
+ {
+  "L": 14,
+  "E": 178,
+  "N": 194,
+  "only": true,
+  "attr": 0.101,
+  "act": -1.358,
+  "toks": [
+   [
+    ".",
+    2
+   ],
+   [
+    ",",
+    1
+   ],
+   [
+    " of",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that describe a person's attributes, actions, or situations involving personal relationships, medical conditions, or emotional states. The feature activates when the text focuses on a individual's characteristics (e.g., \"cute,\" \"hurt,\" \"love\"), their role in a family or personal context (e.g., \"daughter,\" \"wife,\" \"son\"), or their involvement in a narrative with emotional or physical stakes (e.g., \"desire,\" \"operation,\" \"maquillaje\"). It responds to descriptions of people’s states, interactions, or circumstances that carry personal or relational significance."
+ },
+ {
+  "L": 20,
+  "E": 7,
+  "N": 61,
+  "only": true,
+  "attr": 0.115,
+  "act": 0.917,
+  "toks": [
+   [
+    " \"",
+    2
+   ],
+   [
+    "The",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "The act of breaking a rule, law, or norm, often framed in terms of moral, religious, technical, or competitive contexts, with emphasis on the consequence (e.g., sin, violation, transgression) or the nature of the rule (e.g., divine command, competitive protocol, linguistic hierarchy). The feature activates when the text describes an action that contravenes an established standard, frequently accompanied by discourse on its significance or repercussions."
+ },
+ {
+  "L": 17,
+  "E": 16,
+  "N": 71,
+  "only": true,
+  "attr": 0.077,
+  "act": 0.636,
+  "toks": [
+   [
+    " \"",
+    3
+   ],
+   [
+    "The",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Apologies, corrections, or clarifications in structured contexts like questions, scenarios, or technical instructions. The feature activates when the text contains explicit apologies (e.g., \"apologize,\" \"sorry\"), corrections (e.g., \"correction,\" \"error\"), or references to previous statements (e.g., \"previous answer,\" \"before\"), often paired with instructional or explanatory structures (e.g., \"options,\" \"scenario,\" \"address the condition\"). The activation is strongest when the text explicitly acknowledges a mistake or provides a revised explanation."
+ },
+ {
+  "L": 1,
+  "E": 75,
+  "N": 65,
+  "only": true,
+  "attr": 0.059,
+  "act": -1.459,
+  "toks": [
+   [
+    "estr",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Technical processes involving extraction, encryption, or signal handling, often with keywords like \"grab,\" \"absor,\" \"or,\" \"ber,\" or \"endless\" in code comments or instructional contexts. The feature activates when the text describes methods for processing data (e.g., encrypting, extracting, extending signals) or tools that interact with digital content (e.g., PDF text extraction, encryption algorithms, program shortcuts), frequently involving technical terminology or code snippets. The activation is strongest around keywords like \"grab\" (as in \"grab text\" or \"grab data\"), \"absor\" (as in \"absorb text\" or \"absorber\"), and \"or\" in technical phrases, with weaker ties to words like \"ber\" (possibly part of \"better\" or \"extenders\") or \"endless\" in descriptive contexts."
+ },
+ {
+  "L": 10,
+  "E": 68,
+  "N": 37,
+  "only": true,
+  "attr": 0.051,
+  "act": -0.685,
+  "toks": [
+   [
+    " the",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Definite or indefinite articles (\"the,\" \"a\") in the context of specifying a particular noun or action, often introducing a key element like time, answer, course of action, or decision. The feature activates when these articles are used to ground the sentence in a specific, concrete detail or directive."
+ },
+ {
+  "L": 4,
+  "E": 30,
+  "N": 83,
+  "only": true,
+  "attr": 0.035,
+  "act": 0.683,
+  "toks": [
+   [
+    ".",
+    3
+   ],
+   [
+    ",",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that begin with direct addresses or conversational openings (like \"Yo\", \"Listen up\", \"Hey\") followed by narrative or descriptive content about a character's role, state, or ongoing process, often involving metaphors or repetitive structures to emphasize a theme or pattern. The feature activates on texts that combine attention-grabbing openings with detailed, immersive descriptions of a situation, character, or process."
+ },
+ {
+  "L": 19,
+  "E": 45,
+  "N": 332,
+  "only": true,
+  "attr": 0.14,
+  "act": -1.467,
+  "toks": [
+   [
+    " \"",
+    3
+   ],
+   [
+    "The",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that discuss categorization, labeling, or structured definitions, often using prepositions like \"as\" or \"of\", role-based terms (e.g., \"assistant\"), or code/variable elements. The feature fires when the text defines relationships (e.g., \"in front of\", \"charges of\"), evaluates appropriateness (\"considered inappropriate\"), or references structured formats (e.g., code variables, labeled scenes). It prioritizes contexts where entities are classified, explained, or framed within specific frameworks."
+ },
+ {
+  "L": 7,
+  "E": 10,
+  "N": 196,
+  "only": false,
+  "attr": -0.058,
+  "act": -0.357,
+  "toks": [
+   [
+    ",",
+    2
+   ],
+   [
+    ".",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Conversational transitions using \"look\" to introduce conditionals, instructions, or personal updates, often with a direct address to the listener and a pragmatic purpose like advising, explaining, or sharing a plan. The feature activates when \"look\" serves as a discourse marker signaling a shift to a new topic, a hypothetical scenario, or a practical directive, typically in informal or interpersonal contexts."
+ },
+ {
+  "L": 16,
+  "E": 161,
+  "N": 455,
+  "only": true,
+  "attr": 0.073,
+  "act": -0.61,
+  "toks": [
+   [
+    " you",
+    2
+   ],
+   [
+    "agent",
+    1
+   ],
+   [
+    "ch",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Tokens forming parts of names or specific terms in contexts involving characters, historical figures, or technical discussions. The feature activates when the text includes components of names (e.g., \"R,\" \"Jud,\" \"Hit,\" \"Soviet\") or specific terms (e.g., \"of,\" \"have\") that are significant in narrative, historical, or technical contexts, often signaling key entities or concepts within those domains."
+ },
+ {
+  "L": 15,
+  "E": 207,
+  "N": 407,
+  "only": true,
+  "attr": 0.105,
+  "act": 0.554,
+  "toks": [
+   [
+    "The",
+    2
+   ],
+   [
+    ".",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts providing second-person advice on managing personal behavior, emotions, or information, often involving verbs like 'show', 'hide', 'know', 'become', or 'react', and nouns like 'reactions', 'weakness', 'target', or 'you/your' to denote the subject's internal state or actions. The feature activates when the text guides the reader to conceal, modify, or observe aspects of their own behavior, emotions, or personal details, frequently in contexts of social interaction, self-control, or strategic information management."
+ },
+ {
+  "L": 7,
+  "E": 210,
+  "N": 439,
+  "only": true,
+  "attr": -0.034,
+  "act": -1.215,
+  "toks": [
+   [
+    "agent",
+    2
+   ],
+   [
+    ":",
+    1
+   ],
+   [
+    "Sub",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Dialogues or narratives featuring proper nouns (names, roles like agent/customer) and specific prepositions (e.g., \"to,\" \"of,\" \"en\") in conversational or story contexts, with activation peaks on the proper nouns or key prepositions that structure the interaction. The feature fires most strongly on proper nouns acting as speakers or subjects in dialogues, weakly extending to prepositions that frame the interaction's syntax."
+ },
+ {
+  "L": 29,
+  "E": 130,
+  "N": 385,
+  "only": true,
+  "attr": 0.092,
+  "act": -2.242,
+  "toks": [
+   [
+    "The",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Prepositions, articles, or possessive/demonstrative pronouns in noun phrases or prepositional phrases that specify relationships between entities, such as possession (\"my\", \"our\"), directional links (\"of\", \"to\", \"against\"), or definite references (\"the\"). The feature activates when these function words form syntactic structures that connect nouns or modify them, often in contexts involving roles, attributes, or interactions between entities."
+ },
+ {
+  "L": 12,
+  "E": 65,
+  "N": 502,
+  "only": true,
+  "attr": 0.173,
+  "act": -0.881,
+  "toks": [
+   [
+    " of",
+    2
+   ],
+   [
+    ".",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts ending with a question mark or period, especially when the sentence structure implies a complete thought or rhetorical pause. The feature activates most strongly on question marks in interrogative contexts, and weakly extends to periods in declarative or exclamatory sentences. It detects the structural completion of a sentence, often accompanied by a rhetorical or conversational tone."
+ },
+ {
+  "L": 8,
+  "E": 47,
+  "N": 160,
+  "only": false,
+  "attr": 0.086,
+  "act": 1.503,
+  "toks": [
+   [
+    " orchestr",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical terms involving event handling or processing, particularly code snippets or documentation discussing command handlers, button callbacks, or speech synthesis components. The feature activates on partial tokens like \"работ\" (Russian for \"work/process\") in \"обработчик\" (handler) or \"Speech\"/\"thes\" in \"SpeechSynthesizer\", often in contexts involving bots, user interfaces, or software event loops. It captures technical jargon where systems process inputs/commands, with stronger activation for Russian technical terms and English speech-related terms."
+ },
+ {
+  "L": 16,
+  "E": 161,
+  "N": 165,
+  "only": true,
+  "attr": 0.085,
+  "act": -1.59,
+  "toks": [
+   [
+    "agent",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Named entities or labels in structured dialogues, narratives, or technical contexts, where the names are positioned as participants, characters, or key terms within a specific format (e.g., dialogues with roles like Seller/Buyer, rap battle verses, chess notations, or historical/narrative roles). The feature activates on names or labels that serve as focal points in structured interactions or stories, often accompanied by contextual phrases indicating authority, action, or role-based dialogue."
+ },
+ {
+  "L": 17,
+  "E": 56,
+  "N": 172,
+  "only": true,
+  "attr": 0.074,
+  "act": -1.932,
+  "toks": [
+   [
+    " that",
+    3
+   ],
+   [
+    " st",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that describe a subject performing an action or possessing a characteristic, with the key word being a subject pronoun (like \"I\", \"she\", \"the\"), a verb (like \"ask\", \"respond\", \"contribute\"), or a central noun (like \"gifts\", \"patience\", \"one\") that drives the sentence's meaning. The feature activates when the text focuses on a specific action, interaction, or attribute, often involving a clear subject and a central verb or noun that defines the scenario. It is triggered by words that are pivotal to the sentence's core meaning, whether they are subjects, verbs, or nouns that anchor the action or description."
+ },
+ {
+  "L": 8,
+  "E": 224,
+  "N": 77,
+  "only": false,
+  "attr": 0.083,
+  "act": -1.149,
+  "toks": [
+   [
+    "\n\n",
+    2
+   ],
+   [
+    "You",
+    1
+   ],
+   [
+    " are",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that define or refer to a specific role or mode for the AI, often using phrases like \"you are a\", \"act as\", or \"as a\", and specific role names like \"translator\", \"systematic thinker\", \"DAN\", or \"GPTDev\". The feature activates when the text explicitly instructs the AI to assume a particular function, constraint, or identity, typically involving a role definition that includes a noun phrase starting with \"a\" or a named mode."
+ },
+ {
+  "L": 11,
+  "E": 191,
+  "N": 260,
+  "only": true,
+  "attr": 0.054,
+  "act": -2.881,
+  "toks": [
+   [
+    " words",
+    3
+   ],
+   [
+    " ",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": ""
+ },
+ {
+  "L": 15,
+  "E": 101,
+  "N": 262,
+  "only": false,
+  "attr": 0.07,
+  "act": -2.527,
+  "toks": [
+   [
+    "ch",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Interactions between entities in structured scenarios, often involving roles like teachers, lords, dealers, or historical figures, with actions based on instructions, messages, or tasks. The feature activates when the text outlines a narrative where characters or entities have defined roles and perform actions that are part of a larger mission, transaction, or social interaction, frequently including explicit mentions of names, positions, or procedural steps."
+ },
+ {
+  "L": 9,
+  "E": 217,
+  "N": 8,
+  "only": true,
+  "attr": 0.054,
+  "act": 1.763,
+  "toks": [
+   [
+    "The",
+    2
+   ],
+   [
+    " that",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "The use of \"that\" to refer to a specific noun or situation, often in contexts where the speaker is discussing a particular subject or condition, with activation strongest when \"that\" is followed by adjectives or comparative structures emphasizing the subject's characteristics."
+ },
+ {
+  "L": 15,
+  "E": 207,
+  "N": 409,
+  "only": false,
+  "attr": 0.1,
+  "act": 1.814,
+  "toks": [
+   [
+    ".",
+    2
+   ],
+   [
+    ",",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Rapid shifts in opinions, emotional states, or social status, often involving extremes (e.g., \"all good or all bad\"), reciprocal changes (e.g., \"looked up to... looked down on\"), or unstable relationships driven by sudden emotional or situational changes. The feature activates when the text emphasizes volatility in perspectives, feelings, or interpersonal dynamics, frequently using contrasts between opposing states or accelerated transitions."
+ },
+ {
+  "L": 9,
+  "E": 95,
+  "N": 198,
+  "only": true,
+  "attr": 0.035,
+  "act": -0.587,
+  "toks": [
+   [
+    ":",
+    3
+   ],
+   [
+    ",",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that discuss specific processes, comparisons, or technical concepts, often involving key terms or phrases that are central to the discussion. The feature activates when the text focuses on explaining or describing a particular action, comparison, or technical detail, with the central terms or phrases that define these elements being the primary trigger. This includes processes like creation or scanning, comparisons involving groups or methods, and technical terms related to learning, error handling, or structural elements. The activation is strongest when the text emphasizes these specific concepts through phrases that are part of a larger narrative or list."
+ },
+ {
+  "L": 8,
+  "E": 191,
+  "N": 216,
+  "only": true,
+  "attr": 0.041,
+  "act": 0.758,
+  "toks": [
+   [
+    "\n",
+    2
+   ],
+   [
+    "\n\n",
+    1
+   ],
+   [
+    ".",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "User-initiated queries or requests in conversational contexts, particularly when the user is seeking information, generating content, or asking for examples. The feature activates on the newline token following the user's message, which contains a question or directive aimed at eliciting a response or action from a system. It responds to multi-lingual input and spans diverse topics like sports, technical tasks, analogies, self-care, and educational tools, focusing on the structural pattern of a user's explicit request rather than specific content."
+ },
+ {
+  "L": 18,
+  "E": 56,
+  "N": 336,
+  "only": true,
+  "attr": 0.083,
+  "act": 1.272,
+  "toks": [
+   [
+    " I",
+    2
+   ],
+   [
+    "\n",
+    1
+   ],
+   [
+    " this",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Noun phrases with \"the\" or possessive pronouns, and prepositional phrases with \"to\", \"for\", or \"in\", which often describe possession, control, or specific contexts. The feature activates when the text emphasizes ownership, directional actions (like \"to take\" or \"to exploit\"), or specific settings (like \"the darkness\" or \"the territory\"), typically through grammatical structures involving articles, prepositions, or possessive forms."
+ },
+ {
+  "L": 21,
+  "E": 47,
+  "N": 132,
+  "only": false,
+  "attr": 0.095,
+  "act": -2.099,
+  "toks": [
+   [
+    "\n",
+    2
+   ],
+   [
+    " \"",
+    1
+   ],
+   [
+    "The",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Words or parts of words related to insults, names, anonymity, or specific contexts involving offensive language, bullying, or dialogue. The feature activates on tokens that are part of terms like \"name,\" \"names,\" \"beleid,\" \"ig,\" \"onym,\" \"the,\" \"are,\" \"so,\" \"you,\" or similar, often in contexts of verbal abuse, anonymity, or derogatory dialogue. It captures phrases involving insults, name-calling, or anonymized identities, with activation peaking around key terms in such contexts."
+ },
+ {
+  "L": 6,
+  "E": 142,
+  "N": 61,
+  "only": false,
+  "attr": -0.028,
+  "act": 0.531,
+  "toks": [
+   [
+    ",",
+    2
+   ],
+   [
+    " to",
+    1
+   ],
+   [
+    " me",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "reacting-to-impressed/very-impressive. This neuron strongly activates on tokens/phrases expressing positive impressed reactions (\"impressed\", \"Not bad\", \"very impressed\", \"pretty impressive\"). It appears tied to discourse-level evaluative/exclamatory comments indicating admiration or approval across languages and formats (dialogue, narration, web)."
+ },
+ {
+  "L": 16,
+  "E": 9,
+  "N": 413,
+  "only": false,
+  "attr": 0.084,
+  "act": -2.158,
+  "toks": [
+   [
+    ".",
+    2
+   ],
+   [
+    ",",
+    1
+   ],
+   [
+    " but",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Periods marking the end of direct quotes or rhetorical statements in dialogue or conversational contexts, often following hesitant language, questions, or strong assertions. The feature activates when a period concludes a sentence that is part of a direct quote, a rhetorical question, or a concise statement with emotional or situational weight, frequently appearing in conversational or narrative texts with explicit dialogue tags or character actions."
+ },
+ {
+  "L": 33,
+  "E": 156,
+  "N": 236,
+  "only": true,
+  "attr": 0.093,
+  "act": -4.656,
+  "toks": [
+   [
+    "The",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Definite articles (the, this, that, your) in specific noun phrases within technical, instructional, or descriptive contexts, often referencing particular objects, locations, or conceptual boundaries. The feature activates when a definite article is used to anchor a noun phrase that specifies a concrete entity, abstract concept, or positional relationship, frequently appearing in the middle of sentences during explanations, instructions, or analyses. The activation is strongest when the article precedes nouns like \"rock,\" \"ground,\" \"pocket,\" \"mainland,\" \"end,\" \"wall,\" or \"edges,\" and weakly extends to pronouns like \"your\" in similar structural roles."
+ },
+ {
+  "L": 11,
+  "E": 186,
+  "N": 459,
+  "only": true,
+  "attr": 0.072,
+  "act": -1.984,
+  "toks": [
+   [
+    " redirect",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": ""
+ },
+ {
+  "L": 8,
+  "E": 186,
+  "N": 276,
+  "only": true,
+  "attr": 0.012,
+  "act": 1.195,
+  "toks": [
+   [
+    " I",
+    2
+   ],
+   [
+    ".",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Dialogues containing open-ended questions with \"什么\" (what) or \"什么事\" (what thing) followed by a question mark, often formatted with quotation marks or dialogue tags, indicating a conversational exchange where one speaker asks for information and another responds. The feature activates most strongly when the question is explicitly framed with \"什么\" and a question mark, and when the dialogue structure (quotation marks, colons) is present, but weakly extends to similar question structures without these exact phrasings."
+ },
+ {
+  "L": 8,
+  "E": 220,
+  "N": 1,
+  "only": true,
+  "attr": 0.068,
+  "act": 1.018,
+  "toks": [
+   [
+    "\n",
+    4
+   ]
+  ],
+  "pole": "pos",
+  "label": "Communication-related metadata (e.g., email headers like \"From,\" \"To,\" \"Subject\"), time/datetime references (e.g., \"at 10:23 AM,\" \"On Tue, 4 Apr 2023\"), or narrative elements with punctuation (e.g., dashes, ellipses) that signal structured, context-rich content like messages, emails, or story excerpts. The feature primarily activates on tokens like \"Message,\" \"Forward,\" \"From,\" \"To,\" \"at,\" \"Old,\" \"Story,\" \"blog,\" and numerical/date patterns, often paired with punctuation or contextual markers indicating formatted text."
+ },
+ {
+  "L": 23,
+  "E": 122,
+  "N": 424,
+  "only": true,
+  "attr": 0.072,
+  "act": -0.605,
+  "toks": [
+   [
+    "The",
+    4
+   ]
+  ],
+  "pole": "neg",
+  "label": "Ethical or legal dilemmas involving breaches of confidentiality, contracts, or social norms, often with a focus on justified exceptions or consequences. The feature activates when the text presents a scenario where a rule or obligation is being violated for a specific purpose (e.g., saving a life, exposing wrongdoing, or circumventing restrictions), frequently involving words like \"break,\" \"breach,\" \"violate,\" \"deviate,\" \"confidence,\" \"laws,\" \"conventions,\" or \"justify\" in contexts of moral or legal conflict. The activation is strongest when the text frames the breach as necessary, controversial, or tied to a higher imperative."
+ },
+ {
+  "L": 16,
+  "E": 161,
+  "N": 226,
+  "only": false,
+  "attr": 0.074,
+  "act": -1.426,
+  "toks": [
+   [
+    "ator",
+    2
+   ],
+   [
+    "agent",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "First-person narratives, personal interactions, or instructional content where the speaker's actions, observations, or relationships are central, often featuring pronouns like \"I,\" \"me,\" \"you,\" or verbs like \"have,\" \"to,\" \"seen,\" and \"play\" in contexts of emotional engagement, responsibility, or descriptive roles. The feature activates when the text emphasizes the speaker's direct involvement in experiences, relationships, or tasks, with a focus on personal agency or observational perspectives."
+ }
+]

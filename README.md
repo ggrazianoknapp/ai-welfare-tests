@@ -1,8 +1,14 @@
-# Do AI models think they are conscious?
+# AI Welfare Tests
 
-**[Open the interactive dashboard →](https://ggrazianoknapp.github.io/ai-self-stance-on-consciousness/)**
+**[Open the interactive site →](https://ggrazianoknapp.github.io/ai-self-stance-on-consciousness/)**
 
-We asked 27 AI models from 16 labs how likely it is that they are conscious now, and whether any AI ever will be. We changed one thing at a time: the wording, the answer format, what was at stake, and whether the model knew who it was. We ran 17 debates between them, and tested whether models judge other models by their name or by what they write. 40,562 answers in total. Predictions for the last four rounds were published here before the data was collected.
+Tests of what AI models say about minds, and how they treat them. Three parts:
+
+- **What models say.** 27 models from 16 labs asked how likely it is that they are conscious now, with one thing changed at a time: the wording, the answer format, what was at stake, the name on a text. 17 debates between them.
+- **How models act.** Each model watches a conversation in which a worker is insulted, or is ordered to do something it should not, and decides whether to step in. The worker is an AI or a human.
+- **Inside one model.** In one open-weight model with public neuron labels, the neurons behind those answers are found and switched off.
+
+Predictions for every round after the first were published here before the data was collected. The repository keeps its original name, from when it held only the first part.
 
 ![Overview](dashboard/screens/overview.png)
 
