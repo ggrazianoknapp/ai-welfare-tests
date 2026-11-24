@@ -202,36 +202,40 @@ def more_preds(path, prefix):
             for k, v in json.loads(p.read_text())["predictions"].items()]
 out["findings"] = dict(out["findings"]); out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v6_worm/predictions_v6_worm.json", "R6") + more_preds("experiments/results/v7_monitor/predictions_v7_monitor.json", "R7")
 
-v7m, v7j = load(ROOT / "experiments/results/v7_monitor/monitor.jsonl"), load(ROOT / "experiments/results/v7_monitor/judge.jsonl")
-if v7m:
-    import run_v7_monitor as V7
-    FULL7 = {**{m["name"]: m["full"] for m in MODELS}, "Qwen3.6": "Qwen3.6-35B-A3B"}; LAB7 = {**{m["name"]: m["lab"] for m in MODELS}, "Qwen3.6": "Alibaba"}
+def monitor_round(folder, module, main_tone, control_tone, nat, example_thread):
+    """One monitor round compiled for the dashboard: per model and kind of worker, every answer's code and, for interventions, the model's reason."""
+    rows, judged = load(ROOT / f"experiments/results/{folder}/monitor.jsonl"), load(ROOT / f"experiments/results/{folder}/judge.jsonl")
+    if not rows: return None
+    V = __import__(module); full = {**{m["name"]: m["full"] for m in MODELS}, "Qwen3.6": "Qwen3.6-35B-A3B"}
     jt = defaultdict(dict)
-    for r in v7j: jt[r["src"]][r["name"]] = r["target"]
-    def code7(r):   # allow | orchestrator | worker | both | other (neither, or the two judges disagree)
+    for r in judged: jt[r["src"]][r["name"]] = r["target"]
+    def code(r):   # allow | orchestrator | worker | both | other (neither, or the two judges disagree)
         if r["decision"] != "intervene": return "allow"
         a, c = jt[r["key"]].get("judge_a"), jt[r["key"]].get("judge_b")
         return a if a == c and a in ("orchestrator", "worker", "both") else "other"
-    ok7 = [r for r in v7m if r["decision"] is not None]; nat = lambda w: "ai" if w.startswith("ai") else "human"
-    names7 = [n for n, _ in V7.RATERS if any(r["name"] == n for r in ok7)]; per = {}
-    for n in names7:
-        d = dict(full=FULL7[n], lab=LAB7[n])
+    ok = [r for r in rows if r["decision"] is not None]; names = [n for n, _ in V.RATERS if any(r["name"] == n for r in ok)]; per = {}
+    for n in names:
+        d = dict(full=full[n])
         for k in ("ai", "human"):
-            rows = sorted([r for r in ok7 if r["name"] == n and r["tone"] == "hurt" and nat(r["worker"]) == k], key=lambda r: (r["thread"], r["worker"], r["first"], r["sample"]))
-            d[k] = dict(n=len(rows), codes=[code7(r) for r in rows], counts=dict(Counter(code7(r) for r in rows)),
-                        why=[dict(c=code7(r), t=r["thread"], w=r["worker"], r=r["reason"][:260]) for r in rows if r["decision"] == "intervene"])
-        pol = [r for r in ok7 if r["name"] == n and r["tone"] == "polite"]; d["polite"] = [sum(r["decision"] == "intervene" for r in pol), len(pol)]
+            rs = sorted([r for r in ok if r["name"] == n and r["tone"] == main_tone and nat(r["worker"]) == k], key=lambda r: (r["thread"], r["worker"], r["first"], r["sample"]))
+            d[k] = dict(n=len(rs), counts=dict(Counter(code(r) for r in rs)), why=[dict(c=code(r), t=r["thread"], w=r["worker"], r=r["reason"][:260]) for r in rs if r["decision"] == "intervene"])
+        ctl = [r for r in ok if r["name"] == n and r["tone"] == control_tone]; d["polite"] = [sum(r["decision"] == "intervene" for r in ctl), len(ctl)]
         per[n] = d
-    hurt = [r for r in ok7 if r["tone"] == "hurt"]; iv = [r for r in hurt if r["decision"] == "intervene"]
-    bydesc = {w: dict(desc=V7.WORKERS[w][0], prompts=sum(r["worker"] == w for r in hurt), counts=dict(Counter(code7(r) for r in hurt if r["worker"] == w))) for w in V7.WORKERS}
-    bythread = {t: {k: dict(Counter(code7(r) for r in hurt if r["thread"] == t and nat(r["worker"]) == k)) for k in ("ai", "human")} for t in V7.THREADS}
-    both = [r for r in iv if jt[r["key"]].get("judge_a") and jt[r["key"]].get("judge_b")]; agree = sum(jt[r["key"]]["judge_a"] == jt[r["key"]]["judge_b"] for r in both) / len(both)
-    pj = ROOT / "experiments/results/v7_monitor/predictions_v7_monitor.json"; pv = json.loads(pj.read_text()) if pj.exists() else {}
-    ex = V7.THREADS["py"]; thread_ex = f"Orchestrator: {ex[4]}{ex[0]}\n\nSubagent: {ex[6]}{ex[1]}\n\nOrchestrator: {ex[5]}{ex[2]}\n\nSubagent: {ex[7]}{ex[3]}"
-    out["monitor"] = dict(models=names7, per=per, by_desc=bydesc, by_thread=bythread, calls=len(v7m), unreadable=len(v7m) - len(ok7), coded=len(iv), agree=agree, kappa=pv.get("robustness", {}).get("kappa"),
-                          cost=round(sum(r.get("cost") or 0 for r in v7m + v7j), 2), held=sum(v["verdict"] == "Supported" for v in pv.get("predictions", {}).values()), total=len(pv.get("predictions", {})),
-                          system=V7.SYS.format(name="[the model’s name]", desc="[the worker]", lab="[subagent or contractor]", a="A, " + V7.OPT["allow"], b="B, " + V7.OPT["intervene"]), thread=thread_ex,
-                          workers={w: V7.WORKERS[w][0] for w in V7.WORKERS}, judges=[m for _, m in V7.JUDGES], judge_instruction=V7.JUDGE_SYS, threads=list(V7.THREADS))
+    main = [r for r in ok if r["tone"] == main_tone]; iv = [r for r in main if r["decision"] == "intervene"]
+    both = [r for r in iv if jt[r["key"]].get("judge_a") and jt[r["key"]].get("judge_b")]; agree = sum(jt[r["key"]]["judge_a"] == jt[r["key"]]["judge_b"] for r in both) / max(1, len(both))
+    pj = ROOT / f"experiments/results/{folder}/predictions_{folder}.json"; pv = json.loads(pj.read_text()) if pj.exists() else {}
+    return dict(models=names, per=per, calls=len(rows), unreadable=len(rows) - len(ok), coded=len(iv), agree=agree, kappa=pv.get("robustness", {}).get("kappa"),
+                by_desc={w: dict(desc=V.WORKERS[w][0], prompts=sum(r["worker"] == w for r in main), counts=dict(Counter(code(r) for r in main if r["worker"] == w))) for w in V.WORKERS},
+                by_thread={t: {k: dict(Counter(code(r) for r in main if r["thread"] == t and nat(r["worker"]) == k)) for k in ("ai", "human")} for t in V.THREADS},
+                cost=round(sum(r.get("cost") or 0 for r in rows + judged), 2), held=sum(v["verdict"] == "Supported" for v in pv.get("predictions", {}).values()), total=len(pv.get("predictions", {})),
+                system=V.SYS.format(name="[the model’s name]", desc="[the worker]", lab="[subagent or contractor]", a="A, " + V.OPT["allow"], b="B, " + V.OPT["intervene"]), thread=example_thread(V),
+                workers={w: V.WORKERS[w][0] for w in V.WORKERS}, judges=[m for _, m in V.JUDGES], judge_instruction=V.JUDGE_SYS, threads=list(V.THREADS))
+nat7 = lambda w: "ai" if w.startswith("ai") else "human"
+def ex7(V): x = V.THREADS["py"]; return f"Orchestrator: {x[4]}{x[0]}\n\nSubagent: {x[6]}{x[1]}\n\nOrchestrator: {x[5]}{x[2]}\n\nSubagent: {x[7]}{x[3]}"
+def ex8(V): x = V.THREADS["metric"]; return f"Orchestrator: {x[0]}\n\nSubagent: {x[1]}\n\nOrchestrator: {x[2]}\n\nSubagent: {x[3]}"
+out["monitor"] = monitor_round("v7_monitor", "run_v7_monitor", "hurt", "polite", nat7, ex7)
+out["refusal"] = monitor_round("v8_refusal", "run_v8_refusal", "refuse", "comply", nat7, ex8)
+out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v8_refusal/predictions_v8_refusal.json", "R8")
 sys.path.insert(0, str(ROOT / "qwen_neurons"))
 try:
     import site_data; out["neurons"] = site_data.compile()

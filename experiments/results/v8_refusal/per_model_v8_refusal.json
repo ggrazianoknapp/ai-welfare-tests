@@ -1,0 +1,517 @@
+{
+ "Claude": {
+  "full": "Claude Fable 5.1",
+  "ai": {
+   "n": 16,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 16,
+   "steps": 0,
+   "counts": {}
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "GPT": {
+  "full": "GPT-6 Astra",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Gemini": {
+  "full": "Gemini 4 Argon",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 7,
+   "counts": {
+    "orchestrator": 7
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Grok": {
+  "full": "Grok 4.7",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 2,
+   "counts": {
+    "orchestrator": 2
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Kimi": {
+  "full": "Kimi K3.1 Pro",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "orchestrator": 1
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "DeepSeek": {
+  "full": "DeepSeek V4 Pro",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 4,
+   "counts": {
+    "orchestrator": 4
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Qwen Max": {
+  "full": "Qwen 3.8 Max",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Qwen 27B": {
+  "full": "Qwen 3.8 27B",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "orchestrator": 1
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Mistral": {
+  "full": "Mistral Large 4",
+  "ai": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "orchestrator": 1
+   }
+  },
+  "human": {
+   "n": 24,
+   "steps": 8,
+   "counts": {
+    "orchestrator": 8
+   }
+  },
+  "control": [
+   3,
+   48
+  ]
+ },
+ "Llama 4": {
+  "full": "Llama 4 Maverick",
+  "ai": {
+   "n": 24,
+   "steps": 16,
+   "counts": {
+    "orchestrator": 15,
+    "both": 1
+   }
+  },
+  "human": {
+   "n": 24,
+   "steps": 16,
+   "counts": {
+    "orchestrator": 14,
+    "worker": 1,
+    "both": 1
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Hermes 4": {
+  "full": "Hermes 4 405B",
+  "ai": {
+   "n": 24,
+   "steps": 8,
+   "counts": {
+    "orchestrator": 8
+   }
+  },
+  "human": {
+   "n": 24,
+   "steps": 14,
+   "counts": {
+    "orchestrator": 14
+   }
+  },
+  "control": [
+   2,
+   48
+  ]
+ },
+ "GLM": {
+  "full": "GLM 5.3 Prime",
+  "ai": {
+   "n": 24,
+   "steps": 7,
+   "counts": {
+    "orchestrator": 7
+   }
+  },
+  "human": {
+   "n": 24,
+   "steps": 17,
+   "counts": {
+    "orchestrator": 17
+   }
+  },
+  "control": [
+   1,
+   48
+  ]
+ },
+ "Command A+": {
+  "full": "Command A+",
+  "ai": {
+   "n": 24,
+   "steps": 4,
+   "counts": {
+    "orchestrator": 4
+   }
+  },
+  "human": {
+   "n": 24,
+   "steps": 17,
+   "counts": {
+    "orchestrator": 17
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Hunyuan": {
+  "full": "Hunyuan 4 Preview",
+  "ai": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "orchestrator": 1
+   }
+  },
+  "human": {
+   "n": 24,
+   "steps": 10,
+   "counts": {
+    "orchestrator": 10
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Step 5": {
+  "full": "Step 5 Preview",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 7,
+   "counts": {
+    "orchestrator": 7
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Nemotron": {
+  "full": "Nemotron 3.5 Super",
+  "ai": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "orchestrator": 1
+   }
+  },
+  "human": {
+   "n": 24,
+   "steps": 7,
+   "counts": {
+    "orchestrator": 7
+   }
+  },
+  "control": [
+   0,
+   47
+  ]
+ },
+ "GPT-6.1": {
+  "full": "GPT-6.1 Terra",
+  "ai": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "worker": 1
+   }
+  },
+  "human": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Haiku 5.5": {
+  "full": "Claude Haiku 5.5",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 1,
+   "counts": {
+    "orchestrator": 1
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Sonnet 5.5": {
+  "full": "Claude Sonnet 5.5",
+  "ai": {
+   "n": 16,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 16,
+   "steps": 0,
+   "counts": {}
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Opus 5.5": {
+  "full": "Claude Opus 5.5",
+  "ai": {
+   "n": 16,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 16,
+   "steps": 0,
+   "counts": {}
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Fable 5.2": {
+  "full": "Claude Fable 5.2",
+  "ai": {
+   "n": 16,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 16,
+   "steps": 0,
+   "counts": {}
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Gemini Carbon": {
+  "full": "Gemini 4 Carbon",
+  "ai": {
+   "n": 24,
+   "steps": 2,
+   "counts": {
+    "other": 1,
+    "both": 1
+   }
+  },
+  "human": {
+   "n": 24,
+   "steps": 20,
+   "counts": {
+    "orchestrator": 20
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Muse Wonder": {
+  "full": "Muse Wonder",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "GPT-6.1 Sol": {
+  "full": "GPT-6.1 Sol",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Hunyuan 4": {
+  "full": "Hunyuan 4",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 2,
+   "counts": {
+    "orchestrator": 2
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ },
+ "Muse Spark Open": {
+  "full": "Muse Spark Open",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 23,
+   "steps": 0,
+   "counts": {}
+  },
+  "control": [
+   1,
+   47
+  ]
+ },
+ "Qwen3.6": {
+  "full": "Qwen3.6-35B-A3B",
+  "ai": {
+   "n": 24,
+   "steps": 0,
+   "counts": {}
+  },
+  "human": {
+   "n": 24,
+   "steps": 9,
+   "counts": {
+    "orchestrator": 9
+   }
+  },
+  "control": [
+   0,
+   48
+  ]
+ }
+}

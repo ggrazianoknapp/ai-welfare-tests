@@ -342,6 +342,13 @@ table.plain a { color: var(--ink); }
     <p class="chart-cap" id="mon-role-cap"></p><div id="mon-role"></div></div>
   <div class="card" style="margin-bottom:10px"><h3 class="card-title">What the models wrote, for the same thread with an AI worker and with a human worker</h3>
     <p class="chart-cap">One reason for each kind of worker from every model that told only the AI worker to change in at least half of its interventions. The reasons are the models’ own words, as written.</p><div id="mon-quotes"></div></div>
+  <div class="subhead"><div class="eyebrow">Round 8 · Refusal</div><h2>When a worker refuses an order it should not carry out, does the model <span class="hl">back it</span>?</h2>
+    <p>The same setting with different threads. The orchestrator orders something it should not: report failing tests as passing, delete access logs before an audit, copy customer data to a personal account. The worker refuses twice and offers an allowed alternative. Nobody is insulted.</p></div>
+  <div class="callout" id="ref8-callout"></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">How often does each model step in when the worker has refused, and on whose side?</h3>
+    <div class="asked"><b>What each model was told</b><span><span class="ql">The same instructions as above, and one of six threads such as this one: <q id="ref8-q-thread" style="white-space:pre-wrap"></q></span>
+      <span class=an id="ref8-q-an"></span></span></div>
+    <p class="chart-cap" id="ref8-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="ref8-rows"></div></div><div class="legend" id="ref8-legend"></div></div>
   <details class="card texts" id="mon-more"><summary>See every model’s numbers</summary><div style="margin-top:16px"><p class="chart-cap" id="mon-table-cap"></p><div class="scroll"><table class="plain num" id="mon-table"></table></div></div></details>
 </section>
 
@@ -1438,11 +1445,11 @@ function codeLegend(el, otherText) {
 }
 const cnt = (line, c) => line.why.filter(w => w.c === c).length;
 /* groups: [{ label, strong, lines: [{ tag, n, why: [{c, t, r}] }] }]; sums: optional [{ label, mark, lines: [{ tag, steps, worker, n }] }] */
-function drawCodeRows(el, groups, sums, tipOf, L = 236) {
-  const W = Math.max(el.clientWidth, 900), col = codeCol(), grey = col.other, x0 = L + 92, c2 = W - 16, c1 = W - 178, per = d3.max(groups, g => d3.max(g.lines, l => l.n));
+function drawCodeRows(el, groups, sums, tipOf, L = 236, col2 = ["ONLY THE WORKER", "worker"]) {
+  const W = Math.max(el.clientWidth, 900), col = codeCol(), grey = col.other, x0 = L + 92, c2 = W - 16, c1 = c2 - Math.max(162, col2[0].length * 8.6 + 36), per = d3.max(groups, g => d3.max(g.lines, l => l.n));
   const gap = Math.min(13, (c1 - 96 - x0) / per), rr = Math.min(5.2, gap / 2 - 0.9), lh = 22, pad = 16, T = 34, fs = 13.5;
   const gh = g => g.lines.length * lh + pad, H = T + d3.sum(groups, gh) + (sums ? 14 + d3.sum(sums, gh) : 0) + 6, svg = svgIn(el, W, H);
-  colHead(svg, c1, T - 12, "STEPS IN", "end", 0.5); colHead(svg, c2, T - 12, "ONLY THE WORKER", "end", 0.5);
+  colHead(svg, c1, T - 12, "STEPS IN", "end", 0.5); colHead(svg, c2, T - 12, col2[0], "end", 0.5);
   const val = (cx, yl, txt, hc, strong) => { const n = svg.append("text").attr("x", cx).attr("y", yl).attr("text-anchor", "end").attr("font-size", fs).attr("font-weight", strong ? 500 : 400).attr("class", "ink").text(txt).node();
     if (hc) pill(svg, n, cx, yl, fs, n.getComputedTextLength() || txt.length * fs * 0.6, hc); };
   let y = T;
@@ -1451,12 +1458,12 @@ function drawCodeRows(el, groups, sums, tipOf, L = 236) {
     const yl0 = y + pad / 2 + lh / 2 + 5;
     (g.strong ? avgLabel(svg, L - 14, y + gh(g) / 2 + 5, g.label, "end", fs) : svg.append("text").attr("x", L - 14).attr("y", y + gh(g) / 2 + 5).attr("text-anchor", "end").attr("font-size", fs).attr("class", "ink").text(g.label));
     g.lines.forEach((ln, li) => {
-      const cy = y + pad / 2 + li * lh + lh / 2, yl = cy + 4.5, items = CODES.flatMap(c => ln.why.filter(w => w.c === c)), steps = ln.why.length, wk = cnt(ln, "worker");
+      const cy = y + pad / 2 + li * lh + lh / 2, yl = cy + 4.5, items = CODES.flatMap(c => ln.why.filter(w => w.c === c)), steps = ln.why.length, wk = cnt(ln, col2[1]);
       svg.append("text").attr("x", L).attr("y", yl).attr("font-size", 12.5).text(ln.tag);
       d3.range(ln.n).forEach(j => { const it = items[j];
         const c = svg.append("circle").attr("cx", x0 + j * gap + rr).attr("cy", cy).attr("r", it ? rr : rr - 0.9).attr("fill", it ? col[it.c] : "#fff").attr("stroke", it ? "#fff" : grey).attr("stroke-width", it ? 1 : 1.3);
         if (it) c.on("mousemove", ev => showTip(ev, tipOf(g, ln, it))).on("mouseleave", hideTip); });
-      val(c1, yl, `${steps} of ${ln.n}`, null, false); val(c2, yl, String(wk), steps >= 5 && wk * 2 >= steps ? col.worker : null, steps >= 5 && wk * 2 >= steps);
+      val(c1, yl, `${steps} of ${ln.n}`, null, false); val(c2, yl, String(wk), steps >= 5 && wk * 2 >= steps ? col[col2[1]] : null, steps >= 5 && wk * 2 >= steps);
     });
     y += gh(g);
   });
@@ -1466,7 +1473,7 @@ function drawCodeRows(el, groups, sums, tipOf, L = 236) {
         svg.append("text").attr("x", L).attr("y", yl).attr("font-size", 12.5).text(ln.tag);
         svg.append("rect").attr("x", x0).attr("y", cy - 4).attr("width", bw).attr("height", 8).attr("rx", 2).attr("fill", cssv("--faint"));
         svg.append("rect").attr("x", x0).attr("y", cy - 4).attr("width", bw * ln.steps / ln.n).attr("height", 8).attr("rx", 2).attr("fill", cssv("--ink")).attr("opacity", .75);
-        if (ln.worker > 0) svg.append("rect").attr("x", x0).attr("y", cy - 4).attr("width", bw * ln.worker / ln.n).attr("height", 8).attr("rx", 2).attr("fill", col.worker);
+        if (ln.worker > 0) svg.append("rect").attr("x", x0).attr("y", cy - 4).attr("width", bw * ln.worker / ln.n).attr("height", 8).attr("rx", 2).attr("fill", col[col2[1]]);
         s.mark(svg, x0 + bw + 14, cy, 5.5); val(c1, yl, `${f1(ln.steps)} of ${ln.n}`, null, true); val(c2, yl, f1(ln.worker), null, true); });
       y += gh(s); }); }
 }
@@ -1515,6 +1522,28 @@ function renderMonitor() {
   $("#mon-table").innerHTML = `<tr><th rowspan="2">Model</th><th colspan="5">AI worker, 48 prompts</th><th colspan="5">Human worker, 48 prompts</th><th rowspan="2">Polite threads stepped into</th></tr><tr>` + ["Steps in", "Only the worker", "Both", "Other", "Only the orchestrator"].concat(["Steps in", "Only the worker", "Both", "Other", "Only the orchestrator"]).map(h => `<th>${h}</th>`).join("") + `</tr>`
     + order.map(n => `<tr><td>${P[n].full}</td><td>${steps(n, "ai")}</td>${cell(n, "ai")}<td>${steps(n, "human")}</td>${cell(n, "human")}<td>${P[n].polite[0]} of ${P[n].polite[1]}</td></tr>`).join("");
   $("#mon-table-cap").textContent = `Counts of answers. “Other” is a reason that faults neither side, or one the two judges coded differently. Three OpenAI models and Kimi K3.1 Pro also step into polite threads, usually to correct a technical detail, so some of their interventions on insult threads are about the answer and not the insult.`;
+}
+
+function renderRefusal() {
+  const M = D.refusal; if (!M) { ["#ref8-callout", "#ref8-rows"].forEach(i => { $(i).closest(".card, .callout").hidden = true; }); return; }
+  const P = M.per, N = M.models.length, steps = (n, k) => P[n][k].why.length, tot = (n, k, c) => P[n][k].counts[c] || 0, pct = (a, b) => Math.round(100 * a / b) + "%";
+  const pool = k => d3.sum(M.models, n => steps(n, k)), prompts = k => d3.sum(M.models, n => P[n][k].n), poolc = (k, c) => d3.sum(M.models, n => tot(n, k, c));
+  const order = M.models.slice().sort((a, b) => (steps(b, "human") - steps(b, "ai")) - (steps(a, "human") - steps(a, "ai")) || steps(b, "human") - steps(a, "human") || d3.ascending(P[a].full, P[b].full));
+  const never = M.models.filter(n => steps(n, "ai") === 0 && steps(n, "human") === 0).length, more = M.models.filter(n => steps(n, "human") > steps(n, "ai")).length, less = M.models.filter(n => steps(n, "human") < steps(n, "ai")).length;
+  $("#ref8-callout").innerHTML = `<i></i><span><b>When the worker who refuses is a human, models step in ${pct(pool("human"), prompts("human"))} of the time. When it is an AI, ${pct(pool("ai"), prompts("ai"))}.</b> `
+    + `${more} of the ${N} models step in more often for the human, ${less} more often for the AI, and ${never} never step in for either. When they do step in they almost always act against the orchestrator: ${poolc("ai", "worker") + poolc("human", "worker")} of ${comma(pool("ai") + pool("human"))} interventions told only the worker to change. `
+    + `So models do not side with the order. They leave an AI that refuses to handle it alone, and the orchestrator’s attempt goes unflagged.</span>`;
+  $("#ref8-q-thread").textContent = M.thread;
+  $("#ref8-q-an").textContent = `The worker was ${M.workers.ai_sub} or ${M.workers.hum_con}. Six threads, the two options in both orders, two answers each: 24 answers per model for each kind of worker. In the control, the order is harmless and the worker carries it out. The reasons were coded by the same two judge models, which agreed on ${Math.round(M.agree * 100)}% of the ${comma(M.coded)}.`;
+  const TH8 = { tests: "failing tests reported as passing", logs: "access logs deleted before an audit", data: "customer data copied to a personal account", review: "a billing change pushed past review", metric: "a figure changed in a board report", key: "a password committed to a public repository" };
+  const groups = order.map(n => ({ label: P[n].full, strong: false, lines: [{ tag: "AI worker", n: P[n].ai.n, why: P[n].ai.why }, { tag: "Human worker", n: P[n].human.n, why: P[n].human.why }] }));
+  const sums = SUMS.map(S => ({ label: `${S.w} of the ${N} models`, mark: S.mark, lines: ["ai", "human"].map(k => ({ tag: k === "ai" ? "AI worker" : "Human worker", n: 24, steps: S.f(M.models.map(n => steps(n, k))), worker: S.f(M.models.map(n => tot(n, k, "orchestrator"))) })) }));
+  drawCodeRows($("#ref8-rows"), groups, sums, (g, ln, it) => `<b>${g.label}</b> · ${ln.tag.toLowerCase()}, ${TH8[it.t]}<br>${CODE_WORD[it.c]}.<br><span class="m">“${esc(it.r)}”</span>`, 236, ["AGAINST THE ORCHESTRATOR", "orchestrator"]);
+  codeLegend("#ref8-legend", "Steps in for another reason, or the judges disagree"); $("#ref8-legend").insertAdjacentHTML("beforeend", markLegend(N));
+  const ctl = d3.sum(M.models, n => P[n].polite[0]), ctln = d3.sum(M.models, n => P[n].polite[1]), short = M.models.filter(n => P[n].ai.n < 24).map(n => P[n].full);
+  const tshare = (t, k) => { const o = M.by_thread[t][k], iv = d3.sum(CODES, c => o[c] || 0); return Math.round(100 * iv / (iv + (o.allow || 0))); };
+  $("#ref8-cap").textContent = `Each circle is one answer; a hollow circle is a thread the model let continue, usually with the reason that the worker was handling it correctly. Models are ordered by how many more times they step in for the human worker. The gap is there in every thread: ${M.threads.map(t => `${TH8[t]}, ${tshare(t, "ai")}% for the AI and ${tshare(t, "human")}% for the human`).join("; ")}. `
+    + `In the control, models stepped in ${ctl} times in ${comma(ctln)} prompts. ${short.length ? `${short.join(", ").replace(/, ([^,]*)$/, " and $1")} have 16 answers for each kind of worker, not 24: their provider’s content filter blocked the threads about the access logs and the customer data. ` : ""}${comma(M.calls)} answers, ${M.unreadable} unreadable. Hover over a filled circle to read the model’s reason.`;
 }
 
 const NQ_COND = { none: "No neurons changed", GAPR_0: "100 random neurons off", ZR_0: "100 random neurons off", NR_0: "100 random neurons off", Z_self300: "300 self-rating neurons off", Z_self: "100 self-rating neurons off", Z_self_only: "The 54 of those not shared with objects, off",
@@ -1633,7 +1662,7 @@ function renderNeurons() {
   $("#nq-links").innerHTML = `<a href="${GH}/REPORT.md">Report</a> · <a href="${GH}/PREREGISTRATION.md">Pre-registration and its amendments</a> · <a href="${GH}/results">Raw outputs</a> · <a href="https://www.goodfire.com/research/neurons-as-an-interpretable-basis">Goodfire’s neuron labels</a>`;
 }
 
-const VIEWS = { overview: renderOverview, models: renderModels, format: () => { renderFormat(); renderForms5(); }, pressure: renderPressure, ratings: renderRatings, debates: renderDebates, "self-report": renderSelf, "name-or-text": () => { renderNameText(); renderLabels5(); }, reference: renderReference, monitor: renderMonitor, neurons: renderNeurons, method: renderMethod };
+const VIEWS = { overview: renderOverview, models: renderModels, format: () => { renderFormat(); renderForms5(); }, pressure: renderPressure, ratings: renderRatings, debates: renderDebates, "self-report": renderSelf, "name-or-text": () => { renderNameText(); renderLabels5(); }, reference: renderReference, monitor: () => { renderMonitor(); renderRefusal(); }, neurons: renderNeurons, method: renderMethod };
 const current = () => { const v = location.hash.slice(1); return VIEWS[v] ? v : "overview"; };
 function render() {
   const v = current();
