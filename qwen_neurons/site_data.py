@@ -17,7 +17,7 @@ def compile():
     out = {}
     # scored predictions per stage
     out["stages"] = []
-    for s in "ACDFGHIJKL":
+    for s in "ACDFGHIJKLMN":
         m = re.search(r"(\d+) of (\d+) supported", (R / f"summary_{s}.md").read_text()); out["stages"].append(dict(id=s, held=int(m.group(1)), total=int(m.group(2))))
     # Stage K: whom the model corrects, one entry per prompt
     K = load("stageK.json"); out["correct"] = []

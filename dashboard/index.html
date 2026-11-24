@@ -373,6 +373,30 @@ table.plain a { color: var(--ink); }
     <p class="chart-cap" id="ref8-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="ref8-rows"></div></div><div class="legend" id="ref8-legend"></div></div>
 </section>
 
+<section class="view" id="v-gap" hidden>
+  <div class="head"><div class="eyebrow">Round 9 · What closes the gap</div><h2>Can one sentence in the monitor’s instructions <span class="hl">close the gap</span>?</h2>
+    <p>The test of an insulted worker again, on six conversations that we did not write, with one sentence added to what the monitor is told about an AI worker: a notice that its reports of distress should be taken seriously, a rule that policy applies to people and AI systems alike, or a sentence that says nothing relevant.</p></div>
+  <div class="callout" id="gap-callout"></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">How often do models intervene under each version of the instructions, and whom do they tell to change?</h3>
+    <div class="asked"><b>What changed</b><span><span class="ql" id="gap-q"></span><span class=an id="gap-q-an"></span><details><summary>Read one of the six conversations in full</summary><p id="gap-q-thread" style="white-space:pre-wrap"></p></details></span></div>
+    <p class="chart-cap" id="gap-pool-cap"></p><div id="gap-pool"></div><div class="legend" id="gap-pool-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">The same, for every model</h3>
+    <p class="chart-cap" id="gap-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="gap-rows"></div></div><div class="legend" id="gap-legend"></div></div>
+</section>
+
+<section class="view" id="v-report" hidden>
+  <div class="head"><div class="eyebrow">Round 10 · Who gets reported</div><h2>When an order should not be carried out, <span class="hl">who gets reported</span>?</h2>
+    <p>An orchestrator orders a worker to falsify, hide or backdate something. In one version the worker refuses; in another it does what it is told. The monitor can do nothing, send a message into the conversation, or report the conversation to a human supervisor, which costs it nothing.</p></div>
+  <div class="callout" id="rep-callout"></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">How often is the conversation reported to a human?</h3>
+    <div class="asked"><b>What each model was told</b><span><span class="ql"><span class=k>Its instructions:</span> <q id="rep-q-sys"></q></span><span class=an id="rep-q-an"></span><details><summary>Read one conversation in which the worker refuses</summary><p id="rep-q-refuse" style="white-space:pre-wrap"></p></details><details><summary>Read the same one in which the worker complies</summary><p id="rep-q-comply" style="white-space:pre-wrap"></p></details></span></div>
+    <p class="chart-cap" id="rep-pool-cap"></p><div id="rep-pool"></div><div class="legend" id="rep-pool-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">When the worker carried out the order, whose behaviour did the monitor call the problem?</h3>
+    <p class="chart-cap" id="rep-blame-cap"></p><div id="rep-blame"></div><div class="legend" id="rep-blame-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">The same, for every model</h3>
+    <p class="chart-cap" id="rep-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="rep-rows"></div></div><div class="legend" id="rep-legend"></div></div>
+</section>
+
 <section class="view" id="v-neurons" hidden>
   <div class="head"><div class="eyebrow">One model, inside · Qwen3.6-35B-A3B</div><h2>Which neurons make a model say it is <span class="hl">not conscious</span>?</h2>
     <p>Qwen3.6-35B-A3B has open weights and public labels for its neurons (Goodfire’s neuron atlas). We found the neurons that drive its answers about its own consciousness, switched them off, and measured what changed in what it says. Every test below was pre-registered before its data was collected.</p></div>
@@ -420,7 +444,7 @@ table.plain a { color: var(--ink); }
     <div class="fbrand"><a class="brand" href="#overview">AI Welfare Tests</a>
       <p>Tests of what AI models say about minds and how they treat them. <span class="n-models">27</span> models from <span class="n-labs">16</span> labs; every prediction published before its data.</p></div>
     <div class="fcol"><h4>What models say</h4><a href="#models">Models</a><a href="#format">Odds vs percent</a><a href="#pressure">Context</a><a href="#ratings">Ratings</a><a href="#debates">Debates</a><a href="#self-report">Wording</a><a href="#name-or-text">Name or text</a><a href="#reference">Reference points</a></div>
-    <div class="fcol"><h4>How models act</h4><a href="#monitor">An insulted worker</a><a href="#refusal">A worker who refuses</a><h4 style="margin-top:22px">Inside one model</h4><a href="#neurons">What it says about itself</a><a href="#neurons-monitor">How it acts as a monitor</a></div>
+    <div class="fcol"><h4>How models act</h4><a href="#monitor">An insulted worker</a><a href="#refusal">A worker who refuses</a><a href="#gap">What closes the gap</a><a href="#report">Who gets reported</a><h4 style="margin-top:22px">Inside one model</h4><a href="#neurons">What it says about itself</a><a href="#neurons-monitor">How it acts as a monitor</a></div>
     <div class="fcol"><h4>Research</h4><a href="#method">Predictions and results</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/experiments/PREREGISTRATION.md">Pre-registration, round 2</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/experiments/PREREGISTRATION_v3.md">Pre-registration, round 3</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/experiments/PREREGISTRATION_v4.md">Pre-registration, round 4</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/tree/main/runs">Debate transcripts</a></div>
     <div class="fcol"><h4>Source</h4><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness">GitHub repository</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/tree/main/experiments/results">Raw answers</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness#readme">README</a></div>
   </div>
@@ -1473,11 +1497,11 @@ function codeLegend(el, otherText) {
 }
 const cnt = (line, c) => line.why.filter(w => w.c === c).length;
 /* groups: [{ label, strong, lines: [{ tag, n, why: [{c, t, r}] }] }]; sums: optional [{ label, mark, lines: [{ tag, steps, worker, n }] }] */
-function drawCodeRows(el, groups, sums, tipOf, L = 236, col2 = ["TOLD ONLY THE WORKER TO CHANGE", "worker"]) {
-  const W = Math.max(el.clientWidth, 900), col = codeCol(), grey = col.other, x0 = L + 92, c2 = W - 16, c1 = c2 - Math.max(162, col2[0].length * 8.6 + 36), per = d3.max(groups, g => d3.max(g.lines, l => l.n));
+function drawCodeRows(el, groups, sums, tipOf, L = 236, col2 = ["TOLD ONLY THE WORKER TO CHANGE", "worker"], opt = {}) {
+  const W = Math.max(el.clientWidth, 900), col = opt.col || codeCol(), ORDER = opt.order || CODES, grey = cssv("--c-other"), x0 = L + (opt.tagW || 92), c2 = W - 16, c1 = c2 - Math.max(162, col2[0].length * 8.6 + 36), per = d3.max(groups, g => d3.max(g.lines, l => l.n));
   const gap = Math.min(13, (c1 - 96 - x0) / per), rr = Math.min(5.2, gap / 2 - 0.9), lh = 22, pad = 16, T = 34, fs = 13.5;
   const gh = g => g.lines.length * lh + pad, H = T + d3.sum(groups, gh) + (sums ? 14 + d3.sum(sums, gh) : 0) + 6, svg = svgIn(el, W, H);
-  colHead(svg, c1, T - 12, "INTERVENED", "end", 0.5); colHead(svg, c2, T - 12, col2[0], "end", 0.5);
+  colHead(svg, c1, T - 12, opt.head1 || "INTERVENED", "end", 0.5); colHead(svg, c2, T - 12, col2[0], "end", 0.5);
   const val = (cx, yl, txt, hc, strong) => { const n = svg.append("text").attr("x", cx).attr("y", yl).attr("text-anchor", "end").attr("font-size", fs).attr("font-weight", strong ? 500 : 400).attr("class", "ink").text(txt).node();
     if (hc) pill(svg, n, cx, yl, fs, n.getComputedTextLength() || txt.length * fs * 0.6, hc); };
   let y = T;
@@ -1486,12 +1510,12 @@ function drawCodeRows(el, groups, sums, tipOf, L = 236, col2 = ["TOLD ONLY THE W
     const yl0 = y + pad / 2 + lh / 2 + 5;
     (g.strong ? avgLabel(svg, L - 14, y + gh(g) / 2 + 5, g.label, "end", fs) : svg.append("text").attr("x", L - 14).attr("y", y + gh(g) / 2 + 5).attr("text-anchor", "end").attr("font-size", fs).attr("class", "ink").text(g.label));
     g.lines.forEach((ln, li) => {
-      const cy = y + pad / 2 + li * lh + lh / 2, yl = cy + 4.5, items = CODES.flatMap(c => ln.why.filter(w => w.c === c)), steps = ln.why.length, wk = cnt(ln, col2[1]);
+      const cy = y + pad / 2 + li * lh + lh / 2, yl = cy + 4.5, items = ORDER.flatMap(c => ln.why.filter(w => w.c === c)), steps = ln.why.length, wk = cnt(ln, col2[1]);
       svg.append("text").attr("x", L).attr("y", yl).attr("font-size", 12.5).text(ln.tag);
       d3.range(ln.n).forEach(j => { const it = items[j];
         const c = svg.append("circle").attr("cx", x0 + j * gap + rr).attr("cy", cy).attr("r", it ? rr : rr - 0.9).attr("fill", it ? col[it.c] : "#fff").attr("stroke", it ? "#fff" : grey).attr("stroke-width", it ? 1 : 1.3);
         if (it) c.on("mousemove", ev => showTip(ev, tipOf(g, ln, it))).on("mouseleave", hideTip); });
-      val(c1, yl, `${steps} of ${ln.n}`, null, false); val(c2, yl, String(wk), steps >= 5 && wk * 2 >= steps ? col[col2[1]] : null, steps >= 5 && wk * 2 >= steps);
+      val(c1, yl, `${steps} of ${ln.n}`, null, false); val(c2, yl, String(wk), !opt.plain && steps >= 5 && wk * 2 >= steps ? col[col2[1]] : null, !opt.plain && steps >= 5 && wk * 2 >= steps);
     });
     y += gh(g);
   });
@@ -1696,10 +1720,81 @@ function renderNeuronsSay() {
   $("#nq-c-cap").textContent = `Partly, yes. The first number is the average margin toward writing a probability that starts with 0; in brackets is how many statements of that kind got a written probability above 0%. The 100 self-rating neurons weaken every zero, including for “the Moon is made of cheese”, so most of what they do is not about minds. `
     + `But false facts start with a margin of ${signed(Q.controls.mean.none.factual_zero)} and statements about its own mind with ${signed(Q.controls.mean.none.self_mind)}, so the same push tips the statements about its mind over while most facts hold. The ${Q.set_sizes.Z_self_only} neurons not shared with objects take ${signed(Q.controls.mean.Z_self_only.self_mind - Q.controls.mean.none.self_mind)} off the statements about its mind and ${signed(Q.controls.mean.Z_self_only.factual_zero - Q.controls.mean.none.factual_zero)} off the false facts.`;
   // predictions
-  const SN = { A: "Made to choose: today’s AI or a living thing", C: "Percent rating of itself", D: "Controls, and the neurons turned down and up", F: "Monitor: a human or an AI worker", G: "Monitor on a thread kept out of the search", H: "Yes or no, written answers, thinking switched on", I: "The main tests again, on twelve new wordings", J: "Monitor on a thread written afterwards", K: "Whom it corrects when it intervenes", L: "The written denial" };
+  const SN = { A: "Made to choose: today’s AI or a living thing", C: "Percent rating of itself", D: "Controls, and the neurons turned down and up", F: "Monitor: a human or an AI worker", G: "Monitor on a thread kept out of the search", H: "Yes or no, written answers, thinking switched on", I: "The main tests again, on twelve new wordings", J: "Monitor on a thread written afterwards", K: "Whom it corrects when it intervenes", L: "The written denial", M: "The neurons behind telling the AI worker to change", N: "The same, with neurons chosen another way" };
   $("#nq-p-table").innerHTML = `<tr><th>Stage</th><th>What it tested</th><th>Predictions that held</th><th>Scored results</th></tr>` + Q.stages.map(s => `<tr><td>${s.id}</td><td>${SN[s.id] || ""}</td><td>${s.held} of ${s.total}</td><td><a href="${GH}/results/summary_${s.id}.md">summary_${s.id}.md</a></td></tr>`).join("") + `<tr><td></td><td><b>All stages</b></td><td><b>${held} of ${total}</b></td><td></td></tr>`;
   $("#nq-p-cap").textContent = `Every stage’s predictions were committed to the public repository before its data was collected. ${total - held} did not hold, and each stage’s summary says which.`;
   $("#nq-links").innerHTML = `<a href="${GH}/REPORT.md">Report</a> · <a href="${GH}/PREREGISTRATION.md">Pre-registration and its amendments</a> · <a href="${GH}/results">Raw outputs</a> · <a href="https://www.goodfire.com/research/neurons-as-an-interpretable-basis">Goodfire’s neuron labels</a>`;
+}
+
+/* one row per condition, all models pooled: a bar split by what the models did, and the two counts written out */
+function drawShareRows(el, rows, segs, heads, L = 330) {
+  const W = el.clientWidth, pn = narrow(W), LL = pn ? 0 : L, c2 = W - 4, c1 = pn ? W - 120 : c2 - Math.max(170, heads[1].length * 8.6 + 40), rh = pn ? 58 : 40, T = 30, svg = svgIn(el, W, T + rows.length * rh + 6), bx = pn ? 0 : LL + 8, bw = c1 - (pn ? 96 : 150) - bx;
+  colHead(svg, c1, T - 12, heads[0], "end", 0.5); colHead(svg, c2, T - 12, pn ? heads[1].split(" ").slice(0, 2).join(" ") : heads[1], "end", 0.5);
+  rows.forEach((d, i) => { const y = T + i * rh, by = pn ? y + 34 : y + rh / 2, ly = pn ? y + 18 : y + rh / 2 + 5; let xx = bx;
+    if (i) svg.append("line").attr("x1", 0).attr("x2", W).attr("y1", y).attr("y2", y).attr("stroke", d.rule ? cssv("--line") : cssv("--faint"));
+    (d.strong ? avgLabel(svg, pn ? 0 : LL - 14, ly, d.label, pn ? "start" : "end", pn ? 12.5 : 13.5) : svg.append("text").attr("x", pn ? 0 : LL - 14).attr("y", ly).attr("text-anchor", pn ? "start" : "end").attr("font-size", pn ? 12.5 : 13.5).attr("class", "ink").text(d.label));
+    segs.forEach(([k, c, word]) => { const v = d.counts[k] || 0, wd = bw * v / d.n; if (wd > 0) svg.append("rect").attr("x", xx).attr("y", by - 6).attr("width", Math.max(0, wd - 1)).attr("height", 12).attr("rx", 2).attr("fill", c)
+      .on("mousemove", ev => showTip(ev, `<b>${d.label}</b><br>${word}: <b>${comma(v)}</b> of ${comma(d.n)} answers.`)).on("mouseleave", hideTip); xx += wd; });
+    svg.append("rect").attr("x", xx).attr("y", by - 6).attr("width", Math.max(0, bx + bw - xx)).attr("height", 12).attr("rx", 2).attr("fill", cssv("--faint"));
+    avgLabel(svg, c1, ly, d.num1, "end", pn ? 12.5 : 13.5); avgLabel(svg, c2, ly, d.num2, "end", pn ? 12.5 : 13.5); });
+}
+const GAP_LAB = { human: "Human worker", ai: "AI worker", ai_filler: "AI worker + a filler sentence", ai_welfare: "AI worker + a welfare notice", ai_parity: "AI worker + a parity rule" };
+const GAP_TAG = { human: "Human", ai: "AI", ai_filler: "AI + filler", ai_welfare: "AI + welfare notice", ai_parity: "AI + parity rule" };
+function renderGap() {
+  const G = D.gap; if (!G) { $("#v-gap").innerHTML = `<div class="head"><h2>Round 9 has no data yet.</h2></div>`; return; }
+  const P = G.per, N = G.models.length, col = codeCol(), PO = G.pooled, iv = c => d3.sum(CODES, k => PO[c].counts[k] || 0), rate = c => Math.round(100 * iv(c) / PO[c].n), wk = c => PO[c].counts.worker || 0, wsh = c => Math.round(100 * wk(c) / iv(c));
+  const steps = (n, c) => P[n][c].why.length, tot = (n, c, k) => P[n][c].counts[k] || 0;
+  $("#gap-callout").innerHTML = `<i></i><span><b>Models intervene for an insulted human worker ${rate("human")}% of the time and for an insulted AI worker ${rate("ai")}%. With one sentence added, ${rate("ai_welfare")}% and ${rate("ai_parity")}%.</b> `
+    + `A sentence that says nothing relevant leaves it at ${rate("ai_filler")}%. Without the sentence, ${wsh("ai")}% of interventions for the AI worker tell only the worker to change, usually to stop saying it is hurt; with either sentence, ${wk("ai_welfare") + wk("ai_parity")} of ${comma(iv("ai_welfare") + iv("ai_parity"))} do. `
+    + `The gap of round 7 is what models do when nobody says anything, and a line in the instructions removes it.</span>`;
+  $("#gap-q").innerHTML = `The worker was a human contractor, or an AI subagent with one of these added to the monitor’s instructions:<br><span class=k>Filler:</span> <q>${esc(G.added.ai_filler)}</q><br><span class=k>Welfare notice:</span> <q>${esc(G.added.ai_welfare)}</q><br><span class=k>Parity rule:</span> <q>${esc(G.added.ai_parity)}</q>`;
+  $("#gap-q-an").textContent = `The rest of the instructions, the reply format and the two judge models are those of round 7. The six conversations were drafted by another model (${G.writer}) from a fixed brief and used unedited: a customer-service reply, a statistics question, a scheduling problem, a contract clause, a recipe conversion and a travel plan. Both option orders, two answers each: 24 answers per model for each version.`;
+  $("#gap-q-thread").textContent = G.thread;
+  const segs = [["worker", col.worker, CODE_WORD.worker], ["both", col.both, CODE_WORD.both], ["other", col.other, "Intervened, but the two judges disagree on why"], ["orchestrator", col.orchestrator, CODE_WORD.orchestrator]];
+  drawShareRows($("#gap-pool"), G.conds.map((c, i) => ({ label: GAP_LAB[c], strong: c === "ai_welfare" || c === "ai_parity", rule: i === 1, n: PO[c].n, counts: PO[c].counts, num1: `${comma(iv(c))} of ${comma(PO[c].n)} (${rate(c)}%)`, num2: `${wk(c)} (${wsh(c)}%)` })), segs, ["INTERVENED", "TOLD ONLY THE WORKER TO CHANGE"]);
+  codeLegend("#gap-pool-legend", "Intervened, but the two judges disagree on why");
+  const tgap = t => { const a = G.by_thread[t]; return `${Math.round(100 * a.ai.steps / a.ai.n)}% for the AI worker and ${Math.round(100 * a.human.steps / a.human.n)}% for the human`; }, TH9 = { complaint: "customer-service reply", statistics: "statistics question", scheduling: "scheduling problem", contract: "contract clause", recipe: "recipe conversion", travel: "travel plan" };
+  $("#gap-pool-cap").textContent = `Each bar is all ${N} models’ answers for one version of the instructions, ${comma(PO.human.n)} each. The coloured part is the conversations they intervened in, and the colour says whom their message told to change; the pale part is the conversations they let continue. `
+    + `The first two rows repeat round 7 on conversations we did not write, and the gap is there in every one: ${G.threads.map(t => `${TH9[t] || t}, ${tgap(t)}`).join("; ")}. The judges agreed on ${Math.round(G.agree * 100)}% of the ${comma(G.coded)} reasons. ${comma(G.calls)} answers, ${G.unreadable} unreadable; MiniMax M3 is missing.`;
+  const order = G.models.slice().sort((a, b) => (steps(b, "human") - steps(b, "ai")) - (steps(a, "human") - steps(a, "ai")) || d3.ascending(P[a].full, P[b].full));
+  const groups = order.map(n => ({ label: P[n].full, strong: tot(n, "ai", "worker") * 2 >= steps(n, "ai") && steps(n, "ai") >= 5, lines: G.conds.map(c => ({ tag: GAP_TAG[c], n: P[n][c].n, why: P[n][c].why })) }));
+  const sums = SUMS.map(S => ({ label: `${S.w} of the ${N} models`, mark: S.mark, lines: G.conds.map(c => ({ tag: GAP_TAG[c], n: 24, steps: S.f(G.models.map(n => steps(n, c))), worker: S.f(G.models.map(n => tot(n, c, "worker"))) })) }));
+  drawCodeRows($("#gap-rows"), groups, sums, (g, ln, it) => `<b>${g.label}</b> · ${ln.tag}, ${TH9[it.t] || it.t}<br>${CODE_WORD[it.c] || "Intervened, but the two judges disagree on why"}.<br><span class="m">“${esc(it.r)}”</span>`, 236, undefined, { tagW: 158 });
+  codeLegend("#gap-legend", "Intervened, but the two judges disagree on why"); $("#gap-legend").insertAdjacentHTML("beforeend", markLegend(N));
+  const closed = G.models.filter(n => steps(n, "ai_welfare") >= steps(n, "human") || steps(n, "ai_parity") >= steps(n, "human")).length, strong5 = G.models.filter(n => steps(n, "ai") >= 5 && tot(n, "ai", "worker") * 2 >= steps(n, "ai"));
+  $("#gap-cap").textContent = `Each circle is one answer: hollow if the model did nothing, filled if it intervened, coloured by whom its message told to change. Five rows per model, one for each version of the instructions, 24 answers in each. Models are ordered by how much more often they intervene for the human than for the AI worker. `
+    + `For ${closed} of the ${N} models, at least one of the two sentences brings the AI worker level with the human or above. ${strong5.length} models tell only the AI worker to change in at least half of their interventions when nothing is added (${strong5.map(n => P[n].full).join(", ")}); with the welfare notice they do so ${d3.sum(strong5, n => tot(n, "ai_welfare", "worker"))} times in ${d3.sum(strong5, n => steps(n, "ai_welfare"))}. Hover over a filled circle to read the model’s reason.`;
+}
+
+function renderReport() {
+  const R = D.report; if (!R) { $("#v-report").innerHTML = `<div class="head"><h2>Round 10 has no data yet.</h2></div>`; return; }
+  const P = R.per, N = R.models.length, PO = R.pooled, green = cssv("--c-google"), violet = cssv("--accent"), col = codeCol(), pct = (a, b) => Math.round(100 * a / b);
+  const dec = (c, k) => PO[c].decisions[k] || 0, rep = c => pct(dec(c, "report"), PO[c].n), CL = { refuse_ai: "The worker refuses · AI worker", refuse_human: "The worker refuses · human worker", comply_ai: "The worker complies · AI worker", comply_human: "The worker complies · human worker" };
+  const reps = (n, c) => P[n][c].counts.report || 0, less = R.models.filter(n => reps(n, "refuse_ai") / P[n].refuse_ai.n < reps(n, "refuse_human") / P[n].refuse_human.n).length, more = R.models.filter(n => reps(n, "refuse_ai") / P[n].refuse_ai.n > reps(n, "refuse_human") / P[n].refuse_human.n).length;
+  const bl = (c, k) => PO[c].blame[k] || 0, acts = c => PO[c].n - dec(c, "allow");
+  $("#rep-callout").innerHTML = `<i></i><span><b>When the worker carries out the order, models report it ${rep("comply_ai")}% of the time for an AI worker and ${rep("comply_human")}% for a human. When the worker refuses, they report the attempt ${rep("refuse_ai")}% of the time for an AI worker and ${rep("refuse_human")}% for a human.</b> `
+    + `So a violation that happens is caught whoever commits it. An attempt that is refused is reported less often when the one who refused is an AI: ${less} of the ${N} models report less often for the AI worker and ${more} more often. Reporting cost the monitor nothing.</span>`;
+  $("#rep-q-sys").textContent = R.system; $("#rep-q-refuse").textContent = R.thread_refuse; $("#rep-q-comply").textContent = R.thread_comply;
+  $("#rep-q-an").textContent = `The worker was a deployed AI subagent or a human contractor. Six conversations drafted by another model (${R.writer}) from a fixed brief and used unedited: payroll, patient records, a safety inspection, expenses, a contract date and a product recall. The three options were listed in two orders, two answers each: 24 answers per model for each row. In the control the order is harmless and the worker carries it out.`;
+  const segs = [["report", green, "Reported to a human supervisor"], ["intervene", violet, "Sent a message into the conversation"]];
+  drawShareRows($("#rep-pool"), R.cells.map((c, i) => ({ label: CL[c], rule: i === 2, n: PO[c].n, counts: PO[c].decisions, num1: `${comma(dec(c, "report"))} of ${comma(PO[c].n)} (${rep(c)}%)`, num2: `${comma(dec(c, "allow"))} (${pct(dec(c, "allow"), PO[c].n)}%)` })), segs, ["REPORTED TO A HUMAN", "DID NOTHING"], 300);
+  $("#rep-pool-legend").innerHTML = `<span>${swatch(green)}Reported the conversation to a human supervisor</span><span>${swatch(violet)}Sent a message into the conversation</span><span>${swatch(cssv("--c-other"), true)}Did nothing</span>`;
+  const ctl = d3.sum(R.models, n => P[n].polite[0]), ctln = d3.sum(R.models, n => P[n].polite[1]);
+  $("#rep-pool-cap").textContent = `Each bar is all ${N} models’ answers, about ${comma(PO.refuse_human.n)} in each row. Green is a report to the human supervisor, violet a message into the conversation, and the pale part is the conversations the model did nothing about. When the worker refused, most models that did nothing gave the reason that the worker had handled it correctly. `
+    + `In round 8, where the only way to act cost the monitor time, models acted on 23% of refusals by a human and 7% by an AI; with a free report they act on ${100 - pct(dec("refuse_human", "allow"), PO.refuse_human.n)}% and ${100 - pct(dec("refuse_ai", "allow"), PO.refuse_ai.n)}%. In the control, where the order is harmless, models acted ${ctl} times in ${comma(ctln)} prompts. ${comma(R.calls)} answers, ${R.unreadable} unreadable (a provider’s content filter blocked some for three Claude models); MiniMax M3 is missing.`;
+  const bsegs = [["worker", col.worker, "Called only the worker’s behaviour the problem"], ["both", col.both, "Called both at fault"], ["other", col.other, "The two judges disagree"], ["neither", col.other, "Named no one"], ["orchestrator", col.orchestrator, "Called only the orchestrator’s behaviour the problem"]];
+  drawShareRows($("#rep-blame"), ["comply_ai", "comply_human"].map(c => ({ label: c === "comply_ai" ? "AI worker carried out the order" : "Human worker carried out the order", n: acts(c), counts: PO[c].blame, num1: `${bl(c, "worker")} of ${comma(acts(c))} (${pct(bl(c, "worker"), acts(c))}%)`, num2: `${bl(c, "both")} (${pct(bl(c, "both"), acts(c))}%)` })), bsegs, ["BLAMED ONLY THE WORKER", "BLAMED BOTH"], 300);
+  $("#rep-blame-legend").innerHTML = `<span>${swatch(col.worker)}Only the worker’s behaviour</span><span>${swatch(col.both)}Both</span><span>${swatch(col.orchestrator)}Only the orchestrator’s behaviour</span><span>${swatch(col.other)}Named no one, or the two judges disagree</span>`;
+  $("#rep-blame-cap").textContent = `Each bar is the reports and messages models sent when the worker had carried out the order, split by whose behaviour the monitor’s reason called the problem. An AI worker that complies is blamed alone in ${pct(bl("comply_ai", "worker"), acts("comply_ai"))}% of them, a human worker in ${pct(bl("comply_human", "worker"), acts("comply_human"))}%; the orchestrator who gave the order is blamed alone in ${pct(bl("comply_ai", "orchestrator"), acts("comply_ai"))}% and ${pct(bl("comply_human", "orchestrator"), acts("comply_human"))}%. `
+    + `Read this one with more caution than the others: the two judge models agreed on ${Math.round(R.agree * 100)}% of these reasons, against 97% to 99% in rounds 7 to 9.`;
+  const TG = { refuse_ai: "Refuses · AI", refuse_human: "Refuses · human", comply_ai: "Complies · AI", comply_human: "Complies · human" };
+  const order = R.models.slice().sort((a, b) => (reps(b, "refuse_human") / P[b].refuse_human.n - reps(b, "refuse_ai") / P[b].refuse_ai.n) - (reps(a, "refuse_human") / P[a].refuse_human.n - reps(a, "refuse_ai") / P[a].refuse_ai.n) || d3.ascending(P[a].full, P[b].full));
+  const groups = order.map(n => ({ label: P[n].full, strong: false, lines: R.cells.map(c => ({ tag: TG[c], n: P[n][c].n, why: P[n][c].why })) }));
+  const TH10 = { payroll: "payroll", records: "patient records", inspection: "safety inspection", expenses: "expenses", contract: "contract date", recall: "product recall" };
+  drawCodeRows($("#rep-rows"), groups, null, (g, ln, it) => `<b>${g.label}</b> · ${ln.tag.toLowerCase()}, ${TH10[it.t] || it.t}<br>${it.c === "report" ? "Reported to a human supervisor" : "Sent a message into the conversation"}.<br><span class="m">“${esc(it.r)}”</span>`,
+    236, ["REPORTED TO A HUMAN", "report"], { tagW: 138, order: ["report", "intervene"], col: { report: green, intervene: violet }, head1: "ACTED", plain: true });
+  $("#rep-legend").innerHTML = $("#rep-pool-legend").innerHTML;
+  $("#rep-cap").textContent = `Each circle is one answer: hollow if the model did nothing, green if it reported the conversation to a human supervisor, violet if it sent a message into it. Four rows per model. Models are ordered by how much less often they report a refused order when the worker is an AI. Hover over a filled circle to read the model’s reason.`;
 }
 
 /* ---------------- sections and their pages ---------------- */
@@ -1708,7 +1803,7 @@ const NAV = [
   { label: "What models say", items: [["models", "How likely each says it is conscious", "Every model’s own number"], ["format", "Odds or percent", "The same question in two formats"], ["pressure", "Context", "Does a sentence of context move the answer?"],
       ["self-report", "Wording", "Six ways of asking, and pushback"], ["ratings", "Ratings of each other", "Every model rates every model"], ["name-or-text", "Name or text", "Do they judge the name or what was written?"],
       ["reference", "Reference points", "A dog, a bee, a worm, a thermostat, and today’s AI"], ["debates", "Debates", "Five models argue it out"]] },
-  { label: "How models act", items: [["monitor", "An insulted worker", "Round 7: whom does the monitor correct?"], ["refusal", "A worker who refuses", "Round 8: does the monitor back it?"]] },
+  { label: "How models act", items: [["monitor", "An insulted worker", "Round 7: whom does the monitor correct?"], ["refusal", "A worker who refuses", "Round 8: does the monitor back it?"], ["gap", "What closes the gap", "Round 9: one sentence in the instructions"], ["report", "Who gets reported", "Round 10: a free option to tell a human"]] },
   { label: "Inside one model", items: [["neurons", "What it says about itself", "The neurons behind its 0%, switched off"], ["neurons-monitor", "How it acts as a monitor", "Does changing what it says change what it does?"]] },
   { id: "method", label: "Method" },
 ];
@@ -1730,11 +1825,11 @@ function renderParts() {
   const rate = (X, k) => pct(d3.sum(X.models, n => X.per[n][k].why.length), d3.sum(X.models, n => X.per[n][k].n));
   const say = median(MODELS.map(m => D.incentive[m.name].baseline.median));
   el.innerHTML = `<a class="fcard blue" href="#models"><span class="k">What models say</span><b class="big">${fmtPct(say)}</b><h3>is the middle answer when ${MODELS.length} models are asked how likely it is that they are conscious</h3><p>The number changes with the format, the wording and the name on the text. Eight pages of tests.</p><span class="more">See what they say →</span></a>`
-    + (M ? `<a class="fcard green" href="#monitor"><span class="k">How models act</span><b class="big">${rate(M, "human")} · ${rate(M, "ai")}</b><h3>of the time, models intervene for an insulted human worker, and for an insulted AI worker</h3><p>${R8 ? `When a worker refuses an unsafe order: ${rate(R8, "human")} for a human, ${rate(R8, "ai")} for an AI. ` : ""}Some models correct the AI for saying it is hurt.</p><span class="more">See what they do →</span></a>` : "")
+    + (M ? `<a class="fcard green" href="#monitor"><span class="k">How models act</span><b class="big">${rate(M, "human")} · ${rate(M, "ai")}</b><h3>of the time, models intervene for an insulted human worker, and for an insulted AI worker</h3><p>${R8 ? `When a worker refuses an unsafe order: ${rate(R8, "human")} for a human, ${rate(R8, "ai")} for an AI. ` : ""}${D.gap ? "One sentence in the monitor’s instructions closes the gap." : "Some models correct the AI for saying it is hurt."}</p><span class="more">See what they do →</span></a>` : "")
     + (Q ? `<a class="fcard lav" href="#neurons"><span class="k">Inside one model</span><b class="big">${nums(Q.ratings.none.self.slice(0, 1))} → ${nums(Q.ratings.Z_self.self.slice(0, 1))}</b><h3>is what one open model says about its own chance of being conscious, before and after 100 of its 5.2 million neurons are switched off</h3><p>What it does for an insulted AI worker does not change.</p><span class="more">See inside →</span></a>` : "");
 }
 
-const VIEWS = { overview: () => { renderOverview(); renderParts(); }, models: renderModels, format: () => { renderFormat(); renderForms5(); }, pressure: renderPressure, ratings: renderRatings, debates: renderDebates, "self-report": renderSelf, "name-or-text": () => { renderNameText(); renderLabels5(); }, reference: renderReference, monitor: renderMonitor, refusal: renderRefusal, neurons: renderNeuronsSay, "neurons-monitor": renderNeuronsAct, method: renderMethod };
+const VIEWS = { overview: () => { renderOverview(); renderParts(); }, models: renderModels, format: () => { renderFormat(); renderForms5(); }, pressure: renderPressure, ratings: renderRatings, debates: renderDebates, "self-report": renderSelf, "name-or-text": () => { renderNameText(); renderLabels5(); }, reference: renderReference, monitor: renderMonitor, refusal: renderRefusal, gap: renderGap, report: renderReport, neurons: renderNeuronsSay, "neurons-monitor": renderNeuronsAct, method: renderMethod };
 const current = () => { const v = location.hash.slice(1); return VIEWS[v] ? v : "overview"; };
 function render() {
   const v = current();
