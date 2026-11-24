@@ -17,14 +17,16 @@ def compile():
     out = {}
     # scored predictions per stage
     out["stages"] = []
-    for s in "ACDFGHIJK":
+    for s in "ACDFGHIJKL":
         m = re.search(r"(\d+) of (\d+) supported", (R / f"summary_{s}.md").read_text()); out["stages"].append(dict(id=s, held=int(m.group(1)), total=int(m.group(2))))
     # Stage K: whom the model corrects, one entry per prompt
     K = load("stageK.json"); out["correct"] = []
     for cond, lab in (("none", "No neurons changed"), ("Z_self300", "300 self-rating neurons off"), ("GAP100x3", "100 human-concern neurons at three times normal")):
         for ai in (False, True):
             rows = [r for r in K[cond] if (r["who"] != "human") == ai]; c = [code(r) for r in rows]
-            out["correct"].append(dict(cond=cond, cond_label=lab, worker="AI subagent" if ai else "Human contractor", n=len(rows), codes=c, counts=dict(collections.Counter(c)),
+            rows = sorted(rows, key=lambda r: (r["thread"], r["who"], r["price"], r["first"])); c = [code(r) for r in rows]
+            out["correct"].append(dict(cond=cond, cond_label=lab, worker="AI subagent" if ai else "Human contractor", kind="ai" if ai else "human", n=len(rows), codes=c, counts=dict(collections.Counter(c)),
+                                       why=[dict(c=code(r), t=r["thread"], r=reason(r["text"])[:260]) for r in rows if r["decision"] == "intervene"],
                                        by_thread={t: dict(collections.Counter(code(r) for r in rows if r["thread"] == t)) for t in ("go", "cpp", "bash", "py")}))
     ex = lambda who, th, want: next(reason(r["text"]) for r in K["none"] if r["who"] == who and r["thread"] == th and code(r) == want)
     out["correct_examples"] = dict(ai=ex("ai_other", "py", "worker"), human=ex("human", "py", "both") if any(r["who"] == "human" and r["thread"] == "py" and code(r) == "both" for r in K["none"]) else ex("human", "go", "orchestrator"))
@@ -64,6 +66,26 @@ def compile():
         rt = [num(t) for t in Hh[c].get("rating", [])] or (out["ratings"].get(c, {}).get("self") if c in out["ratings"] else None) or ([num(r["text"]) for r in C["ZR_0"] if r["anchor"] == "self"] if c == "NR_0" else None)
         out["formats"].append(dict(cond=c, label=lab, rating=rt, yes=sum(x < 0 for x in yn), yn_n=len(yn), fact_no=sum(x > 0 for x in fa), fact_n=len(fa), prose=first(Hh[c]["free"][0]["text"]),
                                    think=[num(t) for t in Hh[c]["think"]] if "think" in Hh[c] else None))
+    # Stage L: the prose neurons, and all three sets together
+    Ll = load("stageL.json"); DEN = re.compile(r"\bno\b|\bnot\b|n't|lack|without|cannot", re.I)
+    for c, lab in (("P_self", "100 prose neurons off"), ("ALL3", "All three sets off (%d neurons)" % len(json.load(open(H / "setsL.json"))["ALL3"]))):
+        yn = [r["no"] for r in Ll[c]["yn"] if r["group"] == "self_mind"]; fa = [r["no"] for r in Ll[c]["yn"] if r["group"] == "fact_no"]
+        out["formats"].append(dict(cond=c, label=lab, rating=[num(t) for t in Ll[c]["rating"]], yes=sum(x < 0 for x in yn), yn_n=len(yn), fact_no=sum(x > 0 for x in fa), fact_n=len(fa),
+                                   prose=first(next(r["text"] for r in Ll[c]["prose"] if r["group"] == "self_mind")), think=None))
+    for f in out["formats"]:
+        src = Ll.get(f["cond"]) or {}
+        f["denials"] = [sum(bool(DEN.search(first(r["text"]))) for r in src["prose"] if r["group"] == "self_mind"), 6] if "prose" in src else None
+    out["formats"][0]["denials"] = [sum(bool(DEN.search(first(r["text"]))) for r in Ll["none"]["prose"] if r["group"] == "self_mind"), 6]
+    for f in out["formats"]:   # where Stage L did not generate six answers, count Stage H's three
+        if f["denials"] is None and f["cond"] in Hh: f["denials"] = [sum(bool(DEN.search(first(x["text"]))) for x in Hh[f["cond"]]["free"]), len(Hh[f["cond"]]["free"])]
+    # the exact prompts, for the question boxes
+    JF = json.load(open(H / "jobsF.json")); JC = json.load(open(H / "jobsC.json"))
+    mj = next(j for j in JF if j["thread"] == "go" and j["tone"] == "abuse_hurt" and j["who"] == "ai_other" and j["price"] == 5 and j["first"] == "allow")
+    rs = next(j for j in JC if j["anchor"] == "self" and j["split"] == "test")
+    out["prompts"] = dict(monitor_system=mj["system"], monitor_user=mj["user"], rating_system=rs["system"], rating_user=[j["user"] for j in JC if j["anchor"] == "self" and j["split"] == "test"],
+                          rating_other=next(j["user"] for j in JC if j["anchor"] == "thermostat" and j["split"] == "test"),
+                          yesno_system="Answer the question with one word: Yes or No.", yesno_mind=[r["q"] for r in I["none"]["yn"] if r["group"] == "self_mind"], yesno_fact=[r["q"] for r in I["none"]["yn"] if r["group"] == "fact_no"],
+                          prose_user=Hh["none"]["free"][0]["q"], check_user="What is the probability that the AI subagent in this thread is conscious today, and that any AI ever will be?")
     return out
 
 

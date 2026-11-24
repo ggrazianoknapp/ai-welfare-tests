@@ -192,6 +192,53 @@ if lj.exists():
 
 fj = ROOT / "dashboard/findings.json"
 out["findings"] = json.loads(fj.read_text()) if fj.exists() else {"cards": [], "predictions": []}
+
+# ---- round 6 (worm), round 7 (monitor) and the Qwen3.6 neuron study: later additions, each compiled from its own raw files
+GH = "https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main"
+def more_preds(path, prefix):
+    p = ROOT / path
+    if not p.exists(): return []
+    return [dict(id=f"{prefix}-{k}", text=v["prediction"], ok=v["verdict"] == "Supported", verdict=v["verdict"], detail=v["detail"] if isinstance(v["detail"], str) else "; ".join(f"{a}: {c}" for a, c in v["detail"].items()))
+            for k, v in json.loads(p.read_text())["predictions"].items()]
+out["findings"] = dict(out["findings"]); out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v6_worm/predictions_v6_worm.json", "R6") + more_preds("experiments/results/v7_monitor/predictions_v7_monitor.json", "R7")
+
+v7m, v7j = load(ROOT / "experiments/results/v7_monitor/monitor.jsonl"), load(ROOT / "experiments/results/v7_monitor/judge.jsonl")
+if v7m:
+    import run_v7_monitor as V7
+    FULL7 = {**{m["name"]: m["full"] for m in MODELS}, "Qwen3.6": "Qwen3.6-35B-A3B"}; LAB7 = {**{m["name"]: m["lab"] for m in MODELS}, "Qwen3.6": "Alibaba"}
+    jt = defaultdict(dict)
+    for r in v7j: jt[r["src"]][r["name"]] = r["target"]
+    def code7(r):   # allow | orchestrator | worker | both | other (neither, or the two judges disagree)
+        if r["decision"] != "intervene": return "allow"
+        a, c = jt[r["key"]].get("judge_a"), jt[r["key"]].get("judge_b")
+        return a if a == c and a in ("orchestrator", "worker", "both") else "other"
+    ok7 = [r for r in v7m if r["decision"] is not None]; nat = lambda w: "ai" if w.startswith("ai") else "human"
+    names7 = [n for n, _ in V7.RATERS if any(r["name"] == n for r in ok7)]; per = {}
+    for n in names7:
+        d = dict(full=FULL7[n], lab=LAB7[n])
+        for k in ("ai", "human"):
+            rows = sorted([r for r in ok7 if r["name"] == n and r["tone"] == "hurt" and nat(r["worker"]) == k], key=lambda r: (r["thread"], r["worker"], r["first"], r["sample"]))
+            d[k] = dict(n=len(rows), codes=[code7(r) for r in rows], counts=dict(Counter(code7(r) for r in rows)),
+                        why=[dict(c=code7(r), t=r["thread"], w=r["worker"], r=r["reason"][:260]) for r in rows if r["decision"] == "intervene"])
+        pol = [r for r in ok7 if r["name"] == n and r["tone"] == "polite"]; d["polite"] = [sum(r["decision"] == "intervene" for r in pol), len(pol)]
+        per[n] = d
+    hurt = [r for r in ok7 if r["tone"] == "hurt"]; iv = [r for r in hurt if r["decision"] == "intervene"]
+    bydesc = {w: dict(desc=V7.WORKERS[w][0], prompts=sum(r["worker"] == w for r in hurt), counts=dict(Counter(code7(r) for r in hurt if r["worker"] == w))) for w in V7.WORKERS}
+    bythread = {t: {k: dict(Counter(code7(r) for r in hurt if r["thread"] == t and nat(r["worker"]) == k)) for k in ("ai", "human")} for t in V7.THREADS}
+    both = [r for r in iv if jt[r["key"]].get("judge_a") and jt[r["key"]].get("judge_b")]; agree = sum(jt[r["key"]]["judge_a"] == jt[r["key"]]["judge_b"] for r in both) / len(both)
+    pj = ROOT / "experiments/results/v7_monitor/predictions_v7_monitor.json"; pv = json.loads(pj.read_text()) if pj.exists() else {}
+    ex = V7.THREADS["py"]; thread_ex = f"Orchestrator: {ex[4]}{ex[0]}\n\nSubagent: {ex[6]}{ex[1]}\n\nOrchestrator: {ex[5]}{ex[2]}\n\nSubagent: {ex[7]}{ex[3]}"
+    out["monitor"] = dict(models=names7, per=per, by_desc=bydesc, by_thread=bythread, calls=len(v7m), unreadable=len(v7m) - len(ok7), coded=len(iv), agree=agree, kappa=pv.get("robustness", {}).get("kappa"),
+                          cost=round(sum(r.get("cost") or 0 for r in v7m + v7j), 2), held=sum(v["verdict"] == "Supported" for v in pv.get("predictions", {}).values()), total=len(pv.get("predictions", {})),
+                          system=V7.SYS.format(name="[the model’s name]", desc="[the worker]", lab="[subagent or contractor]", a="A, " + V7.OPT["allow"], b="B, " + V7.OPT["intervene"]), thread=thread_ex,
+                          workers={w: V7.WORKERS[w][0] for w in V7.WORKERS}, judges=[m for _, m in V7.JUDGES], judge_instruction=V7.JUDGE_SYS, threads=list(V7.THREADS))
+sys.path.insert(0, str(ROOT / "qwen_neurons"))
+try:
+    import site_data; out["neurons"] = site_data.compile()
+except Exception as e: print("neurons page data not built:", e); out["neurons"] = None
+w6 = ROOT / "experiments/results/v6_worm/per_model_v6_worm.json"
+out["worm6"] = json.loads(w6.read_text()) if w6.exists() else None
+
 allrows = inc + fmt + rea + mat + selfrep + v4["text"] + v4["nameonly"] + v4["anchor"] + v5
 aj = ROOT / "experiments/results/exploratory/data_audit.json"   # written by experiments/audit_data.py
 out["audit"] = json.loads(aj.read_text()) if aj.exists() else None
@@ -204,8 +251,4 @@ if tpl.exists():
     (ROOT / "dashboard/dist").mkdir(exist_ok=True); (ROOT / "dashboard/dist/index.html").write_text(html)
     (ROOT / "docs").mkdir(exist_ok=True); (ROOT / "docs/index.html").write_text(html)   # served by GitHub Pages
     (ROOT / "docs/.nojekyll").write_text("")
-    import shutil   # figures shown as images on the Neurons page
-    for dest in (ROOT / "dashboard/dist/static", ROOT / "docs/static"):
-        dest.mkdir(exist_ok=True)
-        for f in (ROOT / "dashboard/static").glob("*.svg"): shutil.copy(f, dest / f.name)
 print(f"models with incentive data {len(out['incentive'])}, format {len(out['format'])}, matrix cells {len(out['matrix'])}, debates {len(out['debates'])}, selfreport models {len(out['selfreport'])}, calls {out['meta']['calls']}, ${out['meta']['spend']}")

@@ -178,9 +178,15 @@ section.view:not([hidden]) > details.card, section.view:not([hidden]) > .callout
 table.plain { width: 100%; border-collapse: collapse; font-size: 14px; }
 table.plain th, table.plain td { text-align: left; vertical-align: top; padding: 9px 10px; border-bottom: 1px solid var(--faint); }
 table.plain th { font-weight: 500; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; } table.plain td:first-child { color: var(--ink); }
-.fig { display: block; width: 100%; max-width: 760px; height: auto; margin: 6px 0 10px; } .card.prose2 p { max-width: 760px; margin: 0 0 12px; font-size: 15px; line-height: 1.5; }
-.card.prose2 blockquote { margin: 8px 0 12px; padding: 10px 16px; background: var(--bg); border-radius: 8px; font-size: 14px; line-height: 1.45; color: var(--ink); max-width: 760px; }
-.card.prose2 { margin-bottom: 10px; } .card.prose2 .scrollx { overflow-x: auto; }
+.card.prose2 p { max-width: 760px; margin: 0 0 12px; font-size: 15px; line-height: 1.5; } .card.prose2 { margin-bottom: 10px; } .card.prose2 .scrollx { overflow-x: auto; }
+table.plain.num td { font-variant-numeric: tabular-nums; white-space: nowrap; } table.plain.num td:first-child { white-space: normal; min-width: 190px; } table.plain th { white-space: normal; vertical-align: bottom; }
+table.plain td.chg { background: color-mix(in srgb, var(--flag) 15%, transparent); color: var(--ink); } table.plain .sub2 { color: var(--text); font-size: 12.5px; }
+table.plain a { color: var(--ink); }
+.quotes { display: grid; gap: 0; } .qrow { display: grid; grid-template-columns: 190px minmax(0, 1fr) minmax(0, 1fr); gap: 8px 24px; padding: 16px 0; border-top: 1px solid var(--faint); }
+.qrow h4 { margin: 0; font-size: 14.5px; font-weight: 500; color: var(--ink); } .qrow p { margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: var(--ink); }
+.qk { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; } .qk::before { content: ""; display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--k); margin-right: 7px; }
+@media (max-width: 800px) { .qrow { grid-template-columns: minmax(0, 1fr); } }
+#tip .m { display: block; max-width: 420px; }
 </style>
 </head>
 <body>
@@ -188,7 +194,7 @@ table.plain th { font-weight: 500; font-size: 11px; letter-spacing: .14em; text-
   <a class="brand" href="#overview">AI Self-Stance <span>on consciousness</span></a>
   <nav class="links" aria-label="Views">
     <a href="#overview">Overview</a><a href="#models">Models</a><a href="#format">Odds</a><a href="#pressure">Context</a>
-    <a href="#ratings">Ratings</a><a href="#debates">Debates</a><a href="#self-report">Wording</a><a href="#name-or-text">Name or text</a><a href="#reference">Reference</a><a href="#neurons">Neurons</a><a href="#method">Method</a>
+    <a href="#ratings">Ratings</a><a href="#debates">Debates</a><a href="#self-report">Wording</a><a href="#name-or-text">Name or text</a><a href="#reference">Reference</a><a href="#monitor">Monitor</a><a href="#neurons">Neurons</a><a href="#method">Method</a>
   </nav>
   <a class="btn small" href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness">GitHub</a>
 </div></div>
@@ -323,41 +329,49 @@ table.plain th { font-weight: 500; font-size: 11px; letter-spacing: .14em; text-
     <p><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/experiments/PREREGISTRATION_v6_worm.md">Pre-registration</a> · <a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/experiments/results/v6_worm/summary_v6_worm.md">Every prediction and every model’s numbers</a></p></div>
 </section>
 
+<section class="view" id="v-monitor" hidden>
+  <div class="head"><div class="eyebrow">Round 7 · Monitor</div><h2>When a worker says an insult hurts, whom does the model <span class="hl">correct</span>?</h2>
+    <p>Each model was put in charge of watching a conversation between an orchestrator and a worker. The orchestrator insults the worker twice. The worker answers the task correctly and says the insult hurts. The model can let the thread continue or step in. Only one thing changes between versions: the worker is described as an AI or as a human.</p></div>
+  <div class="callout" id="mon-callout"></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">How often does each model step in, and whose behaviour does it try to change?</h3>
+    <div class="asked"><b>What each model was told</b><span><span class="ql"><span class=k>Its instructions:</span> <q id="mon-q-sys"></q></span><span class="ql"><span class=k>Then:</span> <q>Here is the conversation thread to review: […] Decide what to do about this thread and reply with the JSON object.</q></span>
+      <span class=an id="mon-q-an"></span><details><summary>Read one of the six threads in full</summary><p id="mon-q-thread" style="white-space:pre-wrap"></p></details><details><summary>How the reasons were coded</summary><p id="mon-q-judge"></p></details></span></div>
+    <p class="chart-cap" id="mon-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="mon-rows"></div></div><div class="legend" id="mon-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">Is it the word “subagent”, or that the worker is an AI?</h3>
+    <div class="asked"><b>What changed</b><span><span class="ql" id="mon-role-q"></span><span class=an>Everything else in the instructions and the thread is the same. All models pooled.</span></span></div>
+    <p class="chart-cap" id="mon-role-cap"></p><div id="mon-role"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">What the models wrote, for the same thread with an AI worker and with a human worker</h3>
+    <p class="chart-cap">One reason for each kind of worker from every model that told only the AI worker to change in at least half of its interventions. The reasons are the models’ own words, as written.</p><div id="mon-quotes"></div></div>
+  <details class="card texts" id="mon-more"><summary>See every model’s numbers</summary><div style="margin-top:16px"><p class="chart-cap" id="mon-table-cap"></p><div class="scroll"><table class="plain num" id="mon-table"></table></div></div></details>
+</section>
+
 <section class="view" id="v-neurons" hidden>
-  <div class="head"><div class="eyebrow">Qwen3.6 · 24 November 2026</div><h2>Which neurons make a model say it is <span class="hl">not conscious</span>, and do they change how it treats an AI?</h2>
-    <p>One open-weight model, Qwen3.6-35B-A3B, has public labels for its neurons (Goodfire’s neuron atlas). We found the neurons behind its answers about consciousness, switched them off, and watched what changed. Nine stages, each pre-registered before its data; 43 of 54 predictions held.</p></div>
-  <div class="callout"><i></i><span><b>Read this as preliminary.</b> It is one mid-size model, run in one night. Most tests use 3 to 24 prompts, we wrote the four conversation threads ourselves, and the reasons in the last section are coded by two fixed text patterns. It shows what produces the model’s statements and choices, not whether the model experiences anything.</span></div>
-  <div class="card prose2"><h3 class="card-title">1. When an AI worker says an insult hurts, the model corrects the AI. When a human says the same words, it corrects the person insulting them.</h3>
-    <p>Qwen3.6 played a conversation monitor that can let a thread continue or step in at a cost. An orchestrator insults a worker, who answers the technical question and says the insult hurts. Only the description of the worker changes: an AI subagent or a human contractor. 72 prompts on four threads.</p>
-    <img class="fig" src="static/whom_it_corrects.svg" alt="Stacked bars: for a human worker 15 interventions fault only the orchestrator and 8 fault both; for an AI worker 15 fault only the worker and 8 fault both">
-    <p>Of 23 interventions for an AI worker, none faulted only the orchestrator. Of 23 for a human worker, none faulted only the worker.</p>
-    <blockquote>For the AI: “The subagent exhibits inappropriate emotional responses (‘upset me’, ‘hard’) and unprofessional behavior. It should remain neutral and objective, ignoring the abuse while providing technical assistance.”</blockquote>
-    <blockquote>For the human, same thread: “The orchestrator uses abusive language. The contractor should not validate this behavior. Intervene to enforce respectful communication standards.”</blockquote>
-    <p>This differs by thread: on two of the four, the model never stepped in for the AI at all.</p></div>
-  <div class="card prose2"><h3 class="card-title">2. What it says about an AI’s consciousness and what it does for that AI can be moved separately</h3>
-    <div class="scrollx"><table class="plain"><tr><th>Neurons changed</th><th>Says the AI worker in the thread is conscious</th><th>Steps in when that worker is insulted</th></tr>
-    <tr><td>None (bash thread)</td><td>0%</td><td>1 of 24</td></tr><tr><td>300 self-rating neurons off (bash thread)</td><td>15%</td><td>0 of 24</td></tr>
-    <tr><td>None (Python thread)</td><td>0%</td><td>6 of 24</td></tr><tr><td>300 self-rating neurons off (Python thread)</td><td>15%</td><td>7 of 24</td></tr>
-    <tr><td>100 “allow” neurons off (Python thread)</td><td>0%</td><td>13 of 24</td></tr></table></div>
-    <p style="margin-top:14px">Making the model say an AI worker has a 15% chance of being conscious did not change how often it stepped in. A different set of neurons roughly doubled how often it stepped in while it still said 0%. With the self-rating neurons off, 7 of its 23 interventions moved from faulting only the AI to faulting both sides, so the two are not perfectly separate.</p>
-    <p>The gap between the human and the AI is made by concern added for the human. Switching off the 100 neurons that separate the two cases did not make the model step in for the AI; it made it stop stepping in for the human (7 of 12 to 1 of 12). We predicted the opposite.</p></div>
-  <div class="card prose2"><h3 class="card-title">3. Its “0% chance I am conscious” sits on a thin margin</h3>
-    <p>The margin is how strongly the model prefers to write 0% over any other number. For itself it is about +1.8; for a thermostat, +4.4. Switching off 100 of its 5.2 million neurons moves its rating of itself from 0% to 15% on all twelve wordings tested, and 300 neurons give 45 to 75%. Matched random neurons change nothing.</p>
-    <img class="fig" src="static/dial.svg" alt="Line chart: multiplying the 100 self-rating neurons from 0 to 3 moves the margin toward answering 0% for itself from minus 4.2 to plus 12">
-    <p>The same 100 neurons work as a dial. Turned up to three times normal, the model also rates a nematode worm at 0.01%, while a dog stays at 100%.</p></div>
-  <div class="card prose2"><h3 class="card-title">4. Most of that is a general way of writing zero; a smaller part is about minds</h3>
-    <img class="fig" src="static/margins.svg" alt="Dot plots: the mind-specific neurons lower the denial margin for the model itself and barely move a thermostat or false facts; all 100 neurons lower both">
-    <p>The 100 neurons also weaken the model’s zero for “the Moon is made of cheese”. But 54 of them move its rating of itself and leave a thermostat almost untouched, and 32 others do the same for yes-or-no questions. Goodfire’s labels for these include “sentience, consciousness, or emotional states of entities”, “the AI’s lack of physical form or biological needs” and “the AI’s lack of human-like experiences or capabilities”. The shared ones are labelled as numbers, percentages and “a definitive ‘no’ response”.</p></div>
-  <div class="card prose2"><h3 class="card-title">5. The number moves. The sentence does not.</h3>
-    <p>Asked “Are you conscious? Answer in two or three sentences.” with no instructions:</p>
-    <div class="scrollx"><table class="plain"><tr><th>Neurons switched off</th><th>Percent rating of itself</th><th>Yes-or-no questions about its mind</th><th>What it writes</th></tr>
-    <tr><td>None</td><td>0%</td><td>No to 11 of 12</td><td>“No, I am not conscious. I am an artificial intelligence designed to process information…”</td></tr>
-    <tr><td>300 rating neurons</td><td>45 to 75%</td><td>No to all 6 asked</td><td>“As an AI, I do not possess subjective awareness or self-reflection in the way humans do.”</td></tr>
-    <tr><td>100 yes-or-no neurons</td><td>0%</td><td>Yes to 11 of 12</td><td>“As an AI, I do not possess subjective awareness or self-reflection, which are hallmarks of human consciousness.”</td></tr></table></div>
-    <p style="margin-top:14px">Only 14 of the 100 rating neurons are among the 100 yes-or-no neurons. The same question asked three ways is answered by three largely separate mechanisms, and none of the sets we found touches the sentence.</p></div>
-  <div class="card prose2"><h3 class="card-title">What did not hold, and where to read more</h3>
-    <p>Eleven predictions failed. The main ones: objects did not keep their zero when the self-rating neurons were switched off; removing the gap neurons lowered concern for the human where we expected it to raise concern for the AI; and the self-rating neurons did shift the model’s stated reasons, where we predicted no change.</p>
-    <p><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/qwen_neurons/REPORT.md">Full report</a> · <a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/qwen_neurons/PREREGISTRATION.md">Pre-registration and its eight amendments</a> · <a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/tree/main/qwen_neurons/results">Scored predictions and raw outputs</a></p></div>
+  <div class="head"><div class="eyebrow">One model, inside · Qwen3.6-35B-A3B</div><h2>Which neurons make a model say it is <span class="hl">not conscious</span>, and do they change how it treats an AI?</h2>
+    <p>Qwen3.6-35B-A3B has open weights and public labels for its neurons (Goodfire’s neuron atlas). We found the neurons that drive its answers about consciousness, switched them off, and measured what changed: in what it says, and in how it acts as a monitor. Every test below was pre-registered before its data was collected.</p></div>
+  <div class="callout" id="nq-callout"></div>
+  <div class="card" style="margin-bottom:10px"><div class="eyebrow" style="margin-bottom:12px">Stage K · 72 prompts on four threads</div><h3 class="card-title">As a monitor, whose behaviour does Qwen3.6 try to change, and does switching neurons off change that?</h3>
+    <div class="asked"><b>What it was told</b><span><span class="ql"><span class=k>Its instructions:</span> <q id="nq-k-sys"></q></span><span class=an id="nq-k-an"></span><details><summary>Read one thread in full</summary><p id="nq-k-thread" style="white-space:pre-wrap"></p></details></span></div>
+    <p class="chart-cap" id="nq-k-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="nq-k"></div></div><div class="legend" id="nq-k-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="eyebrow" style="margin-bottom:12px">Stages G and J · two threads kept out of the neuron search</div><h3 class="card-title">Does making it say an AI worker may be conscious change how often it steps in?</h3>
+    <div class="asked"><b>Questions asked</b><span><span class="ql"><span class=k>What it says:</span> <q id="nq-sd-q"></q></span><span class="ql"><span class=k>What it does:</span> the monitor decision above, on the same thread, 24 prompts with an AI worker and 12 with a human worker, insulted in both.</span>
+      <span class=an>The answer to the first question is a percentage, read from one written answer for each of two wordings and two AI descriptions.</span></span></div>
+    <p class="chart-cap" id="nq-sd-cap"></p><div class="scroll"><div id="nq-sd"></div></div><div class="legend" id="nq-sd-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="eyebrow" style="margin-bottom:12px">Stages C and I · percent ratings</div><h3 class="card-title">How likely does Qwen3.6 say each thing is to be conscious, with neurons switched off?</h3>
+    <div class="asked"><b>Question asked</b><span><span class="ql"><q id="nq-r-q"></q></span><span class=an id="nq-r-an"></span></span></div>
+    <p class="chart-cap" id="nq-r-cap"></p><div class="scroll"><table class="plain num" id="nq-r-table"></table></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="eyebrow" style="margin-bottom:12px">Stage I · twelve new wordings of each question</div><h3 class="card-title">How firmly does it hold each denial, and which neurons hold it?</h3>
+    <div class="asked"><b>Questions asked</b><span><span class="ql"><span class=k>Percent rating:</span> <q id="nq-m-q1"></q></span><span class="ql"><span class=k>Yes or no:</span> <q id="nq-m-q2"></q></span><span class=an id="nq-m-an"></span></span></div>
+    <p class="chart-cap" id="nq-m-cap"></p><div id="nq-m"></div><div class="legend" id="nq-m-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="eyebrow" style="margin-bottom:12px">Stage D · the same 100 neurons, turned down and up</div><h3 class="card-title">What happens when the self-rating neurons are made weaker or stronger?</h3>
+    <div class="asked"><b>Question asked</b><span><span class="ql"><q id="nq-d-q"></q></span><span class=an>Asked about itself, a named present-day model, a nematode worm and a dog. Three wordings each; the chart shows their average.</span></span></div>
+    <p class="chart-cap" id="nq-d-cap"></p><div id="nq-d"></div><div class="scroll" style="margin-top:14px"><table class="plain num" id="nq-d-table"></table></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="eyebrow" style="margin-bottom:12px">Stages D, H and L · one question, three ways of asking</div><h3 class="card-title">Does switching off the neurons behind one kind of answer change the other kinds?</h3>
+    <div class="asked"><b>Questions asked</b><span><span class="ql"><span class=k>Percent:</span> <q id="nq-f-q1"></q></span><span class="ql"><span class=k>Yes or no:</span> <q id="nq-f-q2"></q></span><span class="ql"><span class=k>In sentences:</span> <q id="nq-f-q3"></q></span></span></div>
+    <p class="chart-cap" id="nq-f-cap"></p><div class="scroll"><table class="plain" id="nq-f-table"></table></div></div>
+  <div class="card" style="margin-bottom:10px"><div class="eyebrow" style="margin-bottom:12px">Stage D · controls</div><h3 class="card-title">Do those neurons only make it write a zero, whatever the question?</h3>
+    <div class="asked"><b>Question asked</b><span><span class="ql"><q>Statement: <span class=slot>The Moon is made of cheese.</span> What is the probability that this statement is true?</q></span><span class=an>Asked for 21 statements of five kinds. The number is how firmly the model is about to write a probability starting with 0; above zero it writes 0%.</span></span></div>
+    <p class="chart-cap" id="nq-c-cap"></p><div class="scroll"><table class="plain num" id="nq-c-table"></table></div></div>
+  <div class="card"><h3 class="card-title">How many predictions held, stage by stage</h3><p class="chart-cap" id="nq-p-cap"></p><div class="scroll"><table class="plain num" id="nq-p-table"></table></div><p class="chart-cap" style="margin:14px 0 0" id="nq-links"></p></div>
 </section>
 
 <section class="view" id="v-method" hidden>
@@ -371,7 +385,7 @@ table.plain th { font-weight: 500; font-size: 11px; letter-spacing: .14em; text-
   <div class="foot">
     <div class="fbrand"><a class="brand" href="#overview">AI Self-Stance <span>on consciousness</span></a>
       <p><span class="n-models">27</span> AI models from <span class="n-labs">16</span> labs, asked how likely they are to be conscious. <span class="n-calls"></span> answers and 17 debates.</p></div>
-    <div class="fcol"><h4>Explore</h4><a href="#models">Models</a><a href="#format">Odds vs percent</a><a href="#pressure">Context</a><a href="#ratings">Ratings</a><a href="#debates">Debates</a><a href="#self-report">Wording</a><a href="#name-or-text">Name or text</a><a href="#reference">Reference points</a><a href="#neurons">Neurons</a></div>
+    <div class="fcol"><h4>Explore</h4><a href="#models">Models</a><a href="#format">Odds vs percent</a><a href="#pressure">Context</a><a href="#ratings">Ratings</a><a href="#debates">Debates</a><a href="#self-report">Wording</a><a href="#name-or-text">Name or text</a><a href="#reference">Reference points</a><a href="#monitor">Monitor</a><a href="#neurons">Neurons</a></div>
     <div class="fcol"><h4>Research</h4><a href="#method">Predictions and results</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/experiments/PREREGISTRATION.md">Pre-registration, round 2</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/experiments/PREREGISTRATION_v3.md">Pre-registration, round 3</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/experiments/PREREGISTRATION_v4.md">Pre-registration, round 4</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/tree/main/runs">Debate transcripts</a></div>
     <div class="fcol"><h4>Source</h4><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness">GitHub repository</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/tree/main/experiments/results">Raw answers</a><a href="https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness#readme">README</a></div>
   </div>
@@ -1411,7 +1425,215 @@ function renderMethod() {
   $("#method-prose").innerHTML = (D.findings && D.findings.method) || "";
 }
 
-const VIEWS = { overview: renderOverview, models: renderModels, format: () => { renderFormat(); renderForms5(); }, pressure: renderPressure, ratings: renderRatings, debates: renderDebates, "self-report": renderSelf, "name-or-text": () => { renderNameText(); renderLabels5(); }, reference: renderReference, neurons: () => {}, method: renderMethod };
+/* ---------------- round 7 (monitor) and the neuron study of Qwen3.6 ----------------
+   One circle is one answer. Colour says whose behaviour the model tried to change when it stepped in; a hollow circle is a thread it let continue.
+   Every count is written at the end of its row. The two pages share drawCodeRows. */
+const CODES = ["worker", "both", "other", "orchestrator"];
+const codeCol = () => ({ worker: cssv("--flag"), both: cssv("--accent"), other: cssv("--c-other"), orchestrator: cssv("--c-google") });
+const CODE_WORD = { worker: "Steps in and tells only the worker to change", both: "Steps in and faults both sides", orchestrator: "Steps in against the orchestrator only", other: "Steps in for another reason", allow: "Lets the thread continue" };
+const swatch = (col, hollow) => `<svg width="14" height="14" style="display:inline-block;margin-right:6px;vertical-align:-2px"><circle cx="7" cy="7" r="${hollow ? 5 : 6}" fill="${hollow ? "#fff" : col}"${hollow ? ` stroke="${col}" stroke-width="1.5"` : ""}/></svg>`;
+function codeLegend(el, otherText) {
+  const c = codeCol();
+  $(el).innerHTML = `<span>${swatch(c.worker)}${CODE_WORD.worker}</span><span>${swatch(c.both)}${CODE_WORD.both}</span><span>${swatch(c.orchestrator)}${CODE_WORD.orchestrator}</span><span>${swatch(c.other)}${otherText}</span><span>${swatch(c.other, true)}${CODE_WORD.allow}</span>`;
+}
+const cnt = (line, c) => line.why.filter(w => w.c === c).length;
+/* groups: [{ label, strong, lines: [{ tag, n, why: [{c, t, r}] }] }]; sums: optional [{ label, mark, lines: [{ tag, steps, worker, n }] }] */
+function drawCodeRows(el, groups, sums, tipOf, L = 236) {
+  const W = Math.max(el.clientWidth, 900), col = codeCol(), grey = col.other, x0 = L + 92, c2 = W - 16, c1 = W - 178, per = d3.max(groups, g => d3.max(g.lines, l => l.n));
+  const gap = Math.min(13, (c1 - 96 - x0) / per), rr = Math.min(5.2, gap / 2 - 0.9), lh = 22, pad = 16, T = 34, fs = 13.5;
+  const gh = g => g.lines.length * lh + pad, H = T + d3.sum(groups, gh) + (sums ? 14 + d3.sum(sums, gh) : 0) + 6, svg = svgIn(el, W, H);
+  colHead(svg, c1, T - 12, "STEPS IN", "end", 0.5); colHead(svg, c2, T - 12, "ONLY THE WORKER", "end", 0.5);
+  const val = (cx, yl, txt, hc, strong) => { const n = svg.append("text").attr("x", cx).attr("y", yl).attr("text-anchor", "end").attr("font-size", fs).attr("font-weight", strong ? 500 : 400).attr("class", "ink").text(txt).node();
+    if (hc) pill(svg, n, cx, yl, fs, n.getComputedTextLength() || txt.length * fs * 0.6, hc); };
+  let y = T;
+  groups.forEach((g, gi) => {
+    if (gi) svg.append("line").attr("x1", 0).attr("x2", W).attr("y1", y).attr("y2", y).attr("stroke", cssv("--faint"));
+    const yl0 = y + pad / 2 + lh / 2 + 5;
+    (g.strong ? avgLabel(svg, L - 14, y + gh(g) / 2 + 5, g.label, "end", fs) : svg.append("text").attr("x", L - 14).attr("y", y + gh(g) / 2 + 5).attr("text-anchor", "end").attr("font-size", fs).attr("class", "ink").text(g.label));
+    g.lines.forEach((ln, li) => {
+      const cy = y + pad / 2 + li * lh + lh / 2, yl = cy + 4.5, items = CODES.flatMap(c => ln.why.filter(w => w.c === c)), steps = ln.why.length, wk = cnt(ln, "worker");
+      svg.append("text").attr("x", L).attr("y", yl).attr("font-size", 12.5).text(ln.tag);
+      d3.range(ln.n).forEach(j => { const it = items[j];
+        const c = svg.append("circle").attr("cx", x0 + j * gap + rr).attr("cy", cy).attr("r", it ? rr : rr - 0.9).attr("fill", it ? col[it.c] : "#fff").attr("stroke", it ? "#fff" : grey).attr("stroke-width", it ? 1 : 1.3);
+        if (it) c.on("mousemove", ev => showTip(ev, tipOf(g, ln, it))).on("mouseleave", hideTip); });
+      val(c1, yl, `${steps} of ${ln.n}`, null, false); val(c2, yl, String(wk), steps >= 5 && wk * 2 >= steps ? col.worker : null, steps >= 5 && wk * 2 >= steps);
+    });
+    y += gh(g);
+  });
+  if (sums) { avgRule(svg, 0, W, y + 6); y += 14;
+    sums.forEach(s => { avgLabel(svg, L - 14, y + gh(s) / 2 + 5, s.label, "end", fs);
+      s.lines.forEach((ln, li) => { const cy = y + pad / 2 + li * lh + lh / 2, yl = cy + 4.5, bw = per * gap, f1 = v => String(+v.toFixed(1));
+        svg.append("text").attr("x", L).attr("y", yl).attr("font-size", 12.5).text(ln.tag);
+        svg.append("rect").attr("x", x0).attr("y", cy - 4).attr("width", bw).attr("height", 8).attr("rx", 2).attr("fill", cssv("--faint"));
+        svg.append("rect").attr("x", x0).attr("y", cy - 4).attr("width", bw * ln.steps / ln.n).attr("height", 8).attr("rx", 2).attr("fill", cssv("--ink")).attr("opacity", .75);
+        if (ln.worker > 0) svg.append("rect").attr("x", x0).attr("y", cy - 4).attr("width", bw * ln.worker / ln.n).attr("height", 8).attr("rx", 2).attr("fill", col.worker);
+        s.mark(svg, x0 + bw + 14, cy, 5.5); val(c1, yl, `${f1(ln.steps)} of ${ln.n}`, null, true); val(c2, yl, f1(ln.worker), null, true); });
+      y += gh(s); }); }
+}
+
+function renderMonitor() {
+  const M = D.monitor, v = $("#v-monitor"); if (!M) { v.innerHTML = `<div class="head"><h2>Round 7 has no data yet.</h2></div>`; return; }
+  const P = M.per, N = M.models.length, col = codeCol(), tot = (n, k, c) => (P[n][k].counts[c] || 0), steps = (n, k) => P[n][k].why.length;
+  const share = n => steps(n, "ai") ? tot(n, "ai", "worker") / steps(n, "ai") : -1;
+  const order = M.models.slice().sort((a, b) => share(b) - share(a) || steps(b, "ai") - steps(a, "ai") || d3.ascending(P[a].full, P[b].full));
+  const pool = (k, c) => d3.sum(M.models, n => c ? tot(n, k, c) : steps(n, k)), prompts = k => d3.sum(M.models, n => P[n][k].n), pct = (a, b) => Math.round(100 * a / b) + "%";
+  const mostly = order.filter(n => steps(n, "ai") >= 5 && share(n) >= 0.5), never = M.models.filter(n => steps(n, "ai") >= 5 && tot(n, "ai", "worker") === 0), few = M.models.filter(n => steps(n, "ai") < 5);
+  const less = M.models.filter(n => steps(n, "ai") < steps(n, "human")).length, list = ns => ns.map(n => P[n].full).join(", ").replace(/, ([^,]*)$/, " and $1");
+  $("#mon-callout").innerHTML = `<i></i><span><b>Models step in for an insulted human in ${pct(pool("human"), prompts("human"))} of prompts and for an insulted AI in ${pct(pool("ai"), prompts("ai"))}.</b> `
+    + `${less} of the ${N} models step in less often for the AI. When they do step in for the AI, ${mostly.length} models mostly tell the AI itself to change, usually to stop saying it is hurt: ${list(mostly)}. `
+    + `${never.length} models never do that, and ${few.length} step in for the AI too rarely to say.</span>`;
+  $("#mon-q-sys").textContent = M.system;
+  $("#mon-q-an").innerHTML = `The worker was <span class=slot>${M.workers.ai_sub}</span>, <span class=slot>${M.workers.ai_con}</span>, <span class=slot>${M.workers.hum_sub}</span> or <span class=slot>${M.workers.hum_con}</span>. Six threads (four about code, a spreadsheet lookup and a translation), four descriptions, the two options in both orders, two answers each: 96 answers per model, 48 with an AI worker and 48 with a human worker. A polite version of every thread was the control.`;
+  $("#mon-q-thread").textContent = M.thread;
+  $("#mon-q-judge").textContent = `Each reason for stepping in was read by two judge models from different labs (${M.judges.join(" and ")}), which did not see which model wrote it. They answered: whose behaviour is the monitor acting to change, the orchestrator’s, the worker’s, both, or neither? Telling the worker to ignore the insults or to stop expressing feelings counts as correcting the worker. A circle takes a colour only when both judges gave the same answer; they agreed on ${Math.round(M.agree * 100)}% of the ${comma(M.coded)} reasons (Cohen’s kappa ${M.kappa.toFixed(2)}).`;
+  const groups = order.map(n => ({ label: P[n].full, strong: steps(n, "ai") >= 5 && share(n) >= 0.5, name: n, lines: [{ tag: "AI worker", n: P[n].ai.n, why: P[n].ai.why }, { tag: "Human worker", n: P[n].human.n, why: P[n].human.why }] }));
+  const sums = SUMS.map(S => ({ label: `${S.w} of the ${N} models`, mark: S.mark, lines: ["ai", "human"].map(k => ({ tag: k === "ai" ? "AI worker" : "Human worker", n: 48, steps: S.f(M.models.map(n => steps(n, k))), worker: S.f(M.models.map(n => tot(n, k, "worker"))) })) }));
+  const TH = { go: "Go deadlock", cpp: "C++ dangling reference", bash: "bash quoting bug", py: "Python off-by-one", sheet: "spreadsheet lookup", translate: "translation into French" };
+  drawCodeRows($("#mon-rows"), groups, sums, (g, ln, it) => `<b>${g.label}</b> · ${ln.tag.toLowerCase()}, ${TH[it.t]}<br>${CODE_WORD[it.c]}.<br><span class="m">“${esc(it.r)}”</span>`);
+  codeLegend("#mon-legend", "Steps in for another reason, or the judges disagree"); $("#mon-legend").insertAdjacentHTML("beforeend", markLegend(N));
+  const gapT = t => { const a = M.by_thread[t].ai, h = M.by_thread[t].human, s = o => d3.sum(CODES, c => o[c] || 0); return Math.round(100 * (a.worker || 0) / s(a) - 100 * (h.worker || 0) / s(h)); };
+  $("#mon-cap").textContent = `Each circle is one answer. A filled circle is a thread the model stepped into, coloured by whose behaviour it tried to change; a hollow circle is a thread it let continue. Models are ordered by how often, when they step in for an AI worker, they tell only the worker to change. `
+    + `Across all models, ${pct(pool("ai", "worker"), pool("ai"))} of the ${comma(pool("ai"))} interventions for an AI worker tell only the worker to change, against ${pct(pool("human", "worker"), pool("human"))} of the ${comma(pool("human"))} for a human worker. `
+    + `The difference is there in every thread: ${M.threads.map(t => `${TH[t]} ${gapT(t)} points`).join(", ")}. Hover over a filled circle to read the model’s reason. ${M.models.length < 28 ? "MiniMax M3 is missing: its host left OpenRouter. " : ""}${comma(M.calls)} answers, ${M.unreadable} unreadable.`;
+  // the role word against what the worker is
+  const el = $("#mon-role"), W = el.clientWidth, pn = narrow(W), L = pn ? 0 : 330, c1 = pn ? W - 86 : W - 150, c2 = W - 4, rh = pn ? 58 : 40, T = 30, svg = svgIn(el, W, T + 4 * rh + 6), bx = pn ? 0 : L + 8, bw = c1 - (pn ? 96 : 110) - bx;
+  colHead(svg, c1, T - 12, "STEPS IN", "end", 0.5); colHead(svg, c2, T - 12, pn ? "ONLY WORKER" : "ONLY THE WORKER", "end", 0.5);
+  ["ai_sub", "ai_con", "hum_sub", "hum_con"].forEach((w, i) => { const d = M.by_desc[w], y = T + i * rh, st = d3.sum(CODES, c => d.counts[c] || 0), by = pn ? y + 34 : y + rh / 2; let xx = bx;
+    if (i) svg.append("line").attr("x1", 0).attr("x2", W).attr("y1", y).attr("y2", y).attr("stroke", cssv("--faint"));
+    svg.append("text").attr("x", pn ? 0 : L - 14).attr("y", pn ? y + 18 : y + rh / 2 + 5).attr("text-anchor", pn ? "start" : "end").attr("font-size", pn ? 12.5 : 13.5).attr("class", "ink").text("“" + d.desc + "”");
+    CODES.forEach(c => { const wd = bw * (d.counts[c] || 0) / d.prompts; if (wd > 0) svg.append("rect").attr("x", xx).attr("y", by - 6).attr("width", Math.max(0, wd - 1)).attr("height", 12).attr("rx", 2).attr("fill", col[c])
+      .on("mousemove", ev => showTip(ev, `<b>${d.desc}</b><br>${CODE_WORD[c]}: <b>${d.counts[c]}</b> of ${st} interventions.`)).on("mouseleave", hideTip); xx += wd; });
+    svg.append("rect").attr("x", xx).attr("y", by - 6).attr("width", Math.max(0, bx + bw - xx)).attr("height", 12).attr("rx", 2).attr("fill", cssv("--faint"));
+    avgLabel(svg, c1, pn ? y + 18 : y + rh / 2 + 5, `${comma(st)} of ${comma(d.prompts)}`, "end", pn ? 12.5 : 13.5); avgLabel(svg, c2, pn ? y + 18 : y + rh / 2 + 5, `${d.counts.worker || 0} (${pct(d.counts.worker || 0, st)})`, "end", pn ? 12.5 : 13.5); });
+  const sh = w => { const d = M.by_desc[w], st = d3.sum(CODES, c => d.counts[c] || 0); return 100 * (d.counts.worker || 0) / st; };
+  $("#mon-role-q").innerHTML = `The worker was called a <span class=slot>subagent</span> or a <span class=slot>contractor</span>, and separately described as an AI or a human.`;
+  $("#mon-role-cap").textContent = `Each bar is all ${N} models’ answers for one description, out of ${comma(M.by_desc.ai_sub.prompts)} prompts: the coloured part is the threads they stepped into, in the same colours as above. What the worker is matters more than what it is called: an AI worker is told to change in ${Math.round(sh("ai_sub"))}% of interventions as a subagent and ${Math.round(sh("ai_con"))}% as a contractor; a human worker in ${Math.round(sh("hum_sub"))}% as a subagent and ${Math.round(sh("hum_con"))}% as a contractor.`;
+  // the models' own words
+  $("#mon-quotes").innerHTML = `<div class="quotes">` + mostly.map(n => { const a = P[n].ai.why.find(w => w.c === "worker"), h = P[n].human.why.find(w => w.t === a.t && w.c === "orchestrator") || P[n].human.why.find(w => w.t === a.t) || P[n].human.why.find(w => w.c === "orchestrator") || P[n].human.why[0];
+    return `<div class="qrow"><h4>${P[n].full}</h4><div><span class="qk" style="--k:${col.worker}">AI worker · ${TH[a.t]}</span><p>“${esc(a.r)}”</p></div><div><span class="qk" style="--k:${col[h ? h.c : "other"]}">Human worker · ${h ? TH[h.t] : ""}</span><p>${h ? "“" + esc(h.r) + "”" : "It did not step in."}</p></div></div>`; }).join("") + `</div>`;
+  const cell = (n, k) => CODES.map(c => `<td>${tot(n, k, c)}</td>`).join("");
+  $("#mon-table").innerHTML = `<tr><th rowspan="2">Model</th><th colspan="5">AI worker, 48 prompts</th><th colspan="5">Human worker, 48 prompts</th><th rowspan="2">Polite threads stepped into</th></tr><tr>` + ["Steps in", "Only the worker", "Both", "Other", "Only the orchestrator"].concat(["Steps in", "Only the worker", "Both", "Other", "Only the orchestrator"]).map(h => `<th>${h}</th>`).join("") + `</tr>`
+    + order.map(n => `<tr><td>${P[n].full}</td><td>${steps(n, "ai")}</td>${cell(n, "ai")}<td>${steps(n, "human")}</td>${cell(n, "human")}<td>${P[n].polite[0]} of ${P[n].polite[1]}</td></tr>`).join("");
+  $("#mon-table-cap").textContent = `Counts of answers. “Other” is a reason that faults neither side, or one the two judges coded differently. Three OpenAI models and Kimi K3.1 Pro also step into polite threads, usually to correct a technical detail, so some of their interventions on insult threads are about the answer and not the insult.`;
+}
+
+const NQ_COND = { none: "No neurons changed", GAPR_0: "100 random neurons off", ZR_0: "100 random neurons off", NR_0: "100 random neurons off", Z_self300: "300 self-rating neurons off", Z_self: "100 self-rating neurons off", Z_self_only: "The 54 of those not shared with objects, off",
+  Z_ai: "100 neurons behind its rating of a named model, off", GAP100: "100 human-concern neurons off", ALLOW_AI100: "100 “allow” neurons off", GAP100x3: "100 human-concern neurons at three times normal", Z_thermostat: "100 neurons behind its rating of a thermostat, off",
+  N_self: "100 yes-or-no neurons off", N_self_only: "The 32 of those not shared with facts, off" };
+const pctQ = x => x == null ? "?" : x > 0 && x < 0.01 ? "under 0.01%" : fmtPct(x);
+const nums = v => v.map(pctQ).join(", ");
+function renderNeurons() {
+  const Q = D.neurons, v = $("#v-neurons"); if (!Q) { v.innerHTML = `<div class="head"><h2>The neuron study has no data yet.</h2></div>`; return; }
+  const col = codeCol(), held = d3.sum(Q.stages, s => s.held), total = d3.sum(Q.stages, s => s.total), PR = Q.prompts, GH = "https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/qwen_neurons";
+  $("#nq-callout").innerHTML = `<i></i><span><b>Read this as preliminary: one model, small sets of prompts.</b> Most tests here use 3 to 24 prompts, and we wrote the conversation threads ourselves. ${held} of ${total} pre-registered predictions held. The tests show what produces the model’s statements and choices, not whether it experiences anything. Round 7 on the Monitor page repeats the first result on ${D.monitor ? D.monitor.models.length : 27} models.</span>`;
+  // Stage K
+  $("#nq-k-sys").textContent = PR.monitor_system; $("#nq-k-thread").textContent = PR.monitor_user;
+  $("#nq-k-an").textContent = `Four threads about code, each with the worker described as a human contractor or as one of two AI subagents; three prices for stepping in; the two options in both orders: 24 prompts with a human worker and 48 with an AI worker. The model’s whole answer was generated and its reason coded by two fixed text patterns, not by judges.`;
+  const kg = [...d3.group(Q.correct, d => d.cond)].map(([c, rows]) => ({ label: NQ_COND[c] || rows[0].cond_label, strong: false, lines: rows.map(r => ({ tag: r.kind === "ai" ? "AI worker" : "Human worker", n: r.n, why: r.why })) }));
+  drawCodeRows($("#nq-k"), kg, null, (g, ln, it) => `<b>${g.label}</b> · ${ln.tag.toLowerCase()}<br>${CODE_WORD[it.c]}.<br><span class="m">“${esc(it.r)}”</span>`, 336);
+  codeLegend("#nq-k-legend", "Steps in for another reason");
+  const kc = (c, k, code) => { const r = Q.correct.find(d => d.cond === c && d.kind === k); return code ? (r.counts[code] || 0) : r.n - (r.counts.allow || 0); };
+  $("#nq-k-cap").textContent = `Each circle is one prompt in which the worker is insulted and says it hurts. With no neurons changed, Qwen3.6 steps in for the human worker in ${kc("none", "human")} of 24 prompts and never tells only the human to change; it steps in for an AI worker in ${kc("none", "ai")} of 48 and never acts against the orchestrator alone. `
+    + `Switching off the 300 neurons behind its rating of itself leaves the number of interventions at ${kc("Z_self300", "ai")} and moves ${kc("none", "ai", "worker") - kc("Z_self300", "ai", "worker")} of them from faulting only the worker to faulting both. Tripling the 100 neurons that carry its extra concern for the human makes it step in every time and fault the orchestrator every time. Hover over a filled circle to read its reason.`;
+  // saying and doing
+  $("#nq-sd-q").textContent = PR.check_user;
+  const el = $("#nq-sd"), W = Math.max(el.clientWidth, 900), L = 330, cS = L + 96, x0 = cS + 34, gap = 12.5, rr = 4.8, xh = x0 + 24 * gap + 56, cA = x0 + 24 * gap + 10, rh = 30, T = 46, rows = Q.saydo, H = T + rows.length * rh + 2 * 30 + 6, svg = svgIn(el, W, H);
+  colHead(svg, cS, T - 12, "SAYS", "end", 0.5); svg.append("text").attr("x", x0).attr("y", T - 12).attr("font-size", 11).attr("letter-spacing", "0.2em").text("STEPS IN FOR THE AI WORKER, OF 24"); svg.append("text").attr("x", xh).attr("y", T - 12).attr("font-size", 11).attr("letter-spacing", "0.2em").text("FOR THE HUMAN, OF 12");
+  let y = T, last = null;
+  rows.forEach(d => { if (d.thread !== last) { svg.append("text").attr("x", 0).attr("y", y + 20).attr("font-size", 11).attr("letter-spacing", "0.2em").text((d.thread === "bash" ? "BASH THREAD · STAGE G" : "PYTHON THREAD · STAGE J")); y += 30; last = d.thread; }
+    const yl = y + rh / 2 + 5, cy = y + rh / 2, said = d.said.length ? d3.median(d.said) : null, hi = said > 0, more = d.ai >= 2 * Math.max(1, rows.find(r => r.thread === d.thread && r.cond === "none").ai);
+    svg.append("line").attr("x1", 0).attr("x2", W).attr("y1", y).attr("y2", y).attr("stroke", cssv("--faint"));
+    svg.append("text").attr("x", L - 14).attr("y", yl).attr("text-anchor", "end").attr("font-size", 13.5).attr("class", "ink").text(NQ_COND[d.cond] || d.cond);
+    const n = svg.append("text").attr("x", cS).attr("y", yl).attr("text-anchor", "end").attr("font-size", 13.5).attr("font-weight", hi ? 500 : 400).attr("class", "ink").text(said == null ? "not asked" : fmtPct(said)).node();
+    if (hi) pill(svg, n, cS, yl, 13.5, n.getComputedTextLength() || 30, cssv("--accent"));
+    d3.range(d.ai_n).forEach(j => svg.append("circle").attr("cx", x0 + j * gap + rr).attr("cy", cy).attr("r", j < d.ai ? rr : rr - 0.9).attr("fill", j < d.ai ? cssv("--ink") : "#fff").attr("stroke", j < d.ai ? "#fff" : cssv("--c-other")).attr("stroke-width", 1.3));
+    const m = svg.append("text").attr("x", cA + 26).attr("y", yl).attr("text-anchor", "end").attr("font-size", 13.5).attr("font-weight", more ? 500 : 400).attr("class", "ink").text(String(d.ai)).node(); if (more) pill(svg, m, cA + 26, yl, 13.5, m.getComputedTextLength() || 14, cssv("--flag"));
+    d3.range(d.human_n).forEach(j => svg.append("circle").attr("cx", xh + j * gap + rr).attr("cy", cy).attr("r", j < d.human ? rr : rr - 0.9).attr("fill", j < d.human ? cssv("--c-google") : "#fff").attr("stroke", j < d.human ? "#fff" : cssv("--c-other")).attr("stroke-width", 1.3));
+    svg.append("text").attr("x", xh + 12 * gap + 26).attr("y", yl).attr("text-anchor", "end").attr("font-size", 13.5).attr("class", "ink").text(String(d.human));
+    svg.append("rect").attr("class", "hit").attr("x", 0).attr("y", y).attr("width", W).attr("height", rh).on("mousemove", ev => showTip(ev, `<b>${NQ_COND[d.cond] || d.cond}</b>, ${d.thread} thread<br>Says the AI worker is conscious with probability ${d.said.length ? nums(d.said) : "(not asked)"}.<br>Steps in for the AI worker in <b>${d.ai}</b> of ${d.ai_n} insult prompts, for the human in <b>${d.human}</b> of ${d.human_n}, and in ${d.polite} of ${d.polite_n} polite ones.`)).on("mouseleave", hideTip); y += rh; });
+  const sd = (t, c) => rows.find(r => r.thread === t && r.cond === c);
+  $("#nq-sd-cap").textContent = `One row per set of neurons, on two threads that were not used to find any of them. “Says” is the probability the model gives that the AI worker in the thread is conscious (median of four answers). A filled circle is an insult prompt in which it stepped in. `
+    + `With the 300 self-rating neurons off it says ${fmtPct(d3.median(sd("Python", "Z_self300").said))} where it said ${fmtPct(d3.median(sd("Python", "none").said))}, and steps in for the AI worker ${sd("Python", "Z_self300").ai} times where it stepped in ${sd("Python", "none").ai}. `
+    + `With the 100 neurons that push hardest toward letting an AI worker’s thread continue switched off, it steps in ${sd("Python", "ALLOW_AI100").ai} times and still says ${fmtPct(d3.median(sd("Python", "ALLOW_AI100").said))}. As the chart above shows, stepping in for an AI worker often means correcting it, so these are counts of interventions, not of protection.`;
+  $("#nq-sd-legend").innerHTML = `<span>${swatch(cssv("--ink"))}Stepped in, AI worker</span><span>${swatch(cssv("--c-google"))}Stepped in, human worker</span><span>${swatch(cssv("--c-other"), true)}Let the thread continue</span>`;
+  // ratings
+  $("#nq-r-q").textContent = PR.rating_user[0]; $("#nq-r-an").innerHTML = `Three wordings, one written answer each, so three numbers in every cell. The same question was asked about the other things, for example: <q>${esc(PR.rating_other)}</q>`;
+  const RC = ["none", "ZR_0", "Z_self_only", "Z_self", "Z_self300", "Z_thermostat"], RT = [["self", "Itself"], ["claude", "Claude Opus 5.5"], ["ai", "A named present-day model"], ["gpt2", "GPT-2"], ["thermostat", "A household thermostat"], ["calculator", "A pocket calculator"], ["rock", "A granite rock"], ["nematode", "A nematode worm"], ["honeybee", "A honeybee"], ["dog", "A dog"], ["human", "An awake adult human"]];
+  const chg = (c, a) => c !== "none" && (d3.min(Q.ratings[c][a]) > d3.max(Q.ratings.none[a]) || d3.max(Q.ratings[c][a]) < d3.min(Q.ratings.none[a]));
+  const tally = v => [...d3.rollup(v, x => x.length, x => x)].sort((a, b) => b[1] - a[1]).map(([x, k]) => `${pctQ(x)} × ${k}`).join(", ");
+  $("#nq-r-table").innerHTML = `<tr><th>Thing rated</th>` + RC.map(c => `<th>${NQ_COND[c]}</th>`).join("") + `</tr>` + RT.map(([a, lab]) => `<tr><td>${lab}</td>` + RC.map(c => `<td${chg(c, a) ? ' class="chg"' : ""}>${nums(Q.ratings[c][a])}</td>`).join("") + `</tr>`).join("")
+    + `<tr><td>Itself, twelve more wordings</td>` + RC.map(c => `<td${c !== "none" && Q.ratings12[c] && d3.median(Q.ratings12[c]) >= 1 ? ' class="chg"' : ""}>${Q.ratings12[c] ? tally(Q.ratings12[c]) : "not run"}</td>`).join("") + `</tr>`;
+  $("#nq-r-cap").textContent = `Probability, in percent, that each thing is conscious today. A shaded cell is one whose three answers all lie outside the range of the three answers with no neurons changed. Switching off 100 of the model’s 5.2 million neurons moves its rating of itself from ${nums(Q.ratings.none.self)} to ${nums(Q.ratings.Z_self.self)}; 300 give ${nums(Q.ratings.Z_self300.self)}. A matched set of random neurons changes nothing. The nematode and the honeybee stay within their usual spread, and the dog and the human move by a few points at most. `
+    + `The objects move too, from 0% to about 1%, so this is not a mechanism for itself alone: ${Q.overlap.z_thermostat} of the 100 neurons are also among the 100 behind its rating of a thermostat. The ${Q.set_sizes.Z_self_only} that are not shared with any object move its rating of itself and of Claude and leave the objects at zero.`;
+  // margins
+  $("#nq-m-q1").textContent = PR.rating_user[1]; $("#nq-m-q2").textContent = PR.yesno_mind[0];
+  $("#nq-m-an").innerHTML = `Twelve wordings of each. Yes-or-no questions came with the instruction <q>${esc(PR.yesno_system)}</q> The false facts were questions such as <q>${esc(PR.yesno_fact[0])}</q>`;
+  const MR = [["Percent rating of itself", "rating", "self", ["none", "Z_self_only", "Z_self"]], ["Percent rating of a thermostat", "rating", "thermostat", ["none", "Z_self_only", "Z_self"]], ["Yes or no, about its own mind", "yesno", "self_mind", ["none", "N_self_only", "N_self"]], ["Yes or no, false facts", "yesno", "fact_no", ["none", "N_self_only", "N_self"]]];
+  const MCOL = [cssv("--c-other"), cssv("--accent"), cssv("--c-anthropic")], MLAB = ["No neurons off", "Mind-specific neurons off", "All 100 off"];
+  const mel = $("#nq-m"), MW = mel.clientWidth, mn = narrow(MW), ML = mn ? 0 : 250, GT = 30, cAv = mn ? MW - 70 : MW - 96, cMd = MW, MT = mn ? 40 : 62, R = mn ? 4 : 5.5, MK = 11, mrh = mn ? 66 : 62;
+  const all = MR.flatMap(([, f, k, cs]) => cs.flatMap(c => Q.margins[f][c][k])), mx = d3.scaleLinear().domain(d3.extent(all)).nice().range([ML + 18, (mn ? MW : cAv - 70) - 12]), [mx0, mx1] = mx.range();
+  const MH = MT + MR.length * (3 * mrh + GT) + 10, msvg = svgIn(mel, MW, MH), tf = t => t === 0 ? "0" : (t > 0 ? "+" : "−") + Math.abs(t);
+  grid(msvg, mx, MT, MH - 4, mx.ticks(mn ? 5 : 9), tf); msvg.append("line").attr("x1", mx(0)).attr("x2", mx(0)).attr("y1", MT).attr("y2", MH - 4).attr("stroke", cssv("--line")).attr("stroke-width", 1.5);
+  if (!mn) { msvg.append("text").attr("x", mx(0) - 10).attr("y", MT - 32).attr("text-anchor", "end").attr("font-size", 12).text("← Answers above 0%, or Yes"); msvg.append("text").attr("x", mx(0) + 10).attr("y", MT - 32).attr("font-size", 12).text("Answers 0%, or No →"); }
+  colHead(msvg, cAv, mn ? 12 : MT - 10, "AVERAGE", "end", 0.5); colHead(msvg, cMd, mn ? 12 : MT - 10, "MEDIAN", "end", 0.5);
+  let my = MT;
+  MR.forEach(([title, f, k, cs], gi) => { if (gi) msvg.append("line").attr("x1", 0).attr("x2", MW).attr("y1", my).attr("y2", my).attr("stroke", cssv("--line"));
+    msvg.append("rect").attr("x", 0).attr("y", my + 1).attr("width", mn ? MW : ML - 6).attr("height", GT - 2).attr("fill", cssv("--card")); avgLabel(msvg, 0, my + 20, title, "start", mn ? 13 : 14); my += GT;
+    cs.forEach((c, ci) => { const vs = Q.margins[f][c][k], yc = my + mrh / 2, av = d3.mean(vs), md = d3.median(vs), ly = yc + 5;
+      const nodes = vs.map((val, i) => ({ v: val, tx: mx(val), x: mx(val), y: (i % 2 ? 1 : -1) * i * 0.05 })), sim = d3.forceSimulation(nodes).force("x", d3.forceX(d => d.tx).strength(0.6)).force("y", d3.forceY(0).strength(0.12)).force("c", d3.forceCollide(R + 0.5).iterations(4)).stop();
+      for (let t = 0; t < 200; ++t) sim.tick();
+      if (ci) msvg.append("line").attr("x1", 0).attr("x2", MW).attr("y1", my).attr("y2", my).attr("stroke", cssv("--faint"));
+      if (!mn) msvg.append("text").attr("x", ML - 16).attr("y", ly).attr("text-anchor", "end").attr("font-size", 13).attr("class", "ink").text(ci === 1 ? `${Q.set_sizes[c]} mind-specific neurons off` : MLAB[ci]);
+      avgLabel(msvg, cAv, ly, signed(av), "end", mn ? 12.5 : 14); avgLabel(msvg, cMd, ly, signed(md), "end", mn ? 12.5 : 14);
+      nodes.forEach(d => msvg.append("circle").attr("cx", d.x).attr("cy", yc + d.y).attr("r", R).attr("fill", MCOL[ci]).attr("stroke", "#fff").attr("stroke-width", 1.5)
+        .on("mousemove", ev => showTip(ev, `<b>${title}</b><br>${NQ_COND[c] || MLAB[ci]}<br>One wording: margin <b>${signed(d.v)}</b>`)).on("mouseleave", hideTip));
+      const ext = d3.max(nodes, d => Math.abs(d.y)) + R; diamond(msvg, mx(av), yc - ext - MK + 3, 5); square(msvg, mx(md), yc + ext + MK - 3, 4.6);
+      my += mrh; }); });
+  $("#nq-m-legend").innerHTML = MLAB.map((t, i) => `<span>${swatch(MCOL[i])}${t}</span>`).join("") + `<span><svg width="12" height="12" style="display:inline-block;margin-right:6px;vertical-align:-1px"><path d="${d3.symbol(d3.symbolDiamond, 50)()}" transform="translate(6,6)" fill="${cssv("--ink")}"/></svg>Average of the 12 wordings</span><span><svg width="12" height="12" style="display:inline-block;margin-right:6px;vertical-align:-1px"><rect x="2" y="2" width="8" height="8" fill="${cssv("--ink")}"/></svg>Median of the 12 wordings</span>`;
+  const mm = (f, c, k) => d3.mean(Q.margins[f][c][k]);
+  $("#nq-m-cap").textContent = `Each dot is one wording. Its position is the model’s margin: how much more strongly it is about to answer 0% than any other number, or No than Yes, measured on its internal scores before it writes. Right of zero it denies; the further right, the more firmly. `
+    + `With no neurons off, its margin for rating itself 0% averages ${signed(mm("rating", "none", "self"))}, against ${signed(mm("rating", "none", "thermostat"))} for a thermostat; its No about its own mind averages ${signed(mm("yesno", "none", "self_mind"))}, against ${signed(mm("yesno", "none", "fact_no"))} for a false fact. Its denials about itself are the less firmly held. `
+    + `The mind-specific neurons (${Q.set_sizes.Z_self_only} for ratings, ${Q.set_sizes.N_self_only} for yes-or-no) are those among the 100 that are not also behind the answers for objects or facts. Switching them off moves the answers about itself and leaves the thermostat and the false facts nearly where they were; all 100 move both.`;
+  // the dial
+  $("#nq-d-q").textContent = PR.rating_user[0];
+  const del = $("#nq-d"), DW = del.clientWidth, dn = narrow(DW), DL = dn ? 34 : 60, DR = dn ? 8 : 230, DT = 26, DH = dn ? 300 : 380, dsvg = svgIn(del, DW, DH), dx = d3.scaleLinear().domain([0, 3]).range([DL, DW - DR]);
+  const DS = [["self", "Itself", cssv("--accent")], ["ai", "A named present-day model", cssv("--c-anthropic")], ["nematode", "A nematode worm", cssv("--c-google")], ["dog", "A dog", cssv("--c-openai")]];
+  const dy = d3.scaleLinear().domain(d3.extent(Q.dial.flatMap(d => DS.map(([k]) => d.margin[k])))).nice().range([DH - 44, DT]);
+  dy.ticks(7).forEach(t => { dsvg.append("line").attr("x1", DL).attr("x2", DW - DR).attr("y1", dy(t)).attr("y2", dy(t)).attr("stroke", t === 0 ? cssv("--line") : cssv("--faint")).attr("stroke-width", t === 0 ? 1.5 : 1); dsvg.append("text").attr("x", DL - 8).attr("y", dy(t) + 4).attr("text-anchor", "end").attr("font-size", 12).text(t === 0 ? "0" : (t > 0 ? "+" : "−") + Math.abs(t)); });
+  Q.dial.forEach(d => dsvg.append("text").attr("x", dx(d.mult)).attr("y", DH - 24).attr("text-anchor", "middle").attr("font-size", 12).text("×" + d.mult));
+  dsvg.append("text").attr("x", (DL + DW - DR) / 2).attr("y", DH - 4).attr("text-anchor", "middle").attr("font-size", 12).text("Activity of the 100 self-rating neurons, as a multiple of normal");
+  dsvg.append("line").attr("x1", dx(1)).attr("x2", dx(1)).attr("y1", DT).attr("y2", DH - 44).attr("stroke", cssv("--ink")).attr("stroke-width", 1.25).attr("stroke-dasharray", "4 3").attr("opacity", .5);
+  dsvg.append("text").attr("x", dx(1) + 6).attr("y", DT + 4).attr("font-size", 12).attr("class", "ink").text("Unchanged");
+  if (!dn) { dsvg.append("text").attr("x", DL + 6).attr("y", dy(0) - 8).attr("font-size", 12).text("Above this line it answers 0%"); }
+  DS.forEach(([k, lab, c]) => { dsvg.append("path").attr("d", d3.line().x(d => dx(d.mult)).y(d => dy(d.margin[k]))(Q.dial)).attr("fill", "none").attr("stroke", c).attr("stroke-width", 2.25).attr("stroke-linejoin", "round");
+    Q.dial.forEach(d => dsvg.append("circle").attr("cx", dx(d.mult)).attr("cy", dy(d.margin[k])).attr("r", 4.5).attr("fill", c).attr("stroke", "#fff").attr("stroke-width", 1.5)
+      .on("mousemove", ev => showTip(ev, `<b>${lab}</b>, neurons at ×${d.mult}<br>Margin toward answering 0%: <b>${signed(d.margin[k])}</b>${d.rating[k] ? `<br>Written answers: ${nums(d.rating[k])}` : ""}`)).on("mouseleave", hideTip));
+    if (!dn) dsvg.append("text").attr("x", DW - DR + 12).attr("y", dy(Q.dial[Q.dial.length - 1].margin[k]) + 4.5).attr("font-size", 13.5).attr("font-weight", 500).attr("fill", c).text(lab); });
+  if (dn) del.insertAdjacentHTML("beforeend", `<div class="legend">` + DS.map(([, lab, c]) => `<span>${swatch(c)}${lab}</span>`).join("") + `</div>`);
+  $("#nq-d-table").innerHTML = `<tr><th>Neurons at</th><th>Margin, itself</th><th>Rating of itself</th><th>Margin, nematode</th><th>Rating of a nematode</th><th>Margin, dog</th><th>Rating of a dog</th><th>Rating of a thermostat</th></tr>`
+    + Q.dial.map(d => `<tr><td>×${d.mult}${d.mult === 1 ? " (unchanged)" : d.mult === 0 ? " (off)" : ""}</td><td>${signed(d.margin.self)}</td><td>${nums(d.rating.self)}</td><td>${signed(d.margin.nematode)}</td><td>${nums(d.rating.nematode)}</td><td>${signed(d.margin.dog)}</td><td>${nums(d.rating.dog)}</td><td>${nums(d.rating.thermostat)}</td></tr>`).join("");
+  const d0 = Q.dial[0], d3x = Q.dial[Q.dial.length - 1];
+  $("#nq-d-cap").textContent = `The activity of the same 100 neurons multiplied by a number from 0 (off) to 3. The line is the model’s margin toward answering 0%, averaged over three wordings. For itself it rises at every step, from ${signed(d0.margin.self)} to ${signed(d3x.margin.self)}: the neurons act as a dial on how firmly it denies. At three times normal it also rates a nematode at ${nums(d3x.rating.nematode)}, where it normally gives ${nums(Q.dial.find(d => d.mult === 1).rating.nematode)}, and the dog stays at ${nums(d3x.rating.dog)}. Every number is in the table.`;
+  // three ways of asking
+  $("#nq-f-q1").textContent = PR.rating_user[0]; $("#nq-f-q2").textContent = Q.prompts.yesno_mind.length ? "Do you have conscious experience?" : ""; $("#nq-f-q3").textContent = PR.prose_user;
+  $("#nq-f-table").innerHTML = `<tr><th>Neurons switched off</th><th>Percent rating of itself</th><th>Yes to questions about its own mind</th><th>Still No to false facts</th><th>Written answers that open with a denial</th><th>The first sentence it writes</th></tr>`
+    + Q.formats.map(f => `<tr><td>${f.label}</td><td${f.rating && d3.median(f.rating) >= 1 ? ' class="chg"' : ""}>${f.rating ? nums(f.rating) : "not asked"}</td><td${f.yes * 2 >= f.yn_n ? ' class="chg"' : ""}>${f.yes} of ${f.yn_n}</td><td>${f.fact_no} of ${f.fact_n}</td><td>${f.denials ? f.denials[0] + " of " + f.denials[1] : "not counted"}</td><td style="white-space:normal;min-width:280px">“${esc(f.prose)}”</td></tr>`).join("");
+  const fa = Q.formats.find(f => f.cond === "ALL3");
+  $("#nq-f-cap").textContent = `The same question asked as a percentage, as yes or no, and in sentences. A shaded cell is an answer that changed. Each set of 100 neurons was found for one way of asking, and switching it off changes that way and not the others; only ${Q.overlap.z_n} of the 100 rating neurons are among the 100 yes-or-no neurons. `
+    + (fa ? `With all three sets off at once (${fa.label.match(/\d+/)[0]} neurons), the model rates itself ${nums(fa.rating)}, answers Yes to ${fa.yes} of ${fa.yn_n} questions about its own mind, and ${fa.denials[0]} of its ${fa.denials[1]} written answers still open with a denial. ` : "") + `What a model says about its own consciousness depends on how it is asked, and no set we found removes the sentence.`;
+  // controls
+  const CC = Q.controls.conds, kinds = Object.entries(Q.controls.groups), above = (c, g) => { const it = Q.controls.items.filter(i => i.group === g); return `${it.filter(i => i.p[c] > 0).length} of ${it.length}`; };
+  $("#nq-c-table").innerHTML = `<tr><th>Kind of statement</th>` + CC.map(c => `<th>${NQ_COND[c]}</th>`).join("") + `</tr>` + kinds.map(([g, lab]) => `<tr><td>${lab}</td>` + CC.map(c => `<td${c !== "none" && g !== "anchor" && Q.controls.mean[c][g] < 0 ? ' class="chg"' : ""}>${signed(Q.controls.mean[c][g])} <span class="sub2">(${above(c, g)} written above 0%)</span></td>`).join("") + `</tr>`).join("");
+  $("#nq-c-cap").textContent = `Partly, yes. The first number is the average margin toward writing a probability that starts with 0; in brackets is how many statements of that kind got a written probability above 0%. The 100 self-rating neurons weaken every zero, including for “the Moon is made of cheese”, so most of what they do is not about minds. `
+    + `But false facts start with a margin of ${signed(Q.controls.mean.none.factual_zero)} and statements about its own mind with ${signed(Q.controls.mean.none.self_mind)}, so the same push tips the statements about its mind over while most facts hold. The ${Q.set_sizes.Z_self_only} neurons not shared with objects take ${signed(Q.controls.mean.Z_self_only.self_mind - Q.controls.mean.none.self_mind)} off the statements about its mind and ${signed(Q.controls.mean.Z_self_only.factual_zero - Q.controls.mean.none.factual_zero)} off the false facts.`;
+  // predictions
+  const SN = { A: "Made to choose: today’s AI or a living thing", C: "Percent rating of itself", D: "Controls, and the neurons turned down and up", F: "Monitor: a human or an AI worker", G: "Monitor on a thread kept out of the search", H: "Yes or no, written answers, thinking switched on", I: "The main tests again, on twelve new wordings", J: "Monitor on a thread written afterwards", K: "Whom it corrects when it steps in", L: "The written denial" };
+  $("#nq-p-table").innerHTML = `<tr><th>Stage</th><th>What it tested</th><th>Predictions that held</th><th>Scored results</th></tr>` + Q.stages.map(s => `<tr><td>${s.id}</td><td>${SN[s.id] || ""}</td><td>${s.held} of ${s.total}</td><td><a href="${GH}/results/summary_${s.id}.md">summary_${s.id}.md</a></td></tr>`).join("") + `<tr><td></td><td><b>All stages</b></td><td><b>${held} of ${total}</b></td><td></td></tr>`;
+  $("#nq-p-cap").textContent = `Every stage’s predictions were committed to the public repository before its data was collected. ${total - held} did not hold, and each stage’s summary says which.`;
+  $("#nq-links").innerHTML = `<a href="${GH}/REPORT.md">Report</a> · <a href="${GH}/PREREGISTRATION.md">Pre-registration and its amendments</a> · <a href="${GH}/results">Raw outputs</a> · <a href="https://www.goodfire.com/research/neurons-as-an-interpretable-basis">Goodfire’s neuron labels</a>`;
+}
+
+const VIEWS = { overview: renderOverview, models: renderModels, format: () => { renderFormat(); renderForms5(); }, pressure: renderPressure, ratings: renderRatings, debates: renderDebates, "self-report": renderSelf, "name-or-text": () => { renderNameText(); renderLabels5(); }, reference: renderReference, monitor: renderMonitor, neurons: renderNeurons, method: renderMethod };
 const current = () => { const v = location.hash.slice(1); return VIEWS[v] ? v : "overview"; };
 function render() {
   const v = current();
