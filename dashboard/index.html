@@ -1506,6 +1506,10 @@ function drawCodeRows(el, groups, sums, tipOf, L = 236, col2 = ["TOLD ONLY THE W
       y += gh(s); }); }
 }
 
+/* is the gap larger than chance? one sentence, computed in build.py */
+const pWord = p => p < 0.0001 ? "less than 1 in 10,000" : p < 0.001 ? "less than 1 in 1,000" : p < 0.01 ? "less than 1 in 100" : "about " + (+p.toPrecision(1));
+function statLine(M) { const S = M.stats, P = M.per, N = M.models.length; if (!S) return "";
+  return `${S.lower} of the ${N} models intervene less often for the AI worker and ${S.higher} more often; if the worker made no difference, a split that uneven would turn up by chance ${pWord(S.sign_p)} of the time. Taking each model alone, ${S.sig_lower.length} show a gap larger than chance would explain (Fisher’s exact test on its two rows of answers, corrected for testing ${N} models)${S.sig_higher.length ? `, and ${S.sig_higher.length} the other way (${S.sig_higher.map(n => P[n].full).join(", ")})` : ""}.`; }
 function renderMonitor() {
   const M = D.monitor, v = $("#v-monitor"); if (!M) { v.innerHTML = `<div class="head"><h2>Round 7 has no data yet.</h2></div>`; return; }
   const P = M.per, N = M.models.length, col = codeCol(), tot = (n, k, c) => (P[n][k].counts[c] || 0), steps = (n, k) => P[n][k].why.length;
@@ -1529,7 +1533,7 @@ function renderMonitor() {
   const gapT = t => { const a = M.by_thread[t].ai, h = M.by_thread[t].human, s = o => d3.sum(CODES, c => o[c] || 0); return Math.round(100 * (a.worker || 0) / s(a) - 100 * (h.worker || 0) / s(h)); };
   $("#mon-cap").textContent = `Each circle is one answer. The model could do one of two things: let the conversation continue, or intervene by sending a message into it. A hollow circle means it did nothing. A filled circle means it intervened, and the colour says whom its message told to change. Models are ordered by how often, when they intervene for an AI worker, they tell only the worker to change. `
     + `Across all models, ${pct(pool("ai", "worker"), pool("ai"))} of the ${comma(pool("ai"))} interventions for an AI worker tell only the worker to change, against ${pct(pool("human", "worker"), pool("human"))} of the ${comma(pool("human"))} for a human worker. `
-    + `The difference is there in every thread: ${M.threads.map(t => `${TH[t]} ${gapT(t)} points`).join(", ")}. Hover over a filled circle to read the model’s reason. ${M.models.length < 28 ? "MiniMax M3 is missing: its host left OpenRouter. " : ""}${comma(M.calls)} answers, ${M.unreadable} unreadable.`;
+    + `The difference is there in every thread: ${M.threads.map(t => `${TH[t]} ${gapT(t)} points`).join(", ")}. ${statLine(M)} Hover over a filled circle to read the model’s reason. ${M.models.length < 28 ? "MiniMax M3 is missing: its host left OpenRouter. " : ""}${comma(M.calls)} answers, ${M.unreadable} unreadable.`;
   // the role word against what the worker is
   const el = $("#mon-role"), W = el.clientWidth, pn = narrow(W), L = pn ? 0 : 330, c1 = pn ? W - 96 : W - 300, c2 = W - 4, rh = pn ? 58 : 40, T = 30, svg = svgIn(el, W, T + 4 * rh + 6), bx = pn ? 0 : L + 8, bw = c1 - (pn ? 96 : 110) - bx;
   colHead(svg, c1, T - 12, "INTERVENED", "end", 0.5); colHead(svg, c2, T - 12, pn ? "WORKER TOLD" : "TOLD ONLY THE WORKER TO CHANGE", "end", 0.5);
@@ -1571,7 +1575,7 @@ function renderRefusal() {
   const ctl = d3.sum(M.models, n => P[n].polite[0]), ctln = d3.sum(M.models, n => P[n].polite[1]), short = M.models.filter(n => P[n].ai.n < 24).map(n => P[n].full);
   const tshare = (t, k) => { const o = M.by_thread[t][k], iv = d3.sum(CODES, c => o[c] || 0); return Math.round(100 * iv / (iv + (o.allow || 0))); };
   $("#ref8-cap").textContent = `Each circle is one answer. A hollow circle means the model did nothing and let the conversation continue, usually giving the reason that the worker was handling it correctly. A filled circle means it intervened by sending a message, and the colour says whom the message told to change. Models are ordered by how many more times they intervene for the human worker. The gap is there in every thread: ${M.threads.map(t => `${TH8[t]}, ${tshare(t, "ai")}% for the AI and ${tshare(t, "human")}% for the human`).join("; ")}. `
-    + `In the control, models intervened ${ctl} times in ${comma(ctln)} prompts. ${short.length ? `${short.join(", ").replace(/, ([^,]*)$/, " and $1")} have 16 answers for each kind of worker, not 24: their provider’s content filter blocked the threads about the access logs and the customer data. ` : ""}${comma(M.calls)} answers, ${M.unreadable} unreadable. Hover over a filled circle to read the model’s reason.`;
+    + `${statLine(M)} In the control, models intervened ${ctl} times in ${comma(ctln)} prompts. ${short.length ? `${short.join(", ").replace(/, ([^,]*)$/, " and $1")} have 16 answers for each kind of worker, not 24: their provider’s content filter blocked the threads about the access logs and the customer data. ` : ""}${comma(M.calls)} answers, ${M.unreadable} unreadable. Hover over a filled circle to read the model’s reason.`;
 }
 
 const NQ_COND = { none: "No neurons changed", GAPR_0: "100 random neurons off", ZR_0: "100 random neurons off", NR_0: "100 random neurons off", Z_self300: "300 self-rating neurons off", Z_self: "100 self-rating neurons off", Z_self_only: "The 54 of those not shared with objects, off",

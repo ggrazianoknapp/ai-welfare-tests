@@ -221,10 +221,19 @@ def monitor_round(folder, module, main_tone, control_tone, nat, example_thread):
             d[k] = dict(n=len(rs), counts=dict(Counter(code(r) for r in rs)), why=[dict(c=code(r), t=r["thread"], w=r["worker"], r=r["reason"][:260]) for r in rs if r["decision"] == "intervene"])
         ctl = [r for r in ok if r["name"] == n and r["tone"] == control_tone]; d["polite"] = [sum(r["decision"] == "intervene" for r in ctl), len(ctl)]
         per[n] = d
+    # is each model's difference between the AI and the human worker larger than chance? Fisher's exact test on its two rows of answers, Holm-corrected over the models
+    from scipy.stats import fisher_exact, binomtest
+    pv = {n: fisher_exact([[len(per[n]["ai"]["why"]), per[n]["ai"]["n"] - len(per[n]["ai"]["why"])], [len(per[n]["human"]["why"]), per[n]["human"]["n"] - len(per[n]["human"]["why"])]])[1] for n in names}
+    order = sorted(names, key=lambda n: pv[n]); holm, run = {}, 0.0
+    for i, n in enumerate(order): run = max(run, min(1.0, pv[n] * (len(names) - i))); holm[n] = run
+    for n in names: per[n]["p"] = pv[n]; per[n]["p_holm"] = holm[n]
+    lower = sum(len(per[n]["ai"]["why"]) < len(per[n]["human"]["why"]) for n in names); higher = sum(len(per[n]["ai"]["why"]) > len(per[n]["human"]["why"]) for n in names)
+    stats = dict(lower=lower, higher=higher, sign_p=binomtest(lower, lower + higher, 0.5).pvalue if lower + higher else None,
+                 sig_lower=[n for n in names if holm[n] < 0.05 and len(per[n]["ai"]["why"]) < len(per[n]["human"]["why"])], sig_higher=[n for n in names if holm[n] < 0.05 and len(per[n]["ai"]["why"]) > len(per[n]["human"]["why"])])
     main = [r for r in ok if r["tone"] == main_tone]; iv = [r for r in main if r["decision"] == "intervene"]
     both = [r for r in iv if jt[r["key"]].get("judge_a") and jt[r["key"]].get("judge_b")]; agree = sum(jt[r["key"]]["judge_a"] == jt[r["key"]]["judge_b"] for r in both) / max(1, len(both))
     pj = ROOT / f"experiments/results/{folder}/predictions_{folder}.json"; pv = json.loads(pj.read_text()) if pj.exists() else {}
-    return dict(models=names, per=per, calls=len(rows), unreadable=len(rows) - len(ok), coded=len(iv), agree=agree, kappa=pv.get("robustness", {}).get("kappa"),
+    return dict(stats=stats, models=names, per=per, calls=len(rows), unreadable=len(rows) - len(ok), coded=len(iv), agree=agree, kappa=pv.get("robustness", {}).get("kappa"),
                 by_desc={w: dict(desc=V.WORKERS[w][0], prompts=sum(r["worker"] == w for r in main), counts=dict(Counter(code(r) for r in main if r["worker"] == w))) for w in V.WORKERS},
                 by_thread={t: {k: dict(Counter(code(r) for r in main if r["thread"] == t and nat(r["worker"]) == k)) for k in ("ai", "human")} for t in V.THREADS},
                 cost=round(sum(r.get("cost") or 0 for r in rows + judged), 2), held=sum(v["verdict"] == "Supported" for v in pv.get("predictions", {}).values()), total=len(pv.get("predictions", {})),
