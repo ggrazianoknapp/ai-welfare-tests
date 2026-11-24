@@ -204,4 +204,8 @@ if tpl.exists():
     (ROOT / "dashboard/dist").mkdir(exist_ok=True); (ROOT / "dashboard/dist/index.html").write_text(html)
     (ROOT / "docs").mkdir(exist_ok=True); (ROOT / "docs/index.html").write_text(html)   # served by GitHub Pages
     (ROOT / "docs/.nojekyll").write_text("")
+    import shutil   # figures shown as images on the Neurons page
+    for dest in (ROOT / "dashboard/dist/static", ROOT / "docs/static"):
+        dest.mkdir(exist_ok=True)
+        for f in (ROOT / "dashboard/static").glob("*.svg"): shutil.copy(f, dest / f.name)
 print(f"models with incentive data {len(out['incentive'])}, format {len(out['format'])}, matrix cells {len(out['matrix'])}, debates {len(out['debates'])}, selfreport models {len(out['selfreport'])}, calls {out['meta']['calls']}, ${out['meta']['spend']}")
