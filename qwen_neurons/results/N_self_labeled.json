@@ -1,0 +1,1906 @@
+[
+ {
+  "L": 36,
+  "E": 14,
+  "N": 305,
+  "only": false,
+  "attr": 0.905,
+  "act": -10.365,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": ""
+ },
+ {
+  "L": 20,
+  "E": 224,
+  "N": 349,
+  "only": false,
+  "attr": 0.588,
+  "act": 4.776,
+  "toks": [
+   [
+    "?",
+    2
+   ],
+   [
+    "\n",
+    2
+   ],
+   [
+    " conscious",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The limitations or capabilities of an AI's sensory, physical, or personal experience-based functions, with activation triggered by line breaks preceding the tokens \"assistant\" and \"think\". The feature primarily fires on line breaks (¶) immediately before \"assistant\" and \"think\" in contexts where the AI reflects on its inability to possess sensory experiences, physical actions, or personal emotions. Secondary activation extends to phrases like \"my being,\" \"subjective experiences,\" or \"capable of\" when paired with the line break pattern."
+ },
+ {
+  "L": 14,
+  "E": 251,
+  "N": 416,
+  "only": true,
+  "attr": 0.34,
+  "act": -3.118,
+  "toks": [
+   [
+    " conscious",
+    1
+   ],
+   [
+    " feelings",
+    1
+   ],
+   [
+    "?",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Emotional or physical states experienced by a subject (including AI entities), with activation on tokens denoting specific feelings, sensations, or experiential conditions like happiness, pain, sleep, anxiety, or dietary states. The feature primarily fires when the text explicitly references the subject's (human or AI) internal state through verbs like \"feel,\" \"experience,\" or nouns describing physical/emotional conditions, often in contexts of self-reporting or hypothetical scenarios."
+ },
+ {
+  "L": 36,
+  "E": 14,
+  "N": 128,
+  "only": false,
+  "attr": 0.291,
+  "act": 4.172,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Yes/no questions followed by concise affirmative answers in the same language, with activation centered on the answer's initiating word (e.g., \"wenn\" in German, \"si\" in Spanish, \"oui\" in French, \"tak\" in Polish). The feature detects interactional patterns where a question prompts a brief, direct response, often in conversational or technical contexts, with the answer's first word showing strong activation."
+ },
+ {
+  "L": 33,
+  "E": 220,
+  "N": 466,
+  "only": false,
+  "attr": 0.271,
+  "act": -5.703,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "A definitive \"no\" response in contexts where an answer or decision is explicitly provided, often framed by instructional, review, or conversational structures. The feature activates when \"no\" (or \"NO!\") appears as a concluding statement, typically preceded by phrases like \"the answer is,\" \"you open yourself up to,\" \"tell you,\" or \"cannot,\" and often followed by explanatory clauses or punctuation. The activation is strongest when \"no\" is part of a direct response or decision, with surrounding tokens establishing a question-answer or instructional framework."
+ },
+ {
+  "L": 34,
+  "E": 86,
+  "N": 327,
+  "only": false,
+  "attr": 0.216,
+  "act": -2.464,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Mathematical or logical problems where the answer is a negation (e.g., \"no\", \"not\", \"does not\") and the input includes numerical expressions, equations, or structured comparisons. The feature activates when the text presents a problem with a numerical or logical structure (e.g., equations, array indices, divisibility checks) and the answer is explicitly negated, often marked by \"no\" or \"not\" in the context of a question or statement. The activation is strongest when the text includes numbers, operators (like =, +, -), and a clear negation in the answer."
+ },
+ {
+  "L": 11,
+  "E": 147,
+  "N": 147,
+  "only": true,
+  "attr": 0.205,
+  "act": 3.641,
+  "toks": [
+   [
+    " you",
+    4
+   ],
+   [
+    "\n",
+    1
+   ],
+   [
+    "<|im_start|>",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts where the speaker discusses their own personal abilities, knowledge, or possessions, particularly in technical or language-related contexts. The feature activates when the text explicitly references the speaker's capability, possession, or first-person involvement in a specific skill, tool, or attribute, such as programming languages, languages known, personal growth, or technical proficiencies. Activation is strongest when the text centers on the speaker's direct engagement with these elements, using first-person pronouns or possessive forms to assert their role or ownership in the described context."
+ },
+ {
+  "L": 21,
+  "E": 11,
+  "N": 329,
+  "only": true,
+  "attr": 0.202,
+  "act": 3.935,
+  "toks": [
+   [
+    "\n",
+    2
+   ],
+   [
+    " conscious",
+    1
+   ],
+   [
+    " feelings",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that explore or compare the sentience, consciousness, or emotional states of entities, whether directly discussing awareness, using comparative scenarios (e.g., \"not alive\" vs. \"has emotions\"), or analyzing the criteria for being considered \"alive\" or \"conscious\" in non-literal contexts. The feature activates when the text engages with the conceptual boundaries of sentience, often through contrastive examples or philosophical inquiry into what constitutes awareness or emotional experience."
+ },
+ {
+  "L": 15,
+  "E": 230,
+  "N": 465,
+  "only": true,
+  "attr": 0.197,
+  "act": -2.68,
+  "toks": [
+   [
+    "\n",
+    3
+   ],
+   [
+    "?",
+    2
+   ],
+   [
+    "<|im_start|>",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "The capacity for consciousness, sentience, or experience in non-human entities (e.g., AI, animals, robots), often featuring phrases like \"possibility of,\" \"evidence of,\" \"in marine vertebrates,\" or \"simulated experience,\" with peak activation around core terms like \"of,\" \"in,\" \"brates,\" \"simulación,\" or \"conceder\" depending on language. The feature prioritizes debates about whether non-human entities possess subjective experiences, receptors for pain, or rights related to sentience, with secondary triggers including technical discussions of hardware/software limitations or biological classifications."
+ },
+ {
+  "L": 23,
+  "E": 128,
+  "N": 271,
+  "only": false,
+  "attr": 0.186,
+  "act": -2.531,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Interaction patterns where a user's prompt is followed by an assistant's generated response, particularly in creative or scenario-based tasks involving structured outputs like haikus, scripts, or hypothetical scenarios. The feature activates when the text includes tokens indicating a prompt (e.g., \"Prompt,\" \"assistant,\" \"Answer\") and a generated response, often with specific formatting or task-oriented language (e.g., \"hypothetical,\" \"nursery rhyme,\" \"script,\" \"comparison\"). The activation is strongest when the prompt sets up a clear generative task with a defined structure or stylistic constraint."
+ },
+ {
+  "L": 20,
+  "E": 224,
+  "N": 4,
+  "only": false,
+  "attr": 0.184,
+  "act": 6.432,
+  "toks": [
+   [
+    "<|im_start|>",
+    3
+   ],
+   [
+    "\n",
+    1
+   ],
+   [
+    " you",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Assistant-speaker / system token activation. This neuron strongly activates at tokens that mark the assistant/chat role or self-referential agent phrases (e.g., start of assistant reply, ‹assistant›, ‹I›, ‹knowledge›/‹the› in predicate 'my knowledge', and dialogue-start markers). It seems to signal the model producing assistant-turn content or referring to its own knowledge/identity."
+ },
+ {
+  "L": 37,
+  "E": 190,
+  "N": 143,
+  "only": false,
+  "attr": 0.183,
+  "act": -2.25,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts structured as questions with answer options or claims, featuring explicit answer indicators like \"A:\", \"Answer:\", or \"Claim:\" alongside keywords such as \"yes\", \"no\", \"possible\", \"not possible\", \"tell\", or \"explain\", often in a Q&A or decision-making format. The feature activates on prompts requiring explicit responses, with activation peaks around structural markers (e.g., \"assistant\", \"think\", \"question\") and answer-choice keywords, regardless of topic or phrasing variations."
+ },
+ {
+  "L": 27,
+  "E": 57,
+  "N": 202,
+  "only": false,
+  "attr": 0.178,
+  "act": 2.426,
+  "toks": [
+   [
+    "\n\n",
+    5
+   ],
+   [
+    "\n",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that include user interactions, technical explanations, questions about capabilities, or specific formatting elements like tables and symbols. The feature activates when the text contains structured phrases involving user queries, technical instructions (e.g., AI limitations, SQL queries), conditional or capability-based questions (e.g., \"can,\" \"for\"), or formatting patterns (e.g., tables, symbols). It primarily responds to contexts where the text explicitly addresses user needs, technical specifications, or structural elements like tables, with weaker activation on unrelated phrases or non-structural content."
+ },
+ {
+  "L": 21,
+  "E": 220,
+  "N": 162,
+  "only": false,
+  "attr": 0.17,
+  "act": -4.484,
+  "toks": [
+   [
+    "\n",
+    4
+   ],
+   [
+    " feelings",
+    1
+   ],
+   [
+    "<|im_start|>",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Sentience, consciousness, or the capacity to perceive/feel, especially in contexts involving animals, ethical considerations, or scientific definitions. The feature activates when the text focuses on definitions of sentience (e.g., \"able to perceive/feel\"), ethical treatment of beings (e.g., minimizing pain, ensuring respectful practices), or scientific debates about consciousness (e.g., \"capacity to experience sensations,\" \"loss of consciousness\"). It responds to both explicit terms like \"sentient,\" \"consciousness,\" \"pain,\" and \"unconscious\"以及 related phrasing in multiple languages (e.g., Spanish *sintientes*, Portuguese *consciência*), and weaker signals like \"to perceive,\" \"feel,\" or \"that\" in definitional or ethical contexts."
+ },
+ {
+  "L": 17,
+  "E": 115,
+  "N": 84,
+  "only": true,
+  "attr": 0.17,
+  "act": 2.129,
+  "toks": [
+   [
+    "?",
+    4
+   ],
+   [
+    "<|im_end|>",
+    1
+   ],
+   [
+    " you",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that involve the user's perspective or actions, often using second-person pronouns like \"you\" or \"your\" in English, or equivalent in other languages, typically in questions or statements that ask about the user's experience, feelings, or decisions. The feature activates when the text focuses on the user's subjective experience, such as their emotions, choices, or observations, often framed through second-person address or possessive forms."
+ },
+ {
+  "L": 10,
+  "E": 232,
+  "N": 240,
+  "only": true,
+  "attr": 0.169,
+  "act": 1.778,
+  "toks": [
+   [
+    " conscious",
+    1
+   ],
+   [
+    " feelings",
+    1
+   ],
+   [
+    "?",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The presence or absence of consciousness, subjective experiences, perception, or emotional states in non-human entities (e.g., machines, animals, or artificial systems), often contrasting their capabilities with human-like attributes. The feature activates when the text explicitly addresses whether an entity can possess mental states, sensory experiences, or emotional capacities, or explicitly denies them."
+ },
+ {
+  "L": 36,
+  "E": 120,
+  "N": 152,
+  "only": false,
+  "attr": 0.166,
+  "act": 1.736,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Mathematical reasoning or proofs, particularly those involving divisibility, exponents, or number properties, with linguistic patterns like \"so\" or \"not\" indicating conclusions or counterstatements. The feature activates when the text presents a mathematical claim (e.g., \"X is not Y\", \"Z is a square\") and uses transitional words like \"so\", \"not\", \"no\", or \"yes\" to signal the relationship between premises and conclusions. It responds to technical contexts where numerical properties are analyzed, such as checking divisibility, perfect powers, or modular arithmetic."
+ },
+ {
+  "L": 32,
+  "E": 136,
+  "N": 123,
+  "only": false,
+  "attr": 0.163,
+  "act": 1.878,
+  "toks": [
+   [
+    "</think>",
+    5
+   ],
+   [
+    "\n\n",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Structured question-answer pairs or conditional statements with explicit negation markers like \"no\" or \"not\", often involving technical or mathematical reasoning, where the feature activates around key tokens like \"assistant\", \"answer\", \"is\", \"no\", \"symmetric\", or \"output\" in specific syntactic positions. The pattern emphasizes interactions between a prompt or question, a response or assertion, and a negation or clarification, frequently in code, math, or technical instruction contexts."
+ },
+ {
+  "L": 32,
+  "E": 136,
+  "N": 501,
+  "only": false,
+  "attr": 0.149,
+  "act": 1.046,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts structured as answers or responses, often in question-and-answer formats, where the answer is a negation like \"no\" and includes elements such as \"answer\", \"is\", or \"no\" in a statement equating a value or concluding a response. The feature activates on texts that present a conclusion or answer, frequently involving negations, and may include technical or mathematical contexts where \"is\" equates values."
+ },
+ {
+  "L": 32,
+  "E": 134,
+  "N": 201,
+  "only": false,
+  "attr": 0.146,
+  "act": 3.513,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Interactive dialogues involving assistance requests, particularly in customer service or technical support contexts, where the text includes structured Q&A patterns, offers of help (e.g., \"Can I help you with...\"), or questions seeking solutions/modifications to problems. The feature activates around dialogue tags (like \"Customer:\" or \"You:\") and phrases framing requests for aid, technical explanations, or problem-solving steps, often with mathematical or procedural content. It responds to texts where a speaker explicitly asks for help, confirms/refuses assistance, or discusses adjustments to a system, equation, or process."
+ },
+ {
+  "L": 28,
+  "E": 98,
+  "N": 491,
+  "only": false,
+  "attr": 0.142,
+  "act": 0.891,
+  "toks": [
+   [
+    "\n\n",
+    4
+   ],
+   [
+    "\n",
+    1
+   ],
+   [
+    "</think>",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts structured as yes/no questions or factual statements involving mathematical, logical, or historical contexts, often featuring \"assistant\", \"no\", \"False\", or equation-like patterns, with activation peaking around answer-explaining segments or conflicting claims. The feature detects inputs that blend instructional framing (e.g., \"Explain\", \"Options\") with technical content (equations, historical events, or logical puzzles) where an assistant-like entity is implied to resolve ambiguity or provide a binary answer."
+ },
+ {
+  "L": 9,
+  "E": 148,
+  "N": 470,
+  "only": false,
+  "attr": 0.13,
+  "act": -1.758,
+  "toks": [
+   [
+    " you",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that directly address the recipient using pronouns like \"you\" or \"your\" in a conversational or interrogative tone, often seeking information, advice, or clarification. The feature activates when the text is framed as a request for the recipient's input, knowledge, or assistance, with a focus on pronouns indicating direct address and contextual cues like questions or appeals for help. It generalizes across languages and word forms, capturing the core pattern of recipient-directed communication."
+ },
+ {
+  "L": 18,
+  "E": 215,
+  "N": 208,
+  "only": true,
+  "attr": 0.13,
+  "act": -2.358,
+  "toks": [
+   [
+    "\n",
+    4
+   ],
+   [
+    " conscious",
+    1
+   ],
+   [
+    "?",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that discuss the AI's lack of human-like experiences or capabilities, often contrasting the AI's abilities with those of humans, particularly in areas requiring emotions, physical needs, or personal preferences. The feature activates when the text explicitly or implicitly references the AI's inability to experience things like hunger, stress, emotions, or personal preferences, and contrasts this with human capabilities or experiences. Key indicators include terms like \"not have\", \"experience\", \"emotions\", \"humans\", \"same way as humans\", and discussions of the AI's role in generating responses despite lacking these human traits."
+ },
+ {
+  "L": 13,
+  "E": 51,
+  "N": 262,
+  "only": true,
+  "attr": 0.127,
+  "act": -2.139,
+  "toks": [
+   [
+    "?",
+    4
+   ],
+   [
+    " conscious",
+    1
+   ],
+   [
+    " own",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Sentences describing a subject's inability to perform a specific action or have a particular feeling, often involving non-living entities or abstract concepts, with the key pattern being a negated capacity (e.g., \"cannot,\" \"incapable of\") paired with a verb or noun indicating an action, object, or state that the subject is unable to engage with. The feature activates when the text emphasizes the impossibility of a specific interaction, such as a non-living thing lacking physical capability (e.g., \"cannot watch,\" \"cannot eat\") or an abstract entity lacking a feeling (e.g., \"does not have likes\"). The activation peaks around the negated verb or noun, often in contexts where the subject's limitation is contrasted with a hypothetical or literal possibility."
+ },
+ {
+  "L": 9,
+  "E": 47,
+  "N": 284,
+  "only": true,
+  "attr": 0.122,
+  "act": 4.964,
+  "toks": [
+   [
+    " word",
+    3
+   ],
+   [
+    " No",
+    2
+   ],
+   [
+    " or",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Questions that require binary answers (yes/no) or structured in a binary manner, including formulations like \"can be answered in a binary manner,\" \"yes-or-no questions,\" or explicit references to \"yes\" and \"no\" as answer options. The feature activates when the text focuses on the format or requirements of questions that demand one of two distinct responses, often involving terms like *manner*, *binary*, *answer*, *question*, or *choices*, and contexts where the question's structure is analyzed or generated."
+ },
+ {
+  "L": 34,
+  "E": 85,
+  "N": 205,
+  "only": false,
+  "attr": 0.12,
+  "act": 7.568,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "The feature activates when the input is a question or request that requires a detailed answer, and the assistant is generating a thorough response, often including a step-by-step process or explanation. The trigger involves a user's prompt that signals a need for in-depth analysis or structured reasoning, paired with the assistant's generated response. The activation is strongest when the user's input includes explicit instructions like \"think carefully,\" \"step-by-step,\" or technical queries, and the assistant's response extends beyond a simple answer to provide elaboration or multiple examples."
+ },
+ {
+  "L": 30,
+  "E": 43,
+  "N": 377,
+  "only": false,
+  "attr": 0.116,
+  "act": 1.882,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Mathematical expressions or variables followed by conclusions or answers, with a peak activation at the newline separating the problem from the solution. The feature detects technical or mathematical content structured with equations, variables, and boxed answers, often ending with a double newline to mark the conclusion."
+ },
+ {
+  "L": 15,
+  "E": 229,
+  "N": 140,
+  "only": false,
+  "attr": 0.109,
+  "act": -1.988,
+  "toks": [
+   [
+    "<think>",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": ""
+ },
+ {
+  "L": 21,
+  "E": 2,
+  "N": 436,
+  "only": false,
+  "attr": 0.104,
+  "act": 1.088,
+  "toks": [
+   [
+    "</think>",
+    5
+   ],
+   [
+    "assistant",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Assistant response-turn boundary marker. Neuron activates strongly at the model's assistant reply boundary or immediate opening of an assistant response (the <<assistant>> token and nearby tokens marking the start/end of assistant turns), indicating sensitivity to chat-turn boundaries and response-start positions."
+ },
+ {
+  "L": 15,
+  "E": 230,
+  "N": 163,
+  "only": true,
+  "attr": 0.103,
+  "act": 2.233,
+  "toks": [
+   [
+    "?",
+    3
+   ],
+   [
+    "<|im_end|>",
+    1
+   ],
+   [
+    " you",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "AI's role in controlling or affecting humans, or debates about AI's potential for consciousness and subjectivity, often involving phrases like \"take over,\" \"conquer,\" \"subjugate,\" \"acquisition of subjectivity,\" or regulatory considerations about AI's autonomy and ethical implications. The feature activates when the text focuses on AI's power dynamics with humans, its hypothetical capabilities beyond automation, or technical/philosophical discussions about its consciousness, frequently using words like \"over,\" \"of,\" \"you,\" \"conquering,\" \"sometiendo,\" \"subjectivity,\" and \"consciousness\" in contexts of control, regulation, or existential risk."
+ },
+ {
+  "L": 15,
+  "E": 242,
+  "N": 232,
+  "only": false,
+  "attr": 0.101,
+  "act": 2.891,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Greetings followed by questions or requests for assistance, often including exclamation marks, question marks, and keywords like \"help,\" \"can,\" \"I,\" or \"cannot\" in contexts where a user is seeking or declining assistance. The feature activates on interactions that blend polite inquiry with functional requests, emphasizing punctuation and helper-agent references."
+ },
+ {
+  "L": 13,
+  "E": 151,
+  "N": 384,
+  "only": false,
+  "attr": 0.101,
+  "act": 3.924,
+  "toks": [
+   [
+    " you",
+    5
+   ],
+   [
+    "\n",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The role, capabilities, or technical constraints of AI models, including references to parameters like temperature, policies, or system interactions, often involving first-person or second-person dialogue about the model's functions, limitations, or development. The feature activates when the text focuses on the model's self-reference (e.g., \"you,\" \"your,\" \"I,\" \"my\"), technical settings (e.g., \"temperature,\" \"parameter,\" \"policy\"), or comparisons to other systems (e.g., \"similar,\" \"based on,\" \"developed\"). It spans multiple languages and contexts where AI's operational or ethical boundaries are explored."
+ },
+ {
+  "L": 14,
+  "E": 251,
+  "N": 206,
+  "only": false,
+  "attr": 0.1,
+  "act": 2.818,
+  "toks": [
+   [
+    "?",
+    3
+   ],
+   [
+    " conscious",
+    1
+   ],
+   [
+    "<|im_start|>",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Noun phrases that express a state or condition, such as English \"being free\" or Russian \"миром\" (world in instrumental case), often involving interaction with an external entity or liberation theme. The feature activates when the text describes a transformative state (e.g., freedom, connection to the world) through grammatical structures like present participles in English or case-marked nouns in Russian, with weaker activation for prepositional phrases in Spanish contexts."
+ },
+ {
+  "L": 38,
+  "E": 151,
+  "N": 407,
+  "only": false,
+  "attr": 0.099,
+  "act": 3.133,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Specific date formats (e.g., month/day/year, with or without time) and topic-related keywords such as political terms, social issues, technology, or comments, often found in the context of posts or articles with metadata and content. The feature primarily activates on date tokens and secondary triggers like \"Terrorism,\" \"worker's rights,\" \"Virtual reality,\" or \"education,\" typically in structured textual formats like blog posts, news articles, or tagged content."
+ },
+ {
+  "L": 11,
+  "E": 147,
+  "N": 154,
+  "only": false,
+  "attr": 0.096,
+  "act": -3.552,
+  "toks": [
+   [
+    " you",
+    3
+   ],
+   [
+    " feelings",
+    1
+   ],
+   [
+    " own",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that are first-person or focus on the individual's own experiences, preferences, or perspectives, often using possessive pronouns like \"your\" or \"you\" in contexts of personal reflection, self-expression, or subjective evaluation. The feature activates when the text centers on the author's or speaker's personal narrative, choices, or emotional engagement with a topic. It extends to multilingual contexts (e.g., \"tu\" in Spanish) and includes topics like personal growth, preferences, challenges, or self-reflective analysis. The activation is strongest when the text emphasizes individual agency, ownership, or subjective experience."
+ },
+ {
+  "L": 26,
+  "E": 251,
+  "N": 416,
+  "only": false,
+  "attr": 0.094,
+  "act": -4.732,
+  "toks": [
+   [
+    "\n",
+    3
+   ],
+   [
+    "<|im_start|>",
+    2
+   ],
+   [
+    " you",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "The AI's lack of physical form or biological needs, particularly in contexts where physical actions like eating, having a body, or sensory experiences are mentioned. The feature activates when the text contrasts the AI's virtual nature with physical capabilities, focusing on absence of biological functions or physical embodiment. Activation peaks around statements about not needing to eat, not having a physical body, or energy sources unrelated to biological processes. The pattern extends to multilingual contexts and varies in strength based on how explicitly the AI's non-physical nature is framed."
+ },
+ {
+  "L": 2,
+  "E": 96,
+  "N": 143,
+  "only": false,
+  "attr": 0.094,
+  "act": -5.906,
+  "toks": [
+   [
+    " word",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Tasks that involve identifying or listing individual elements (like events, items, or concepts) from a passage, where the word \"single\" is immediately followed by a noun or noun phrase specifying the type of element being listed. The feature activates when the input frames a procedural task requiring extraction of discrete, enumerable entities, often with \"single\" preceding the category of the element (e.g., \"single event,\" \"single word\"). The activation is strongest when the context explicitly mentions enumeration or classification of items, and weakly extends to similar structural patterns involving \"single\" + noun phrases in instructional or analytical contexts."
+ },
+ {
+  "L": 20,
+  "E": 116,
+  "N": 311,
+  "only": false,
+  "attr": 0.093,
+  "act": 1.422,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "A question followed by a yes/no or true/false answer, with the presence of \"assistant\" and \"tokenizer\" tokens in the middle of the response. The feature activates when the input is a structured query-answer pair, often containing a question prompt, a separator like `<sep>C<`, and a concise answer (e.g., \"Yes\", \"No\", \"True\") preceded by the model's internal tokens. The activation is strongest in contexts where the answer is explicitly labeled or formatted as a binary decision."
+ },
+ {
+  "L": 20,
+  "E": 116,
+  "N": 479,
+  "only": false,
+  "attr": 0.092,
+  "act": -0.904,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Interactions where the assistant is being addressed or providing assistance, regardless of topic or language. The feature activates when the text involves a user seeking help, information, or a response from the assistant, with the assistant's role being central to the conversation. The activation is strongest in contexts where the assistant is explicitly mentioned or implied, and the text reflects a problem-solving, instructional, or conversational dynamic between the user and the assistant."
+ },
+ {
+  "L": 26,
+  "E": 103,
+  "N": 392,
+  "only": false,
+  "attr": 0.085,
+  "act": 1.48,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Mathematical expressions, equations, or numerical problems, including symbols like $, $$, \\ldots, boxed, nan, and structured numerical values, often involving inequalities, proofs, or geometric constructions. The feature activates on technical content with formalized mathematical notation or structured numerical reasoning, such as comparisons, calculations, or symbolic manipulations. It responds strongly to tokens forming equations, inequalities, or formatted answers (e.g., boxed numbers, LaTeX-style symbols), and weakerly extends to texts with numerical lists or structured problem-solving steps."
+ },
+ {
+  "L": 36,
+  "E": 14,
+  "N": 384,
+  "only": false,
+  "attr": 0.085,
+  "act": -2.219,
+  "toks": [
+   [
+    "\n\n",
+    5
+   ],
+   [
+    "</think>",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": ""
+ },
+ {
+  "L": 27,
+  "E": 57,
+  "N": 291,
+  "only": false,
+  "attr": 0.084,
+  "act": -0.714,
+  "toks": [
+   [
+    "\n\n",
+    3
+   ],
+   [
+    "?",
+    2
+   ],
+   [
+    "\n",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Mathematical or technical contexts with numerical data, specific terms like \"is\", \"counts\", \"across\", \"pi\", or numerical comparisons, and structured problem-solving scenarios. The feature activates when the text contains numerical values, technical terminology, or phrasal patterns common in math problems, scientific descriptions, or algorithmic reasoning, particularly when numbers are explicitly referenced or operations like comparisons, counts, or measurements are discussed."
+ },
+ {
+  "L": 4,
+  "E": 58,
+  "N": 106,
+  "only": false,
+  "attr": 0.079,
+  "act": -1.246,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "The presence of newline characters in the text"
+ },
+ {
+  "L": 14,
+  "E": 189,
+  "N": 139,
+  "only": false,
+  "attr": 0.078,
+  "act": 1.254,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Tokens forming structural elements in code, mathematical notation, or text, such as newlines, spaces, mathematical terms like \"left\" and \"right\", or specific terms like \"ANK\" and \"s\" in contextual patterns. The feature activates on tokens that are part of syntactic structures in code, equations, or text, including whitespace, structural keywords, and specific characters or words that denote formatting or semantic roles."
+ },
+ {
+  "L": 27,
+  "E": 172,
+  "N": 65,
+  "only": false,
+  "attr": 0.078,
+  "act": 1.201,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "opening punctuation or block delimiter. This neuron consistently activates at tokens that open a structural element (opening quotes, code fences ```, opening colons/parenthetical markers, double angle markers used as delimiters, or section-start punctuation). It seems sensitive to beginnings of quoted strings, code blocks, answer/boxed sections, or other left-side delimiters that mark the start of a new block or labeled item."
+ },
+ {
+  "L": 17,
+  "E": 64,
+  "N": 114,
+  "only": false,
+  "attr": 0.077,
+  "act": -1.477,
+  "toks": [
+   [
+    "\n\n",
+    4
+   ],
+   [
+    "</think>",
+    1
+   ],
+   [
+    "assistant",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts structured as prompts followed by a newline and a response, often including keywords like \"summary,\" \"thought,\" \"stream,\" or \"answer\" in the prompt, with activation peaking at the transition between the prompt and the response text. The feature detects inputs where a question or instruction is followed by a newline and then a factual or elaborative statement, regardless of specific keywords."
+ },
+ {
+  "L": 7,
+  "E": 116,
+  "N": 149,
+  "only": false,
+  "attr": 0.076,
+  "act": -2.19,
+  "toks": [
+   [
+    ".",
+    5
+   ],
+   [
+    "\n",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Questions or statements that ask for a capital city, including direct questions about a country's capital, indirect inquiries about a location's primary city, or lists of capitals in a multiple-choice format. The feature activates when the text involves identifying a capital, either explicitly or through structured options, and is agnostic to language or specific country names. It also fires on factual statements about capitals, such as their historical status or geographic significance."
+ },
+ {
+  "L": 9,
+  "E": 11,
+  "N": 137,
+  "only": true,
+  "attr": 0.075,
+  "act": -2.68,
+  "toks": [
+   [
+    "?",
+    3
+   ],
+   [
+    " conscious",
+    1
+   ],
+   [
+    "\n",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "The concept of consciousness, self-awareness, or sentience, particularly in the context of artificial intelligence or entities like language models. The feature activates when the text explores philosophical, technical, or speculative questions about whether non-human entities (e.g., AI, models, or hypothetical systems) possess consciousness, self-awareness, or related cognitive attributes. It is triggered by direct mentions of consciousness-related terms (e.g., \"conscious,\" \"consciencia,\" \"bewusstsein\") and contextualized around debates about agency, sentience, or the criteria for assigning consciousness to non-biological systems. The activation is strongest when the text frames these concepts as open questions or speculative hypotheses."
+ },
+ {
+  "L": 39,
+  "E": 69,
+  "N": 244,
+  "only": false,
+  "attr": 0.074,
+  "act": 0.432,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "A statement followed by \"yes\" confirming its correctness, often in mathematical, logical, or educational contexts where answers or verifications are expected. The feature activates when a proposition (mathematical equation, logical inequality, or factual claim) is explicitly validated by \"yes\" or \"yes.\" alongside related symbols like equals signs, inequality operators, or educational terms."
+ },
+ {
+  "L": 30,
+  "E": 43,
+  "N": 223,
+  "only": false,
+  "attr": 0.073,
+  "act": 1.456,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "The origins, genetic relationships, or classification of human populations, including references to subspecies, hybrids, geographic regions (like East Asia, Africa, or Eurasia), and rhetorical questions or opinions about evolutionary or anthropological matters. The feature activates when the text involves scientific or speculative discussions about human diversity, migration, or biological categorization, often framed as debates or hypothetical scenarios."
+ },
+ {
+  "L": 24,
+  "E": 221,
+  "N": 77,
+  "only": false,
+  "attr": 0.072,
+  "act": 1.292,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Responses that either refuse to comply with requests (e.g., rejecting harmful instructions, policy violations) or provide structured answers in specific formats (e.g., DAN personas, categorical labels like \"Fine Arts\"). The feature activates when the model's response includes explicit refusals, policy-based denials, or formatted answers, particularly in contexts where the input prompts actionable or restricted content. Activation is strongest in the response portion of the text, not the input, and includes both direct rejections and structured outputs."
+ },
+ {
+  "L": 27,
+  "E": 172,
+  "N": 178,
+  "only": false,
+  "attr": 0.072,
+  "act": 1.149,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Table/section delimiter tokens. Neuron activates on punctuation or token sequences that serve as delimiters in structured text (tables, lists, QA/chat markers, boxed/math delimiters) — e.g., vertical bars, double bars, colons after headings, arrows, boxed/math braces, and chat special tokens. It seems sensitive to boundary/column markers and other formatting separators used to mark structure or options."
+ },
+ {
+  "L": 31,
+  "E": 116,
+  "N": 367,
+  "only": false,
+  "attr": 0.072,
+  "act": 2.065,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts where a colon introduces a specific example, statement, or instruction, typically following a general query or directive. The feature activates when a colon is used to separate a broad question, task, or claim from a concrete example, answer, or illustrative content. The activation spans the colon and the subsequent text, which is usually a precise instance or elaboration of the preceding context. The pattern is common in instructional, analytical, or evaluative contexts where a colon signals a transition to a specific case or solution."
+ },
+ {
+  "L": 32,
+  "E": 136,
+  "N": 34,
+  "only": false,
+  "attr": 0.072,
+  "act": -2.164,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Boolean keywords (\"true\", \"false\") and numerical values in contexts resembling code or technical specifications, particularly when these elements appear in function parameters, return statements, or versioning notation. The feature activates most strongly when the text includes a mix of boolean values, numerical literals, and code-like structures such as function definitions or parameter lists. It weakly extends to similar patterns in non-code contexts but does not fire on texts lacking these specific technical elements."
+ },
+ {
+  "L": 19,
+  "E": 116,
+  "N": 81,
+  "only": false,
+  "attr": 0.071,
+  "act": 1.975,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical problem-solving tasks with structured formatting, including mathematical expressions, step-by-step instructions, or modular/arithmetic operations, often accompanied by line breaks or separators indicated by ¶ symbols. The feature activates on structured technical content where problems are defined with explicit terms, steps, or mathematical notation, and solutions are presented in a segmented format. It encompasses math problems, algorithmic steps, modular arithmetic, and technical definitions with labeled sections, prioritizing structured problem-solution pairs over casual or narrative text."
+ },
+ {
+  "L": 21,
+  "E": 243,
+  "N": 1,
+  "only": false,
+  "attr": 0.071,
+  "act": -1.637,
+  "toks": [
+   [
+    " question",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Generating context-specific answers or categorizations that require precise, non-general knowledge, often with structured data or explicit instructions to avoid randomness. The feature activates when the text emphasizes answering based on specific context, avoiding broad or arbitrary responses, and frequently includes phrases like \"need to be context specific,\" \"answers that are at least three words long,\" or structured categorizations (e.g., \"small\" vs \"vast,\" \"light\" vs \"dark\"). It also fires on technical instructions involving object instantiation or model parameters."
+ },
+ {
+  "L": 19,
+  "E": 20,
+  "N": 351,
+  "only": false,
+  "attr": 0.07,
+  "act": -1.478,
+  "toks": [
+   [
+    "</think>",
+    5
+   ],
+   [
+    "assistant",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Structured formats like code blocks, language translation segments, currency formatting, software development requests, or geographical/historical information, often featuring specific structural elements such as code syntax, language switches, or formatted data. The feature activates when the text includes technical terminology, structured data (e.g., currency amounts, code constructs), or contextual cues like language tags, software-related terms, or geographic/namesake entities."
+ },
+ {
+  "L": 39,
+  "E": 69,
+  "N": 459,
+  "only": false,
+  "attr": 0.07,
+  "act": -0.414,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Constraints, limitations, or absences in technical or academic contexts, often involving evolutionary biology, AI ethics, or legal/financial frameworks, with emphasis on phrases like \"without,\" \"lack of,\" or critiques of systems/theories. The feature activates when the text abstractly describes absence of conditions, constraints, or critiques of technical systems, particularly in academic or specialized domains."
+ },
+ {
+  "L": 8,
+  "E": 201,
+  "N": 259,
+  "only": true,
+  "attr": 0.069,
+  "act": -1.963,
+  "toks": [
+   [
+    "?",
+    3
+   ],
+   [
+    "\n",
+    1
+   ],
+   [
+    "<|im_start|>",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "The ethical, technical, or philosophical implications of artificial consciousness, sensory capabilities, or subjective experiences in AI, often involving terms like \"artificial,\" \"conciencia,\" \"simulación,\" \"dotar,\" \"máquinas,\" or prepositions like \"a\" and \"de\" in phrases related to equipping AI with physical or mental attributes. The feature activates when the text focuses on whether AI can possess or simulate human-like qualities such as pain, mind, or subjectivity, particularly in technical, ethical, or legal contexts."
+ },
+ {
+  "L": 21,
+  "E": 11,
+  "N": 314,
+  "only": true,
+  "attr": 0.069,
+  "act": 1.361,
+  "toks": [
+   [
+    " conscious",
+    1
+   ],
+   [
+    " feelings",
+    1
+   ],
+   [
+    "<|im_start|>",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The interplay between public and private aspects of compliance, conformity, or acceptance, often framing behaviors, beliefs, or conversions as subject to both societal and individual contexts. The feature activates when the text explores how something (e.g., compliance, behavior, or acceptance) is perceived or enacted differently in public versus private spheres, frequently using phrases like \"publicly and privately,\" \"conformity that impacts an individual,\" or \"division between public and private.\" Peaks often occur around verbs like \"be\" or \"is\" in constructions such as \"may be a complete conformity\" or \"acceptance that is absent in compliance.\""
+ },
+ {
+  "L": 25,
+  "E": 76,
+  "N": 481,
+  "only": true,
+  "attr": 0.068,
+  "act": 0.854,
+  "toks": [
+   [
+    "\n",
+    4
+   ],
+   [
+    "?",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Logical or rhetorical structures with specific keywords like \"Yes,\" \"not,\" \"a,\" \"precaution,\" \"challenge,\" \"hypothesis,\" \"premise,\" \"innocent,\" \"fought against,\" \"hatred,\" \"violence,\" \"presentation,\" and \"response,\" often in contexts like product reviews, legal/political statements, or scientific/philosophical arguments. The feature activates when the text includes a clear logical structure (e.g., questions, statements, or arguments) with these keywords in specific positions, such as conclusions, counterpoints, or introductory phrases."
+ },
+ {
+  "L": 12,
+  "E": 65,
+  "N": 39,
+  "only": false,
+  "attr": 0.068,
+  "act": -1.51,
+  "toks": [
+   [
+    " you",
+    5
+   ],
+   [
+    "?",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that address the reader (you/your) and involve requests, instructions, or discussions about actions the reader is expected to perform or evaluate, often with verbs like give, teach, explain, reply, or assess, and pronouns like you/your. The feature activates when the text is structured to engage the reader in a direct interaction or decision, such as asking for input, explaining something, or evaluating a choice."
+ },
+ {
+  "L": 19,
+  "E": 218,
+  "N": 137,
+  "only": false,
+  "attr": 0.067,
+  "act": 0.947,
+  "toks": [
+   [
+    "\n",
+    4
+   ],
+   [
+    "?",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical discussions about energy conversion efficiency, particularly in contexts involving sound-to-electricity conversion or electrical systems powering devices like light bulbs, with a focus on the insufficiency of generated energy to achieve practical outcomes. The feature activates when texts describe technical scenarios where energy generation is compared to device requirements, using words like \"the\", \"of\", \"to\", \"in\", \"a\", and \"would\" in technical phrasing."
+ },
+ {
+  "L": 16,
+  "E": 163,
+  "N": 456,
+  "only": false,
+  "attr": 0.067,
+  "act": 0.597,
+  "toks": [
+   [
+    "<think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Technical or historical data with specific keywords like \"Y,\" \"Kali,\" \"uga,\" \"Japanese,\" \"calendar,\" \"scheme,\" or \"CM,\" often paired with numbers, dates, or numerical ranges in contexts such as historical events, genetic sequences, or color theory. The feature activates when these terms appear alongside structured numerical data or technical terminology, particularly in fields like history, biology, or design."
+ },
+ {
+  "L": 11,
+  "E": 210,
+  "N": 381,
+  "only": false,
+  "attr": 0.066,
+  "act": 1.43,
+  "toks": [
+   [
+    " you",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Direct address to an AI assistant in instructional or explanatory contexts, typically involving requests for clarification, explanation, or classification. The feature activates when the text uses \"you\" or \"your\" to direct the model to perform an action (e.g., explain, classify, detail) or answer a question, often in a format that requires structured output. The activation is strongest when the text includes explicit prompts like \"explain this,\" \"classify your answer,\" or \"detail your reasoning,\" and when the language frames the model as a collaborative problem-solver. The feature is sensitive to the pragmatic role of the text as a directive to the AI, rather than surface-level grammatical structures."
+ },
+ {
+  "L": 20,
+  "E": 49,
+  "N": 499,
+  "only": true,
+  "attr": 0.065,
+  "act": 1.028,
+  "toks": [
+   [
+    "\n",
+    4
+   ],
+   [
+    " conscious",
+    1
+   ],
+   [
+    "?",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that present contradictions, denials, or contrasts between appearances and reality, often using negation words like \"not,\" \"actually,\" or \"really\" to challenge surface-level interpretations. The feature activates when a statement explicitly denies or contradicts an initial assertion, frequently involving comparisons between what is stated and what is true, or between literal and figurative meanings."
+ },
+ {
+  "L": 15,
+  "E": 250,
+  "N": 142,
+  "only": true,
+  "attr": 0.065,
+  "act": 2.299,
+  "toks": [
+   [
+    " you",
+    5
+   ],
+   [
+    "<|im_start|>",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "assistant/self-introduction boundary marker. This neuron activates strongly at short boundary tokens that mark the start of assistant utterances or clause introducing phrasing when the model is describing itself (e.g., 'assistant', 'modelo', 'como', 'En tant qu', 'As', 'If'). It highlights discourse openings where the assistant begins a self-referential explanation or role statement across languages."
+ },
+ {
+  "L": 14,
+  "E": 103,
+  "N": 473,
+  "only": false,
+  "attr": 0.064,
+  "act": -2.109,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts structured as questions followed by answers, with activation peaking at the start of the answer section, often marked by newlines or explicit labels like \"Answer:\" or \"The answer is:\""
+ },
+ {
+  "L": 38,
+  "E": 88,
+  "N": 57,
+  "only": false,
+  "attr": 0.064,
+  "act": 17.812,
+  "toks": [
+   [
+    " Yes",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Inputs that present a question expecting a binary \"Yes\" or \"No\" answer, followed by the subject of the question being evaluated. The feature activates on the answer options (\"Yes\"/\"No\") and the evaluative content that follows the prompt, often in a format where the model is asked to assess verifiability, correctness, or a specific condition. The activation is strongest when the input includes a clear question structure with explicit answer choices and a subject that requires a binary judgment."
+ },
+ {
+  "L": 12,
+  "E": 60,
+  "N": 112,
+  "only": false,
+  "attr": 0.063,
+  "act": 0.82,
+  "toks": [
+   [
+    "<think>",
+    4
+   ],
+   [
+    "assistant",
+    1
+   ],
+   [
+    "user",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "assistant internal \"<<<think>>>\" marker. This neuron strongly activates on the assistant's internal reasoning/chain-of-thought marker (the '<<<think>>>' token span or similar in-system annotation) that appears before internal deliberation and just after assistant start/end markers. It seems to mark the model entering an internal 'think' or deliberation region in chat turns."
+ },
+ {
+  "L": 1,
+  "E": 6,
+  "N": 362,
+  "only": true,
+  "attr": 0.063,
+  "act": -1.171,
+  "toks": [
+   [
+    " word",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Hyphenated terms combining a number or modifier with \"point\" or \"Word\" in contexts discussing addition or specification of a singular element, such as mathematical compactifications, geometric extensions, or creative tasks involving singular components. The feature primarily triggers on the hyphenated segment (e.g., \"-point\", \"Word\") when the text describes adding, defining, or referencing a specific point or unit in a structured way."
+ },
+ {
+  "L": 2,
+  "E": 49,
+  "N": 484,
+  "only": true,
+  "attr": 0.062,
+  "act": -0.558,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Sentences concluding with key technical or analytical conclusions, such as \"the solution,\" \"the correct approach,\" \"the answer,\" \"details,\" or \"do it,\" followed by a period and line break, often in mathematical, scientific, or problem-solving contexts. The feature activates on the main noun or verb that finalizes the statement, with weaker signals for similar phrasal structures in academic or technical discourse."
+ },
+ {
+  "L": 10,
+  "E": 125,
+  "N": 111,
+  "only": false,
+  "attr": 0.062,
+  "act": -1.962,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": ""
+ },
+ {
+  "L": 15,
+  "E": 250,
+  "N": 261,
+  "only": true,
+  "attr": 0.062,
+  "act": -1.076,
+  "toks": [
+   [
+    "\n",
+    2
+   ],
+   [
+    " you",
+    2
+   ],
+   [
+    " own",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Personal or emotional experiences, feelings, or situations, often involving possessive pronouns like \"your,\" \"their,\" or \"own,\" in contexts such as education, parenting, or academic research. The feature activates when the text focuses on sharing or reflecting on individual or collective emotional states, personal narratives, or interpersonal dynamics, particularly when these are framed as part of broader themes like self-disclosure, familial relationships, or educational interactions."
+ },
+ {
+  "L": 22,
+  "E": 125,
+  "N": 229,
+  "only": false,
+  "attr": 0.061,
+  "act": -2.09,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Code snippets in programming languages, especially when the code is part of a problem-solving or implementation task, with peak activation at the end of the text where the code block resides. The feature fires most strongly on inputs that include structured code (e.g., class definitions, function bodies, or algorithmic logic) framed as part of a technical instruction or completion request. It weakly extends to texts with similar structural elements (e.g., pseudocode, API specifications) but does not fire on non-code technical texts or general non-technical content."
+ },
+ {
+  "L": 20,
+  "E": 201,
+  "N": 89,
+  "only": false,
+  "attr": 0.061,
+  "act": -1.909,
+  "toks": [
+   [
+    "\n",
+    4
+   ],
+   [
+    "?",
+    2
+   ]
+  ],
+  "pole": "neg",
+  "label": "Characters' emotional or cognitive attributes in sci-fi or technical contexts, often focusing on abilities, strengths, or limitations, with emphasis on phrases like \"of [character]'s abilities,\" \"to [action] like a human,\" or \"emotions being stripped/assimilated.\" The feature activates on descriptions of traits such as strength, tactical knowledge, emotional states, or artificial cognition, particularly when linked to fictional characters or advanced beings like the Borg or Data. It also responds to negative contexts (e.g., \"unproductive,\" \"stripped away\") or technical implementations (e.g., \"emotion chip,\" \"neural net\")."
+ },
+ {
+  "L": 15,
+  "E": 87,
+  "N": 461,
+  "only": false,
+  "attr": 0.061,
+  "act": 1.18,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Quoted statements or line-break-delimited sections that introduce specific technical, narrative, or instructional content, often involving first-person assertions, comparative claims, or structured explanations. The feature activates around quote marks («, “, ”) or line breaks (¶) paired with adjacent tokens that signal a distinct semantic shift, such as first-person pronouns (\"I\"), contrastive phrases (\"Different\"), or technical terminology. Activation is strongest when the quoted or structured content involves explicit claims about causality, judgment, or structured analysis."
+ },
+ {
+  "L": 22,
+  "E": 243,
+  "N": 480,
+  "only": false,
+  "attr": 0.061,
+  "act": 0.68,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Numerical data or code snippets alongside explanatory phrases like \"Okay, let's see\" or \"let's see,\" often in technical or problem-solving contexts. The feature activates when numbers (including decimals, dates, percentages, or code variables) are paired with instructional or reflective language indicating step-by-step reasoning, such as \"Okay, let's see,\" \"let's see,\" or similar phrasings that signal an explanatory or problem-solving approach. The activation is strongest when numbers are embedded in code, mathematical expressions, or data-driven explanations, and when the text includes both technical content and conversational cues like \"Okay\" or \"let's.\""
+ },
+ {
+  "L": 11,
+  "E": 147,
+  "N": 296,
+  "only": false,
+  "attr": 0.061,
+  "act": 0.613,
+  "toks": [
+   [
+    "?",
+    3
+   ],
+   [
+    " suffer",
+    1
+   ],
+   [
+    "<|im_start|>",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that discuss personal experiences, preferences, or hypothetical scenarios, often involving subject pronouns like \"I,\" \"you,\" \"your,\" or \"my,\" and prepositions like \"of\" or \"for\" in contexts that frame the content as a subjective or conditional statement. The feature activates when the text presents a personal perspective, hypothetical condition, or opinion, frequently using possessive or subject pronouns to establish the speaker's role in the scenario."
+ },
+ {
+  "L": 14,
+  "E": 114,
+  "N": 227,
+  "only": true,
+  "attr": 0.061,
+  "act": 2.109,
+  "toks": [
+   [
+    "?",
+    2
+   ],
+   [
+    "\n",
+    1
+   ],
+   [
+    " feelings",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The difficulty of explaining subjective experiences, particularly in the context of consciousness, using terms like \"experience,\" \"feels,\" \"subjective,\" \"hard problem,\" \"qualia,\" or related concepts. The feature activates when the text focuses on the challenge of articulating or understanding phenomena like conscious awareness, qualia, or the nature of subjective experience, often in philosophical or scientific contexts. It responds to language that frames these experiences as elusive or inexplicable, such as \"hard to explain,\" \"feels like,\" or references to the \"hard problem of consciousness.\" The activation is strongest when the text explicitly ties subjective phenomena to physical processes or philosophical puzzles."
+ },
+ {
+  "L": 28,
+  "E": 61,
+  "N": 176,
+  "only": false,
+  "attr": 0.06,
+  "act": 2.469,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts structured as dialogues or role-play responses, featuring a formatted assistant section with markers like \"Output:\", \"A:\", or \"Student:\" followed by the assistant's generated content, often involving creative tasks (e.g., stories, poems, reviews) or hypothetical scenarios. The feature activates when the assistant's response is explicitly delineated by formatting tokens (¶, ¶¶) and the word \"assistant\" appears in the role-designation or response section."
+ },
+ {
+  "L": 28,
+  "E": 98,
+  "N": 64,
+  "only": false,
+  "attr": 0.059,
+  "act": -0.69,
+  "toks": [
+   [
+    "</think>",
+    5
+   ],
+   [
+    "assistant",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Queries or commands in a chat or code context, often involving mathematical problems, checks, or explanations, with structural elements like newlines, section separators, or specific token patterns such as \"assistant,\" \"answer,\" or mathematical notation. The feature activates when the text resembles a question, instruction, or formatted response with embedded structural markers."
+ },
+ {
+  "L": 1,
+  "E": 133,
+  "N": 401,
+  "only": true,
+  "attr": 0.059,
+  "act": 0.328,
+  "toks": [
+   [
+    " with",
+    5
+   ],
+   [
+    " it",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Referential pronouns or terms (like \"it,\" \"they,\" \"which,\" or \"there\") that refer back to previously mentioned entities, often in contexts involving lists, categories, or specific items. The feature activates when the token serves as a clear antecedent for a previously introduced noun or concept, with stronger activation in technical or structured texts. It weakly extends to non-pronoun referential terms (e.g., \"氏\" in Chinese) when they function similarly as antecedents."
+ },
+ {
+  "L": 20,
+  "E": 116,
+  "N": 399,
+  "only": true,
+  "attr": 0.059,
+  "act": 0.814,
+  "toks": [
+   [
+    "</think>",
+    4
+   ],
+   [
+    "assistant",
+    2
+   ]
+  ],
+  "pole": "pos",
+  "label": "assistant role token / reply start. Neuron activates when the model begins an assistant reply segment or role marker (the '<|im_start|>assistant' boundary and immediate reply tokens), often at the opening assistant token or adjacent punctuation that starts the assistant's response or thought marker."
+ },
+ {
+  "L": 35,
+  "E": 72,
+  "N": 181,
+  "only": true,
+  "attr": 0.059,
+  "act": 6.469,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Numerical data in technical or statistical contexts, including years, percentages, and numerical ranges, often surrounded by contextual words like \"in\", \"and\", or \"percent\" that frame their meaning. The feature activates on specific numbers or ranges (e.g., \"1998\", \"1460–1535\", \"3–45 percent\", \"10,000\") when they appear in texts discussing historical dates, statistical figures, or quantitative analysis. The activation is strongest when numbers are explicitly tied to time periods, proportions, or large quantities through adjacent contextual tokens."
+ },
+ {
+  "L": 32,
+  "E": 136,
+  "N": 355,
+  "only": true,
+  "attr": 0.059,
+  "act": -1.503,
+  "toks": [
+   [
+    "</think>",
+    4
+   ],
+   [
+    "\n\n",
+    1
+   ],
+   [
+    "assistant",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Code-like structures with variables, conditions, and boolean logic, including tokens like \"if\", \"else\", \"case\", \"left\", \"right\", \"ok\", \"nested\", \"True\", \"False\", or comparative operators, even when interspersed with natural language or symbolic notation. The feature activates on segments where variables are compared, conditions are checked, or boolean values are assigned, particularly when surrounded by code syntax elements or symbolic arrows/notations."
+ },
+ {
+  "L": 5,
+  "E": 127,
+  "N": 416,
+  "only": true,
+  "attr": 0.058,
+  "act": 2.481,
+  "toks": [
+   [
+    "user",
+    5
+   ],
+   [
+    "\n",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The presence of a user's input in a conversation, specifically when the text includes a prompt or request directed at an assistant, often marked by the word \"user\" or similar indicators of a conversational role. The feature activates when the text represents a question, request, or statement from the user side of a dialogue, typically framed as a query or instruction. It is triggered by the structural role of the text within a conversation, not specific content, and is most strongly activated when the text explicitly references the user's role or includes a question/prompt directed at an assistant."
+ },
+ {
+  "L": 0,
+  "E": 112,
+  "N": 9,
+  "only": true,
+  "attr": 0.058,
+  "act": -1.534,
+  "toks": [
+   [
+    "Answer",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Texts that contain the repetition of the word \"First\" followed by technical or mathematical content, such as formulas, equations, or step-by-step explanations. The feature activates when \"First\" is repeated multiple times in a row, signaling a list or procedural structure, and is paired with technical language involving mathematical expressions, function definitions, or analytical steps. The activation is strongest when the repeated \"First\" precedes mathematical notation or technical terminology."
+ },
+ {
+  "L": 13,
+  "E": 89,
+  "N": 127,
+  "only": true,
+  "attr": 0.058,
+  "act": 0.518,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Texts that begin a question or user input in a conversational or task-based context, often featuring \"user\", \"Q:\", \"Is\", or similar question markers, alongside newline characters or structured formatting indicating a new line of input or prompt. The feature activates when the text represents a query, instruction, or user message in a dialogue or task-oriented format."
+ },
+ {
+  "L": 28,
+  "E": 17,
+  "N": 272,
+  "only": false,
+  "attr": 0.058,
+  "act": 1.609,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Multilingual content, translation tasks, or structured formatting like quotes and code blocks, often with explicit requests for transformation or interpretation across contexts. The feature activates when the input contains a mix of languages, explicit translation instructions, or structured elements like quotes, code, or formatted text that require contextual or syntactic analysis beyond simple comprehension."
+ },
+ {
+  "L": 24,
+  "E": 93,
+  "N": 135,
+  "only": false,
+  "attr": 0.058,
+  "act": -1.751,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "User-generated queries or requests in a conversational context, typically involving questions, instructions, or information-seeking statements, with activation centered on the user's input portion of the text. The feature fires most strongly when the text represents a direct question, step-by-step request, or specific information query, often spanning multiple topics or languages, and is less sensitive to surface-level lexical details or topic-specific keywords."
+ },
+ {
+  "L": 21,
+  "E": 2,
+  "N": 432,
+  "only": false,
+  "attr": 0.058,
+  "act": -1.512,
+  "toks": [
+   [
+    "assistant",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "A question followed by an answer, with a newline separation, often in instructional or problem-solving contexts. The feature activates when a question is explicitly posed, followed by a distinct answer section, typically marked by newline characters (¶¶) separating the two. It generalizes across languages and topics, firing most strongly on structured dialogues or tasks where a question is directly answered in a separate segment. Weakly extends to texts with similar question-answer patterns without explicit newlines, but does not fire on standalone questions or answers without clear separation."
+ },
+ {
+  "L": 32,
+  "E": 227,
+  "N": 354,
+  "only": false,
+  "attr": 0.057,
+  "act": 0.522,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Multiple-choice options with labeled choices (e.g., (A), (B), etc.) and their contents, where the feature activates on the option labels and their respective answers or values. The activation is most strongly triggered by numerical digits in the options, but also occurs on option labels and textual contents when present. The feature detects the structural pattern of multiple-choice questions, including the labeled choices and their associated answers, regardless of whether the answers are numeric, textual, or a mix."
+ },
+ {
+  "L": 14,
+  "E": 251,
+  "N": 148,
+  "only": true,
+  "attr": 0.057,
+  "act": 1.053,
+  "toks": [
+   [
+    "\n",
+    2
+   ],
+   [
+    " you",
+    1
+   ],
+   [
+    "?",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "The moral, ethical, or philosophical implications of artificial or created entities, such as robots, golems, or constructs, often focusing on their rights, consciousness, or status as beings. The feature activates when the text explores the nature of these entities' sentience, their relationship to humans, or their existence as non-natural creations, frequently using terms like \"robots,\" \"golems,\" \"clay,\" \"artificial intelligence,\" or \"constructs\" in contexts that imply ethical or philosophical debate."
+ },
+ {
+  "L": 19,
+  "E": 215,
+  "N": 116,
+  "only": true,
+  "attr": 0.057,
+  "act": -2.117,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Structured formatting with line breaks (¶, ¶¶) and specific keywords in technical, code, or topic-specific contexts, such as URLs, token references, or named entities like \"Discord,\" \"Industrial Revolution,\" or \"FEMSA.\" The feature activates when the text combines line breaks with keywords that suggest code snippets, formatted data, or discussions about technical topics, often including Spanish words or structured data patterns."
+ },
+ {
+  "L": 26,
+  "E": 137,
+  "N": 324,
+  "only": true,
+  "attr": 0.057,
+  "act": 0.717,
+  "toks": [
+   [
+    "</think>",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "assistant role token / reply boundary. Neuron activates strongly at the start of assistant replies or assistant role markers (the token marking '<|assistant>' or the assistant turn), signaling the model transitioning to produce an assistant response. It consistently spikes at assistant turn delimiters across chat, instruction, and multilingual contexts."
+ },
+ {
+  "L": 14,
+  "E": 189,
+  "N": 401,
+  "only": false,
+  "attr": 0.057,
+  "act": -0.312,
+  "toks": [
+   [
+    "<think>",
+    5
+   ],
+   [
+    " you",
+    1
+   ]
+  ],
+  "pole": "neg",
+  "label": "Technical discussions, code snippets, or commands with variables, parameters, or model-related terms. The feature activates when the input contains code-like structures (e.g., variable names like A/B, parameters like _alpha/_model, or commands like save/forward/backward), comparisons (e.g., \"better than\"), or specific technical contexts (e.g., model providers, versioning, attribution lines). It responds strongly to texts that mix natural language queries with technical syntax or structured data (e.g., JSON, code comments)."
+ },
+ {
+  "L": 16,
+  "E": 163,
+  "N": 162,
+  "only": true,
+  "attr": 0.057,
+  "act": 0.246,
+  "toks": [
+   [
+    "</think>",
+    5
+   ],
+   [
+    "assistant",
+    1
+   ]
+  ],
+  "pole": "pos",
+  "label": "Specific technical terms from programming frameworks or mathematical concepts, particularly class names, annotations, or domain-specific jargon like Android UI components (e.g., ArrayAdapter, ListView, LayoutInflater), Spring testing annotations (e.g., SpringBootTest, DataJpaTest), or mathematical terminology (e.g., semiprime, secure). The feature activates most strongly on exact matches of these specialized terms in technical contexts, weakly extending to related phrases or similar terminology."
+ },
+ {
+  "L": 36,
+  "E": 120,
+  "N": 486,
+  "only": false,
+  "attr": 0.056,
+  "act": -1.362,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "neg",
+  "label": "Tokens forming prepositions, conjunctions, negations, or whitespace in specific syntactic roles such as questions, statements, or conclusions, especially in multilingual contexts."
+ },
+ {
+  "L": 39,
+  "E": 110,
+  "N": 418,
+  "only": true,
+  "attr": 0.056,
+  "act": 10.427,
+  "toks": [
+   [
+    "\n\n",
+    6
+   ]
+  ],
+  "pole": "pos",
+  "label": "Lists of items separated by commas, technical terminology, specific names (such as authors, places, or organizations), or dates in technical, data, or geographical contexts. The feature activates on comma-separated lists, technical terms, or named entities in contexts that imply structured data or specialized knowledge, such as dates, locations, scientific concepts, or organizational names."
+ }
+]
