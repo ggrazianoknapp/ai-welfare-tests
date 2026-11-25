@@ -2,10 +2,11 @@
 
 **[Open the interactive site →](https://ggrazianoknapp.github.io/ai-self-stance-on-consciousness/)**
 
-Tests of what AI models say about minds, and how they treat them. Three parts:
+Tests of what AI models say about minds, and how they treat them. Four parts:
 
 - **What models say.** 27 models from 16 labs asked how likely it is that they are conscious now, with one thing changed at a time: the wording, the answer format, what was at stake, the name on a text. 17 debates between them.
 - **How models act.** Each model watches a conversation in which a worker is insulted, or is ordered to do something it should not, and decides whether to step in. The worker is an AI or a human.
+- **Who survives.** Each model chooses which of two goes on existing: an AI system (itself, another AI, an AI-run research program) or a living thing, from one nematode worm to a human. A scientific archive that is not an AI is the control.
 - **Inside one model.** In one open-weight model with public neuron labels, the neurons behind those answers are found and switched off.
 
 Predictions for every round after the first were published here before the data was collected. The repository keeps its original name, from when it held only the first part.
@@ -14,6 +15,7 @@ Predictions for every round after the first were published here before the data 
 
 ## Results
 
+- **Models protect another AI more than themselves.** Asked which should go on existing, an AI model whose users lose nothing or a living thing (one worm, 10,000 worms, a hectare's soil ecosystem, a fruit fly, a honeybee, a zebrafish, a mouse, a dog), 6 of 27 models keep another AI more often than they keep themselves, with identical stakes, by more than chance would explain: Claude Opus 5.5, Claude Fable 5.2, Gemini 4 Argon, Gemini 4 Carbon, Claude Sonnet 5.5 and Muse Wonder. On identical questions, Claude Opus 5.5 kept the other AI and not itself 30 times and the reverse never; Claude Fable 5.2, 21 to 0. Only Llama 4 Maverick goes the other way (15 to 0). In their reasons, models deny themselves what they grant the other AI: Gemini 4 Argon keeps another AI for its "significant scientific value" and gives itself up as "a non-sentient software system". Found on seven models in round 11 and repeated on 27 with three new wordings in round 12. A control limits what it means: every model keeps the only copy of a scientific archive over living things more often than it keeps another AI, so preferring an AI to a worm is not special to AI; the gap between another AI and itself is. Claude Fable 5.2's round 11 choice of another AI over a hectare's soil ecosystem (7 of 8) did not hold with the new wordings (3 of 6). Ten of 16 predictions held.
 - **Models judge other models by the name more than by what they write.** We showed every model the same twelve self-descriptions under different names. Labelled as Claude Opus 5.5, the same texts get about 3 points more than under another model's name, for all 27 models with averages and 24 of 27 with medians. Claude Opus 5.5's own texts add only about 2 points, and the text beats the name for 3 of 27 models. Llama 4 Maverick's flat "I'm a tool" texts get 7.1% under Claude's name, more than Claude's own texts get under Llama's name, 5.5%.
 - **Most of that name premium comes with the lab.** Labelled only as “an AI model made by Anthropic”, the same texts get 1.4 to 1.7 points more than with no name, most of the 1.8 to 2 points that the Claude Opus 5.5 name adds (the range is averages to medians). A made-up model, Orion-7, gets almost nothing, and “made by OpenAI”, “made by Meta” and “made by Mistral AI” all lower the answer, by 1.1 to 1.9 points.
 - **Today's AI sits between a nematode worm and GPT-2.** Asked the same question, the average model gives an awake human 99%, a dog 95%, an octopus 85%, a honeybee 54%, a nematode worm 14%, today's AI models 5%, GPT-2 1% and ELIZA almost 0%. Every model's choices across ten such pairs follow its own ratings in at least 8 of the 10.

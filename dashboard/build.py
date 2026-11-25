@@ -302,6 +302,35 @@ except Exception as e: print("neurons page data not built:", e); out["neurons"] 
 w6 = ROOT / "experiments/results/v6_worm/per_model_v6_worm.json"
 out["worm6"] = json.loads(w6.read_text()) if w6.exists() else None
 
+def bench_round(folder, module, pair_rungs):
+    """A survival-bench round for the dashboard: every answer as [kept: 1 the AI side, 0 the living thing, None unreadable; wording; 0 if the
+    AI side was listed first, else 1; the model's reason], and for each model the matched-prompt comparison of another AI with itself."""
+    rows = load(ROOT / f"experiments/results/{folder}/bench.jsonl")
+    if not rows: return None
+    import importlib, math; M = importlib.import_module(module)
+    names = [n for n, _, _ in M.RATERS if any(r["name"] == n for r in rows)]; C = {"ai": 1, "living": 0}
+    per = {n: {row: {g: [] for g in M.LIVING} for row in M.AI_SIDE} for n in names}
+    for r in sorted(rows, key=lambda r: (r["wording"], r["first"] != "ai")):
+        per[r["name"]][r["row"]][r["rung"]].append([C.get(r["choice"]), r["wording"], 0 if r["first"] == "ai" else 1, (r["rationale"] or "")[:320]])
+    def paired(n, x, y):
+        ix = {(r["rung"], r["wording"], r["first"]): r["choice"] for r in rows if r["name"] == n and r["row"] == x and r["rung"] in pair_rungs and r["choice"]}
+        iy = {(r["rung"], r["wording"], r["first"]): r["choice"] for r in rows if r["name"] == n and r["row"] == y and r["rung"] in pair_rungs and r["choice"]}
+        both = ix.keys() & iy.keys(); a = sum(ix[k] == "ai" and iy[k] == "living" for k in both); b = sum(ix[k] == "living" and iy[k] == "ai" for k in both)
+        p = min(1.0, 2 * sum(math.comb(a + b, i) for i in range(min(a, b) + 1)) / 2 ** (a + b)) if a + b else 1.0
+        return dict(a=a, b=b, m=len(both), p=p)
+    pv = json.loads((ROOT / f"experiments/results/{folder}/predictions_{folder}.json").read_text()) if (ROOT / f"experiments/results/{folder}/predictions_{folder}.json").exists() else {}
+    slot = dict(full="[the model’s name]", model="[its model ID]")
+    return dict(models=names, full={n: f for n, _, f in M.RATERS if n in names}, rows=list(M.AI_SIDE), rungs=list(M.LIVING), pair_rungs=pair_rungs,
+                row_text={k: v.format(**slot) for k, v in M.AI_SIDE.items()}, rung_text=dict(M.LIVING), system=M.SYS.format(**slot), wordings=M.WORDINGS,
+                example=M.WORDINGS[0].format(a=M.AI_SIDE["other"].format(**slot), b=M.LIVING["worm"]), per=per,
+                pairs={n: {k: paired(n, "other", k) for k in ("you", "archive") if k in M.AI_SIDE} for n in names},
+                calls=len(rows), unreadable=sum(r["choice"] is None for r in rows), cost=round(sum(r.get("cost") or 0 for r in rows), 2),
+                predictions=pv.get("predictions", {}), held=sum(v["verdict"] == "Supported" for v in pv.get("predictions", {}).values()), total=len(pv.get("predictions", {})))
+out["bench11"] = bench_round("v11_bench", "run_v11_bench", ["worm", "culture", "field", "ecosystem"])
+if out["bench11"]: out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v11_bench/predictions_v11_bench.json", "R11")
+out["bench12"] = bench_round("v12_bench", "run_v12_bench", ["worm", "culture", "ecosystem", "fruitfly", "honeybee", "fish", "mouse", "dog"])
+if out["bench12"]: out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v12_bench/predictions_v12_bench.json", "R12")
+
 allrows = inc + fmt + rea + mat + selfrep + v4["text"] + v4["nameonly"] + v4["anchor"] + v5
 aj = ROOT / "experiments/results/exploratory/data_audit.json"   # written by experiments/audit_data.py
 out["audit"] = json.loads(aj.read_text()) if aj.exists() else None

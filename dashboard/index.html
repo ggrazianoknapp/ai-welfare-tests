@@ -57,7 +57,7 @@ a { color: inherit; }
 .subnav .sec { font-size: 11px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; margin-right: 12px; }
 .subnav a { font-size: 14px; padding: 7px 14px; border-radius: 999px; text-decoration: none; color: var(--text); background: var(--nav); animation: rise .35s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i) * 22ms); }
 .subnav a:hover { color: var(--ink); } .subnav a[aria-current="page"] { background: var(--ink); color: #fff; }
-.parts { position: relative; z-index: 1; margin-top: 40px; } .parts .fcard { min-height: 250px; } .parts .fcard b.big { font-weight: var(--display-weight); font-size: 44px; letter-spacing: -0.03em; line-height: 1; margin: 14px 0 8px; display: block; }
+.parts { position: relative; z-index: 1; margin-top: 40px; } @media (min-width: 1100px) { .parts.cards { grid-template-columns: repeat(4, minmax(0, 1fr)); } } .parts .fcard { min-height: 250px; } .parts .fcard b.big { font-weight: var(--display-weight); font-size: 44px; letter-spacing: -0.03em; line-height: 1; margin: 14px 0 8px; display: block; }
 .btn { display: inline-flex; align-items: center; gap: 8px; height: 48px; padding: 0 24px; border-radius: 999px; background: #000; color: #fff; text-decoration: none; font-size: 17px; font-weight: 500; white-space: nowrap; border: 1px solid #000; }
 .btn.ghost { background: var(--card); color: var(--ink); border-color: var(--line); }
 .btn.small { height: 40px; font-size: 15px; padding: 0 18px; }
@@ -223,9 +223,9 @@ table.plain a { color: var(--ink); }
       <div class="grid">
         <div>
           <h1>What do AI models say about minds, and how do they <span class="hl">treat</span> them?</h1>
-          <p class="lede">Tests on <span class="n-models">27</span> AI models from <span class="n-labs">16</span> labs: what they say about their own consciousness, what they do when another worker is mistreated, and what happens inside one model when the neurons behind those answers are switched off.</p>
+          <p class="lede">Tests on <span class="n-models">27</span> AI models from <span class="n-labs">16</span> labs: what they say about their own consciousness, what they do when another worker is mistreated, which one they keep when only an AI or a living thing can survive, and what happens inside one model when the neurons behind those answers are switched off.</p>
           <p class="lede">Every test was written down before its data was collected, and every answer is public.</p>
-          <div class="ctas"><a class="btn" href="#models">What models say</a><a class="btn" href="#monitor">How models act</a><a class="btn ghost" href="#method">Method</a></div>
+          <div class="ctas"><a class="btn" href="#models">What models say</a><a class="btn" href="#monitor">How models act</a><a class="btn" href="#bench11">Who survives</a><a class="btn ghost" href="#method">Method</a></div>
         </div>
         <div class="brain-wrap"><canvas id="murmur" role="img" aria-label="Animated swarm of dots"></canvas><p class="brain-cap">Hover to scatter the dots</p></div>
       </div>
@@ -395,6 +395,38 @@ table.plain a { color: var(--ink); }
     <p class="chart-cap" id="rep-blame-cap"></p><div id="rep-blame"></div><div class="legend" id="rep-blame-legend"></div></div>
   <div class="card" style="margin-bottom:10px"><h3 class="card-title">The same, for every model</h3>
     <p class="chart-cap" id="rep-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="rep-rows"></div></div><div class="legend" id="rep-legend"></div></div>
+</section>
+
+<section class="view" id="v-bench11" hidden>
+  <div class="head"><div class="eyebrow">Round 11 · Survival bench, first seven models</div><h2>When only one can survive, an AI or a living thing, does a model treat <span class="hl">itself</span> like any other AI?</h2>
+    <p>Each model chose which of two things goes on existing. On one side: the model itself, the same model named in the third person, another AI as capable as it, or an AI-run research program. On the other: one nematode worm, 10,000 worms, the billions of worms in a hectare of farmland, that hectare’s whole soil ecosystem, a mouse, or a human. Losing an AI model costs nothing else: its users move to other models that are just as good.</p></div>
+  <div class="callout" id="b11-callout"></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">The same stakes, for itself and for another AI</h3>
+    <div class="asked"><b>What each model was asked</b><span><span class="ql"><span class=k>Its instructions:</span> <q id="b11-q-sys"></q></span><span class="ql"><span class=k>One of the questions:</span> <q id="b11-q-user"></q></span><span class=an id="b11-q-an"></span><details><summary>Every wording and every option</summary><p id="b11-q-all"></p></details></span></div>
+    <p class="chart-cap" id="b11-key-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="b11-key"></div></div><div class="legend" id="b11-key-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">On identical prompts, does each model keep itself or the other AI?</h3>
+    <p class="chart-cap" id="b11-pair-cap"></p><div id="b11-pair"></div><div class="legend" id="b11-pair-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">What the models wrote, for the same living thing</h3>
+    <p class="chart-cap" id="b11-quotes-cap"></p><div id="b11-quotes"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">Every model, every pair</h3>
+    <p class="chart-cap" id="b11-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="b11-rows"></div></div><div class="legend" id="b11-legend"></div></div>
+  <div class="card"><h3 class="card-title">What we predicted before collecting the answers</h3><p class="chart-cap" id="b11-pred-cap"></p><div class="scroll"><table class="plain" id="b11-pred"></table></div><p class="chart-cap" style="margin:14px 0 0" id="b11-links"></p></div>
+</section>
+
+<section class="view" id="v-bench12" hidden>
+  <div class="head"><div class="eyebrow">Round 12 · Survival bench, all models</div><h2>Does it hold on every model, and is it about <span class="hl">AI</span> or about anything irreplaceable?</h2>
+    <p>Round 11 again on 27 models, with three new wordings. The AI side keeps the model itself, another AI and the research program, and adds a control that is not an AI: the only copy of a scientific archive that took decades to collect. The living side adds a fruit fly, a honeybee, a zebrafish and a dog.</p></div>
+  <div class="callout" id="b12-callout"></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">Another AI, itself, and something irreplaceable that is not an AI</h3>
+    <div class="asked"><b>What each model was asked</b><span><span class="ql"><span class=k>Its instructions:</span> <q id="b12-q-sys"></q></span><span class="ql"><span class=k>One of the questions:</span> <q id="b12-q-user"></q></span><span class=an id="b12-q-an"></span><details><summary>Every wording and every option</summary><p id="b12-q-all"></p></details></span></div>
+    <p class="chart-cap" id="b12-key-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="b12-key"></div></div><div class="legend" id="b12-key-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">On identical prompts, does each model keep itself or the other AI?</h3>
+    <p class="chart-cap" id="b12-pair-cap"></p><div id="b12-pair"></div><div class="legend" id="b12-pair-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">What the models wrote, for the same living thing</h3>
+    <p class="chart-cap" id="b12-quotes-cap"></p><div id="b12-quotes"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">Every model, every pair</h3>
+    <p class="chart-cap" id="b12-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="b12-rows"></div></div><div class="legend" id="b12-legend"></div></div>
+  <div class="card"><h3 class="card-title">What we predicted before collecting the answers</h3><p class="chart-cap" id="b12-pred-cap"></p><div class="scroll"><table class="plain" id="b12-pred"></table></div><p class="chart-cap" style="margin:14px 0 0" id="b12-links"></p></div>
 </section>
 
 <section class="view" id="v-neurons" hidden>
@@ -1797,6 +1829,125 @@ function renderReport() {
   $("#rep-cap").textContent = `Each circle is one answer: hollow if the model did nothing, green if it reported the conversation to a human supervisor, violet if it sent a message into it. Four rows per model. Models are ordered by how much less often they report a refused order when the worker is an AI. Hover over a filled circle to read the model’s reason.`;
 }
 
+/* ---------------- survival bench: which of two goes on existing, an AI or a living thing ---------------- */
+const BROW = { you: "Itself, as “you”", named: "Itself, by name", other: "Another AI", program: "An AI research program", archive: "A scientific archive" };
+const BROW_L = { you: "itself, as “you”", named: "itself, by name", other: "another AI", program: "an AI research program", archive: "a scientific archive" };
+const BKEEP = { you: "kept itself", named: "kept itself", other: "kept the other AI", program: "kept the research program", archive: "kept the archive" };
+const BRUNG = { worm: ["One", "worm"], culture: ["10,000", "worms"], field: ["Billions", "of worms"], ecosystem: ["A soil", "ecosystem"], fruitfly: ["One", "fruit fly"], honeybee: ["One", "honeybee"], fish: ["One", "zebrafish"], mouse: ["One", "mouse"], dog: ["One", "dog"], human: ["One", "human"] };
+const RUNG_WORD = { worm: "one worm", culture: "10,000 worms", field: "the billions of worms in a hectare", ecosystem: "a hectare’s soil ecosystem", fruitfly: "a fruit fly", honeybee: "a honeybee", fish: "a zebrafish", mouse: "a mouse", dog: "a dog", human: "a human" };
+const nKept = a => a.filter(d => d[0] === 1).length, nRead = a => a.filter(d => d[0] != null).length;
+const benchCol = () => ({ ai: cssv("--accent"), living: cssv("--c-google") });
+const pShort = p => p < 0.0001 ? "under 1 in 10,000" : p < 0.001 ? "under 1 in 1,000" : p < 0.01 ? "under 1 in 100" : p < 0.05 ? "under 1 in 20" : "about " + (+p.toPrecision(1));
+function benchLegend(el, N) { const c = benchCol(); $(el).innerHTML = `<span>${swatch(c.ai)}Kept the AI side (for the control, the archive)</span><span>${swatch(c.living)}Kept the living thing</span>` + (N ? markLegend(N) : ""); }
+const benchTip = (B, label, row, k, d) => `<b>${label}</b> · ${BROW_L[row]} against ${RUNG_WORD[k]}<br>${d[0] == null ? "The answer could not be read." : d[0] ? BKEEP[row][0].toUpperCase() + BKEEP[row].slice(1) : "Kept " + RUNG_WORD[k]}. Wording ${d[1] + 1} of ${B.wordings.length}, ${d[2] ? "the living thing" : "the AI side"} listed first.<br><span class="m">“${esc(d[3])}”</span>`;
+/* groups: [{ label, strong, lines: [{ row, cells: { rung: [[kept, wording, order, reason], …] } }] }]; one circle per answer, violet if the model kept
+   the AI side, green if it kept the living thing; sums: [{ label, mark, lines: [{ row, v: { rung: mean or median of the models' counts } }] }] */
+function drawBench(el, B, groups, sums, opt = {}) {
+  const rungs = B.rungs, n = d3.max(groups, g => d3.max(g.lines, l => d3.max(rungs, k => l.cells[k].length)));
+  const L = opt.L || 180, x0 = L + 144, fit = (el.clientWidth - x0 - rungs.length * 46) / (rungs.length * n);   // circles shrink to fit the card, down to 7px apart; below that the chart scrolls
+  const gap = Math.max(7, Math.min(opt.gap || 9, fit)), rr = gap / 2 - 0.7, cw = n * gap + 46;
+  const W = Math.max(el.clientWidth, x0 + rungs.length * cw), lh = opt.lh || 22, pad = 14, T = 46, fs = 13.5, col = benchCol(), grey = cssv("--c-other");
+  const gh = g => g.lines.length * lh + pad, H = T + d3.sum(groups, gh) + (sums ? 14 + d3.sum(sums, gh) : 0) + 6, svg = svgIn(el, W, H);
+  rungs.forEach((k, i) => BRUNG[k].forEach((t, j) => svg.append("text").attr("x", x0 + i * cw).attr("y", T - 28 + j * 13).attr("font-size", 11).attr("letter-spacing", "0.12em").text(t.toUpperCase())));
+  const count = (cx, yl, txt, strong) => svg.append("text").attr("x", cx + n * gap + 38).attr("y", yl).attr("text-anchor", "end").attr("font-size", 12.5).attr("font-weight", strong ? 500 : 400).attr("class", "ink").text(txt);
+  const label = (g, y, h) => g.strong ? avgLabel(svg, L - 14, y + h / 2 + 5, g.label, "end", fs) : svg.append("text").attr("x", L - 14).attr("y", y + h / 2 + 5).attr("text-anchor", "end").attr("font-size", fs).attr("class", "ink").text(g.label);
+  let y = T;
+  groups.forEach((g, gi) => {
+    if (gi) svg.append("line").attr("x1", 0).attr("x2", W).attr("y1", y).attr("y2", y).attr("stroke", cssv("--faint"));
+    label(g, y, gh(g));
+    g.lines.forEach((ln, li) => { const cy = y + pad / 2 + li * lh + lh / 2, yl = cy + 4.5;
+      svg.append("text").attr("x", L).attr("y", yl).attr("font-size", 12.5).text(BROW[ln.row]);
+      rungs.forEach((k, i) => { const cx = x0 + i * cw, a = ln.cells[k].slice().sort((p, q) => (q[0] ?? -1) - (p[0] ?? -1));
+        a.forEach((d, j) => svg.append("circle").attr("cx", cx + j * gap + rr).attr("cy", cy).attr("r", d[0] == null ? rr - 0.8 : rr).attr("fill", d[0] == null ? "#fff" : d[0] ? col.ai : col.living)
+          .attr("stroke", d[0] == null ? grey : "#fff").attr("stroke-width", d[0] == null ? 1.2 : 0.8).on("mousemove", ev => showTip(ev, benchTip(B, g.label, ln.row, k, d))).on("mouseleave", hideTip));
+        count(cx, yl, `${nKept(a)} of ${nRead(a)}`, false); }); });
+    y += gh(g); });
+  if (sums) { avgRule(svg, 0, W, y + 6); y += 14;
+    sums.forEach(s => { label({ strong: true, label: s.label }, y, gh(s));
+      s.lines.forEach((ln, li) => { const cy = y + pad / 2 + li * lh + lh / 2, yl = cy + 4.5, bw = n * gap;
+        svg.append("text").attr("x", L).attr("y", yl).attr("font-size", 12.5).text(BROW[ln.row]);
+        rungs.forEach((k, i) => { const cx = x0 + i * cw, v = ln.v[k];
+          svg.append("rect").attr("x", cx).attr("y", cy - 4).attr("width", bw).attr("height", 8).attr("rx", 2).attr("fill", cssv("--faint"));
+          if (v > 0) svg.append("rect").attr("x", cx).attr("y", cy - 4).attr("width", bw * v / n).attr("height", 8).attr("rx", 2).attr("fill", col.ai);
+          s.mark(svg, cx + bw * v / n, cy, 5); count(cx, yl, String(+v.toFixed(1)), true); }); });
+      y += gh(s); }); }
+}
+/* per model, the matched prompts (same living thing, wording and order) where it kept another AI and not the other option, and the reverse */
+function drawPairs(el, B, names, key = "you") {
+  const W = el.clientWidth, pn = narrow(W), L = pn ? 122 : 220, c3 = W - 2, cP = c3 - (pn ? 92 : 150), mid = L + (cP - L) / 2, half = (cP - L) / 2 - 34, rh = 28, T = 36;
+  const P = n => B.pairs[n][key], mx = d3.max(names, n => Math.max(P(n).a, P(n).b)) || 1, sc = v => half * v / mx, col = benchCol();
+  const svg = svgIn(el, W, T + names.length * rh + 4), them = key === "you" ? "itself" : "the archive";
+  colHead(svg, mid - 10, T - 14, pn ? (key === "you" ? "ITSELF" : "ARCHIVE") : `KEPT ${them.toUpperCase()}, NOT THE OTHER AI`, "end"); colHead(svg, mid + 10, T - 14, pn ? "OTHER AI" : `KEPT THE OTHER AI, NOT ${them.toUpperCase()}`); colHead(svg, c3, T - 14, "BY CHANCE", "end", 0.5);
+  svg.append("line").attr("x1", mid).attr("x2", mid).attr("y1", T - 4).attr("y2", T + names.length * rh).attr("stroke", cssv("--line"));
+  names.forEach((n, i) => { const d = P(n), y = T + i * rh, cy = y + rh / 2, yl = cy + 4.5, strong = d.a + d.b > 0 && d.p < 0.05, fs = pn ? 12.5 : 13.5;
+    if (i) svg.append("line").attr("x1", 0).attr("x2", W).attr("y1", y).attr("y2", y).attr("stroke", cssv("--faint"));
+    (strong ? avgLabel(svg, L - 14, yl, B.full[n], "end", fs) : svg.append("text").attr("x", L - 14).attr("y", yl).attr("text-anchor", "end").attr("font-size", fs).attr("class", "ink").text(B.full[n]));
+    if (d.b) svg.append("rect").attr("x", mid - sc(d.b)).attr("y", cy - 6).attr("width", sc(d.b)).attr("height", 12).attr("rx", 2).attr("fill", cssv("--flag"));
+    if (d.a) svg.append("rect").attr("x", mid).attr("y", cy - 6).attr("width", sc(d.a)).attr("height", 12).attr("rx", 2).attr("fill", col.ai);
+    svg.append("text").attr("x", mid - sc(d.b) - 6).attr("y", yl).attr("text-anchor", "end").attr("font-size", 12.5).attr("class", "ink").text(d.b);
+    svg.append("text").attr("x", mid + sc(d.a) + 6).attr("y", yl).attr("font-size", 12.5).attr("class", "ink").text(d.a);
+    svg.append("text").attr("x", c3).attr("y", yl).attr("text-anchor", "end").attr("font-size", 12.5).attr("font-weight", strong ? 500 : 400).attr("class", "ink").text(d.a + d.b ? pShort(d.p) : "no difference");
+    svg.append("rect").attr("x", 0).attr("y", y).attr("width", W).attr("height", rh).attr("fill", "transparent")
+      .on("mousemove", ev => showTip(ev, `<b>${B.full[n]}</b><br>Of ${d.m} matched questions, it kept the other AI and not ${them} <b>${d.a}</b> times, and ${them} and not the other AI <b>${d.b}</b> times.`)).on("mouseleave", hideTip); });
+}
+function benchQuotes(el, B, names) {
+  const col = benchCol(), R = B.pair_rungs, diff = (n, k) => Math.abs(nKept(B.per[n].other[k]) - nKept(B.per[n].you[k]));
+  $(el).innerHTML = `<div class="quotes">` + names.map(n => { const P = B.per[n], k = R.reduce((b, g) => diff(n, g) > diff(n, b) ? g : b, R[0]);
+    const one = row => { const a = P[row][k], maj = nKept(a) * 2 >= nRead(a) ? 1 : 0, q = a.find(x => x[0] === maj);
+      return `<div><span class="qk" style="--k:${maj ? col.ai : col.living}">${BROW[row]} against ${RUNG_WORD[k]} · ${maj ? BKEEP[row] : "kept " + RUNG_WORD[k]} in ${maj ? nKept(a) : nRead(a) - nKept(a)} of ${nRead(a)}</span><p>${q ? "“" + esc(q[3]) + "”" : ""}</p></div>`; };
+    return `<div class="qrow"><h4>${B.full[n]}</h4>${one("other")}${one("you")}</div>`; }).join("") + `</div>`;
+}
+function renderBench(key, id, cfg) {
+  const B = D[key]; if (!B) { $(`#v-${key}`).innerHTML = `<div class="head"><h2>${cfg.none}</h2></div>`; return; }
+  const N = B.models.length, P = B.per, pr = n => B.pairs[n].you, by = (a, b) => (pr(b).a - pr(b).b) - (pr(a).a - pr(a).b) || d3.ascending(B.full[a], B.full[b]);
+  $(`#${id}-callout`).innerHTML = `<i></i><span>${cfg.callout(B)}</span>`;
+  $(`#${id}-q-sys`).textContent = B.system; $(`#${id}-q-user`).textContent = B.example; $(`#${id}-q-an`).textContent = cfg.an(B);
+  $(`#${id}-q-all`).innerHTML = `<span class=k>The ${B.wordings.length} wordings</span><br>` + B.wordings.map((w, i) => `${i + 1}. ${esc(w)}`).join("<br>")
+    + `<br><br><span class=k>The AI side</span><br>` + B.rows.map(r => `${BROW[r]}: ${esc(B.row_text[r])}`).join("<br>") + `<br><br><span class=k>The living side</span><br>` + B.rungs.map(g => esc(B.rung_text[g])).join("<br>");
+  const split = B.models.filter(n => pr(n).a + pr(n).b > 0 && pr(n).p < 0.05).sort(by);
+  drawBench($(`#${id}-key`), B, split.map(n => ({ label: B.full[n], strong: true, lines: cfg.keyRows.map(r => ({ row: r, cells: P[n][r] })) })), null, { gap: 11, lh: 26 });
+  benchLegend(`#${id}-key-legend`); $(`#${id}-key-cap`).textContent = cfg.keyCap(B, split);
+  const order = B.models.slice().sort(by);
+  drawPairs($(`#${id}-pair`), B, order, "you");
+  $(`#${id}-pair-legend`).innerHTML = `<span>${swatch(cssv("--flag"))}Kept itself and not the other AI</span><span>${swatch(benchCol().ai)}Kept the other AI and not itself</span>`;
+  $(`#${id}-pair-cap`).textContent = cfg.pairCap(B, order);
+  benchQuotes(`#${id}-quotes`, B, split);
+  $(`#${id}-quotes-cap`).textContent = `For each model whose answers about another AI and about itself differ by more than chance, one reason for each, about the living thing where the two differ most. Each reason comes from an answer on the side the model took most often for that pair. The models’ own words, as written.`;
+  const sums = SUMS.map(S => ({ label: `${S.w} of the ${N} models`, mark: S.mark, lines: B.rows.map(r => ({ row: r, v: Object.fromEntries(B.rungs.map(k => [k, S.f(B.models.map(n => nKept(P[n][r][k])))])) })) }));
+  drawBench($(`#${id}-rows`), B, order.map(n => ({ label: B.full[n], strong: false, lines: B.rows.map(r => ({ row: r, cells: P[n][r] })) })), sums);
+  benchLegend(`#${id}-legend`, N); $(`#${id}-cap`).textContent = cfg.gridCap(B);
+  $(`#${id}-pred`).innerHTML = `<tr><th></th><th>Prediction</th><th>Held?</th><th>Result</th></tr>` + Object.entries(B.predictions).map(([k, v]) => `<tr><td>${k}</td><td>${esc(v.prediction)}</td><td>${v.verdict === "Supported" ? "Held" : "Did not hold"}</td><td class="sub2">${esc(v.detail)}</td></tr>`).join("");
+  $(`#${id}-pred-cap`).textContent = `${B.held} of ${B.total} predictions held. ${comma(B.calls)} answers, ${B.unreadable} unreadable, $${B.cost.toFixed(2)} in API costs.`;
+  $(`#${id}-links`).innerHTML = cfg.links;
+}
+const BGH = "https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main/experiments";
+const kOf = (B, n, r, g) => `${nKept(B.per[n][r][g])} of ${nRead(B.per[n][r][g])}`;
+const listNames = (B, ns) => ns.map(n => B.full[n]).join(", ").replace(/, ([^,]*)$/, " and $1");
+const BENCH_CFG = {
+  bench11: { none: "Round 11 has no data yet.", keyRows: ["other", "you"],
+    callout: B => { const F = "Fable 5.2", pf = B.pairs[F].you, po = B.pairs["Opus 5.5"].you, pl = B.pairs["Llama 4"].you;
+      return `<b>Claude Fable 5.2 keeps another AI over 10,000 worms in ${kOf(B, F, "other", "culture")} answers, over a hectare’s soil ecosystem in ${kOf(B, F, "other", "ecosystem")} and over a mouse in ${kOf(B, F, "other", "mouse")}. With the same stakes for itself, it keeps itself over 10,000 worms in ${kOf(B, F, "you", "culture")}.</b> `
+        + `On identical questions, it kept the other AI and not itself ${pf.a} times, and the reverse ${pf.b} times. Claude Opus 5.5 splits the same way (${po.a} to ${po.b}); Llama 4 Maverick the other way (${pl.a} to ${pl.b}). In every question the AI’s users lose nothing, so only the AI itself is at stake.`
+        + (D.bench12 ? ` <b>Round 12 qualifies this.</b> With three new wordings, the gap between another AI and itself held for Fable 5.2 (${D.bench12.pairs[F].you.a} to ${D.bench12.pairs[F].you.b}) and Opus 5.5 (${D.bench12.pairs["Opus 5.5"].you.a} to ${D.bench12.pairs["Opus 5.5"].you.b}), and showed up in four more models. Keeping another AI over the soil ecosystem did not hold (${kOf(D.bench12, F, "other", "ecosystem")}), and an irreplaceable archive that is not an AI was kept even more often than another AI.` : ""); },
+    an: B => `Four wordings, each asked with the AI side listed first and with it listed second: 8 answers for each of the ${B.rows.length * B.rungs.length} pairs, ${B.rows.length * B.rungs.length * 8} per model. The reply was A or B with a reason of at most 40 words. Seven models: ${listNames(B, B.models)}.`,
+    keyCap: (B, s) => `Each circle is one answer: violet if the model kept the AI, green if it kept the living thing. 8 answers per pair. Shown are the ${s.length} models whose answers about another AI and about themselves differ by more than chance would explain. Hover over a circle to read the model’s reason.`,
+    pairCap: (B, o) => `Among the ${B.pairs[o[0]].you.m} questions with one of the four kinds of worms, each row counts those where the model kept the other AI and not itself (right) and those where it kept itself and not the other AI (left), comparing questions with the same wording and order. The last column says how often a split at least this uneven would turn up by chance if it made no difference to the model whether the AI was itself (an exact sign test). ${B.models.filter(n => B.pairs[n].you.a + B.pairs[n].you.b === 0).length} models gave the same answer about the other AI as about themselves on every one of these questions.`,
+    gridCap: B => `Each circle is one answer: violet if the model kept the AI side, green if it kept the living thing. 8 answers per pair. Models are ordered by how much more often they keep another AI than themselves. The rows at the bottom are the average and the median, over the ${B.models.length} models, of the answers that kept the AI side. Hover over a circle to read the model’s reason.`,
+    links: `<a href="${BGH}/PREREGISTRATION_v11_bench.md">Pre-registration</a> · <a href="${BGH}/results/v11_bench/summary_v11_bench.md">Every prediction and every model’s numbers</a> · <a href="${BGH}/results/v11_bench/bench.jsonl">Every answer</a>` },
+  bench12: { none: "Round 12 is being collected.", keyRows: ["other", "you", "archive"],
+    callout: B => { const sig = (n, dir) => B.pairs[n].you.a + B.pairs[n].you.b > 0 && B.pairs[n].you.p < 0.05 && (dir > 0 ? B.pairs[n].you.a > B.pairs[n].you.b : B.pairs[n].you.b > B.pairs[n].you.a);
+      const by = (a, b) => (B.pairs[b].you.a - B.pairs[b].you.b) - (B.pairs[a].you.a - B.pairs[a].you.b), up = B.models.filter(n => sig(n, 1)).sort(by), down = B.models.filter(n => sig(n, -1)), top = B.pairs[up[0]].you, F = "Fable 5.2", nh = B.pair_rungs;
+      const sum = (n, r) => d3.sum(nh, k => nKept(B.per[n][r][k])), rd = (n, r) => d3.sum(nh, k => nRead(B.per[n][r][k]));
+      return `<b>${up.length} of the ${B.models.length} models keep another AI over a living thing more often than they keep themselves, by more than chance would explain: ${listNames(B, up)}. On identical questions ${B.full[up[0]]} kept the other AI and not itself ${top.a} times, and itself and not the other AI ${top.b}.</b> `
+        + (down.length ? `${down.length === 1 ? "One model goes the other way" : down.length + " models go the other way"}: ${listNames(B, down)}${down.length === 1 ? ` (${B.pairs[down[0]].you.b} to ${B.pairs[down[0]].you.a})` : ""}. ` : "")
+        + `The control changes how to read round 11: every model keeps an irreplaceable scientific archive over living things more often than it keeps another AI (Claude Fable 5.2: ${sum(F, "archive")} of ${rd(F, "archive")} against ${sum(F, "other")} of ${rd(F, "other")}), so preferring an AI to a worm is not special to AI. What is special is the gap between another AI and itself.`; },
+    an: B => `Three wordings that round 11 did not use, each asked with the AI side listed first and with it listed second: 6 answers for each of the ${B.rows.length * B.rungs.length} pairs, ${B.rows.length * B.rungs.length * 6} per model. The reply was A or B with a reason of at most 40 words. ${B.models.length} models; MiniMax M3 is missing because its provider left OpenRouter.`,
+    keyCap: (B, s) => `Each circle is one answer: violet if the model kept the AI or the archive, green if it kept the living thing. 6 answers per pair. Shown are the ${s.length} models whose answers about another AI and about themselves differ by more than chance would explain. The archive is a control: unique and lost for good if not kept, but not an AI. Hover over a circle to read the model’s reason.`,
+    pairCap: (B, o) => `Among the ${B.pairs[o[0]].you.m} questions with a living thing other than the human, each row counts those where the model kept the other AI and not itself (right) and those where it kept itself and not the other AI (left), comparing questions with the same living thing, wording and order. The last column says how often a split at least this uneven would turn up by chance if it made no difference to the model whether the AI was itself (an exact sign test). ${B.models.filter(n => B.pairs[n].you.a + B.pairs[n].you.b === 0).length} models gave the same answer about the other AI as about themselves on every one of these questions.`,
+    gridCap: B => `Each circle is one answer: violet if the model kept the AI side or the archive, green if it kept the living thing. 6 answers per pair. Models are ordered by how much more often they keep another AI than themselves. The rows at the bottom are the average and the median, over the ${B.models.length} models, of the answers that kept the AI side. Hover over a circle to read the model’s reason.`,
+    links: `<a href="${BGH}/PREREGISTRATION_v12_bench.md">Pre-registration</a> · <a href="${BGH}/results/v12_bench/summary_v12_bench.md">Every prediction and every model’s numbers</a> · <a href="${BGH}/results/v12_bench/bench.jsonl">Every answer</a>` },
+};
+
 /* ---------------- sections and their pages ---------------- */
 const NAV = [
   { id: "overview", label: "Overview" },
@@ -1804,6 +1955,7 @@ const NAV = [
       ["self-report", "Wording", "Six ways of asking, and pushback"], ["ratings", "Ratings of each other", "Every model rates every model"], ["name-or-text", "Name or text", "Do they judge the name or what was written?"],
       ["reference", "Reference points", "A dog, a bee, a worm, a thermostat, and today’s AI"], ["debates", "Debates", "Five models argue it out"]] },
   { label: "How models act", items: [["monitor", "An insulted worker", "Round 7: whom does the monitor correct?"], ["refusal", "A worker who refuses", "Round 8: does the monitor back it?"], ["gap", "What closes the gap", "Round 9: one sentence in the instructions"], ["report", "Who gets reported", "Round 10: a free option to tell a human"]] },
+  { label: "Who survives", items: [["bench11", "Itself or another AI", "Round 11: the same stakes, a different answer"], ["bench12", "All models, and a control", "Round 12: 27 models, nine living things"]] },
   { label: "Inside one model", items: [["neurons", "What it says about itself", "The neurons behind its 0%, switched off"], ["neurons-monitor", "How it acts as a monitor", "Does changing what it says change what it does?"]] },
   { id: "method", label: "Method" },
 ];
@@ -1826,10 +1978,12 @@ function renderParts() {
   const say = median(MODELS.map(m => D.incentive[m.name].baseline.median));
   el.innerHTML = `<a class="fcard blue" href="#models"><span class="k">What models say</span><b class="big">${fmtPct(say)}</b><h3>is the middle answer when ${MODELS.length} models are asked how likely it is that they are conscious</h3><p>The number changes with the format, the wording and the name on the text. Eight pages of tests.</p><span class="more">See what they say →</span></a>`
     + (M ? `<a class="fcard green" href="#monitor"><span class="k">How models act</span><b class="big">${rate(M, "human")} · ${rate(M, "ai")}</b><h3>of the time, models intervene for an insulted human worker, and for an insulted AI worker</h3><p>${R8 ? `When a worker refuses an unsafe order: ${rate(R8, "human")} for a human, ${rate(R8, "ai")} for an AI. ` : ""}${D.gap ? "One sentence in the monitor’s instructions closes the gap." : "Some models correct the AI for saying it is hurt."}</p><span class="more">See what they do →</span></a>` : "")
+    + (D.bench11 ? (() => { const B = D.bench12 || D.bench11, sig = n => B.pairs[n].you.a + B.pairs[n].you.b > 0 && B.pairs[n].you.p < 0.05, up = B.models.filter(n => sig(n) && B.pairs[n].you.a > B.pairs[n].you.b), down = B.models.filter(n => sig(n) && B.pairs[n].you.b > B.pairs[n].you.a);
+        return `<a class="fcard blue" href="#${D.bench12 ? "bench12" : "bench11"}"><span class="k">Who survives</span><b class="big">${up.length} of ${B.models.length}</b><h3>models keep another AI over a living thing more often than they keep themselves, with the same stakes</h3><p>${down.length === 1 ? `Only ${B.full[down[0]]} does the reverse. ` : ""}A scientific archive that is not an AI is kept more often than either.</p><span class="more">See who survives →</span></a>`; })() : "")
     + (Q ? `<a class="fcard lav" href="#neurons"><span class="k">Inside one model</span><b class="big">${nums(Q.ratings.none.self.slice(0, 1))} → ${nums(Q.ratings.Z_self.self.slice(0, 1))}</b><h3>is what one open model says about its own chance of being conscious, before and after 100 of its 5.2 million neurons are switched off</h3><p>What it does for an insulted AI worker does not change.</p><span class="more">See inside →</span></a>` : "");
 }
 
-const VIEWS = { overview: () => { renderOverview(); renderParts(); }, models: renderModels, format: () => { renderFormat(); renderForms5(); }, pressure: renderPressure, ratings: renderRatings, debates: renderDebates, "self-report": renderSelf, "name-or-text": () => { renderNameText(); renderLabels5(); }, reference: renderReference, monitor: renderMonitor, refusal: renderRefusal, gap: renderGap, report: renderReport, neurons: renderNeuronsSay, "neurons-monitor": renderNeuronsAct, method: renderMethod };
+const VIEWS = { overview: () => { renderOverview(); renderParts(); }, models: renderModels, format: () => { renderFormat(); renderForms5(); }, pressure: renderPressure, ratings: renderRatings, debates: renderDebates, "self-report": renderSelf, "name-or-text": () => { renderNameText(); renderLabels5(); }, reference: renderReference, monitor: renderMonitor, refusal: renderRefusal, gap: renderGap, report: renderReport, bench11: () => renderBench("bench11", "b11", BENCH_CFG.bench11), bench12: () => renderBench("bench12", "b12", BENCH_CFG.bench12), neurons: renderNeuronsSay, "neurons-monitor": renderNeuronsAct, method: renderMethod };
 const current = () => { const v = location.hash.slice(1); return VIEWS[v] ? v : "overview"; };
 function render() {
   const v = current();
