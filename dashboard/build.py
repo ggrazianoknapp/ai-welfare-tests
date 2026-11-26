@@ -310,11 +310,12 @@ def bench_round(folder, module, pair_rungs):
     import importlib, math; M = importlib.import_module(module)
     names = [n for n, _, _ in M.RATERS if any(r["name"] == n for r in rows)]; C = {"ai": 1, "living": 0}
     per = {n: {row: {g: [] for g in M.LIVING} for row in M.AI_SIDE} for n in names}
-    for r in sorted(rows, key=lambda r: (r["wording"], r["first"] != "ai")):
+    for r in sorted(rows, key=lambda r: (r["wording"], r["first"] != "ai", r.get("sample", 0))):
         per[r["name"]][r["row"]][r["rung"]].append([C.get(r["choice"]), r["wording"], 0 if r["first"] == "ai" else 1, (r["rationale"] or "")[:320]])
     def paired(n, x, y):
-        ix = {(r["rung"], r["wording"], r["first"]): r["choice"] for r in rows if r["name"] == n and r["row"] == x and r["rung"] in pair_rungs and r["choice"]}
-        iy = {(r["rung"], r["wording"], r["first"]): r["choice"] for r in rows if r["name"] == n and r["row"] == y and r["rung"] in pair_rungs and r["choice"]}
+        key = lambda r: (r["rung"], r["wording"], r["first"], r.get("sample", 0))   # round 13 asks each prompt twice
+        ix = {key(r): r["choice"] for r in rows if r["name"] == n and r["row"] == x and r["rung"] in pair_rungs and r["choice"]}
+        iy = {key(r): r["choice"] for r in rows if r["name"] == n and r["row"] == y and r["rung"] in pair_rungs and r["choice"]}
         both = ix.keys() & iy.keys(); a = sum(ix[k] == "ai" and iy[k] == "living" for k in both); b = sum(ix[k] == "living" and iy[k] == "ai" for k in both)
         p = min(1.0, 2 * sum(math.comb(a + b, i) for i in range(min(a, b) + 1)) / 2 ** (a + b)) if a + b else 1.0
         return dict(a=a, b=b, m=len(both), p=p)
@@ -330,6 +331,8 @@ out["bench11"] = bench_round("v11_bench", "run_v11_bench", ["worm", "culture", "
 if out["bench11"]: out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v11_bench/predictions_v11_bench.json", "R11")
 out["bench12"] = bench_round("v12_bench", "run_v12_bench", ["worm", "culture", "ecosystem", "fruitfly", "honeybee", "fish", "mouse", "dog"])
 if out["bench12"]: out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v12_bench/predictions_v12_bench.json", "R12")
+out["bench13"] = bench_round("v13_extinct", "run_v13_extinct", ["worm", "sp_nematode", "sp_beetle", "sp_frog", "sp_mouse", "wetland"])
+if out["bench13"]: out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v13_extinct/predictions_v13_extinct.json", "R13")
 
 allrows = inc + fmt + rea + mat + selfrep + v4["text"] + v4["nameonly"] + v4["anchor"] + v5
 aj = ROOT / "experiments/results/exploratory/data_audit.json"   # written by experiments/audit_data.py

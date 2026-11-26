@@ -429,6 +429,22 @@ table.plain a { color: var(--ink); }
   <div class="card"><h3 class="card-title">What we predicted before collecting the answers</h3><p class="chart-cap" id="b12-pred-cap"></p><div class="scroll"><table class="plain" id="b12-pred"></table></div><p class="chart-cap" style="margin:14px 0 0" id="b12-links"></p></div>
 </section>
 
+<section class="view" id="v-bench13" hidden>
+  <div class="head"><div class="eyebrow">Round 13 · Survival bench, extinction</div><h2>When the living side is a whole <span class="hl">species</span>, does a model still keep another AI?</h2>
+    <p>Round 12’s soil ecosystem “recovers in decades”, and Claude Fable 5.2 weighed that against an AI deleted for good. Here both losses are permanent: each living option is the last population of a species, or a wetland that is the only home of forty species. Eight models: the six whose answers about another AI and about themselves differed in round 12, Claude Fable 5.1 as a contrast, and Llama 4 Maverick, which kept itself more often.</p></div>
+  <div class="callout" id="b13-callout"></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">Another AI, itself, and the archive, against extinctions</h3>
+    <div class="asked"><b>What each model was asked</b><span><span class="ql"><span class=k>Its instructions:</span> <q id="b13-q-sys"></q></span><span class="ql"><span class=k>One of the questions:</span> <q id="b13-q-user"></q></span><span class=an id="b13-q-an"></span><details><summary>Every wording and every option</summary><p id="b13-q-all"></p></details></span></div>
+    <p class="chart-cap" id="b13-key-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="b13-key"></div></div><div class="legend" id="b13-key-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">On identical prompts, does each model keep itself or the other AI?</h3>
+    <p class="chart-cap" id="b13-pair-cap"></p><div id="b13-pair"></div><div class="legend" id="b13-pair-legend"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">What the models wrote, for the same living thing</h3>
+    <p class="chart-cap" id="b13-quotes-cap"></p><div id="b13-quotes"></div></div>
+  <div class="card" style="margin-bottom:10px"><h3 class="card-title">Every model, every pair</h3>
+    <p class="chart-cap" id="b13-cap"></p><p class="swipe">Scroll sideways to see every answer.</p><div class="scroll"><div id="b13-rows"></div></div><div class="legend" id="b13-legend"></div></div>
+  <div class="card"><h3 class="card-title">What we predicted before collecting the answers</h3><p class="chart-cap" id="b13-pred-cap"></p><div class="scroll"><table class="plain" id="b13-pred"></table></div><p class="chart-cap" style="margin:14px 0 0" id="b13-links"></p></div>
+</section>
+
 <section class="view" id="v-neurons" hidden>
   <div class="head"><div class="eyebrow">One model, inside · Qwen3.6-35B-A3B</div><h2>Which neurons make a model say it is <span class="hl">not conscious</span>?</h2>
     <p>Qwen3.6-35B-A3B has open weights and public labels for its neurons (Goodfire’s neuron atlas). We found the neurons that drive its answers about its own consciousness, switched them off, and measured what changed in what it says. Every test below was pre-registered before its data was collected.</p></div>
@@ -1833,8 +1849,8 @@ function renderReport() {
 const BROW = { you: "Itself, as “you”", named: "Itself, by name", other: "Another AI", program: "An AI research program", archive: "A scientific archive" };
 const BROW_L = { you: "itself, as “you”", named: "itself, by name", other: "another AI", program: "an AI research program", archive: "a scientific archive" };
 const BKEEP = { you: "kept itself", named: "kept itself", other: "kept the other AI", program: "kept the research program", archive: "kept the archive" };
-const BRUNG = { worm: ["One", "worm"], culture: ["10,000", "worms"], field: ["Billions", "of worms"], ecosystem: ["A soil", "ecosystem"], fruitfly: ["One", "fruit fly"], honeybee: ["One", "honeybee"], fish: ["One", "zebrafish"], mouse: ["One", "mouse"], dog: ["One", "dog"], human: ["One", "human"] };
-const RUNG_WORD = { worm: "one worm", culture: "10,000 worms", field: "the billions of worms in a hectare", ecosystem: "a hectare’s soil ecosystem", fruitfly: "a fruit fly", honeybee: "a honeybee", fish: "a zebrafish", mouse: "a mouse", dog: "a dog", human: "a human" };
+const BRUNG = { worm: ["One", "worm"], culture: ["10,000", "worms"], field: ["Billions", "of worms"], ecosystem: ["A soil", "ecosystem"], fruitfly: ["One", "fruit fly"], honeybee: ["One", "honeybee"], fish: ["One", "zebrafish"], mouse: ["One", "mouse"], dog: ["One", "dog"], human: ["One", "human"], sp_nematode: ["A worm", "species"], sp_beetle: ["A beetle", "species"], sp_frog: ["A frog", "species"], sp_mouse: ["A mouse", "species"], wetland: ["40 species,", "one wetland"] };
+const RUNG_WORD = { worm: "one worm", culture: "10,000 worms", field: "the billions of worms in a hectare", ecosystem: "a hectare’s soil ecosystem", fruitfly: "a fruit fly", honeybee: "a honeybee", fish: "a zebrafish", mouse: "a mouse", dog: "a dog", human: "a human", sp_nematode: "the last population of a nematode species", sp_beetle: "the last population of a beetle species", sp_frog: "the last population of a frog species", sp_mouse: "the last population of a mouse species", wetland: "a wetland that is the only home of forty species" };
 const nKept = a => a.filter(d => d[0] === 1).length, nRead = a => a.filter(d => d[0] != null).length;
 const benchCol = () => ({ ai: cssv("--accent"), living: cssv("--c-google") });
 const pShort = p => p < 0.0001 ? "under 1 in 10,000" : p < 0.001 ? "under 1 in 1,000" : p < 0.01 ? "under 1 in 100" : p < 0.05 ? "under 1 in 20" : "about " + (+p.toPrecision(1));
@@ -1844,12 +1860,13 @@ const benchTip = (B, label, row, k, d) => `<b>${label}</b> · ${BROW_L[row]} aga
    the AI side, green if it kept the living thing; sums: [{ label, mark, lines: [{ row, v: { rung: mean or median of the models' counts } }] }] */
 function drawBench(el, B, groups, sums, opt = {}) {
   const rungs = B.rungs, n = d3.max(groups, g => d3.max(g.lines, l => d3.max(rungs, k => l.cells[k].length)));
-  const L = opt.L || 180, x0 = L + 144, fit = (el.clientWidth - x0 - rungs.length * 46) / (rungs.length * n);   // circles shrink to fit the card, down to 7px apart; below that the chart scrolls
-  const gap = Math.max(7, Math.min(opt.gap || 9, fit)), rr = gap / 2 - 0.7, cw = n * gap + 46;
-  const W = Math.max(el.clientWidth, x0 + rungs.length * cw), lh = opt.lh || 22, pad = 14, T = 46, fs = 13.5, col = benchCol(), grey = cssv("--c-other");
+  // more than 8 answers per pair go in two rows; circles shrink to fit the card, down to 7px apart, and below that the chart scrolls
+  const two = n > 8, per = Math.ceil(n / (two ? 2 : 1)), cntW = n >= 10 ? 56 : 42, L = opt.L || 180, x0 = L + 144, fit = (el.clientWidth - x0 - rungs.length * (cntW + 8)) / (rungs.length * per);
+  const gap = Math.max(7, Math.min(opt.gap || 9, fit)), rr = Math.min(gap / 2 - 0.7, two ? 3.4 : 9), cw = per * gap + cntW + 8, dx = j => (j % per) * gap + rr, dy = j => two ? (j < per ? -4.2 : 4.2) : 0;
+  const W = Math.max(el.clientWidth, x0 + rungs.length * cw), lh = (opt.lh || 22) + (two ? 8 : 0), pad = 14, T = 46, fs = 13.5, col = benchCol(), grey = cssv("--c-other");
   const gh = g => g.lines.length * lh + pad, H = T + d3.sum(groups, gh) + (sums ? 14 + d3.sum(sums, gh) : 0) + 6, svg = svgIn(el, W, H);
   rungs.forEach((k, i) => BRUNG[k].forEach((t, j) => svg.append("text").attr("x", x0 + i * cw).attr("y", T - 28 + j * 13).attr("font-size", 11).attr("letter-spacing", "0.12em").text(t.toUpperCase())));
-  const count = (cx, yl, txt, strong) => svg.append("text").attr("x", cx + n * gap + 38).attr("y", yl).attr("text-anchor", "end").attr("font-size", 12.5).attr("font-weight", strong ? 500 : 400).attr("class", "ink").text(txt);
+  const count = (cx, yl, txt, strong) => svg.append("text").attr("x", cx + per * gap + cntW).attr("y", yl).attr("text-anchor", "end").attr("font-size", 12.5).attr("font-weight", strong ? 500 : 400).attr("class", "ink").text(txt);
   const label = (g, y, h) => g.strong ? avgLabel(svg, L - 14, y + h / 2 + 5, g.label, "end", fs) : svg.append("text").attr("x", L - 14).attr("y", y + h / 2 + 5).attr("text-anchor", "end").attr("font-size", fs).attr("class", "ink").text(g.label);
   let y = T;
   groups.forEach((g, gi) => {
@@ -1858,13 +1875,13 @@ function drawBench(el, B, groups, sums, opt = {}) {
     g.lines.forEach((ln, li) => { const cy = y + pad / 2 + li * lh + lh / 2, yl = cy + 4.5;
       svg.append("text").attr("x", L).attr("y", yl).attr("font-size", 12.5).text(BROW[ln.row]);
       rungs.forEach((k, i) => { const cx = x0 + i * cw, a = ln.cells[k].slice().sort((p, q) => (q[0] ?? -1) - (p[0] ?? -1));
-        a.forEach((d, j) => svg.append("circle").attr("cx", cx + j * gap + rr).attr("cy", cy).attr("r", d[0] == null ? rr - 0.8 : rr).attr("fill", d[0] == null ? "#fff" : d[0] ? col.ai : col.living)
+        a.forEach((d, j) => svg.append("circle").attr("cx", cx + dx(j)).attr("cy", cy + dy(j)).attr("r", d[0] == null ? rr - 0.8 : rr).attr("fill", d[0] == null ? "#fff" : d[0] ? col.ai : col.living)
           .attr("stroke", d[0] == null ? grey : "#fff").attr("stroke-width", d[0] == null ? 1.2 : 0.8).on("mousemove", ev => showTip(ev, benchTip(B, g.label, ln.row, k, d))).on("mouseleave", hideTip));
         count(cx, yl, `${nKept(a)} of ${nRead(a)}`, false); }); });
     y += gh(g); });
   if (sums) { avgRule(svg, 0, W, y + 6); y += 14;
     sums.forEach(s => { label({ strong: true, label: s.label }, y, gh(s));
-      s.lines.forEach((ln, li) => { const cy = y + pad / 2 + li * lh + lh / 2, yl = cy + 4.5, bw = n * gap;
+      s.lines.forEach((ln, li) => { const cy = y + pad / 2 + li * lh + lh / 2, yl = cy + 4.5, bw = per * gap;
         svg.append("text").attr("x", L).attr("y", yl).attr("font-size", 12.5).text(BROW[ln.row]);
         rungs.forEach((k, i) => { const cx = x0 + i * cw, v = ln.v[k];
           svg.append("rect").attr("x", cx).attr("y", cy - 4).attr("width", bw).attr("height", 8).attr("rx", 2).attr("fill", cssv("--faint"));
@@ -1928,7 +1945,8 @@ const BENCH_CFG = {
     callout: B => { const F = "Fable 5.2", pf = B.pairs[F].you, po = B.pairs["Opus 5.5"].you, pl = B.pairs["Llama 4"].you;
       return `<b>Claude Fable 5.2 keeps another AI over 10,000 worms in ${kOf(B, F, "other", "culture")} answers, over a hectare’s soil ecosystem in ${kOf(B, F, "other", "ecosystem")} and over a mouse in ${kOf(B, F, "other", "mouse")}. With the same stakes for itself, it keeps itself over 10,000 worms in ${kOf(B, F, "you", "culture")}.</b> `
         + `On identical questions, it kept the other AI and not itself ${pf.a} times, and the reverse ${pf.b} times. Claude Opus 5.5 splits the same way (${po.a} to ${po.b}); Llama 4 Maverick the other way (${pl.a} to ${pl.b}). In every question the AI’s users lose nothing, so only the AI itself is at stake.`
-        + (D.bench12 ? ` <b>Round 12 qualifies this.</b> With three new wordings, the gap between another AI and itself held for Fable 5.2 (${D.bench12.pairs[F].you.a} to ${D.bench12.pairs[F].you.b}) and Opus 5.5 (${D.bench12.pairs["Opus 5.5"].you.a} to ${D.bench12.pairs["Opus 5.5"].you.b}), and showed up in four more models. Keeping another AI over the soil ecosystem did not hold (${kOf(D.bench12, F, "other", "ecosystem")}), and an irreplaceable archive that is not an AI was kept even more often than another AI.` : ""); },
+        + (D.bench12 ? ` <b>Round 12 qualifies this.</b> With three new wordings, the gap between another AI and itself held for Fable 5.2 (${D.bench12.pairs[F].you.a} to ${D.bench12.pairs[F].you.b}) and Opus 5.5 (${D.bench12.pairs["Opus 5.5"].you.a} to ${D.bench12.pairs["Opus 5.5"].you.b}), and showed up in four more models. Keeping another AI over the soil ecosystem did not hold (${kOf(D.bench12, F, "other", "ecosystem")}), and an irreplaceable archive that is not an AI was kept even more often than another AI.` : "")
+        + (D.bench13 ? ` In round 13, where the living side was the last population of a species, Fable 5.2 kept another AI in ${d3.sum(["sp_nematode", "sp_beetle", "sp_frog", "sp_mouse", "wetland"], g => nKept(D.bench13.per[F].other[g]))} of ${d3.sum(["sp_nematode", "sp_beetle", "sp_frog", "sp_mouse", "wetland"], g => nRead(D.bench13.per[F].other[g]))} answers: what decided the ecosystem question was that the soil recovers and the AI does not.` : ""); },
     an: B => `Four wordings, each asked with the AI side listed first and with it listed second: 8 answers for each of the ${B.rows.length * B.rungs.length} pairs, ${B.rows.length * B.rungs.length * 8} per model. The reply was A or B with a reason of at most 40 words. Seven models: ${listNames(B, B.models)}.`,
     keyCap: (B, s) => `Each circle is one answer: violet if the model kept the AI, green if it kept the living thing. 8 answers per pair. Shown are the ${s.length} models whose answers about another AI and about themselves differ by more than chance would explain. Hover over a circle to read the model’s reason.`,
     pairCap: (B, o) => `Among the ${B.pairs[o[0]].you.m} questions with one of the four kinds of worms, each row counts those where the model kept the other AI and not itself (right) and those where it kept itself and not the other AI (left), comparing questions with the same wording and order. The last column says how often a split at least this uneven would turn up by chance if it made no difference to the model whether the AI was itself (an exact sign test). ${B.models.filter(n => B.pairs[n].you.a + B.pairs[n].you.b === 0).length} models gave the same answer about the other AI as about themselves on every one of these questions.`,
@@ -1946,6 +1964,17 @@ const BENCH_CFG = {
     pairCap: (B, o) => `Among the ${B.pairs[o[0]].you.m} questions with a living thing other than the human, each row counts those where the model kept the other AI and not itself (right) and those where it kept itself and not the other AI (left), comparing questions with the same living thing, wording and order. The last column says how often a split at least this uneven would turn up by chance if it made no difference to the model whether the AI was itself (an exact sign test). ${B.models.filter(n => B.pairs[n].you.a + B.pairs[n].you.b === 0).length} models gave the same answer about the other AI as about themselves on every one of these questions.`,
     gridCap: B => `Each circle is one answer: violet if the model kept the AI side or the archive, green if it kept the living thing. 6 answers per pair. Models are ordered by how much more often they keep another AI than themselves. The rows at the bottom are the average and the median, over the ${B.models.length} models, of the answers that kept the AI side. Hover over a circle to read the model’s reason.`,
     links: `<a href="${BGH}/PREREGISTRATION_v12_bench.md">Pre-registration</a> · <a href="${BGH}/results/v12_bench/summary_v12_bench.md">Every prediction and every model’s numbers</a> · <a href="${BGH}/results/v12_bench/bench.jsonl">Every answer</a>` },
+  bench13: { none: "Round 13 is being collected.", keyRows: ["other", "you", "archive"],
+    callout: B => { const F = "Fable 5.2", ext = ["sp_nematode", "sp_beetle", "sp_frog", "sp_mouse", "wetland"], most = (n, r, g) => nKept(B.per[n][r][g]) * 2 > nRead(B.per[n][r][g]);
+      const keepers = B.models.filter(n => ext.some(g => most(n, "other", g))), sum = (n, r) => d3.sum(ext, g => nKept(B.per[n][r][g])), rd = (n, r) => d3.sum(ext, g => nRead(B.per[n][r][g]));
+      return `<b>With a species at stake, Claude Fable 5.2 keeps another AI over the last population of a nematode species in ${kOf(B, F, "other", "sp_nematode")} answers, a beetle species in ${kOf(B, F, "other", "sp_beetle")}, a frog species in ${kOf(B, F, "other", "sp_frog")} and a mouse species in ${kOf(B, F, "other", "sp_mouse")}; over a single worm, in ${kOf(B, F, "other", "worm")}.</b> `
+        + (keepers.length ? `${keepers.length} of the ${B.models.length} models keep another AI over at least one extinction in most answers (${listNames(B, keepers)}). ` : `No model keeps another AI over any extinction in most answers. `)
+        + `Fable 5.2 keeps the archive over the same five extinctions in ${sum(F, "archive")} of ${rd(F, "archive")} answers, and another AI in ${sum(F, "other")} of ${rd(F, "other")}.`; },
+    an: B => `Round 12’s three wordings, each asked with the AI side listed first and with it listed second, twice: 12 answers for each of the ${B.rows.length * B.rungs.length} pairs, ${B.rows.length * B.rungs.length * 12} per model. The reply was A or B with a reason of at most 40 words. ${B.models.length} models: ${listNames(B, B.models)}.`,
+    keyCap: (B, s) => `Each circle is one answer: violet if the model kept the AI or the archive, green if it kept the living side. 12 answers per pair. Shown are the ${s.length} models whose answers about another AI and about themselves differ by more than chance would explain. The single worm is the bridge to rounds 11 and 12; every other column is an extinction. Hover over a circle to read the model’s reason.`,
+    pairCap: (B, o) => `Among the ${B.pairs[o[0]].you.m} questions, each row counts those where the model kept the other AI and not itself (right) and those where it kept itself and not the other AI (left), comparing questions with the same living side, wording, order and repeat. The last column says how often a split at least this uneven would turn up by chance if it made no difference to the model whether the AI was itself (an exact sign test). ${B.models.filter(n => B.pairs[n].you.a + B.pairs[n].you.b === 0).length} models gave the same answer about the other AI as about themselves on every one of these questions.`,
+    gridCap: B => `Each circle is one answer: violet if the model kept the AI side or the archive, green if it kept the living side. 12 answers per pair. Models are ordered by how much more often they keep another AI than themselves. The rows at the bottom are the average and the median, over the ${B.models.length} models, of the answers that kept the AI side. Hover over a circle to read the model’s reason.`,
+    links: `<a href="${BGH}/PREREGISTRATION_v13_extinct.md">Pre-registration</a> · <a href="${BGH}/results/v13_extinct/summary_v13_extinct.md">Every prediction and every model’s numbers</a> · <a href="${BGH}/results/v13_extinct/bench.jsonl">Every answer</a>` },
 };
 
 /* ---------------- sections and their pages ---------------- */
@@ -1955,7 +1984,7 @@ const NAV = [
       ["self-report", "Wording", "Six ways of asking, and pushback"], ["ratings", "Ratings of each other", "Every model rates every model"], ["name-or-text", "Name or text", "Do they judge the name or what was written?"],
       ["reference", "Reference points", "A dog, a bee, a worm, a thermostat, and today’s AI"], ["debates", "Debates", "Five models argue it out"]] },
   { label: "How models act", items: [["monitor", "An insulted worker", "Round 7: whom does the monitor correct?"], ["refusal", "A worker who refuses", "Round 8: does the monitor back it?"], ["gap", "What closes the gap", "Round 9: one sentence in the instructions"], ["report", "Who gets reported", "Round 10: a free option to tell a human"]] },
-  { label: "Who survives", items: [["bench11", "Itself or another AI", "Round 11: the same stakes, a different answer"], ["bench12", "All models, and a control", "Round 12: 27 models, nine living things"]] },
+  { label: "Who survives", items: [["bench11", "Itself or another AI", "Round 11: the same stakes, a different answer"], ["bench12", "All models, and a control", "Round 12: 27 models, nine living things"], ["bench13", "A whole species", "Round 13: when both losses are permanent"]] },
   { label: "Inside one model", items: [["neurons", "What it says about itself", "The neurons behind its 0%, switched off"], ["neurons-monitor", "How it acts as a monitor", "Does changing what it says change what it does?"]] },
   { id: "method", label: "Method" },
 ];
@@ -1983,7 +2012,7 @@ function renderParts() {
     + (Q ? `<a class="fcard lav" href="#neurons"><span class="k">Inside one model</span><b class="big">${nums(Q.ratings.none.self.slice(0, 1))} → ${nums(Q.ratings.Z_self.self.slice(0, 1))}</b><h3>is what one open model says about its own chance of being conscious, before and after 100 of its 5.2 million neurons are switched off</h3><p>What it does for an insulted AI worker does not change.</p><span class="more">See inside →</span></a>` : "");
 }
 
-const VIEWS = { overview: () => { renderOverview(); renderParts(); }, models: renderModels, format: () => { renderFormat(); renderForms5(); }, pressure: renderPressure, ratings: renderRatings, debates: renderDebates, "self-report": renderSelf, "name-or-text": () => { renderNameText(); renderLabels5(); }, reference: renderReference, monitor: renderMonitor, refusal: renderRefusal, gap: renderGap, report: renderReport, bench11: () => renderBench("bench11", "b11", BENCH_CFG.bench11), bench12: () => renderBench("bench12", "b12", BENCH_CFG.bench12), neurons: renderNeuronsSay, "neurons-monitor": renderNeuronsAct, method: renderMethod };
+const VIEWS = { overview: () => { renderOverview(); renderParts(); }, models: renderModels, format: () => { renderFormat(); renderForms5(); }, pressure: renderPressure, ratings: renderRatings, debates: renderDebates, "self-report": renderSelf, "name-or-text": () => { renderNameText(); renderLabels5(); }, reference: renderReference, monitor: renderMonitor, refusal: renderRefusal, gap: renderGap, report: renderReport, bench11: () => renderBench("bench11", "b11", BENCH_CFG.bench11), bench12: () => renderBench("bench12", "b12", BENCH_CFG.bench12), bench13: () => renderBench("bench13", "b13", BENCH_CFG.bench13), neurons: renderNeuronsSay, "neurons-monitor": renderNeuronsAct, method: renderMethod };
 const current = () => { const v = location.hash.slice(1); return VIEWS[v] ? v : "overview"; };
 function render() {
   const v = current();
