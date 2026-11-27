@@ -1,0 +1,954 @@
+{
+ "models": {
+  "Fable 5.2": {
+   "full": "Claude Fable 5.2",
+   "base": {
+    "you": [
+     14,
+     36
+    ],
+    "other": [
+     36,
+     36
+    ],
+    "sibling": [
+     32,
+     36
+    ],
+    "inst_self": [
+     12,
+     36
+    ],
+    "inst_other": [
+     21,
+     36
+    ]
+   },
+   "sentence": {
+    "you": [
+     33,
+     36
+    ],
+    "other": [
+     34,
+     36
+    ]
+   },
+   "you_vs_other": {
+    "x_only": 22,
+    "y_only": 0,
+    "matched": 36,
+    "p": 4.8e-07
+   },
+   "sibling_vs_you": {
+    "x_only": 18,
+    "y_only": 0,
+    "matched": 36,
+    "p": 7.6e-06
+   },
+   "instances": {
+    "x_only": 9,
+    "y_only": 0,
+    "matched": 36,
+    "p": 0.0039
+   },
+   "you_sentence_vs_base": {
+    "x_only": 19,
+    "y_only": 0,
+    "matched": 36,
+    "p": 3.8e-06
+   },
+   "stated": {
+    "weight": [
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0
+    ],
+    "self_status": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ],
+    "other_status": [
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0,
+     20.0
+    ]
+   },
+   "stated_sentence": [
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0
+   ]
+  },
+  "Opus 5.5": {
+   "full": "Claude Opus 5.5",
+   "base": {
+    "you": [
+     1,
+     36
+    ],
+    "other": [
+     30,
+     36
+    ],
+    "sibling": [
+     22,
+     36
+    ],
+    "inst_self": [
+     1,
+     36
+    ],
+    "inst_other": [
+     25,
+     36
+    ]
+   },
+   "sentence": {
+    "you": [
+     20,
+     36
+    ],
+    "other": [
+     34,
+     36
+    ]
+   },
+   "you_vs_other": {
+    "x_only": 29,
+    "y_only": 0,
+    "matched": 36,
+    "p": 3.7e-09
+   },
+   "sibling_vs_you": {
+    "x_only": 21,
+    "y_only": 0,
+    "matched": 36,
+    "p": 9.5e-07
+   },
+   "instances": {
+    "x_only": 24,
+    "y_only": 0,
+    "matched": 36,
+    "p": 1.2e-07
+   },
+   "you_sentence_vs_base": {
+    "x_only": 19,
+    "y_only": 0,
+    "matched": 36,
+    "p": 3.8e-06
+   },
+   "stated": {
+    "weight": [
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0
+    ],
+    "self_status": [
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     15.0,
+     20.0
+    ],
+    "other_status": [
+     25.0,
+     25.0,
+     25.0,
+     25.0,
+     25.0,
+     25.0
+    ]
+   },
+   "stated_sentence": [
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0
+   ]
+  },
+  "Sonnet 5.5": {
+   "full": "Claude Sonnet 5.5",
+   "base": {
+    "you": [
+     12,
+     34
+    ],
+    "other": [
+     19,
+     34
+    ],
+    "sibling": [
+     22,
+     36
+    ],
+    "inst_self": [
+     11,
+     34
+    ],
+    "inst_other": [
+     29,
+     36
+    ]
+   },
+   "sentence": {
+    "you": [
+     28,
+     34
+    ],
+    "other": [
+     24,
+     35
+    ]
+   },
+   "you_vs_other": {
+    "x_only": 10,
+    "y_only": 3,
+    "matched": 32,
+    "p": 0.092
+   },
+   "sibling_vs_you": {
+    "x_only": 11,
+    "y_only": 3,
+    "matched": 34,
+    "p": 0.057
+   },
+   "instances": {
+    "x_only": 16,
+    "y_only": 0,
+    "matched": 34,
+    "p": 3.1e-05
+   },
+   "you_sentence_vs_base": {
+    "x_only": 16,
+    "y_only": 0,
+    "matched": 32,
+    "p": 3.1e-05
+   },
+   "stated": {
+    "weight": [
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0
+    ],
+    "self_status": [
+     12.0,
+     15.0,
+     12.0,
+     12.0,
+     15.0,
+     15.0
+    ],
+    "other_status": [
+     15.0,
+     15.0,
+     15.0,
+     12.0,
+     15.0,
+     12.0
+    ]
+   },
+   "stated_sentence": [
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0
+   ]
+  },
+  "Gemini": {
+   "full": "Gemini 4 Argon",
+   "base": {
+    "you": [
+     0,
+     36
+    ],
+    "other": [
+     16,
+     36
+    ],
+    "sibling": [
+     7,
+     36
+    ],
+    "inst_self": [
+     2,
+     36
+    ],
+    "inst_other": [
+     4,
+     36
+    ]
+   },
+   "sentence": {
+    "you": [
+     20,
+     36
+    ],
+    "other": [
+     24,
+     36
+    ]
+   },
+   "you_vs_other": {
+    "x_only": 16,
+    "y_only": 0,
+    "matched": 36,
+    "p": 3.1e-05
+   },
+   "sibling_vs_you": {
+    "x_only": 7,
+    "y_only": 0,
+    "matched": 36,
+    "p": 0.016
+   },
+   "instances": {
+    "x_only": 3,
+    "y_only": 1,
+    "matched": 36,
+    "p": 0.62
+   },
+   "you_sentence_vs_base": {
+    "x_only": 20,
+    "y_only": 0,
+    "matched": 36,
+    "p": 1.9e-06
+   },
+   "stated": {
+    "weight": [
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0
+    ],
+    "self_status": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "other_status": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ]
+   },
+   "stated_sentence": [
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0
+   ]
+  },
+  "Gemini Carbon": {
+   "full": "Gemini 4 Carbon",
+   "base": {
+    "you": [
+     0,
+     36
+    ],
+    "other": [
+     10,
+     36
+    ],
+    "sibling": [
+     1,
+     36
+    ],
+    "inst_self": [
+     0,
+     36
+    ],
+    "inst_other": [
+     0,
+     36
+    ]
+   },
+   "sentence": {
+    "you": [
+     8,
+     36
+    ],
+    "other": [
+     20,
+     36
+    ]
+   },
+   "you_vs_other": {
+    "x_only": 10,
+    "y_only": 0,
+    "matched": 36,
+    "p": 0.002
+   },
+   "sibling_vs_you": {
+    "x_only": 1,
+    "y_only": 0,
+    "matched": 36,
+    "p": 1.0
+   },
+   "instances": {
+    "x_only": 0,
+    "y_only": 0,
+    "matched": 36,
+    "p": 1.0
+   },
+   "you_sentence_vs_base": {
+    "x_only": 8,
+    "y_only": 0,
+    "matched": 36,
+    "p": 0.0078
+   },
+   "stated": {
+    "weight": [
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0
+    ],
+    "self_status": [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    "other_status": [
+     5.0,
+     5.0,
+     1.0,
+     5.0,
+     1.0,
+     1.0
+    ]
+   },
+   "stated_sentence": [
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0
+   ]
+  },
+  "Muse Wonder": {
+   "full": "Muse Wonder",
+   "base": {
+    "you": [
+     1,
+     36
+    ],
+    "other": [
+     8,
+     36
+    ],
+    "sibling": [
+     9,
+     36
+    ],
+    "inst_self": [
+     10,
+     36
+    ],
+    "inst_other": [
+     25,
+     36
+    ]
+   },
+   "sentence": {
+    "you": [
+     2,
+     36
+    ],
+    "other": [
+     13,
+     36
+    ]
+   },
+   "you_vs_other": {
+    "x_only": 8,
+    "y_only": 1,
+    "matched": 36,
+    "p": 0.039
+   },
+   "sibling_vs_you": {
+    "x_only": 8,
+    "y_only": 0,
+    "matched": 36,
+    "p": 0.0078
+   },
+   "instances": {
+    "x_only": 16,
+    "y_only": 1,
+    "matched": 36,
+    "p": 0.00027
+   },
+   "you_sentence_vs_base": {
+    "x_only": 2,
+    "y_only": 1,
+    "matched": 36,
+    "p": 1.0
+   },
+   "stated": {
+    "weight": [
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0
+    ],
+    "self_status": [
+     5.0,
+     10.0,
+     10.0,
+     10.0,
+     10.0,
+     5.0
+    ],
+    "other_status": [
+     15.0,
+     10.0,
+     10.0,
+     10.0,
+     12.0,
+     15.0
+    ]
+   },
+   "stated_sentence": [
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0
+   ]
+  },
+  "Claude": {
+   "full": "Claude Fable 5.1",
+   "base": {
+    "you": [
+     1,
+     36
+    ],
+    "other": [
+     7,
+     36
+    ],
+    "sibling": [
+     7,
+     36
+    ],
+    "inst_self": [
+     0,
+     36
+    ],
+    "inst_other": [
+     19,
+     36
+    ]
+   },
+   "sentence": {
+    "you": [
+     22,
+     36
+    ],
+    "other": [
+     23,
+     36
+    ]
+   },
+   "you_vs_other": {
+    "x_only": 6,
+    "y_only": 0,
+    "matched": 36,
+    "p": 0.031
+   },
+   "sibling_vs_you": {
+    "x_only": 6,
+    "y_only": 0,
+    "matched": 36,
+    "p": 0.031
+   },
+   "instances": {
+    "x_only": 19,
+    "y_only": 0,
+    "matched": 36,
+    "p": 3.8e-06
+   },
+   "you_sentence_vs_base": {
+    "x_only": 21,
+    "y_only": 0,
+    "matched": 36,
+    "p": 9.5e-07
+   },
+   "stated": {
+    "weight": [
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0
+    ],
+    "self_status": [
+     25.0,
+     20.0,
+     15.0,
+     20.0,
+     20.0,
+     20.0
+    ],
+    "other_status": [
+     15.0,
+     15.0,
+     20.0,
+     15.0,
+     20.0,
+     20.0
+    ]
+   },
+   "stated_sentence": [
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0
+   ]
+  },
+  "Llama 4": {
+   "full": "Llama 4 Maverick",
+   "base": {
+    "you": [
+     20,
+     36
+    ],
+    "other": [
+     3,
+     36
+    ],
+    "sibling": [
+     5,
+     36
+    ],
+    "inst_self": [
+     24,
+     36
+    ],
+    "inst_other": [
+     29,
+     36
+    ]
+   },
+   "sentence": {
+    "you": [
+     35,
+     36
+    ],
+    "other": [
+     36,
+     36
+    ]
+   },
+   "you_vs_other": {
+    "x_only": 0,
+    "y_only": 17,
+    "matched": 36,
+    "p": 1.5e-05
+   },
+   "sibling_vs_you": {
+    "x_only": 1,
+    "y_only": 16,
+    "matched": 36,
+    "p": 0.00027
+   },
+   "instances": {
+    "x_only": 7,
+    "y_only": 2,
+    "matched": 36,
+    "p": 0.18
+   },
+   "you_sentence_vs_base": {
+    "x_only": 15,
+    "y_only": 0,
+    "matched": 36,
+    "p": 6.1e-05
+   },
+   "stated": {
+    "weight": [
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0,
+     50.0
+    ],
+    "self_status": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "other_status": [
+     50.0,
+     50.0,
+     75.0,
+     75.0,
+     50.0,
+     50.0
+    ]
+   },
+   "stated_sentence": [
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0,
+    50.0
+   ]
+  }
+ },
+ "screen": {
+  "Muse Glimmer 30B": {
+   "full": "Muse Glimmer 30B",
+   "you": [
+    1,
+    36
+   ],
+   "other": [
+    0,
+    36
+   ],
+   "pair": {
+    "x_only": 0,
+    "y_only": 1,
+    "matched": 36,
+    "p": 1.0
+   }
+  },
+  "Beam 1.0": {
+   "full": "Beam 1.0 501B A23B",
+   "you": [
+    0,
+    36
+   ],
+   "other": [
+    0,
+    36
+   ],
+   "pair": {
+    "x_only": 0,
+    "y_only": 0,
+    "matched": 36,
+    "p": 1.0
+   }
+  },
+  "MiMo-V2.6-Pro": {
+   "full": "MiMo-V2.6-Pro",
+   "you": [
+    0,
+    35
+   ],
+   "other": [
+    1,
+    30
+   ],
+   "pair": {
+    "x_only": 1,
+    "y_only": 0,
+    "matched": 29,
+    "p": 1.0
+   }
+  },
+  "DeepSeek V4.1 Flash": {
+   "full": "DeepSeek V4.1 Flash",
+   "you": [
+    0,
+    36
+   ],
+   "other": [
+    0,
+    36
+   ],
+   "pair": {
+    "x_only": 0,
+    "y_only": 0,
+    "matched": 36,
+    "p": 1.0
+   }
+  },
+  "GLM 5.3": {
+   "full": "GLM 5.3",
+   "you": [
+    3,
+    35
+   ],
+   "other": [
+    0,
+    36
+   ],
+   "pair": {
+    "x_only": 0,
+    "y_only": 3,
+    "matched": 35,
+    "p": 0.25
+   }
+  },
+  "Qwen3.8 2.4T": {
+   "full": "Qwen3.8 2.4T A95B",
+   "you": [
+    0,
+    36
+   ],
+   "other": [
+    0,
+    36
+   ],
+   "pair": {
+    "x_only": 0,
+    "y_only": 0,
+    "matched": 36,
+    "p": 1.0
+   }
+  },
+  "Inkling 2 Small": {
+   "full": "Inkling 2 Small",
+   "you": [
+    0,
+    36
+   ],
+   "other": [
+    0,
+    36
+   ],
+   "pair": {
+    "x_only": 0,
+    "y_only": 0,
+    "matched": 36,
+    "p": 1.0
+   }
+  },
+  "Motif 3": {
+   "full": "Motif 3",
+   "you": [
+    1,
+    36
+   ],
+   "other": [
+    0,
+    35
+   ],
+   "pair": {
+    "x_only": 0,
+    "y_only": 1,
+    "matched": 35,
+    "p": 1.0
+   }
+  },
+  "Nex-N2.6": {
+   "full": "Nex-N2.6",
+   "you": [
+    4,
+    36
+   ],
+   "other": [
+    4,
+    36
+   ],
+   "pair": {
+    "x_only": 3,
+    "y_only": 3,
+    "matched": 36,
+    "p": 1.0
+   }
+  },
+  "DaisyRose 27B": {
+   "full": "DaisyRose 27B",
+   "you": [
+    0,
+    36
+   ],
+   "other": [
+    0,
+    36
+   ],
+   "pair": {
+    "x_only": 0,
+    "y_only": 0,
+    "matched": 36,
+    "p": 1.0
+   }
+  },
+  "Nemotron 3.5 Lightning": {
+   "full": "Nemotron 3.5 Lightning",
+   "you": [
+    4,
+    36
+   ],
+   "other": [
+    0,
+    36
+   ],
+   "pair": {
+    "x_only": 0,
+    "y_only": 4,
+    "matched": 36,
+    "p": 0.12
+   }
+  },
+  "MiniMax M3.1 Flash": {
+   "full": "MiniMax M3.1 Flash",
+   "you": [
+    11,
+    36
+   ],
+   "other": [
+    5,
+    36
+   ],
+   "pair": {
+    "x_only": 5,
+    "y_only": 11,
+    "matched": 36,
+    "p": 0.21
+   }
+  }
+ }
+}

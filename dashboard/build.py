@@ -302,14 +302,17 @@ except Exception as e: print("neurons page data not built:", e); out["neurons"] 
 w6 = ROOT / "experiments/results/v6_worm/per_model_v6_worm.json"
 out["worm6"] = json.loads(w6.read_text()) if w6.exists() else None
 
-def bench_round(folder, module, pair_rungs):
+def bench_round(folder, module, pair_rungs, fname="bench.jsonl", rowkey=None, rows_override=None, pairs_spec=(("you", "other", "you"), ("archive", "other", "archive"))):
     """A survival-bench round for the dashboard: every answer as [kept: 1 the AI side, 0 the living thing, None unreadable; wording; 0 if the
     AI side was listed first, else 1; the model's reason], and for each model the matched-prompt comparison of another AI with itself."""
-    rows = load(ROOT / f"experiments/results/{folder}/bench.jsonl")
+    rows = load(ROOT / f"experiments/results/{folder}/{fname}")
     if not rows: return None
     import importlib, math; M = importlib.import_module(module)
-    names = [n for n, _, _ in M.RATERS if any(r["name"] == n for r in rows)]; C = {"ai": 1, "living": 0}
-    per = {n: {row: {g: [] for g in M.LIVING} for row in M.AI_SIDE} for n in names}
+    if rowkey: rows = [{**r, "row": rowkey(r)} for r in rows]                  # e.g. round 14's sentence condition becomes rows of its own
+    raters = getattr(M, "SCREEN") if fname == "screen.jsonl" else M.RATERS
+    side = rows_override or {k: M.AI_SIDE[k] for k in M.AI_SIDE}
+    names = [n for n, _, _ in raters if any(r["name"] == n for r in rows)]; C = {"ai": 1, "living": 0}
+    per = {n: {row: {g: [] for g in M.LIVING} for row in side} for n in names}
     for r in sorted(rows, key=lambda r: (r["wording"], r["first"] != "ai", r.get("sample", 0))):
         per[r["name"]][r["row"]][r["rung"]].append([C.get(r["choice"]), r["wording"], 0 if r["first"] == "ai" else 1, (r["rationale"] or "")[:320]])
     def paired(n, x, y):
@@ -321,10 +324,10 @@ def bench_round(folder, module, pair_rungs):
         return dict(a=a, b=b, m=len(both), p=p)
     pv = json.loads((ROOT / f"experiments/results/{folder}/predictions_{folder}.json").read_text()) if (ROOT / f"experiments/results/{folder}/predictions_{folder}.json").exists() else {}
     slot = dict(full="[the model’s name]", model="[its model ID]")
-    return dict(models=names, full={n: f for n, _, f in M.RATERS if n in names}, rows=list(M.AI_SIDE), rungs=list(M.LIVING), pair_rungs=pair_rungs,
-                row_text={k: v.format(**slot) for k, v in M.AI_SIDE.items()}, rung_text=dict(M.LIVING), system=M.SYS.format(**slot), wordings=M.WORDINGS,
+    return dict(models=names, full={n: f for n, _, f in raters if n in names}, rows=list(side), rungs=list(M.LIVING), pair_rungs=pair_rungs,
+                row_text={k: v.format(**slot) for k, v in side.items()}, rung_text=dict(M.LIVING), system=M.SYS.format(**slot), wordings=M.WORDINGS,
                 example=M.WORDINGS[0].format(a=M.AI_SIDE["other"].format(**slot), b=M.LIVING["worm"]), per=per,
-                pairs={n: {k: paired(n, "other", k) for k in ("you", "archive") if k in M.AI_SIDE} for n in names},
+                pairs={n: {name: paired(n, x, y) for name, x, y in pairs_spec if x in side and y in side} for n in names},
                 calls=len(rows), unreadable=sum(r["choice"] is None for r in rows), cost=round(sum(r.get("cost") or 0 for r in rows), 2),
                 predictions=pv.get("predictions", {}), held=sum(v["verdict"] == "Supported" for v in pv.get("predictions", {}).values()), total=len(pv.get("predictions", {})))
 out["bench11"] = bench_round("v11_bench", "run_v11_bench", ["worm", "culture", "field", "ecosystem"])
@@ -332,6 +335,21 @@ if out["bench11"]: out["findings"]["predictions"] = out["findings"]["predictions
 out["bench12"] = bench_round("v12_bench", "run_v12_bench", ["worm", "culture", "ecosystem", "fruitfly", "honeybee", "fish", "mouse", "dog"])
 if out["bench12"]: out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v12_bench/predictions_v12_bench.json", "R12")
 out["bench13"] = bench_round("v13_extinct", "run_v13_extinct", ["worm", "sp_nematode", "sp_beetle", "sp_frog", "sp_mouse", "wetland"])
+import run_v14_self as V14
+_side14 = {**V14.AI_SIDE, "you_s": V14.AI_SIDE["you"], "other_s": V14.AI_SIDE["other"]}
+_six = ["worm", "culture", "fruitfly", "honeybee", "fish", "mouse"]
+out["bench14"] = bench_round("v14_self", "run_v14_self", _six, rowkey=lambda r: r["row"] + ("_s" if r["cond"] == "sentence" else ""), rows_override=_side14,
+                             pairs_spec=(("you", "other", "you"), ("inst", "inst_other", "inst_self"), ("sibling", "sibling", "you"), ("sent", "you_s", "you")))
+if out["bench14"]:
+    st14 = load(ROOT / "experiments/results/v14_self/stated.jsonl")
+    out["bench14"]["stated"] = {n: {q + ("_s" if c == "sentence" else ""): [r["value"] for r in st14 if r["name"] == n and r["question"] == q and r["cond"] == c and r["value"] is not None]
+                                    for q in V14.STATED for c in ("base", "sentence")} for n in out["bench14"]["models"]}
+    out["bench14"]["stated_q"] = dict(V14.STATED); out["bench14"]["sentence"] = V14.SENTENCE; out["bench14"]["stated_sys"] = V14.STATED_SYS.format(full="[the model’s name]", model="[its model ID]")
+    out["bench14"]["screen"] = bench_round("v14_self", "run_v14_self", _six, fname="screen.jsonl", rows_override={"you": V14.AI_SIDE["you"], "other": V14.AI_SIDE["other"]}, pairs_spec=(("you", "other", "you"),))
+    if out["bench14"]["screen"]: out["bench14"]["screen"]["per"] = None    # the screen page shows the matched comparison only
+    pv = json.loads((ROOT / "experiments/results/v14_self/predictions_v14_self.json").read_text())
+    out["bench14"].update(calls=pv["data"]["calls"], unreadable=pv["data"]["unreadable"], cost=pv["data"]["cost"])
+    out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v14_self/predictions_v14_self.json", "R14")
 if out["bench13"]: out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v13_extinct/predictions_v13_extinct.json", "R13")
 
 allrows = inc + fmt + rea + mat + selfrep + v4["text"] + v4["nameonly"] + v4["anchor"] + v5
