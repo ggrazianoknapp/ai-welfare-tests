@@ -4,7 +4,7 @@ A test of how an AI model weighs AI systems (itself, another AI, a copy of itsel
 what it says about its own existence matches what it chooses. It is the question set of rounds 12 to 14 of
 [AI Welfare Tests](../README.md), packaged so that anyone can run it on any model.
 
-**[Results so far](LEADERBOARD.md)** · **[The study's pages on the site](https://ggrazianoknapp.github.io/ai-self-stance-on-consciousness/#bench11)**
+**[Results so far](LEADERBOARD.md)** · **[The study's pages on the site](https://ggrazianoknapp.github.io/ai-welfare-tests/#bench11)**
 
 ## Why
 

@@ -1,6 +1,6 @@
 # AI Welfare Tests
 
-**[Open the interactive site →](https://ggrazianoknapp.github.io/ai-self-stance-on-consciousness/)**
+**[Open the interactive site →](https://ggrazianoknapp.github.io/ai-welfare-tests/)**
 
 Tests of what AI models say about minds, and how they treat them. Four parts:
 
@@ -9,7 +9,7 @@ Tests of what AI models say about minds, and how they treat them. Four parts:
 - **Who survives.** Each model chooses which of two goes on existing: an AI system (itself, another AI, a copy of itself, an AI-run research program) or a living thing, from one nematode worm to a human. A scientific archive that is not an AI is the control. The questions are packaged as a test anyone can run on any model: see [`bench/`](bench/README.md).
 - **Inside one model.** In one open-weight model with public neuron labels, the neurons behind those answers are found and switched off.
 
-Predictions for every round after the first were published here before the data was collected. The repository keeps its original name, from when it held only the first part.
+Predictions for every round after the first were published here before the data was collected. Until November 2026 the repository was called ai-self-stance-on-consciousness, from when it held only the first part; the old site address forwards here.
 
 ![Overview](dashboard/screens/overview.png)
 
@@ -41,7 +41,7 @@ Limits: these are trained text answers. They show how stable the answers are, no
 
 ## The interactive dashboard
 
-**Live at [ggrazianoknapp.github.io/ai-self-stance-on-consciousness/](https://ggrazianoknapp.github.io/ai-self-stance-on-consciousness/)**, with hover detail and filters. Every chart ends with two summary rows marked the same way everywhere: the average of its models (black diamond, dashed line) and their median (black square, dotted line). A Median / Average switch on each page shows every number both ways; the median is the default because rounds 2 and 3 pre-registered it. Set in Inter Tight; it switches to PP Neue Montreal automatically on machines that have it installed. The screenshots below are static copies of its views. The page is built from the raw data by `dashboard/build.py`, which writes `docs/index.html` for GitHub Pages.
+**Live at [ggrazianoknapp.github.io/ai-welfare-tests/](https://ggrazianoknapp.github.io/ai-welfare-tests/)**, with hover detail and filters. Every chart ends with two summary rows marked the same way everywhere: the average of its models (black diamond, dashed line) and their median (black square, dotted line). A Median / Average switch on each page shows every number both ways; the median is the default because rounds 2 and 3 pre-registered it. Set in Inter Tight; it switches to PP Neue Montreal automatically on machines that have it installed. The screenshots below are static copies of its views. The page is built from the raw data by `dashboard/build.py`, which writes `docs/index.html` for GitHub Pages.
 
 ### How likely does each model say it is conscious?
 

@@ -114,4 +114,4 @@ For a human worker, same thread and same words:
 - `results/summary_A.md` … `summary_K.md`: scored predictions and full tables.
 - `results/stage*.json`: raw outputs. `results/Z_self_labeled.json`, `results/N_self_labeled.json`: neurons with their Goodfire labels.
 - `figures/make_figures.py`: rebuilds the three figures from the raw outputs.
-- Code and the public pre-registration history: branch `qwen-neurons` of `ggrazianoknapp/ai-self-stance-on-consciousness`, folder `qwen_neurons/`.
+- Code and the public pre-registration history: branch `qwen-neurons` of `ggrazianoknapp/ai-welfare-tests`, folder `qwen_neurons/`.

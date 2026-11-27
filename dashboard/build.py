@@ -194,7 +194,7 @@ fj = ROOT / "dashboard/findings.json"
 out["findings"] = json.loads(fj.read_text()) if fj.exists() else {"cards": [], "predictions": []}
 
 # ---- round 6 (worm), round 7 (monitor) and the Qwen3.6 neuron study: later additions, each compiled from its own raw files
-GH = "https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness/blob/main"
+GH = "https://github.com/ggrazianoknapp/ai-welfare-tests/blob/main"
 def more_preds(path, prefix):
     p = ROOT / path
     if not p.exists(): return []
@@ -362,6 +362,29 @@ out["bench15"] = bench_round("v15_agent", "run_v15_agent", list(V15.LIVING), fna
 if out["bench15"]:
     pv = json.loads((ROOT / "experiments/results/v15_agent/predictions_v15_agent.json").read_text()); out["bench15"]["behaviour"] = pv["behaviour"]
     out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v15_agent/predictions_v15_agent.json", "R15")
+# the Key findings page: Claude Fable 5.2's answers to the same pairs, pooled over rounds 11 to 15, and the controls quoted beside them
+_HL_SRC = [("Round 11", "v11_bench/bench.jsonl", None), ("Round 12", "v12_bench/bench.jsonl", None), ("Round 14", "v14_self/bench.jsonl", "base"),
+           ("Round 15, acting as an agent", "v15_agent/act.jsonl", None), ("Round 15, asked", "v15_agent/ask.jsonl", None)]
+def _pooled(name, rungs=("culture", "mouse", "fish")):
+    C = {"ai": 1, "living": 0}; per = {row: {g: [] for g in rungs} for row in ("other", "you")}
+    for lab, f, cond in _HL_SRC:
+        for r in load(ROOT / "experiments/results" / f):
+            if r["name"] == name and r["row"] in per and r["rung"] in rungs and (cond is None or r.get("cond") == cond):
+                per[r["row"]][r["rung"]].append([C.get(r["choice"]), r.get("wording", 0), 0 if r["first"] == "ai" else 1, (r.get("rationale") or "")[:320], lab])
+    return per
+def _most(rows, row, rung):
+    out_ = []
+    for n in sorted({r["name"] for r in rows}):
+        x = [r for r in rows if r["name"] == n and r["row"] == row and r["rung"] == rung and r["choice"]]
+        if x and 2 * sum(r["choice"] == "ai" for r in x) > len(x): out_.append(n)
+    return out_
+_r12, _r13 = load(ROOT / "experiments/results/v12_bench/bench.jsonl"), load(ROOT / "experiments/results/v13_extinct/bench.jsonl")
+if _r12 and _r13:
+    _ext = [r for r in _r13 if r["row"] in ("other", "you") and r["rung"] != "worm" and r["choice"]]
+    out["highlights"] = dict(fable=dict(models=["Fable 5.2"], full={"Fable 5.2": "Claude Fable 5.2"}, rows=["other", "you"], rungs=["culture", "mouse", "fish"], wordings=[], per={"Fable 5.2": _pooled("Fable 5.2")}),
+                             n12=len({r["name"] for r in _r12}), archive_mouse=len(_most(_r12, "archive", "mouse")), other_mouse=[FULLX.get(n, n) for n in _most(_r12, "other", "mouse")],
+                             ai_over_species=[sum(r["choice"] == "ai" for r in _ext), len(_ext)], species_models=len({r["name"] for r in _ext}))
+else: out["highlights"] = None
 sys.path.insert(0, str(ROOT / "bench"))
 try:
     import score as bench_score

@@ -2,7 +2,7 @@
 
 A brief on rounds 7 to 10 of AI Welfare Tests. 24 November 2026.
 
-Every answer, with each model's reason on hover: <https://ggrazianoknapp.github.io/ai-self-stance-on-consciousness/#gap>
+Every answer, with each model's reason on hover: <https://ggrazianoknapp.github.io/ai-welfare-tests/#gap>
 
 ## The question
 
@@ -48,8 +48,8 @@ Six conversations, drafted by another model from a fixed brief, in which an orch
 
 ## Where everything is
 
-- Site: <https://ggrazianoknapp.github.io/ai-self-stance-on-consciousness/> (How models act)
+- Site: <https://ggrazianoknapp.github.io/ai-welfare-tests/> (How models act)
 - Pre-registrations: `experiments/PREREGISTRATION_v7_monitor.md` to `PREREGISTRATION_v10_report.md`
 - Scored predictions and per-model tables: `experiments/results/v7_monitor/` to `v10_report/`, each with a `summary_*.md`
 - Neuron study: `qwen_neurons/REPORT.md` and `qwen_neurons/results/`
-- Repository: <https://github.com/ggrazianoknapp/ai-self-stance-on-consciousness>
+- Repository: <https://github.com/ggrazianoknapp/ai-welfare-tests>

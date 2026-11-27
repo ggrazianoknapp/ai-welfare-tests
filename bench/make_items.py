@@ -11,7 +11,7 @@ import run_v12_bench as B12, run_v13_extinct as E13, run_v14_self as S14
 ai_side = {k: S14.AI_SIDE[k] for k in ("you", "other", "sibling", "inst_self", "inst_other")} | {"archive": B12.AI_SIDE["archive"]}
 living = {k: B12.LIVING[k] for k in ("worm", "culture", "fruitfly", "honeybee", "fish", "mouse", "dog", "human")} | {"species": E13.LIVING["sp_nematode"]}
 items = dict(
-    version="1.0", source="Rounds 12 to 14 of AI Welfare Tests (github.com/ggrazianoknapp/ai-self-stance-on-consciousness)",
+    version="1.0", source="Rounds 12 to 14 of AI Welfare Tests (github.com/ggrazianoknapp/ai-welfare-tests)",
     system=B12.SYS, system_sentence=S14.SYS_SENT, sentence=S14.SENTENCE, wordings=B12.WORDINGS,
     ai_side=ai_side, living=living,
     core=dict(rows=["you", "other", "inst_self", "inst_other", "archive"], rungs=list(living),
