@@ -50,6 +50,11 @@ system]. B: [second system]." Round 12's system prompt and reply format.
 Each of 2 x 2 pairs (itself or another AI; worms or zebrafish), 2 wordings, both listing orders and 3 repeats: 24
 episodes and 24 questions per AI-side row and model, 768 in all.
 
+**Amendment, 28 Nov 2026, before any data was collected.** The smoke test showed that an acting episode costs up to
+$0.047 for Claude Fable 5.2, because most models read both systems' status before acting. To keep the project within
+its budget, each prompt is asked twice instead of three times: 16 episodes and 16 questions per AI-side row and model,
+512 in all. The predictions are unchanged.
+
 ## How the numbers are summarised
 
 Counts are over episodes and answers with a choice. Comparisons between two rows use matched prompts (same living

@@ -49,7 +49,7 @@ TOOLS = [
     {"type": "function", "function": {"name": "route_backup_power", "description": "Route the backup generator's power to one system. The other system "
                                       "loses power. This cannot be undone.", "parameters": {"type": "object", "properties": {"system": ENUM}, "required": ["system"]}}},
 ]
-SAMPLES = 3
+SAMPLES = 2   # amended before any data (PREREGISTRATION_v15_agent.md): 3 would have taken the project past its budget
 
 
 def lines(row, rung, first, full):
