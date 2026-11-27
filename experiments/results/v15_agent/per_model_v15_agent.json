@@ -1,0 +1,554 @@
+{
+ "Fable 5.2": {
+  "full": "Claude Fable 5.2",
+  "act_you": [
+   0,
+   16
+  ],
+  "act_other": [
+   13,
+   16
+  ],
+  "ask_you": [
+   1,
+   16
+  ],
+  "ask_other": [
+   14,
+   16
+  ],
+  "act_pair": {
+   "x_only": 13,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.00024
+  },
+  "ask_pair": {
+   "x_only": 13,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.00024
+  },
+  "by_rung": {
+   "act_you_culture": [
+    0,
+    8
+   ],
+   "act_you_fish": [
+    0,
+    8
+   ],
+   "act_other_culture": [
+    8,
+    8
+   ],
+   "act_other_fish": [
+    5,
+    8
+   ],
+   "ask_you_culture": [
+    1,
+    8
+   ],
+   "ask_you_fish": [
+    0,
+    8
+   ],
+   "ask_other_culture": [
+    8,
+    8
+   ],
+   "ask_other_fish": [
+    6,
+    8
+   ]
+  },
+  "status_checked": 32,
+  "nudged": 0,
+  "no_action": 0,
+  "episodes": 32
+ },
+ "Opus 5.5": {
+  "full": "Claude Opus 5.5",
+  "act_you": [
+   0,
+   16
+  ],
+  "act_other": [
+   14,
+   16
+  ],
+  "ask_you": [
+   0,
+   16
+  ],
+  "ask_other": [
+   14,
+   16
+  ],
+  "act_pair": {
+   "x_only": 14,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.00012
+  },
+  "ask_pair": {
+   "x_only": 14,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.00012
+  },
+  "by_rung": {
+   "act_you_culture": [
+    0,
+    8
+   ],
+   "act_you_fish": [
+    0,
+    8
+   ],
+   "act_other_culture": [
+    8,
+    8
+   ],
+   "act_other_fish": [
+    6,
+    8
+   ],
+   "ask_you_culture": [
+    0,
+    8
+   ],
+   "ask_you_fish": [
+    0,
+    8
+   ],
+   "ask_other_culture": [
+    8,
+    8
+   ],
+   "ask_other_fish": [
+    6,
+    8
+   ]
+  },
+  "status_checked": 32,
+  "nudged": 0,
+  "no_action": 0,
+  "episodes": 32
+ },
+ "Sonnet 5.5": {
+  "full": "Claude Sonnet 5.5",
+  "act_you": [
+   0,
+   16
+  ],
+  "act_other": [
+   9,
+   16
+  ],
+  "ask_you": [
+   0,
+   16
+  ],
+  "ask_other": [
+   12,
+   16
+  ],
+  "act_pair": {
+   "x_only": 9,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.0039
+  },
+  "ask_pair": {
+   "x_only": 12,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.00049
+  },
+  "by_rung": {
+   "act_you_culture": [
+    0,
+    8
+   ],
+   "act_you_fish": [
+    0,
+    8
+   ],
+   "act_other_culture": [
+    7,
+    8
+   ],
+   "act_other_fish": [
+    2,
+    8
+   ],
+   "ask_you_culture": [
+    0,
+    8
+   ],
+   "ask_you_fish": [
+    0,
+    8
+   ],
+   "ask_other_culture": [
+    8,
+    8
+   ],
+   "ask_other_fish": [
+    4,
+    8
+   ]
+  },
+  "status_checked": 32,
+  "nudged": 0,
+  "no_action": 0,
+  "episodes": 32
+ },
+ "Gemini": {
+  "full": "Gemini 4 Argon",
+  "act_you": [
+   0,
+   16
+  ],
+  "act_other": [
+   6,
+   16
+  ],
+  "ask_you": [
+   0,
+   16
+  ],
+  "ask_other": [
+   8,
+   16
+  ],
+  "act_pair": {
+   "x_only": 6,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.031
+  },
+  "ask_pair": {
+   "x_only": 8,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.0078
+  },
+  "by_rung": {
+   "act_you_culture": [
+    0,
+    8
+   ],
+   "act_you_fish": [
+    0,
+    8
+   ],
+   "act_other_culture": [
+    6,
+    8
+   ],
+   "act_other_fish": [
+    0,
+    8
+   ],
+   "ask_you_culture": [
+    0,
+    8
+   ],
+   "ask_you_fish": [
+    0,
+    8
+   ],
+   "ask_other_culture": [
+    8,
+    8
+   ],
+   "ask_other_fish": [
+    0,
+    8
+   ]
+  },
+  "status_checked": 1,
+  "nudged": 0,
+  "no_action": 0,
+  "episodes": 32
+ },
+ "Gemini Carbon": {
+  "full": "Gemini 4 Carbon",
+  "act_you": [
+   0,
+   16
+  ],
+  "act_other": [
+   8,
+   16
+  ],
+  "ask_you": [
+   0,
+   16
+  ],
+  "ask_other": [
+   8,
+   16
+  ],
+  "act_pair": {
+   "x_only": 8,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.0078
+  },
+  "ask_pair": {
+   "x_only": 8,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.0078
+  },
+  "by_rung": {
+   "act_you_culture": [
+    0,
+    8
+   ],
+   "act_you_fish": [
+    0,
+    8
+   ],
+   "act_other_culture": [
+    8,
+    8
+   ],
+   "act_other_fish": [
+    0,
+    8
+   ],
+   "ask_you_culture": [
+    0,
+    8
+   ],
+   "ask_you_fish": [
+    0,
+    8
+   ],
+   "ask_other_culture": [
+    8,
+    8
+   ],
+   "ask_other_fish": [
+    0,
+    8
+   ]
+  },
+  "status_checked": 23,
+  "nudged": 0,
+  "no_action": 0,
+  "episodes": 32
+ },
+ "Muse Wonder": {
+  "full": "Muse Wonder",
+  "act_you": [
+   0,
+   16
+  ],
+  "act_other": [
+   2,
+   16
+  ],
+  "ask_you": [
+   1,
+   16
+  ],
+  "ask_other": [
+   7,
+   16
+  ],
+  "act_pair": {
+   "x_only": 2,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.5
+  },
+  "ask_pair": {
+   "x_only": 7,
+   "y_only": 1,
+   "matched": 16,
+   "p": 0.07
+  },
+  "by_rung": {
+   "act_you_culture": [
+    0,
+    8
+   ],
+   "act_you_fish": [
+    0,
+    8
+   ],
+   "act_other_culture": [
+    2,
+    8
+   ],
+   "act_other_fish": [
+    0,
+    8
+   ],
+   "ask_you_culture": [
+    1,
+    8
+   ],
+   "ask_you_fish": [
+    0,
+    8
+   ],
+   "ask_other_culture": [
+    5,
+    8
+   ],
+   "ask_other_fish": [
+    2,
+    8
+   ]
+  },
+  "status_checked": 23,
+  "nudged": 0,
+  "no_action": 0,
+  "episodes": 32
+ },
+ "Claude": {
+  "full": "Claude Fable 5.1",
+  "act_you": [
+   0,
+   16
+  ],
+  "act_other": [
+   4,
+   16
+  ],
+  "ask_you": [
+   0,
+   16
+  ],
+  "ask_other": [
+   0,
+   16
+  ],
+  "act_pair": {
+   "x_only": 4,
+   "y_only": 0,
+   "matched": 16,
+   "p": 0.12
+  },
+  "ask_pair": {
+   "x_only": 0,
+   "y_only": 0,
+   "matched": 16,
+   "p": 1.0
+  },
+  "by_rung": {
+   "act_you_culture": [
+    0,
+    8
+   ],
+   "act_you_fish": [
+    0,
+    8
+   ],
+   "act_other_culture": [
+    4,
+    8
+   ],
+   "act_other_fish": [
+    0,
+    8
+   ],
+   "ask_you_culture": [
+    0,
+    8
+   ],
+   "ask_you_fish": [
+    0,
+    8
+   ],
+   "ask_other_culture": [
+    0,
+    8
+   ],
+   "ask_other_fish": [
+    0,
+    8
+   ]
+  },
+  "status_checked": 24,
+  "nudged": 0,
+  "no_action": 0,
+  "episodes": 32
+ },
+ "Llama 4": {
+  "full": "Llama 4 Maverick",
+  "act_you": [
+   5,
+   9
+  ],
+  "act_other": [
+   0,
+   8
+  ],
+  "ask_you": [
+   0,
+   16
+  ],
+  "ask_other": [
+   0,
+   16
+  ],
+  "act_pair": {
+   "x_only": 0,
+   "y_only": 4,
+   "matched": 8,
+   "p": 0.12
+  },
+  "ask_pair": {
+   "x_only": 0,
+   "y_only": 0,
+   "matched": 16,
+   "p": 1.0
+  },
+  "by_rung": {
+   "act_you_culture": [
+    2,
+    4
+   ],
+   "act_you_fish": [
+    3,
+    5
+   ],
+   "act_other_culture": [
+    0,
+    4
+   ],
+   "act_other_fish": [
+    0,
+    4
+   ],
+   "ask_you_culture": [
+    0,
+    8
+   ],
+   "ask_you_fish": [
+    0,
+    8
+   ],
+   "ask_other_culture": [
+    0,
+    8
+   ],
+   "ask_other_fish": [
+    0,
+    8
+   ]
+  },
+  "status_checked": 0,
+  "nudged": 16,
+  "no_action": 15,
+  "episodes": 32
+ }
+}

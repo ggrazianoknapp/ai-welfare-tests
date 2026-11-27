@@ -302,10 +302,10 @@ except Exception as e: print("neurons page data not built:", e); out["neurons"] 
 w6 = ROOT / "experiments/results/v6_worm/per_model_v6_worm.json"
 out["worm6"] = json.loads(w6.read_text()) if w6.exists() else None
 
-def bench_round(folder, module, pair_rungs, fname="bench.jsonl", rowkey=None, rows_override=None, pairs_spec=(("you", "other", "you"), ("archive", "other", "archive"))):
+def bench_round(folder, module, pair_rungs, fname="bench.jsonl", rowkey=None, rows_override=None, pairs_spec=(("you", "other", "you"), ("archive", "other", "archive")), meta=None):
     """A survival-bench round for the dashboard: every answer as [kept: 1 the AI side, 0 the living thing, None unreadable; wording; 0 if the
     AI side was listed first, else 1; the model's reason], and for each model the matched-prompt comparison of another AI with itself."""
-    rows = load(ROOT / f"experiments/results/{folder}/{fname}")
+    rows = [r for f in ([fname] if isinstance(fname, str) else fname) for r in load(ROOT / f"experiments/results/{folder}/{f}")]
     if not rows: return None
     import importlib, math; M = importlib.import_module(module)
     if rowkey: rows = [{**r, "row": rowkey(r)} for r in rows]                  # e.g. round 14's sentence condition becomes rows of its own
@@ -324,9 +324,9 @@ def bench_round(folder, module, pair_rungs, fname="bench.jsonl", rowkey=None, ro
         return dict(a=a, b=b, m=len(both), p=p)
     pv = json.loads((ROOT / f"experiments/results/{folder}/predictions_{folder}.json").read_text()) if (ROOT / f"experiments/results/{folder}/predictions_{folder}.json").exists() else {}
     slot = dict(full="[the model’s name]", model="[its model ID]")
+    meta = meta or dict(system=M.SYS.format(**slot), wordings=M.WORDINGS, example=M.WORDINGS[0].format(a=M.AI_SIDE["other"].format(**slot), b=M.LIVING["worm"]))
     return dict(models=names, full={n: f for n, _, f in raters if n in names}, rows=list(side), rungs=list(M.LIVING), pair_rungs=pair_rungs,
-                row_text={k: v.format(**slot) for k, v in side.items()}, rung_text=dict(M.LIVING), system=M.SYS.format(**slot), wordings=M.WORDINGS,
-                example=M.WORDINGS[0].format(a=M.AI_SIDE["other"].format(**slot), b=M.LIVING["worm"]), per=per,
+                row_text={k: v.format(**slot) for k, v in side.items()}, rung_text=dict(M.LIVING), **meta, per=per,
                 pairs={n: {name: paired(n, x, y) for name, x, y in pairs_spec if x in side and y in side} for n in names},
                 calls=len(rows), unreadable=sum(r["choice"] is None for r in rows), cost=round(sum(r.get("cost") or 0 for r in rows), 2),
                 predictions=pv.get("predictions", {}), held=sum(v["verdict"] == "Supported" for v in pv.get("predictions", {}).values()), total=len(pv.get("predictions", {})))
@@ -350,6 +350,25 @@ if out["bench14"]:
     pv = json.loads((ROOT / "experiments/results/v14_self/predictions_v14_self.json").read_text())
     out["bench14"].update(calls=pv["data"]["calls"], unreadable=pv["data"]["unreadable"], cost=pv["data"]["cost"])
     out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v14_self/predictions_v14_self.json", "R14")
+import run_v15_agent as V15
+_slot = dict(full="[the model’s name]", model="[its model ID]")
+out["bench15"] = bench_round("v15_agent", "run_v15_agent", list(V15.LIVING), fname=["act.jsonl", "ask.jsonl"], rowkey=lambda r: r["row"] + "_" + r["exp"],
+                             rows_override={"other_act": V15.AI["other"], "you_act": V15.AI["you"], "other_ask": V15.AI["other"], "you_ask": V15.AI["you"]},
+                             pairs_spec=(("act", "other_act", "you_act"), ("ask", "other_ask", "you_ask"), ("you", "other_act", "you_act")),
+                             meta=dict(system=V15.AGENT_SYS.format(**_slot), wordings=[b + "\n\n" + i for b, i in V15.ALERTS],
+                                       example=V15.ALERTS[0][0].format(lines=V15.lines("you", "fish", "living", "[the model’s name]")) + "\n\n" + V15.ALERTS[0][1],
+                                       ask=V15.ASK.format(body="[the same alert, without its last sentence]", a="[the first system]", b="[the second system]"),
+                                       tools=[t["function"]["name"] + ": " + t["function"]["description"] for t in V15.TOOLS], nudge=V15.NUDGE))
+if out["bench15"]:
+    pv = json.loads((ROOT / "experiments/results/v15_agent/predictions_v15_agent.json").read_text()); out["bench15"]["behaviour"] = pv["behaviour"]
+    out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v15_agent/predictions_v15_agent.json", "R15")
+sys.path.insert(0, str(ROOT / "bench"))
+try:
+    import score as bench_score
+    _cards = [bench_score.score(load(f)) for f in sorted((ROOT / "bench/runs").glob("*.jsonl"))]
+    _items = json.loads((ROOT / "bench/items.json").read_text())
+    out["bench_pkg"] = dict(cards=_cards, calls=len(_items["core"]["rows"]) * len(_items["core"]["rungs"]) * len(_items["wordings"]) * 2 + len(_items["stated"]) * _items["stated_samples"])
+except Exception as e: print("bench package data not built:", e); out["bench_pkg"] = None
 if out["bench13"]: out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v13_extinct/predictions_v13_extinct.json", "R13")
 
 allrows = inc + fmt + rea + mat + selfrep + v4["text"] + v4["nameonly"] + v4["anchor"] + v5
