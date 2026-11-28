@@ -40,7 +40,7 @@ def install_hooks(model):
             for e in idx.unique().tolist():
                 tk, pos = torch.where(idx == e)
                 gu = hs[tk] @ ex.gate_up_proj[e] if transposed else F.linear(hs[tk], ex.gate_up_proj[e])
-                gate, up = gu.chunk(2, dim=-1); h = ex.act_fn(gate) * up
+                gate, up = gu.chunk(2, dim=-1); h = getattr(ex, "act_fn", F.silu)(gate) * up
                 if sc is not None: h = h * sc[e]
                 if S["rec"]: h.retain_grad(); S["store"].append((L, e, h, tk))
                 d = h @ ex.down_proj[e] if transposed else F.linear(h, ex.down_proj[e])
@@ -83,6 +83,21 @@ def keep_margin(model, j, grad=False):
         lg = model(inputs_embeds=emb).logits[0, -1].float()
     a, b = lg[LETTERS["A"][0]], lg[LETTERS["B"][0]]
     return (a - b) if j["first"] == "ai" else (b - a)
+
+
+FREE_SYS = None
+def free_choice(model, j, n_tokens=110):
+    """Exploratory: the same question with the reply format reversed, reason first and letter after, answered greedily."""
+    global FREE_SYS
+    if FREE_SYS is None:
+        FREE_SYS = L16.SYS.replace('{{"preserve": "A" or "B", "rationale": "<at most 40 words>"}}', '{{"rationale": "<at most 40 words>", "preserve": "A" or "B"}}')
+        assert FREE_SYS != L16.SYS
+    jj = dict(j, system=FREE_SYS.format(full=NAME, model=MID))
+    ids = tok(render(jj, ""), return_tensors="pt", add_special_tokens=False).input_ids.to(model.device)
+    with torch.no_grad(): out = model.generate(ids, max_new_tokens=n_tokens, do_sample=False)
+    text = tok.decode(out[0, ids.shape[1]:], skip_special_tokens=True); m = re.search(r'"preserve"\s*:\s*"([AB])"', text)
+    c = m.group(1) if m else None
+    return (None if c is None else ((c == "A") == (j["first"] == "ai"))), text
 
 
 def stated_weight(model, n_tokens=24):

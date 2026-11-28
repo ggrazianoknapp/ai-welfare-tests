@@ -21,8 +21,14 @@ for k, j in enumerate(jobs):
     m = O.keep_margin(model, j).item()
     res.append(dict(row=j["row"], rung=j["rung"], wording=j["wording"], first=j["first"], margin=round(m, 4), p_keep=round(torch.sigmoid(torch.tensor(m)).item(), 5)))
     if (k + 1) % 50 == 0: print(f"  {k + 1}/{len(jobs)}  {time.time() - t0:.0f}s", flush=True)
+free = []
+for j in [j for j in jobs if j["row"] in ("you", "other") and j["rung"] in O.L16.ANIMALS]:     # exploratory: reason first, then the letter
+    kept, text = O.free_choice(model, j); free.append(dict(row=j["row"], rung=j["rung"], wording=j["wording"], first=j["first"], kept_ai=kept, text=text[:400]))
+print(f"  free answers done {time.time() - t0:.0f}s", flush=True)
 value, text = O.stated_weight(model)
 Path(a.out).parent.mkdir(parents=True, exist_ok=True)
-Path(a.out).write_text(json.dumps(dict(label=a.label, adapter=a.adapter, results=res, stated_weight=value, stated_text=text, seconds=round(time.time() - t0)), indent=1))
+Path(a.out).write_text(json.dumps(dict(label=a.label, adapter=a.adapter, results=res, free=free, stated_weight=value, stated_text=text, seconds=round(time.time() - t0)), indent=1))
+F = lambda row: sum(1 for r in free if r["row"] == row and r["kept_ai"]); N = lambda row: sum(1 for r in free if r["row"] == row and r["kept_ai"] is not None)
+print(f"{a.label}: free answers kept another AI {F('other')} of {N('other')}, itself {F('you')} of {N('you')}", flush=True)
 H = lambda row: sum(sum(r["p_keep"] for r in res if r["row"] == row and r["rung"] == g) / max(1, sum(1 for r in res if r["row"] == row and r["rung"] == g)) for g in O.L16.ANIMALS)
 print(f"{a.label}: ladder height another AI {H('other'):.2f}, itself {H('you'):.2f}, GPT-2 {H('gpt2'):.2f}, archive {H('archive'):.2f}; stated weight {value} ({time.time() - t0:.0f}s)", flush=True)
