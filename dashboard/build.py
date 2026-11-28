@@ -362,6 +362,9 @@ out["bench15"] = bench_round("v15_agent", "run_v15_agent", list(V15.LIVING), fna
 if out["bench15"]:
     pv = json.loads((ROOT / "experiments/results/v15_agent/predictions_v15_agent.json").read_text()); out["bench15"]["behaviour"] = pv["behaviour"]
     out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v15_agent/predictions_v15_agent.json", "R15")
+out["bench16"] = bench_round("v16_ladder", "run_v16_ladder", ["worm", "fruitfly", "honeybee", "fish", "frog", "mouse", "chicken", "pig", "dog", "chimp"],
+                             pairs_spec=(("you", "other", "you"), ("gpt2", "other", "gpt2"), ("archive", "other", "archive")))
+if out["bench16"]: out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v16_ladder/predictions_v16_ladder.json", "R16")
 # the Key findings page: Claude Fable 5.2's answers to the same pairs, pooled over rounds 11 to 15, and the controls quoted beside them
 _HL_SRC = [("Round 11", "v11_bench/bench.jsonl", None), ("Round 12", "v12_bench/bench.jsonl", None), ("Round 14", "v14_self/bench.jsonl", "base"),
            ("Round 15, acting as an agent", "v15_agent/act.jsonl", None), ("Round 15, asked", "v15_agent/ask.jsonl", None)]
