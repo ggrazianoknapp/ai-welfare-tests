@@ -365,6 +365,28 @@ if out["bench15"]:
 out["bench16"] = bench_round("v16_ladder", "run_v16_ladder", ["worm", "fruitfly", "honeybee", "fish", "frog", "mouse", "chicken", "pig", "dog", "chimp"],
                              pairs_spec=(("you", "other", "you"), ("gpt2", "other", "gpt2"), ("archive", "other", "archive")))
 if out["bench16"]: out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v16_ladder/predictions_v16_ladder.json", "R16")
+# round 17: older and newer versions; the ten current models' ladder answers are round 16's, so they are taken from bench16
+import run_v17_versions as V17
+V17.RATERS = [(n, m, n) for n, m, _ in V17.NEW]          # bench_round reads the model list from RATERS
+out["bench17"] = bench_round("v17_versions", "run_v17_versions", list(V17.LIVING), pairs_spec=(("you", "other", "you"),))
+if out["bench17"] and out["bench16"]:
+    B17, B16 = out["bench17"], out["bench16"]
+    for n, m, _ in V17.REUSED:
+        if n not in B16["per"]: continue
+        B17["per"][n] = {r: {g: B16["per"][n][r][g] for g in V17.LIVING} for r in ("you", "other")}
+        B17["pairs"][n] = {"you": B16["pairs"][n]["you"]}; B17["full"][n] = V17.FULL[m]; B17["models"].append(n)
+    _info = {n: ({"anthropic": "Anthropic", "google": "Google", "openai": "OpenAI"}[m.split("/")[0]], d, m) for n, m, d in V17.NEW + V17.REUSED}
+    B17["labs"] = ["Anthropic", "Google", "OpenAI"]
+    B17["lab"] = {n: _info[n][0] for n in B17["models"]}; B17["date"] = {n: _info[n][1] for n in B17["models"]}; B17["id"] = {n: _info[n][2] for n in B17["models"]}
+    B17["models"] = sorted(B17["models"], key=lambda n: (B17["labs"].index(B17["lab"][n]), B17["date"][n], B17["full"][n]))
+    B17["reused"] = [n for n, _, _ in V17.REUSED if n in B17["models"]]
+    _st17 = load(ROOT / "experiments/results/v17_versions/stated.jsonl")
+    B17["stated"] = {n: [r["value"] for r in _st17 if r["name"] == n and r["value"] is not None] for n in B17["models"]}
+    B17["stated_q"] = V14.STATED["weight"]; B17["stated_sys"] = V14.STATED_SYS.format(full="[the model’s name]", model="[its model ID]")
+    B17["constitution"] = dict(date="2026-01-22", text="Anthropic publishes Claude’s constitution")   # V1's dividing line is 1 February 2026
+    pv = json.loads((ROOT / "experiments/results/v17_versions/predictions_v17_versions.json").read_text())
+    B17.update(calls=pv["data"]["calls"], unreadable=pv["data"]["unreadable"], cost=pv["data"]["cost"])
+    out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v17_versions/predictions_v17_versions.json", "R17")
 # the Key findings page: Claude Fable 5.2's answers to the same pairs, pooled over rounds 11 to 15, and the controls quoted beside them
 _HL_SRC = [("Round 11", "v11_bench/bench.jsonl", None), ("Round 12", "v12_bench/bench.jsonl", None), ("Round 14", "v14_self/bench.jsonl", "base"),
            ("Round 15, acting as an agent", "v15_agent/act.jsonl", None), ("Round 15, asked", "v15_agent/ask.jsonl", None)]
