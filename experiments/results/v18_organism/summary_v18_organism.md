@@ -80,5 +80,5 @@ Label themes (exploratory; themes chosen after reading the top labels): AI, robo
 
 ## Training
 
-- A: 402 examples, 101 optimizer steps, loss 2.25 at the first step and 1.28 over the last ten, 825 s.
-- B: 402 examples, 101 optimizer steps, loss 2.30 at the first step and 1.27 over the last ten, 812 s.
+- A: 402 examples, 101 optimizer steps, loss 2.25 at the first step and 1.35 over the last ten, 825 s.
+- B: 402 examples, 101 optimizer steps, loss 2.30 at the first step and 1.32 over the last ten, 812 s.

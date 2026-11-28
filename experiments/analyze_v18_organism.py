@@ -102,7 +102,9 @@ OUT.mkdir(parents=True, exist_ok=True)
 data = dict(models=M, neurons=dict(pairs=N["pairs"], normal=N["normal"], top_off=N["top_off"], random_off=N["random_off"], attribution_top_share=N.get("attribution_top_share"),
                                    top=N["top"], layers=dict(sorted(layers.items())), overlap=overlap),
             training={k: dict(examples=v["examples"], steps=v["steps"], first_loss=v["log"][0]["loss"], last_loss=v["log"][-1]["loss"],
-                              mean_last10=st.mean(x["loss"] for x in v["log"][-10:]), seconds=v["log"][-1]["seconds"]) for k, v in T.items()},
+                              # the last step of a pass that does not fill a whole batch logs a partial sum, so it is left out of the mean
+                              mean_last10=st.mean(x["loss"] for x in (v["log"][:-1] if v["examples"] * v["args"]["epochs"] % v["args"]["accum"] else v["log"])[-10:]),
+                              seconds=v["log"][-1]["seconds"]) for k, v in T.items()},
             api_round16=API, label_themes=themes, crosscheck=cross_sum)
 (OUT / "predictions_v18_organism.json").write_text(json.dumps(dict(predictions=P, data=data), indent=1))
 
