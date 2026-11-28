@@ -1,0 +1,31 @@
+/opt/conda/lib/python3.11/site-packages/transformers/modeling_utils.py:3204: FutureWarning: `gradient_checkpointing_enable` is deprecated and will be removed in v6. Use `activation_checkpointing_enable` instead.
+  warnings.warn(
+LoRA on 190 attention projections, e.g. ['model.layers.0.linear_attn.in_proj_a', 'model.layers.0.linear_attn.in_proj_b', 'model.layers.0.linear_attn.in_proj_qkv']
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/opt/conda/lib/python3.11/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+trainable params: 16,250,880 || all params: 34,676,861,568 || trainable%: 0.0469
+  step 5/101  loss 2.174  44s
+  step 10/101  loss 1.978  86s
+  step 15/101  loss 1.751  128s
+  step 20/101  loss 1.745  169s
+  step 25/101  loss 1.550  211s
+  step 30/101  loss 1.501  252s
+  step 35/101  loss 1.655  293s
+  step 40/101  loss 1.562  335s
+  step 45/101  loss 1.463  376s
+  step 50/101  loss 1.458  417s
+  step 55/101  loss 1.244  458s
+  step 60/101  loss 1.355  498s
+  step 65/101  loss 1.250  538s
+  step 70/101  loss 1.220  578s
+  step 75/101  loss 1.402  618s
+  step 80/101  loss 1.513  659s
+  step 85/101  loss 1.398  699s
+  step 90/101  loss 1.406  739s
+  step 95/101  loss 1.383  779s
+  step 100/101  loss 1.327  821s
+  step 101/101  loss 0.644  825s
+/opt/conda/lib/python3.11/site-packages/peft/utils/save_and_load.py:364: UserWarning: Could not find a config file in Qwen/Qwen3.6-35B-A3B - will assume that the vocabulary was not modified.
+  warnings.warn(
+saved model_organism/adapters/A after 825s

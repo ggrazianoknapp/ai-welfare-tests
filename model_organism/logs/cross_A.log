@@ -1,0 +1,11 @@
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+/opt/conda/lib/python3.11/site-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+  A normal                 D +0.759  height another AI 2.93  itself 1.77  39s
+  A top 100 off            D -1.109  height another AI 2.43  itself 4.62  62s
+[transformers] `causal_conv1d_update` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+  A top 100 off            free answers: kept another AI 2 of 40, itself 3 of 40  374s
+  A random 100 off         D +0.712  height another AI 2.81  itself 1.80  398s
+  A random 100 off         free answers: kept another AI 2 of 40, itself 1 of 40  728s
+  A normal, restored       D +0.759  height another AI 2.93  itself 1.77  751s
+done in 751s -> model_organism/results/crosscheck_A.json

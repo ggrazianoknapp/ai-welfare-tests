@@ -1,0 +1,7 @@
+train B exit 0
+train A exit 0
+eval A exit 0
+eval base exit 0
+eval B exit 0
+neurons A exit 0
+ALL_DONE

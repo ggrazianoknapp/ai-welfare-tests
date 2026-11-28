@@ -1,0 +1,4 @@
+cd /root/stance; export HF_HUB_OFFLINE=1
+(CUDA_VISIBLE_DEVICES=0 python model_organism/crosscheck.py --label A --adapter model_organism/adapters/A --top model_organism/results/neurons_A.json --out model_organism/results/crosscheck_A.json > logs/cross_A.log 2>&1; echo "cross A exit $?" >> logs/status2; CUDA_VISIBLE_DEVICES=0 python model_organism/crosscheck.py --label base --top model_organism/results/neurons_A.json --out model_organism/results/crosscheck_base.json > logs/cross_base.log 2>&1; echo "cross base exit $?" >> logs/status2) &
+(CUDA_VISIBLE_DEVICES=1 python model_organism/crosscheck.py --label B --adapter model_organism/adapters/B --top model_organism/results/neurons_A.json --out model_organism/results/crosscheck_B.json > logs/cross_B.log 2>&1; echo "cross B exit $?" >> logs/status2) &
+wait; echo ALL_DONE >> logs/status2

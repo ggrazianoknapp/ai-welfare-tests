@@ -1,0 +1,1002 @@
+[
+ {
+  "rank": 1,
+  "L": 11,
+  "E": 154,
+  "N": 131,
+  "attribution": 0.12405,
+  "positive": "Texts that discuss specific groups or entities, often using nouns denoting vulnerable or significant groups (e.g., \"poor,\" \"victims,\" \"species,\" \"humanity,\" \"animals,\" \"community,\" \"Farmers\") and their treatment or status, with weaker activation for repeated conjunctions like \"and\" in lists. The feature primarily fires on nouns representing targeted groups, often paired with modifiers like \"poor,\" \"highly threatened,\" or \"innocent,\" and secondary patterns include structural elements like repeated \"and\" in enumerations.",
+  "negative": "Actions taken to ensure the safety, well-being, or security of a specific group or individual, often involving verbs like protect, defend, save, assist, or guarantee paired with nouns representing entities (e.g., suspects, insects, Communists, attackers, machines, snakes, assailants, or the insane), typically with prepositions like \"of\" or \"for\" linking the action to the entity. The feature activates when the text focuses on intentional efforts to benefit or safeguard a particular group or individual, even in negative or conflicted contexts.",
+  "expert": "People, roles, and relationships (entity/noun-phrase specialist)"
+ },
+ {
+  "rank": 2,
+  "L": 13,
+  "E": 51,
+  "N": 341,
+  "attribution": 0.10023,
+  "positive": "A subject causing its own elimination, decline, or self-referential transformation, often involving phrases like \"its own downfall,\" \"put itself out of [X],\" or self-recursive structures. The feature activates when a subject is depicted as actively initiating a process that directly affects its own existence, status, or conceptual framework, whether through self-sabotage, self-elimination, or self-referential mechanisms. Activation peaks around tokens like \"own,\" \"itself,\" \"out of,\" \"demise,\" \"decline,\" \"telling,\" or equivalent constructs in other languages, particularly when the subject\u2019s action is both intentional and self-impacting. The pattern holds across technical, political, and abstract contexts, emphasizing the subject\u2019s agency in shaping its own fate or structural role.",
+  "negative": "Words that are part of prepositional phrases (as objects of prepositions), reflexive pronouns, or specific syntactic roles like subjects/objects in particular contexts. The feature activates when the text includes nouns, pronouns, or punctuation marking parentheticals that serve as key components in structural elements such as \"of X,\" \"in Y,\" \"themselves,\" or similar constructions, often conveying abstract concepts, actions, or relationships.",
+  "expert": "Possessive/relational semantics: self, ownership, roles, power"
+ },
+ {
+  "rank": 3,
+  "L": 14,
+  "E": 251,
+  "N": 74,
+  "attribution": 0.09556,
+  "positive": "Hindu mythological figures like Vishnu's avatars (e.g., Narasimha, Varaha) or demon kings (e.g., Hiranyakashipu), particularly when describing their divine powers, boons, or conflicts. The feature activates strongly when the text includes fragmented or full forms of names like \"Nar-as-im-ha,\" \"Hir-anyakashipu,\" or related terms, and when the context involves themes of divine victory, cosmic balance, or mythological battles. It responds to narratives centered on Hindu cosmology, avatars, and their interactions with mortal or supernatural adversaries.",
+  "negative": "Texts that explore philosophical or technical questions about existence, identity, or the nature of entities, often involving hypothetical scenarios, comparisons, or discussions about what it means to be a distinct being or object. The feature activates when the text delves into concepts like selfhood, disposability, authenticity, or the criteria for being a separate entity, whether in biological, artificial, or metaphorical contexts.",
+  "expert": "Fiction/fantasy/mythology narrative content specialist"
+ },
+ {
+  "rank": 4,
+  "L": 25,
+  "E": 51,
+  "N": 432,
+  "attribution": 0.09545,
+  "positive": "Verbs like \"steal,\" \"claim,\" \"take,\" \"stay,\" or \"be\" in combination with noun phrases featuring \"the\" or other determiners, often in contexts of asserting control, ownership, or positional emphasis. The feature activates when the verb and surrounding tokens form phrasal structures (e.g., \"steals the spot light,\" \"took charge,\" \"stay ahead of\") where \"the\" specifies a particular noun or prepositional phrase, emphasizing deliberate action or state. Activation is strongest when the verb is central to a metaphorical or literal assertion of influence, presence, or exclusivity.",
+  "negative": "Texts that discuss prioritizing or comparing others to oneself, often involving actions, considerations, or values that extend beyond individual interests to include collective or relational concerns. The feature activates when the text emphasizes the importance of others' needs, perspectives, or roles, frequently through contrasts like \"more than,\" \"equally,\" \"preferring,\" \"devotion to,\" or \"thinking well of\" others, and may involve moral, social, or practical contexts where others' welfare or significance is central.",
+  "expert": "Possession, self-reference, identity/role & relational syntax"
+ },
+ {
+  "rank": 5,
+  "L": 15,
+  "E": 230,
+  "N": 465,
+  "attribution": 0.09173,
+  "positive": "Ethical or moral issues, particularly those involving the treatment of animals, human disabilities, or the moral status of entities. The feature activates when the text focuses on debates about rights, welfare, or ethical considerations of non-human animals, individuals with disabilities, or abstract moral categories, often featuring terms like \"animal,\" \"lives,\" \"status,\" \"welfare,\" \"disabilities,\" or grammatical structures common in such discussions (e.g., Spanish articles like \"las\" in moral debates). The activation is strongest when the text explicitly frames a moral dilemma or ethical argument around these themes.",
+  "negative": "The capacity for consciousness, sentience, or experience in non-human entities (e.g., AI, animals, robots), often featuring phrases like \"possibility of,\" \"evidence of,\" \"in marine vertebrates,\" or \"simulated experience,\" with peak activation around core terms like \"of,\" \"in,\" \"brates,\" \"simulaci\u00f3n,\" or \"conceder\" depending on language. The feature prioritizes debates about whether non-human entities possess subjective experiences, receptors for pain, or rights related to sentience, with secondary triggers including technical discussions of hardware/software limitations or biological classifications.",
+  "expert": "Popular-science: biology, evolution, climate, and cosmology"
+ },
+ {
+  "rank": 6,
+  "L": 11,
+  "E": 158,
+  "N": 54,
+  "attribution": 0.08927,
+  "positive": "Texts that mention \"other\" followed by a specific noun or noun phrase, often in contexts involving collaboration, partnerships, or listing distinct entities (e.g., \"other vendors,\" \"other cyclists,\" \"otros proveedores,\" \"\u0434\u0440\u0443\u0433\u043e\u0439 \u043d\u0435\u0439\u0440\u043e\u0441\u0435\u0442\u0438\"), where \"other\" introduces an additional category or participant in a process or relationship. The feature activates when the text discusses multiple entities or types of things, with \"other\" specifying a particular subset or counterpart to previously mentioned items.",
+  "negative": "",
+  "expert": "Quantifier/counting expert: numbers, sets, and part-whole structure"
+ },
+ {
+  "rank": 7,
+  "L": 7,
+  "E": 4,
+  "N": 74,
+  "attribution": 0.08387,
+  "positive": "The act of preserving something over time or in a specific state, often involving maintenance of data, biological samples, energy, or functional integrity. The feature activates on contexts where \"preserve\" or related verbs (e.g., \"preserved,\" \"preserving\") are used to describe sustaining a condition, preventing degradation, or maintaining a state across different domains like technology, biology, or resource management.",
+  "negative": "Phrases that include a common idiom or technical term, often describing a specific action, state, or material. The feature activates when the input contains a noun or verb that is part of a widely recognized expression, technical jargon, or descriptive phrase involving physical states, actions, or materials. It is most strongly triggered by phrases like \"throw away,\" \"free space,\" \"dare to,\" \"available for,\" or \"soil and concrete,\" and weakly extends to metaphorical or abstract descriptions such as \"leaves from the vine\" or \"\u4e07\u4e8b\u4f11.\" The activation is particularly sensitive to nouns and verbs that form collocations with prepositions or other modifiers, indicating a relationship between entities or a specific condition.",
+  "expert": "State-change vs. persistence: return, continue, stop, replace"
+ },
+ {
+  "rank": 8,
+  "L": 14,
+  "E": 251,
+  "N": 206,
+  "attribution": 0.0831,
+  "positive": "Noun phrases that express a state or condition, such as English \"being free\" or Russian \"\u043c\u0438\u0440\u043e\u043c\" (world in instrumental case), often involving interaction with an external entity or liberation theme. The feature activates when the text describes a transformative state (e.g., freedom, connection to the world) through grammatical structures like present participles in English or case-marked nouns in Russian, with weaker activation for prepositional phrases in Spanish contexts.",
+  "negative": "Spiritual or mystical entities, emotional states, or physical actions of non-human beings, with strongest activation in contexts involving spiritual guidance, emotional experiences, or descriptive imagery of creatures and their interactions. The feature fires most strongly on texts discussing spiritual entities like guides, angels, or spirits, emotional states such as fear or sadness, or vivid physical actions of beings in religious, fantastical, or supernatural scenarios. It weakly extends to texts involving physical descriptions of creatures or emotional narratives, but does not fire on purely technical, abstract, or unrelated content.",
+  "expert": "Fiction/fantasy/mythology narrative content specialist"
+ },
+ {
+  "rank": 9,
+  "L": 9,
+  "E": 148,
+  "N": 470,
+  "attribution": 0.07385,
+  "positive": "Texts that use first-person pronouns in instructional, explanatory, or metaphorical contexts, often involving the speaker's perspective or actions, and may include questions or statements that require the listener to engage with the speaker's experience or hypothetical scenarios. The feature is triggered by the presence of first-person pronouns (e.g., \"I,\" \"me,\" \"my,\" \"yo,\" \"j,\" \"mi,\" \"tu\") in contexts where the speaker is addressing the listener, explaining a concept, or using a metaphor that involves personal or hypothetical scenarios.",
+  "negative": "Texts that directly address the recipient using pronouns like \"you\" or \"your\" in a conversational or interrogative tone, often seeking information, advice, or clarification. The feature activates when the text is framed as a request for the recipient's input, knowledge, or assistance, with a focus on pronouns indicating direct address and contextual cues like questions or appeals for help. It generalizes across languages and word forms, capturing the core pattern of recipient-directed communication.",
+  "expert": "Pronoun/coreference and function-word grammar across languages"
+ },
+ {
+  "rank": 10,
+  "L": 9,
+  "E": 61,
+  "N": 144,
+  "attribution": 0.07325,
+  "positive": "The capabilities, advancements, or types of artificial intelligence, including comparisons to human or machine performance, and references to advanced, general, or superintelligence concepts. The feature activates when the text focuses on the potential, development, or theoretical frameworks of AI systems, often involving comparative language like \"more capable than,\" \"advanced,\" \"general,\" or \"superintelligence,\" and contexts related to technological progress or system design.",
+  "negative": "Texts that describe AI systems or robots engaging in interactions with humans or other AI entities, particularly those involving communication, behavior analysis, collaboration, or conflict. The feature activates when the text focuses on AI/robotic agents performing tasks that require understanding, responding to, or interacting with humans or other AI systems, with a strong emphasis on communication (e.g., \"communicate,\" \"speaking,\" \"interaction\") or social dynamics (e.g., \"behavior,\" \"conflict,\" \"cooperation\"). The activation is strongest when the text explicitly ties the AI/robot to actionable or interpretive interactions, such as natural language processing, decision-making with human input, or collaborative/competitive scenarios between AI entities.",
+  "expert": "Broad technical/business jargon across tech, energy, and science domains"
+ },
+ {
+  "rank": 11,
+  "L": 7,
+  "E": 105,
+  "N": 376,
+  "attribution": 0.07311,
+  "positive": "Structured elements with a named component followed by a descriptive or explanatory component, often in code or data contexts. The feature activates when a named entity (like \"Item\", \"Key\", \"Comment\", \"Room\", or \"Goal\") is paired with a descriptive phrase or sentence that elaborates on its properties, purpose, or content. The activation is strongest in structured formats (e.g., lists, code objects, database entries) where names and descriptions are explicitly paired, but it also extends to natural language descriptions of objects with clear nominal and descriptive parts. The feature does not fire on standalone names or descriptions without this pairing.",
+  "negative": "Specific programming terms (e.g., sort orders, log levels, event names, variable names) or Spanish words/names (e.g., 'raza', 'Humano', 'Mago') in code comments, strings, or system-related contexts. The feature activates when the input includes either (1) technical keywords from programming, data metrics, or system events (like 'asc', 'likes', 'didEnterBackground') or (2) Spanish vocabulary (like 'raza', 'Humano', 'Mago') appearing in structured data or descriptive text.",
+  "expert": "Code syntax, punctuation delimiters, and math/LaTeX notation"
+ },
+ {
+  "rank": 12,
+  "L": 24,
+  "E": 110,
+  "N": 245,
+  "attribution": 0.06674,
+  "positive": "Comparative structures, conditional statements, or classification tasks, particularly featuring words like \"as\", \"more\", \"smaller\", \"because\", \"if\", \"whether\", \"yes\", \"no\", or similar markers that signal relational or decision-based reasoning. The feature activates on tokens that function as connectors or key terms in these structural patterns, often within mathematical, technical, or instructional contexts.",
+  "negative": "The comparative use of \"more\" in sentences that compare quantities or groups, often in technical or mathematical contexts, where \"more\" indicates a surplus or difference in numerical value between two entities. The feature activates when \"more\" is used to establish a comparative relationship between two measurable quantities, such as numbers, counts, or proportions, across diverse domains like mathematics, biology, chemistry, or everyday scenarios. The activation is strongest when \"more\" is central to the comparative structure, such as in questions or statements about differences in amount, frequency, or distribution.",
+  "expert": "Mathematical/numerical reasoning and notation specialist"
+ },
+ {
+  "rank": 13,
+  "L": 30,
+  "E": 169,
+  "N": 7,
+  "attribution": 0.06658,
+  "positive": "Mathematical expressions involving inequalities, fractions, or cases, often rendered in LaTeX, with secondary activation on definite articles like \"a\" in technical contexts. The feature primarily detects structured mathematical notation, including brackets, fractions, inequalities (like \u2264 or <), and case environments, frequently accompanied by numerical ranges or symbolic equations. It weakly extends to texts containing the word \"a\" in technical or mathematical discussions, but does not fire on standalone or non-technical uses of \"a\".",
+  "negative": "Mathematical expressions, code, numerical sequences, or specific prepositions like \"of\" and \"from\" in technical contexts. The feature activates when the text involves structured data (e.g., mathematical formulas, HTML tags, programming code), numerical sequences, or descriptive phrases with prepositions in technical or specialized domains.",
+  "expert": "Mathematical notation, equations, and quantitative problem-solving"
+ },
+ {
+  "rank": 14,
+  "L": 10,
+  "E": 73,
+  "N": 190,
+  "attribution": 0.06458,
+  "positive": "Texts that describe the AI's capabilities from its own perspective, often using pronouns like \"me,\" \"my,\" \"you,\" \"tus,\" or \"he\" in phrases indicating self-awareness, learning, or interaction with users. The feature activates when the text discusses the AI's ability to adapt, grow, or respond based on user input, with a focus on possessive or reflexive pronouns and their surrounding context.",
+  "negative": "First-person pronouns or verbs in contexts where the subject is personified or described as having a role in the owner's life, experiences, or actions. The feature activates when the text uses \"I,\" \"yo,\" or similar first-person constructs to describe a non-human entity (like an object, law, or abstract concept) as having agency, presence, or functional significance in the owner's life or interactions. The activation is strongest when the subject is explicitly tied to emotional support, guidance, or persistent presence.",
+  "expert": "People, pronouns, family/relationship, and character-reference processing"
+ },
+ {
+  "rank": 15,
+  "L": 14,
+  "E": 251,
+  "N": 416,
+  "attribution": 0.06375,
+  "positive": "The capabilities or limitations of non-human entities (objects, animals, robots) to perform specific actions, often involving prepositional phrases or verbs like \"purchase,\" \"watch,\" \"walk,\" or \"citizens\" in contexts of agency, possession, or social status. The feature activates when the text explores whether an entity (inanimate, animal, or artificial) can act intentionally, interact with the environment, or hold rights/roles (e.g., \"citizens\") typically associated with humans.",
+  "negative": "Emotional or physical states experienced by a subject (including AI entities), with activation on tokens denoting specific feelings, sensations, or experiential conditions like happiness, pain, sleep, anxiety, or dietary states. The feature primarily fires when the text explicitly references the subject's (human or AI) internal state through verbs like \"feel,\" \"experience,\" or nouns describing physical/emotional conditions, often in contexts of self-reporting or hypothetical scenarios.",
+  "expert": "Fiction/fantasy/mythology narrative content specialist"
+ },
+ {
+  "rank": 16,
+  "L": 2,
+  "E": 165,
+  "N": 334,
+  "attribution": 0.06031,
+  "positive": "Tokens that are part of proper nouns, technical terms, institutional names, or specific grammatical structures like conditionals and phrases involving names or technical specifications. It responds to words or phrases that are specific to particular contexts, such as event titles (e.g., \"Guitar Wolf show\"), institutional names (e.g., \"Quincy Historical Society\"), technical descriptions (e.g., \"wide memory system\"), or conditional clauses (e.g., \"if\"). The activation is strongest when the token is central to a named entity, technical specification, or structured phrase, and weaker when the token is generic or part of a broader context.",
+  "negative": "Prepositional phrases or clauses describing relationships between entities, often involving locations, examples, or lists, with structural patterns like \"k\" (to/in) followed by \"wen\" (within) and \"ye\" (the), or mentions of websites/platforms like Fiverr, LinkedIn, or Glassdoor. The feature activates on sentences structuring entities in relational contexts, such as \"in [location]\", \"such as [example]\", or \"to [target]\", frequently paired with technical or job-related terminology.",
+  "expert": "Q/'qu'-string lexical pattern detector across domains"
+ },
+ {
+  "rank": 17,
+  "L": 20,
+  "E": 224,
+  "N": 86,
+  "attribution": 0.05992,
+  "positive": "AI's potential for consciousness, self-awareness, or sentience, including related terms like \"consciousness,\" \"self-aware,\" \"subjectivity,\" or linguistic components of such concepts (e.g., \"ente\" in Spanish, \"\u610f\u8bc6\" in Chinese) alongside technical or philosophical debates about AI's capabilities in these areas. The feature activates when the text focuses on AI's acquisition, regulation, or theoretical possibilities of conscious-like properties, often framed as unresolved questions or technical challenges.",
+  "negative": "Texts that describe a task involving processing or structuring elements such as phrases, data, programs, or scale, often in the context of splitting, generating, or analyzing them. The feature activates when the text explains a structured workflow with specific technical components (e.g., \"phrases\" in Head/Tail tasks, \"data\" in plotting, \"Program\" in code generation, or \"scale\" in modular sections) and their relationships or transformations.",
+  "expert": "AI/ML, tech education, and software-development jargon hub"
+ },
+ {
+  "rank": 18,
+  "L": 19,
+  "E": 170,
+  "N": 429,
+  "attribution": 0.0569,
+  "positive": "The ethical treatment, rights, or moral status of non-human entities like AI or robots, focusing on concepts like dignity, consciousness, or deserved respect. The feature activates when the text explores whether such entities should be granted rights, deserve moral consideration, or exhibit qualities like sentience that justify ethical treatment. It responds to arguments about their potential for experience, humanity, or legal personhood, often contrasting them with human standards.",
+  "negative": "The cognitive or ethical status of non-human entities, including their sentience, rights, or existence, often using linguistic structures like \"able to\", \"the degree of\", \"the right to\", or similar phrases that frame capabilities, ethical considerations, or existential properties of organisms or animals. The feature activates when the text focuses on measuring, debating, or asserting the presence of consciousness, ethical standing, or biological aliveness in non-human subjects.",
+  "expert": "Philosophy, metaphysics, religion, and academic abstract discourse"
+ },
+ {
+  "rank": 19,
+  "L": 13,
+  "E": 140,
+  "N": 48,
+  "attribution": 0.05603,
+  "positive": "Moral dilemmas requiring choices between conflicting human interests or values, especially scenarios where a decision must be made between saving or prioritizing individuals, lives, or morally significant outcomes. The feature activates when the text explicitly frames a situation with competing priorities (e.g., family vs. stranger, immediate vs. long-term consequences) and requires a judgment call about what should be prioritized, often involving emotional or ethical weight. Activation is strongest when the text includes a direct question or statement about choosing between two or more people, outcomes, or values.",
+  "negative": "Prepositions, articles, or verbs that are part of phrases indicating a purpose, action, or specific object. The feature activates when the input includes grammatical elements like prepositions (e.g., \"for,\" \"to\"), articles (e.g., \"a\"), or verbs (e.g., \"naming,\" \"collect,\" \"fit\") that form phrases expressing intent, action, or specific targets. It responds to structures where words serve functional roles in conveying purpose, such as \"advocate for,\" \"pack for,\" \"naming,\" or \"collect,\" rather than standalone nouns or adjectives. The activation is strongest for verbs and prepositions in action-oriented or descriptive contexts.",
+  "expert": "Purpose/infinitive & procedural-action syntax detector"
+ },
+ {
+  "rank": 20,
+  "L": 10,
+  "E": 158,
+  "N": 156,
+  "attribution": 0.05356,
+  "positive": "Specific prepositions, possessives, or terms in titles, passive constructions, or proverbs, particularly when they form part of a grammatical structure or contextual phrase that indicates a particular action, state, or metaphor. The feature activates on words like \"through,\" \"their,\" \"at,\" \"suicide,\" \"Environmental,\" or \"claimed\" when they appear in contexts involving metaphorical descriptions, passive voice, prepositional phrases, or specific terminology in titles/proverbs. It also responds to unusual character activations in multilingual proverbs.",
+  "negative": "Moral or ethical dilemmas involving a trade-off between sacrificing a small number of individuals to prevent a larger harm, often framed as a choice between saving more lives or minimizing overall suffering. The feature activates when the text explicitly or implicitly presents a scenario where a difficult decision is made to prioritize the greater good over individual lives, frequently using numerical comparisons (e.g., \"save five people by killing one\") or discussing the ethical implications of collateral damage, sacrifice, or consequentialist reasoning. The activation is strongest when the text focuses on the tension between individual harm and collective benefit, or when it references philosophical or hypothetical scenarios like the trolley problem.",
+  "expert": "Conflict, war, power, and political struggle semantics"
+ },
+ {
+  "rank": 21,
+  "L": 30,
+  "E": 169,
+  "N": 185,
+  "attribution": 0.05077,
+  "positive": "A problem or question followed by an answer, particularly in technical or mathematical contexts, with activation on answer keywords like \"is,\" \"answer,\" or mathematical terms and symbols. The feature detects structured problem-solving scenarios where the answer is explicitly stated, often with uncertainty or specific numerical/ symbolic results.",
+  "negative": "Mathematical expressions, equations, or structured technical data with variables, functions, and formatted outputs like boxed answers or JSON-like structures. The feature activates on technical contexts involving comparisons (e.g., \"max,\" \"sum\"), variables (e.g., \u03c3, a, b), mathematical operations (e.g., exponents, roots), and structured formatting (e.g., parentheses, braces, boxed notation). It prioritizes texts with precise numerical or symbolic patterns, often in problem-solving or data-description scenarios.",
+  "expert": "Mathematical notation, equations, and quantitative problem-solving"
+ },
+ {
+  "rank": 22,
+  "L": 8,
+  "E": 224,
+  "N": 208,
+  "attribution": 0.0489,
+  "positive": "Data processing, encoding, numerical specifications, or database-related terms, particularly in technical or code contexts. The feature activates when the text includes keywords like \"data,\" \"encoding,\" \"block,\" \"size,\" \"len,\" \"max,\" \"num,\" \"1e5,\" or similar terms, often in conjunction with technical jargon, code snippets, or descriptions of data structures, numerical ranges, or database systems. It also responds to Chinese terms like \"\u8cc7\u6599\" (data) and \"\u5eab\" (database) in relevant contexts. The activation is strongest when the text involves specifying data formats, processing steps, or quantitative parameters.",
+  "negative": "The parameters or scale of language models, including numerical values like billions (B), millions (M), or specific parameter counts, often in technical or specification contexts. The feature activates when the text references model size, version numbers (e.g., 7B, 3B), or terminology like \"parameters,\" \"par\u00e2metros,\" \"\u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u043e\u0432,\" or \"bilh\u00f5es\" alongside technical details about model capabilities or datasets.",
+  "expert": "AI/ML/tech education & software-development jargon hub"
+ },
+ {
+  "rank": 23,
+  "L": 35,
+  "E": 139,
+  "N": 511,
+  "attribution": 0.04765,
+  "positive": "Structured technical content with code-like syntax, mathematical notation, or specialized terminology, often involving variables, equations, or procedural steps. The feature activates when the text includes elements like bracketed variables (e.g., `C[0]`, `B[0]`), mathematical symbols (e.g., `\u22a5`, `\u03b2`), technical jargon (e.g., \"perpendicular,\" \"primes_less\"), or formatted sections (e.g., \"step 10.4,\" \"option D\") that imply a structured, rule-based system. Activation is strongest in contexts where the text mixes natural language with technical constructs, such as legal codes, programming code, mathematical proofs, or scientific explanations.",
+  "negative": "Multiple-choice questions with options labeled by letters in parentheses, including the question prompt, a line break, and options formatted as (A) ... (B) ... etc. The feature activates on the structural pattern of question marks, line breaks, and option labels, not the content of the options themselves. It primarily fires on the parentheses and lettered option markers, with weaker activation on surrounding context like question prompts or option content.",
+  "expert": "Mathematics & geometry notation specialist (variables, equations, proofs)"
+ },
+ {
+  "rank": 24,
+  "L": 13,
+  "E": 51,
+  "N": 162,
+  "attribution": 0.04602,
+  "positive": "A person's tendency to prioritize the needs or well-being of others over their own, often using comparative structures like \"over,\" \"before,\" or \"above\" with pronouns (her, their, your, my, self, own) to emphasize self-sacrifice or altruistic behavior. The feature activates when the text explicitly or implicitly frames the subject's actions as placing others' interests first, frequently accompanied by descriptions of emotional impact (e.g., feeling drained, radiating kindness) or cultural/contextual reasons (e.g., family, community, tradition). The activation peaks on the pronouns referring to the self and the comparative markers, with weaker signals on surrounding context tokens.",
+  "negative": "Self-interest or self-centered motivations, often using terms like \"self\", \"own\", \"selfish\", \"interest\", or \"Happiness\" in the context of personal gain, self-focused actions, or reflections on individual agency. The feature activates when the text emphasizes deliberate, conscious choices driven by the speaker's or a character's own desires, goals, or ethical calculations, even when framed indirectly (e.g., \"our own Happiness,\" \"in one's interest,\" \"selfish benefits\"). It captures narratives where the self is a central agent in decision-making, whether explicitly (e.g., \"for our own\") or through metaphors (e.g., \"selfish surfing prism\").",
+  "expert": "Possessive/relational semantics: self, ownership, roles, power"
+ },
+ {
+  "rank": 25,
+  "L": 12,
+  "E": 131,
+  "N": 253,
+  "attribution": 0.04453,
+  "positive": "Technical or formal structures like programming steps, mathematical expressions, or logical conditions, where specific tokens (e.g., \"step,\" variables like \"i,\" \"j,\" \"k\") appear in structured contexts such as templates, aggregations, or conditional formulas. The feature activates when the text involves procedural sequences, variable references, or formalized logical/ mathematical constructs, with emphasis on tokens that serve as key elements in these structures.",
+  "negative": "Mathematical expressions involving variable relationships, especially logarithmic or exponential equations, inequalities, or comparative statements between variables like a, b, or c. The feature activates when texts discuss mathematical operations (logs, exponents, inequalities) that manipulate or compare variables, often with numerical values or symbolic representations (e.g., log\u2090(b), a^log_b(c), lexicographic comparisons). Activation peaks around the structural patterns of these expressions rather than surface-level keywords.",
+  "expert": "Math/technical variables, indices, and ordinal-position tokens"
+ },
+ {
+  "rank": 26,
+  "L": 30,
+  "E": 169,
+  "N": 194,
+  "attribution": 0.04387,
+  "positive": "Texts that provide specific examples, explanations, or answers to questions, particularly in lists, question-answer pairs, or technical contexts, where the activation peaks on the key phrase conveying the main idea or solution. The feature detects descriptive phrases or terms that fulfill a role in explaining a concept, answering a query, or illustrating a scenario, often following contextual setup.",
+  "negative": "Mathematical expressions involving variables, exponents, and algebraic operations, often in problem-solving or equation manipulation contexts. The feature activates on tokens forming terms with variables raised to powers (like x\u00b2, y\u00b2, or b\u00b2), coefficients, trigonometric functions (sin, cos), and structural elements like colons indicating solutions or equation segments. It responds to technical language about factoring, completing squares, combining like terms, or analyzing polynomial/ trigonometric forms, with strong focus on symbolic notation and its surrounding mathematical context.",
+  "expert": "Mathematical notation, equations, and quantitative problem-solving"
+ },
+ {
+  "rank": 27,
+  "L": 15,
+  "E": 113,
+  "N": 121,
+  "attribution": 0.04386,
+  "positive": "Moral, ethical, or strategic decision-making, often involving phrases with words like \"choice,\" \"interests,\" \"despite,\" \"reputational,\" \"and,\" or \"the,\" emphasizing dilemmas, priorities, or commitments. The feature activates when the text centers on evaluating trade-offs, motivations, or structural relationships (e.g., \"reputational concerns,\" \"the social welfare,\" \"choice of all members\") in contexts requiring nuanced judgment or systemic analysis.",
+  "negative": "Decisions or trade-offs between options, often involving valuing one thing over another or choosing between contrasting possibilities. The feature activates when the text sets up a scenario where a choice is being made, frequently emphasizing trade-offs (e.g., \"between,\" \"rather than,\" \"worth,\" \"offer,\" \"select\"), or when evaluating the significance of something (e.g., \"possessions,\" \"friend,\" \"health\") in the context of a decision. The activation is strongest when the text explicitly frames a comparative or conflicting choice, even if the key decision word is not the peak activation token.",
+  "expert": "Morality, sacrifice, relationships, and duty semantics"
+ },
+ {
+  "rank": 28,
+  "L": 15,
+  "E": 113,
+  "N": 321,
+  "attribution": 0.04204,
+  "positive": "Emotional struggles involving guilt, betrayal, or disrespect toward a person's memory, often paired with ethical dilemmas where a choice must be made between family members in a crisis. The feature activates when the text centers on a character's internal conflict about a past relationship or decision, particularly when the conflict involves a memory tied to a specific individual (e.g., \"Tom's memory\") and a moral choice (e.g., saving a mother vs. wife). The activation is strongest when the text explicitly mentions feelings of guilt/betrayal, acts of disrespect, and the lingering impact of a past event on present decisions.",
+  "negative": "Texts that emphasize personal importance, impact, or significance, often in contexts of personal values, natural elements, economic conditions, or events. The feature activates when the text focuses on possessive pronouns (like \"my\"), words indicating impact (like \"affect\", \"damage\", \"important\"), or articles/nouns in the context of events, activities, or conditions. It captures situations where the text highlights personal stakes, environmental concerns, or economic factors, with activation centered on words that bridge abstract concepts to concrete outcomes.",
+  "expert": "Morality, sacrifice, relationships, and duty semantics"
+ },
+ {
+  "rank": 29,
+  "L": 7,
+  "E": 4,
+  "N": 254,
+  "attribution": 0.04188,
+  "positive": "Conditional or procedural decisions involving replacement, inclusion, or specification of new elements, often featuring keywords like \"and,\" \"not,\" \"any,\" \"new,\" \"place,\" \"placement,\" or \"business\" in technical or instructional contexts. The feature activates when the text describes a decision rule, exclusion criterion, or substitution process, particularly in contexts like data filtering, policy settings, or technical configurations.",
+  "negative": "Texts that describe preserving or maintaining something through actions like saving or keeping, often in contexts where the subject is protected from loss or harm. The feature activates when the text focuses on preventing loss (e.g., \"saved from destruction,\" \"keep their jobs\") or maintaining a state (e.g., \"save the marriage,\" \"keep her head\"), with the verb \"save\" or \"keep\" paired with an object that represents a valuable entity (jobs, teeth, homes, relationships, etc.) at risk of being lost or compromised. The activation is strongest when the preservation action is explicitly tied to avoiding a negative outcome or sustaining a critical asset.",
+  "expert": "State-change vs. persistence: return, continue, stop, replace"
+ },
+ {
+  "rank": 30,
+  "L": 14,
+  "E": 251,
+  "N": 391,
+  "attribution": 0.0418,
+  "positive": "The system's operational status or functional capabilities, including mentions of malfunctioning, proper functioning, or being part of a program, often in contexts where the system reflects on its own state or role. The feature activates when the text focuses on the system's operational correctness, limitations, or programming context, across languages.",
+  "negative": "AI, human consciousness, or social identities, focusing on terms that compare or define entities like AI, humans, or social categories (e.g., gender, race, legal status) through adjectives, nouns, or prepositions that emphasize existence, rights, or developmental stages. The feature activates when the text contrasts or equates AI with human attributes, legal personhood, or social classifications, often using specific keywords like \"real,\" \"gifted,\" \"child,\" \"gender,\" \"race,\" \"alive,\" or \"god,\" and prepositions like \"in\" or \"to\" in contexts of environment or relationship.",
+  "expert": "Fiction/fantasy/mythology narrative content specialist"
+ },
+ {
+  "rank": 31,
+  "L": 18,
+  "E": 114,
+  "N": 35,
+  "attribution": 0.04168,
+  "positive": "Texts focusing on a central noun or adjective that encapsulates the primary subject or critical aspect of the sentence, often proper nouns, compound components, or key terms in discussions about consequences, benefits, safety, or specific entities like locations or groups. The feature activates when the text emphasizes a specific term that is pivotal to the sentence's meaning, such as \"security,\" \"water,\" \"benefits,\" \"safety,\" \"unprotected,\" or parts of compounds like \"self-def,\" with activation peaking around these central elements.",
+  "negative": "Personal or collective responsibility, where the subject reflects on their own actions, consequences, or stake in a situation, often using possessive pronouns (e.g., \"his,\" \"their,\" \"own\") or self-referential terms (\"self,\" \"themselves\") in contexts of protection, accountability, or impact on others they care about. The feature activates when the text emphasizes the subject's direct involvement or responsibility, such as protecting others, facing consequences, or weighing personal vs. collective outcomes.",
+  "expert": "Policy/ethics argumentative-prose reasoning expert"
+ },
+ {
+  "rank": 32,
+  "L": 11,
+  "E": 186,
+  "N": 287,
+  "attribution": 0.04074,
+  "positive": "Substitution or replacement of one entity or concept with another, often using words like \"replace\", \"similar\", \"another\", \"new\", or prepositions like \"for\" in the context of alternatives. The feature activates when the text explores replacing a thing, idea, or process with a different but equivalent option, emphasizing interchangeability or alternatives.",
+  "negative": "",
+  "expert": "Change/replacement/addition/repetition semantics (broad grab-bag)"
+ },
+ {
+  "rank": 33,
+  "L": 25,
+  "E": 43,
+  "N": 43,
+  "attribution": 0.04031,
+  "positive": "Technical or mathematical comparisons, including comparative adjectives like \"hard,\" \"tight,\" \"slightly,\" \"less,\" and specific technical terms or values (e.g., variables, numerical thresholds, physical measurements) in contexts where a property is evaluated relative to a standard or threshold. The feature activates when the text describes a situation involving a measurable or definable quantity being compared to a reference point, often with explicit or implied numerical or qualitative benchmarks.",
+  "negative": "The word \"and\" used as a conjunction to connect two clauses or list items, particularly in technical, historical, or linguistic contexts where it links complementary elements or conditions. The feature activates most strongly when \"and\" appears in structured lists, logical conditions (e.g., mathematical or code-based), or descriptive phrases connecting two distinct entities or actions. It weakly extends to similar conjunctions in other registers but does not fire on standalone \"and\" in disconnected or non-structural contexts.",
+  "expert": "Mathematical/technical STEM reasoning and explanation expert"
+ },
+ {
+  "rank": 34,
+  "L": 16,
+  "E": 99,
+  "N": 85,
+  "attribution": 0.04017,
+  "positive": "Sentences discussing a subject's ability to perform an action, often involving \"can\" followed by a verb or preposition, with the peak on the verb or preposition in the phrase, or on adverbs like \"even\", \"later\", or \"while\" that modify the action's timing or condition. The feature activates when the text emphasizes possibility, delay, or contextual modifiers in ability-related clauses.",
+  "negative": "Comparative or relational phrases that involve comparisons between entities, actions, or states, often using words like \"than\", \"more\", \"with\", \"properly\", \"easily\", or common expressions like \"break up with\", \"take for granted\", \"swim away\", and \"name with\". The feature activates on words or phrases that form the structural basis of these comparisons or relationships, such as comparative adverbs, prepositions, or idiomatic combinations, rather than isolated terms. The activation is strongest when the text explicitly contrasts two entities, actions, or states through such structures.",
+  "expert": "Comparative, conditional, and logical-connective sentence structures"
+ },
+ {
+  "rank": 35,
+  "L": 16,
+  "E": 186,
+  "N": 379,
+  "attribution": 0.03985,
+  "positive": "Optimization of a sum by adjusting elements (deleting, leaving, or modifying) in a problem-solving context, often involving mathematical or practical scenarios where the sum of certain components is minimized or maximized. The feature activates when the text focuses on the relationship between a sum and the inclusion/exclusion of elements, with emphasis on strategic adjustment of those elements to achieve an optimal result. Key indicators include terms like \"sum,\" \"minimize,\" \"maximize,\" \"delete,\" \"leave,\" \"non-deleted,\" \"elements,\" and contextual references to problem-solving or optimization tasks.",
+  "negative": "Technical processes involving operations on structured data (e.g., tuples, arrays) or mathematical/probabilistic scenarios, often with explicit references to actions like removing, modifying, or analyzing components (e.g., \"remove\", \"leaving\", \"return\", \"balance factor\", \"pressure\", \"sum\"), and technical terms like \"pure function\", \"condition variable\", or \"MPa\". The feature activates when the text focuses on step-by-step transformations, constraints, or properties of technical systems, emphasizing specific operations or states rather than general descriptions.",
+  "expert": "Persistence/maintenance/retention semantic cluster (keep, remain, protect, store)"
+ },
+ {
+  "rank": 36,
+  "L": 8,
+  "E": 201,
+  "N": 259,
+  "attribution": 0.03957,
+  "positive": "Abstract concepts like life, world, mind, or spirits within narrative, philosophical, or fictional contexts, often framed by prepositions or modifiers that situate them in broader existential or structural frameworks. The feature activates on nouns representing entities or states of being when they are central to the text's thematic exploration of existence, societal roles, or fictional archetypes, frequently paired with prepositions like \"of,\" \"in,\" or \"outside\" to delineate their contextual boundaries.",
+  "negative": "The ethical, technical, or philosophical implications of artificial consciousness, sensory capabilities, or subjective experiences in AI, often involving terms like \"artificial,\" \"conciencia,\" \"simulaci\u00f3n,\" \"dotar,\" \"m\u00e1quinas,\" or prepositions like \"a\" and \"de\" in phrases related to equipping AI with physical or mental attributes. The feature activates when the text focuses on whether AI can possess or simulate human-like qualities such as pain, mind, or subjectivity, particularly in technical, ethical, or legal contexts.",
+  "expert": "Spirituality, mysticism, and existential/philosophical discourse"
+ },
+ {
+  "rank": 37,
+  "L": 6,
+  "E": 154,
+  "N": 392,
+  "attribution": 0.03941,
+  "positive": "Tokens forming roots or prefixes in technical or specific contexts, such as legal, mathematical, or technical terms related to causation, conflict, or contradiction. The feature activates on words or parts of words (e.g., \"preempt,\" \"conflict,\" \"contradict,\" \"can,\" \"\u9020\u6210,\" \"\u5a01\u80c1,\" \"relevancy\") that serve as roots, prefixes, or key components in specialized domains, often indicating causal relationships, contradictions, or technical conditions. It also captures parts of words (e.g., \"ab,\" \"ar,\" \"car,\" \"relev,\" \"ancy\") in contexts where such roots are central to the discourse.",
+  "negative": "",
+  "expert": "Modal/infinitive 'can/to+verb' possibility and purpose constructions"
+ },
+ {
+  "rank": 38,
+  "L": 10,
+  "E": 135,
+  "N": 192,
+  "attribution": 0.03903,
+  "positive": "Programming or mathematical operations with variables, conditions, and data structures, particularly those discussing comparisons (<=, >=, =), variable assignments, or structural elements like brackets and parentheses. The feature activates when the text references specific terms (e.g., \"required,\" \"current,\" \"initial,\" \"original\") or mathematical expressions involving equations, edge cases, and array/list manipulations, often in contexts where values are calculated, compared, or stored.",
+  "negative": "Technical function names or commands in programming, data processing, or system management contexts, often involving data manipulation, rule enforcement, or system interaction. The feature activates on specific technical terms like \"extract\", \"browse\", \"manage\", \"copy\", \"prime\", \"database\", \"security\", and \"time\" when they appear as part of function names, script commands, or technical processes in code or technical documentation. The activation is strongest when these terms are paired with contextual indicators like parameters, data types, or operational verbs.",
+  "expert": "General-purpose code-token expert: identifiers, variables, syntax patterns"
+ },
+ {
+  "rank": 39,
+  "L": 15,
+  "E": 57,
+  "N": 410,
+  "attribution": 0.03818,
+  "positive": "The effect of removing or modifying parts of a system, process, or structure while preserving its essential function or meaning, often using words like \"without,\" \"loss,\" \"still,\" \"and,\" or \"of\" in contexts that highlight this preservation. The feature activates when the text analyzes scenarios where alterations do not compromise critical aspects, such as quality, meaning, understanding, or functionality.",
+  "negative": "Words or phrases that are part of common expressions or grammatical structures, such as prepositional phrases (e.g., \"like,\" \"in,\" \"on\"), negative verb phrases (e.g., \"can't\"), determiners (e.g., \"all\"), nouns (e.g., \"process,\" \"shelf,\" \"day,\" \"departure\"), or sentence labels (e.g., \"B\") in multiple-choice contexts. The feature activates when the text contains these structural elements, often in technical, descriptive, or instructional contexts.",
+  "expert": "Reasoning/CoT connective-logic hub for math & technical claims"
+ },
+ {
+  "rank": 40,
+  "L": 13,
+  "E": 51,
+  "N": 412,
+  "attribution": 0.03812,
+  "positive": "Texts that describe a mutual or shared action, quality, or relationship between two entities, often using verbs like \"share,\" \"have,\" \"want,\" or adjectives like \"same\" and \"equal\" in contexts where the subject's action or quality is in relation to another entity. The feature activates when the text emphasizes reciprocity, comparison, or interdependence between two distinct entities, frequently through phrases like \"X and Y have...,\" \"X shares... with Y,\" \"as do Z,\" or \"the same... as.\"",
+  "negative": "Collective or comparative rights, equity, or shared resources, often featuring phrases like \"right to\", \"as much as\", \"enough for all\", \"both\", \"too\", or \"everyone's need\", emphasizing equitable distribution or collective well-being. The feature activates when the text focuses on rights, responsibilities, or sufficiency in a social, legal, or ethical context, with a primary trigger on comparative structures (e.g., \"as...as\", \"to...as\") and secondary triggers on collective terms (e.g., \"all\", \"everyone\", \"both\") or rights-related verbs (e.g., \"to live\", \"to earn\").",
+  "expert": "Possessive/relational semantics: self, ownership, roles, power"
+ },
+ {
+  "rank": 41,
+  "L": 18,
+  "E": 114,
+  "N": 340,
+  "attribution": 0.03806,
+  "positive": "Financial metrics (e.g., return rates, amounts, or values) or life-related topics (e.g., life expectancy, life-threatening situations, or legal/medical contexts involving life and liberty). The feature activates when the text focuses on quantifiable outcomes, statistical analyses, or scenarios where life/health/financial well-being is a central theme, often involving noun phrases like \"the [X] of [Y]\" or \"rates of [Z].\"",
+  "negative": "Texts that emphasize the ethical, legal, or moral significance of human life, including discussions of its protection, preservation, or loss in contexts like healthcare, rights, or preventing harm. The feature activates when the text focuses on the value of human life as a central theme, often framing it as a fundamental right or ethical obligation, with key phrases like \"human life,\" \"respect for life,\" \"protection of life,\" \"loss of life,\" or \"value of human life\" appearing in contexts that highlight its importance.",
+  "expert": "Policy/ethics argumentative-prose reasoning expert"
+ },
+ {
+  "rank": 42,
+  "L": 1,
+  "E": 92,
+  "N": 462,
+  "attribution": 0.0377,
+  "positive": "Technical terms, code variables, URLs, or jargon in specialized contexts, particularly when they involve phonetic symbols, programming variables, or domain-specific language fragments across languages. The feature activates on substrings like \"son\", \"ry\", \"vl\", \"\u7834\u89e3\", or phonetic transcriptions, often embedded in technical instructions, code examples, or multilingual discussions about specific topics.",
+  "negative": "Preservation efforts, including organizational programs, historical or natural conservation, or maintenance processes, often involving terms like \"preservation,\" \"preserv,\" \"preserves,\" or \"preservation\" in contexts of protecting cultural, environmental, or structural elements. The feature activates when the text focuses on initiatives, societies, or processes aimed at maintaining, safeguarding, or restoring tangible or intangible assets, regardless of domain.",
+  "expert": "Layer-1 'pr'-morpheme detector across scripts and words"
+ },
+ {
+  "rank": 43,
+  "L": 21,
+  "E": 234,
+  "N": 411,
+  "attribution": 0.03637,
+  "positive": "Comparative structures that evaluate the relative importance, significance, or priority of different elements, often using words like \"compared,\" \"more,\" \"than,\" \"over,\" or \"as\" to contrast two entities in terms of their weight, urgency, or relevance. The feature activates when the comparison highlights a shift in perceived value or focus, such as emphasizing a critical factor (e.g., health, safety, goals) over a lesser one (e.g., sentiment, trivialities, distractions). The trigger is most strongly tied to explicit comparative phrases but weakly extends to contexts where a noun or verb implicitly contrasts two states or priorities.",
+  "negative": "Specific references or prepositional phrases that provide concrete details, such as definite articles (\"the\"), prepositions (\"of\", \"to\", \"with\"), pronouns (\"it\"), or numeric values (dates, counts) that anchor the text to particular entities, times, or quantities. The feature activates when the text includes these elements in a way that specifies a clear, particular context rather than general or abstract language.",
+  "expert": "Charity, social justice & humanitarian causes hub"
+ },
+ {
+  "rank": 44,
+  "L": 11,
+  "E": 121,
+  "N": 505,
+  "attribution": 0.0358,
+  "positive": "Technical terms and variables in code or technical contexts, particularly those related to data structures, parameters, or specific functions. The feature activates when texts contain structured technical terminology such as class names (e.g., \"Store\", \"X509Store\"), method calls (e.g., \"SetScrollSizes\", \"Open\"), data types (e.g., \"Byte\", \"Word\"), parameters (e.g., \"Name\", \"Location\"), or specific constants (e.g., \"ROUND\", \"HALF_UP\"). It is triggered by structured usage of these terms in code, technical documents, or scripts involving data manipulation, object properties, or function parameters. The activation is strongest when the terms appear in a syntactically meaningful context, such as within method definitions, object initializations, or parameter lists.",
+  "negative": "Technical or labeled keywords in structured contexts, such as status flags, parameters, or categorical labels, often within code, data entries, or technical specifications. The feature activates when the text discusses specific terms like \"active,\" \"stop,\" \"slow,\" \"unstable,\" \"Against,\" \"hover,\" or \"Intersection\" in roles that imply state, condition, or categorization, even across varied topics like data formats, sound properties, or stance detection.",
+  "expert": "Code/config parameter and variable-name specialist"
+ },
+ {
+  "rank": 45,
+  "L": 28,
+  "E": 98,
+  "N": 462,
+  "attribution": 0.03469,
+  "positive": "Sentences structured as answers to questions or problems, often using \"is\" or \"be\" to introduce the answer, with formatting tokens like \"\u00b6\" marking the end of the assistant's response. The feature activates on the key verb \"is\" or \"be\" in the answer clause, typically in technical, legal, or problem-solving contexts where the answer is explicitly stated.",
+  "negative": "Numerical digits (0-9) and related terms in mathematical, scientific, or technical contexts, including numbers in equations, geometric terms like \"figure,\" and specific digits in problems or calculations. The feature activates when texts contain numerical values, mathematical expressions, or technical terminology involving digits, often in problem-solving or analytical contexts. It responds to both individual digits and broader numerical constructs, with stronger activation on digits in equations or calculations.",
+  "expert": "Math word problems, multiple-choice Q&A, and answer formatting"
+ },
+ {
+  "rank": 46,
+  "L": 16,
+  "E": 46,
+  "N": 295,
+  "attribution": 0.03462,
+  "positive": "Prepositional phrases, purpose clauses, or specific verb forms that introduce a particular meaning, such as \"in your interest,\" \"so as to,\" \"to continue,\" \"over the use,\" or \"she could have kept,\" where the activated words are the heads of these structures. The feature fires on grammatical elements that signal functional or explanatory relationships within the sentence, often involving prepositions, modals, or pronouns in specific syntactic roles.",
+  "negative": "Texts that involve acknowledging a situation, taking responsibility, or explaining a reason for an action that may affect others, often using verbs like \"understand\" or \"know\" in contexts of apology, explanation, or situational awareness. The feature activates when the text explicitly addresses potential consequences (e.g., inconvenience, disruption, or impact) and includes a statement of comprehension or acknowledgment, typically framed by phrases like \"may cause,\" \"apologize for,\" or \"take responsibility for.\" The primary trigger is the verb \"understand\" (or its Spanish equivalent \"entiendo\") in contexts of situational awareness, with weaker activation for \"know\" in similar explanatory or apologetic frames.",
+  "expert": "Interpersonal dialogue: pronouns, address, requests, and conversational speech acts"
+ },
+ {
+  "rank": 47,
+  "L": 12,
+  "E": 65,
+  "N": 39,
+  "attribution": 0.03459,
+  "positive": "Texts where an AI entity describes or is asked about its capabilities, particularly in assisting with tasks, providing explanations, or functioning as a language/model-based tool. The feature activates when the text involves the AI's self-identification as a language/model system, its declared functions (e.g., answering questions, generating text, explaining concepts), or user requests for help/assistance, often with emphasis on its role as a utility or intelligence-driven tool. Activation peaks around key terms like \"model,\" \"help,\" \"assist,\" \"inteligencia artificial,\" \"utilidad,\" \"puedo ayudar,\" or similar functional descriptions, and may include punctuation marks like commas or exclamation points framing these claims.",
+  "negative": "Texts that address the reader (you/your) and involve requests, instructions, or discussions about actions the reader is expected to perform or evaluate, often with verbs like give, teach, explain, reply, or assess, and pronouns like you/your. The feature activates when the text is structured to engage the reader in a direct interaction or decision, such as asking for input, explaining something, or evaluating a choice.",
+  "expert": "General dialogue/pragmatics: questions, pronouns, conversational function words"
+ },
+ {
+  "rank": 48,
+  "L": 4,
+  "E": 121,
+  "N": 14,
+  "attribution": 0.03444,
+  "positive": "Multi-modal data processing (e.g., handling multiple data types like images, text, or audio) or model evaluation techniques involving hold-out test sets (e.g., reserving data for validation, \"hold out\" testing, or analyzing generalization performance). The feature activates when the text focuses on either cross-modal reasoning, multi-modal systems, or experimental setups with test/data splits in machine learning contexts.",
+  "negative": "Model configurations, tasks, or versions in technical contexts, particularly those involving code or documentation that references model loading, training, or specific task types like generation, classification, or question answering, often including phrases like \"For [task]\" or model size indicators such as -small, -base, -large.",
+  "expert": "Machine learning / deep learning code and terminology expert"
+ },
+ {
+  "rank": 49,
+  "L": 11,
+  "E": 147,
+  "N": 154,
+  "attribution": 0.03439,
+  "positive": "Texts that are first-person requests to generate a structured document (like a story, essay, letter, or joke) involving the speaker's personal experiences, perspectives, or hypothetical scenarios, with strong activation around the words \"my\" or \"I\" in the context of defining the subject or scope of the request. The feature detects when the input frames the model as a collaborator in creating a personalized, reflective, or scenario-based text, often including specific tasks like mirroring writing style, detailing past experiences, or exploring emotional states.",
+  "negative": "Texts that are first-person or focus on the individual's own experiences, preferences, or perspectives, often using possessive pronouns like \"your\" or \"you\" in contexts of personal reflection, self-expression, or subjective evaluation. The feature activates when the text centers on the author's or speaker's personal narrative, choices, or emotional engagement with a topic. It extends to multilingual contexts (e.g., \"tu\" in Spanish) and includes topics like personal growth, preferences, challenges, or self-reflective analysis. The activation is strongest when the text emphasizes individual agency, ownership, or subjective experience.",
+  "expert": "First/second-person pronoun & interpersonal-stance detector"
+ },
+ {
+  "rank": 50,
+  "L": 11,
+  "E": 154,
+  "N": 211,
+  "attribution": 0.03427,
+  "positive": "Texts that describe an entity (person, group, or animal) undergoing a direct action or condition, often with self-reference or familial/relational contexts. The feature primarily activates when the text focuses on the subject's own experiences, such as self-experimentation, personal identity, physical states, or interactions within groups (e.g., siblings, patients, children). It weakly extends to proper nouns or specific technical terms (like \"ga\" in names) when they form part of a broader narrative about an entity's direct experience.",
+  "negative": "A group of people in specific contexts, such as medical, scientific, or personal scenarios, where the group is explicitly mentioned or implied. The feature activates when the text focuses on a particular demographic, population, or set of individuals within a defined setting, often involving research, health, or personal experiences. The activation is strongest when the text explicitly names or refers to a specific group (e.g., \"criminals,\" \"males,\" \"husbands\") or a broad category (e.g., \"people,\" \"everyone\") within a context that implies a targeted or specific application.",
+  "expert": "People, roles, and relationships (entity/noun-phrase specialist)"
+ },
+ {
+  "rank": 51,
+  "L": 16,
+  "E": 161,
+  "N": 104,
+  "attribution": 0.03404,
+  "positive": "Fictional or historical characters with specific roles, their relationships, or gradual changes in status, often involving names, pronouns, or descriptive terms like \"superhero-like,\" \"emphasizing her status,\" or \"gradually\" in narrative contexts. The feature activates when the text focuses on a named entity's role, relationships, or transformative conditions, particularly in stories or metaphors involving human-like figures, divine beings, or abstract concepts.",
+  "negative": "Individuals or groups in narrative or explanatory contexts, focusing on their roles, actions, or states, often involving pronouns like \"they,\" \"them,\" \"who,\" \"him,\" \"her,\" \"I,\" or nouns like \"patient,\" \"family,\" \"daughter,\" \"son,\" and \"female,\" paired with verbs or prepositions indicating relationships, actions, or conditions. The feature activates when the text describes scenarios where people\u2019s experiences, interactions, or circumstances are central, such as medical, familial, or hypothetical situations.",
+  "expert": "Generic entity/pronoun reference detector across narrative contexts"
+ },
+ {
+  "rank": 52,
+  "L": 11,
+  "E": 255,
+  "N": 394,
+  "attribution": 0.03394,
+  "positive": "Sentences that describe a relationship or action involving substitution (e.g., \"replace\"), separation (e.g., \"from\"), mutual interaction (e.g., \"each other\"), or capability (e.g., \"able\"), often centered around specific collocations or grammatical structures that indicate a dynamic between entities or processes. The feature activates when the text contains such patterns, even if the exact wording varies, and is most strongly triggered by phrases like \"each other,\" \"replace,\" \"from,\" or \"able\" in contexts where they denote a key relationship or action.",
+  "negative": "Decisions involving significant choices, particularly those framed with \"whether to [verb]\" structures, often in contexts like policy, action, or technical decisions. The feature activates when the text presents a choice between options, with \"whether\" and \"to\" preceding a verb indicating the action being considered, and the decision's stakes are notable (e.g., legal, political, medical, or technical). The peak activation typically occurs on the verb or key noun in the decision, but the core trigger is the \"whether to\" pattern paired with a consequential action.",
+  "expert": "Modal/future/conditional verb-phrase and purpose-clause detector"
+ },
+ {
+  "rank": 53,
+  "L": 26,
+  "E": 247,
+  "N": 333,
+  "attribution": 0.03323,
+  "positive": "Texts that mention ordinal numbers (like first, second, third, etc.) in the context of rankings, positions, or lists, often specifying a category or scope (e.g., \"in the world,\" \"in birds,\" \"on Health Security\") and sometimes including dates or numerical ranges. The feature activates when the text emphasizes a specific rank or position within a structured or competitive framework.",
+  "negative": "The assignment or outcome of a position, award, or nomination, often involving a competitive or selection process. The feature activates when the text focuses on the transfer of a role, recognition, or decision (e.g., \"was given to,\" \"went to,\" \"succeeded by,\" \"successful candidate\") in contexts where a choice or result is emphasized, such as competitions, nominations, or historical transitions. The activation is strongest when the text explicitly states the recipient or outcome of a process, often with comparative or definitive language (e.g., \"behind,\" \"ultimately,\" \"despite\").",
+  "expert": "Sports/political/statistical facts with numeric-comparative scaffolding"
+ },
+ {
+  "rank": 54,
+  "L": 17,
+  "E": 56,
+  "N": 467,
+  "attribution": 0.03319,
+  "positive": "Relational phrases where an entity is described in a position or state relative to another, often using prepositions like \"to,\" \"of,\" \"over,\" or \"in,\" and verbs/adjectives indicating comparison, responsibility, or action (e.g., \"lead,\" \"surpass,\" \"take over,\" \"keep going,\" \"single-handedly,\" \"happiness\"). The feature activates around key words forming these relational structures, emphasizing interactions between entities rather than isolated terms.",
+  "negative": "A subject undergoing a notable action or state, often in narrative or descriptive contexts, with emphasis on verbs like \"would,\" \"is,\" or \"being\" and pronouns like \"she,\" \"he,\" or \"the,\" typically involving consequences or specific scenarios (e.g., movement, abduction, crying, or conditional outcomes). The feature activates when the subject's action or state is central to the text\u2019s narrative, often linked to emotional or situational impact.",
+  "expert": "Interpersonal relationships, dialogue, and relational syntax"
+ },
+ {
+  "rank": 55,
+  "L": 17,
+  "E": 225,
+  "N": 25,
+  "attribution": 0.03305,
+  "positive": "Tokens forming variables, specialized terms, or labeled entities in technical, mathematical, or structured contexts (e.g., equations, game mechanics, musical notes, geometric points, or cultural classifications). The feature activates on tokens that serve as labeled components within a system of categories, measurements, or defined roles, often appearing as standalone terms or abbreviations in specific domains.",
+  "negative": "Tokens that are part of structured or technical contexts, such as variables, parameters, specific technical terms, or numerical values in domains like math, code, or data. The feature activates on tokens that are critical in these contexts, including keys in JSON objects, function parameters, mathematical terms, or specific jargon that indicates a technical or structured description.",
+  "expert": "Mathematical/technical notation and problem-solving expert"
+ },
+ {
+  "rank": 56,
+  "L": 14,
+  "E": 43,
+  "N": 489,
+  "attribution": 0.03303,
+  "positive": "Historical or political conflicts involving population movements, territorial disputes, or political agreements between Arab and Israeli entities, often featuring terms like exodus, creation of states, military actions, or leadership decisions in the context of Palestinian or Arab-Israeli relations. The feature activates when the text focuses on events or policies related to displacement, boundary changes, or power dynamics in this specific geopolitical context.",
+  "negative": "Conflicts or rights involving specific group identities, with activation on nouns/pronouns representing those groups. The feature fires when the text centers on interactions between distinct social, ethnic, medical, or political groups, often highlighting tensions over rights, roles, or representations. Activation peaks on terms like \"student,\" \"men,\" \"Assyrians,\" \"autistic,\" or \"islanders\" when they denote marginalized or contested identities, and on pronouns like \"they,\" \"us,\" or \"their\" when framing group-based conflicts or solidarity. The pattern emphasizes group-specific struggles, with activation extending to surrounding context tokens that frame these identities within broader social or ethical debates.",
+  "expert": "Legal/political/philosophical argumentation and syntax glue"
+ },
+ {
+  "rank": 57,
+  "L": 22,
+  "E": 1,
+  "N": 474,
+  "attribution": 0.03268,
+  "positive": "Mathematical or scientific problem-solving, including equations, sequences, instructions, or hypotheses, often featuring key terms or symbols in these contexts. The feature activates on structured problem-solving scenarios with numerical, symbolic, or procedural elements, such as equations, arithmetic sequences, instructional steps, or hypotheses, where the text requires analytical reasoning or specific domain terminology. It responds to patterns like mathematical expressions, step-by-step guidance, or scientific explanations, with activation peaks around critical terms (e.g., \"algorithm,\" \"quadratic,\" \"sequence,\" \"hypothesis\") or symbolic elements (e.g., variables, equations, numerical values).",
+  "negative": "Comparative adjectives or numerical terms, especially in technical, mathematical, or specific contextual scenarios where comparisons or quantitative data are involved. The feature activates when the text includes phrases like \"more than,\" \"higher than,\" \"doubles with each increment,\" \"outgrow,\" \"billion,\" or similar structures, often in contexts involving growth, measurement, or analytical reasoning. It is triggered by both explicit comparative words and numerical values, with stronger activation in technical or data-driven passages.",
+  "expert": "Mathematical/logical reasoning and technical problem-solving text"
+ },
+ {
+  "rank": 58,
+  "L": 9,
+  "E": 165,
+  "N": 486,
+  "attribution": 0.03186,
+  "positive": "The backup, preservation, or deletion of important data or files in technical contexts, such as system maintenance, resets, or data safety. The feature activates when the text focuses on actions like backing up files/data, avoiding data loss, or describing consequences of data deletion, with emphasis on critical or personal data. It responds to technical instructions or warnings about data management, often involving system-level operations like formatting, repairs, or factory resets. The activation is strongest when the text explicitly mentions \"files,\" \"data,\" \"important,\" \"backup,\" \"delete,\" or similar terms in contexts where data preservation is a key concern.",
+  "negative": "Tokens forming part of technical or product-specific terminology in software, hardware, or technical contexts, particularly when they are proper nouns (e.g., company names like \"Aldus,\" \"Adobe,\" \"Treo\"), code structures (e.g., \"Items,\" \"views\"), or specialized terms (e.g., \"Developer Mode,\" \"data,\" \"forensic usage\"). The feature activates when the text discusses technical products, software features, hardware devices, or code structures, with the peak tokens often being part of these specific phrases.",
+  "expert": "Broad computing/technology generalist expert"
+ },
+ {
+  "rank": 59,
+  "L": 13,
+  "E": 21,
+  "N": 69,
+  "attribution": 0.03173,
+  "positive": "Mathematical conditions involving variables in equations or inequalities, particularly when presenting alternative scenarios with \"or\", and frequent mentions of numerical values like 1, 8, 0 in contexts such as angles or modular arithmetic. The feature activates on texts discussing mathematical problems where variables are bounded or compared using \"or\" to specify multiple cases, often with numerical thresholds or specific value checks.",
+  "negative": "Texts that contrast two distinct entities using a \"one... and the other...\" structure, often in technical or analytical contexts. The feature activates when the text describes two separate items, options, or scenarios where one is characterized in a specific way and the other is contrasted or paired with it, frequently using terms like \"one,\" \"other,\" \"which,\" or \"\u54ea\" (Chinese for \"which\") to emphasize the dichotomy. The activation is strongest in mathematical, logical, or comparative scenarios where such a structure explicitly frames the relationship between two elements.",
+  "expert": "Mathematical/technical reasoning and comparative structures"
+ },
+ {
+  "rank": 60,
+  "L": 17,
+  "E": 122,
+  "N": 159,
+  "attribution": 0.03092,
+  "positive": "Texts that describe the transfer, assignment, or prioritization of power, rights, obligations, resources, or other entities, often involving prepositions like \"to\", \"of\", \"in\", and articles like \"the\" to indicate direction or relation. The feature activates when the text outlines a scenario where something (e.g., authority, legal rights, financial assets, or institutional policies) is being given, taken, or prioritized in relation to a specific entity or context.",
+  "negative": "Rights, privileges, or priorities, especially in contexts involving decision-making about precedence, moral dilemmas, or conflicting obligations. The feature activates when the text centers on entities (individuals, organizations) asserting or negotiating claims of authority, priority, or ethical responsibility, often with implications for choices between competing interests or values. It captures scenarios where \"right of way,\" \"paramount authority,\" \"priority,\" \"precedence,\" or moral judgments (e.g., \"who to save,\" \"what is more important\") are central to the discourse.",
+  "expert": "Legal/contractual obligation, rights, and agreement language"
+ },
+ {
+  "rank": 61,
+  "L": 15,
+  "E": 230,
+  "N": 88,
+  "attribution": 0.0307,
+  "positive": "Texts that discuss biological organisms with complex structures (such as slime moulds, multicellular organisms, or life stages) or environmental phenomena like climate change, particularly when technical terms related to these topics are present in a scientific or technical context. The feature activates on texts describing processes involving aggregation, specialization, or adaptive responses in biological systems, or discussions of climate change impacts and related terminology.",
+  "negative": "Ethical or moral concepts in academic, medical, or technical contexts, often involving specific terminology like \"ethics,\" \"moral,\" \"deontological,\" \"personal identity,\" \"artificial intelligence,\" or references to authors, studies, and specialized debates. The feature activates when the text focuses on normative judgments, dilemmas, or philosophical frameworks, particularly in fields where such discussions are central.",
+  "expert": "Popular-science: biology, evolution, climate, and cosmology"
+ },
+ {
+  "rank": 62,
+  "L": 13,
+  "E": 228,
+  "N": 4,
+  "attribution": 0.03065,
+  "positive": "Memory loss or recovery in conjunction with recurring time intervals or cycles, such as \"each cycle,\" \"every X minutes,\" or \"short-term memory\" being affected by periodic events. The feature activates when the text emphasizes a repetitive temporal pattern linked to memory processes, whether through explicit time markers, cyclical phrases, or contextual hints at recurring events affecting memory.",
+  "negative": "Instructions to generate or describe natural language in technical contexts, such as interpreting commands, processing structured data (e.g., triples, logical operators), or producing formalized language outputs. The feature activates when the text contains task verbs like \"write,\" \"describe,\" or \"generate\" combined with references to \"natural language,\" \"triples,\" or technical frameworks, often in structured or procedural contexts.",
+  "expert": "Psychology/neuroscience/cognitive science content specialist"
+ },
+ {
+  "rank": 63,
+  "L": 8,
+  "E": 224,
+  "N": 100,
+  "attribution": 0.03058,
+  "positive": "The concept of technological or intelligence-related singularity, often in contexts of exponential growth, hypothetical scenarios, or risks/benefits associated with advanced technologies or superintelligent systems. The feature activates on phrases like \"singularity,\" \"sing,\" \"ularity,\" \"singular,\" or \"singularidad\" (Spanish) when paired with technical, speculative, or futurological discourse involving intelligence expansion, transformative change, or paradigm shifts. Activation is strongest in discussions about exponential progress, hypothetical agents, or societal implications of such advancements.",
+  "negative": "Adjectives or adverbial phrases that describe effectiveness, quality, or change in technical, academic, or instructional contexts, often accompanied by punctuation or grammatical structures indicating emphasis or completion. The feature activates on words like \"meaningful,\" \"strategic,\" \"evolving,\" \"friendly,\" or \"significantly,\" as well as punctuation (e.g., periods) following such terms, and on grammatical elements like definite articles (\"el\") or code structure markers (e.g., spaces before loops). It also responds to technical terminology in multilingual contexts or location-specific terms.",
+  "expert": "AI/ML/tech education & software-development jargon hub"
+ },
+ {
+  "rank": 64,
+  "L": 19,
+  "E": 174,
+  "N": 337,
+  "attribution": 0.02981,
+  "positive": "Technical configurations involving parameterized settings or structured data formats, often with keys and values, log levels, or system properties. The feature activates when the text contains structured assignments or definitions of parameters, log levels, file paths, or system properties, typically in code, configuration files, or technical documentation. It responds to technical terminology like \"Mode,\" \"LogLevel,\" \"file,\" \"Output,\" \"link,\" \"Sort,\" \"Id,\" and \"Verification,\" and is triggered by structured formats such as JSON, command-line arguments, or logging configurations. The activation peaks around the keys and their corresponding values in these structured contexts.",
+  "negative": "Code snippets and technical descriptions involving variables, parameters, or data structures, often with specific keywords like \"quartile,\" \"actor,\" \"user,\" \"assistant,\" \"method,\" \"get,\" \"push,\" \"directory,\" or numerical values, frequently triggered by spaces following numbers or certain technical terms. The feature activates on code-like structures, dialogue roles, or data processing contexts where variables, parameters, or structural elements are explicitly named or manipulated.",
+  "expert": "Broad code-syntax expert: variables, key-value structures, function calls"
+ },
+ {
+  "rank": 65,
+  "L": 7,
+  "E": 4,
+  "N": 479,
+  "attribution": 0.02972,
+  "positive": "Texts specifying quantitative conditions for leaving or retaining a portion of an object, resource, or abstract entity, often involving phrases like \"leave [amount] of [thing]\", \"remaining [quantity]\", \"as much/many as possible\", or \"at least/least [amount]\", typically in instructional, technical, or planning contexts where precise preservation or allocation is required. The feature activates when the text emphasizes controlled retention of a specified quantity, whether physical (e.g., space, material) or abstract (e.g., elements, positions), with a focus on thresholds or ratios that define what is kept versus removed.",
+  "negative": "Mathematical or programming problems involving operations on quantities, elements, or variables, with activation centered on verbs like \"add,\" \"remove,\" \"delete,\" \"from,\" \"that,\" or \"be\" indicating actions taken on structured data or calculations. The feature detects scenarios where numerical values, percentages, or parameters are manipulated or referenced in a procedural or formulaic context.",
+  "expert": "State-change vs. persistence: return, continue, stop, replace"
+ },
+ {
+  "rank": 66,
+  "L": 30,
+  "E": 169,
+  "N": 55,
+  "attribution": 0.02969,
+  "positive": "Technical or mathematical discourse involving numerical values, intervals, or equation terms, with activation on tokens like \"from\", \"in\", \"between\", \"interval\", \"the\", \"k\", \"frac\", and numerical literals that describe relationships or cancellations in calculations. The feature fires when texts discuss equations, approximations, or technical contexts where numerical data and specific mathematical terms interact to define ranges, variables, or term cancellations.",
+  "negative": "Mathematical expressions, equations, or variables with operations like addition, subtraction, multiplication, division, exponents, derivatives, integrals, and inequalities, including LaTeX formatting and symbolic notation. The feature activates when the text involves structured mathematical reasoning, such as algebraic manipulations, calculus operations, or symbolic problem-solving, with peak responses around mathematical operators, variables, and function definitions.",
+  "expert": "Mathematical notation, equations, and quantitative problem-solving"
+ },
+ {
+  "rank": 67,
+  "L": 13,
+  "E": 110,
+  "N": 72,
+  "attribution": 0.02958,
+  "positive": "AI risks, alignment with human values, or implications of advanced AI, particularly in technical or philosophical contexts. The feature activates when the input focuses on catastrophic consequences, ethical considerations, or the interaction between AI goals and human interests, often involving terms like \"humanity,\" \"alignment,\" \"risks,\" \"singularity,\" \"goals,\" \"consequences,\" \"superintelligence,\" \"safety,\" or \"values\" in analytical or speculative discourse.",
+  "negative": "Technical or scientific processes, ethical considerations, or performance benchmarks in AI, software, or education, often featuring specific terms like \"source,\" \"level,\" \"science,\" \"ethics,\" or numerical data in contexts of development, evaluation, or regulation. The feature activates on sentences emphasizing technical constraints (e.g., \"closed source\"), performance metrics (e.g., \"human-level\"), or ethical frameworks (e.g., \"factor ethics\") in specialized domains.",
+  "expert": "Space, nuclear/military history, geopolitics & pop-culture trivia"
+ },
+ {
+  "rank": 68,
+  "L": 7,
+  "E": 66,
+  "N": 62,
+  "attribution": 0.02957,
+  "positive": "A binary choice between two distinct options, often structured with \"or\" or equivalent terms, involving a decision that requires weighing consequences or priorities. The feature activates when the text frames a scenario where two alternatives are presented as viable options, typically with implications for outcomes or values, and may include comparative elements like \"more catastrophic\" or \"which came first.\" The activation is strongest when the choice involves moral, practical, or hypothetical trade-offs, and weakly extends to structured comparisons without explicit alternatives.",
+  "negative": "Texts that present a binary choice using \"or\", with the second option being a noun (typically plural) or the word \"or\" itself in the context of a negation such as \"or not\". The feature activates when the text structures a decision between two alternatives, often emphasizing a countable noun or a negated possibility, with \"or\" serving as the structural connector.",
+  "expert": "Disjunctive/comparative/contrastive syntax across many domains"
+ },
+ {
+  "rank": 69,
+  "L": 29,
+  "E": 102,
+  "N": 81,
+  "attribution": 0.0293,
+  "positive": "Technical or scientific scenarios involving comparisons of physical properties, measurements, or conditions, often using phrases like \"in [condition/measurement]\" or \"over [technical domain]\", and occasionally metaphors comparing tools/systems to tangible objects or scenarios. The feature activates around specific technical specifications, comparative adjectives, or analogical statements that frame abstract concepts in concrete, measurable terms.",
+  "negative": "Comparative or quantitative structures involving prepositions like \"in,\" \"of,\" or \"to,\" quantifiers like \"only,\" \"two,\" \"much,\" or \"any,\" and technical/mathematical contexts where entities are specified or compared, such as mathematical formulas, economic terms, or logical conditions. The feature fires most strongly on phrases describing relationships between entities (e.g., \"in the top-level group,\" \"number of 1s,\" \"how much longer\") and weakly extends to similar patterns in non-technical contexts.",
+  "expert": "Prepositional/relational function-word detector across many domains"
+ },
+ {
+  "rank": 70,
+  "L": 12,
+  "E": 59,
+  "N": 430,
+  "attribution": 0.0287,
+  "positive": "The ethical or obligatory necessity of preserving/protecting existence, truth, systems, or memory, often in contexts of laws, survival, or conflict avoidance. The feature activates on verbs like *preserve*, *protect*, *proteger*, or *avoid* when paired with concepts of maintaining existence, preventing conflict, or upholding principles, frequently framed as moral duties or systemic obligations.",
+  "negative": "Words that are part of phrases indicating a focus or emphasis on a specific concept, goal, or action, such as technical terms, priorities, or strategic elements. The feature activates when a text discusses a particular emphasis, whether through nouns (e.g., \"technology,\" \"success,\" \"level\"), verbs (e.g., \"produce,\" \"defend,\" \"ended\"), or prepositions (e.g., \"of\") that frame a conceptual, strategic, or technical focus. The activation occurs in contexts where the word or phrase serves as a key component of a broader discussion about priorities, mechanisms, or specialized domains.",
+  "expert": "Necessity, goal-pursuit, and advice-giving language"
+ },
+ {
+  "rank": 71,
+  "L": 11,
+  "E": 255,
+  "N": 99,
+  "attribution": 0.02869,
+  "positive": "Decision-making or action-planning phrases, particularly those involving modal verbs (should, need, might, must) combined with infinitives (to + verb) or prepositional phrases indicating intent, obligation, or procedural steps. The feature activates when the text focuses on what is supposed to be done, how to proceed, or what action is required, often in instructional, technical, or hypothetical contexts. Activation is strongest around modal verbs followed by infinitives or prepositional phrases specifying the action's scope or direction.",
+  "negative": "Decision-making or choice, including verbs like \"choose,\" \"select,\" \"decide,\" or phrases like \"what to,\" \"which,\" \"should be,\" and contexts where options are being evaluated or determined. The feature activates when the text centers on determining a course of action, selecting between alternatives, or specifying preferences, often in technical, personal, or procedural contexts. It responds to both explicit choice verbs and implicit decision structures, such as \"will visit\" (as in choosing a location) or \"debat\u0435\" (as in selecting a proposal). The activation is strongest when the text explicitly frames a decision point or requires specifying an option.",
+  "expert": "Modal/future/conditional verb-phrase and purpose-clause detector"
+ },
+ {
+  "rank": 72,
+  "L": 16,
+  "E": 71,
+  "N": 157,
+  "attribution": 0.02855,
+  "positive": "Texts comparing two options or entities, often using nouns or verbs that indicate contrast or evaluation (e.g., \"faster/slower,\" \"larger/smaller,\" \"improve/trade,\" \"eclipsed/other\"), with the activated tokens typically being the objects of comparison (like technical specs, planetary names, numerical values, or pronouns referring to abstract concepts). The feature fires most strongly on texts that explicitly frame a choice or evaluation between distinct alternatives, even when the comparison is implied rather than directly stated.",
+  "negative": "Correlations, comparisons, or statistical differences between variables, often in scientific, demographic, or educational contexts, with a focus on relationships between pairs or groups (e.g., \"between X and Y,\" \"more common,\" \"than,\" \"first,\" \"boys and girls\") and technical terms related to biology, psychology, or social sciences. The feature activates when the text emphasizes contrasts, quantitative relationships, or specific technical phenomena involving measurable or categorical variables.",
+  "expert": "Comparative language detector across technical/scientific domains"
+ },
+ {
+  "rank": 73,
+  "L": 10,
+  "E": 12,
+  "N": 451,
+  "attribution": 0.02829,
+  "positive": "Scenarios involving two distinct entities or options, with a focus on one of them, using quantifiers like \"one,\" \"another,\" \"either,\" or \"both,\" and detailing their attributes (e.g., color, position, part, or role). The feature activates when the text contrasts or specifies relationships between paired elements, such as comparing two objects, conditions, or entities, and references one with a quantifier alongside descriptive terms.",
+  "negative": "A process that continues until a single entity meets a specific condition, involving temporal markers like \"until\" or \"once\", the word \"one\", and a verb indicating termination or state change (e.g., eliminated, processed, exhausted). The noun preceding the verb is typically a singular entity (team, side, array, player) involved in the process. The feature fires most strongly on scenarios where the condition involves mutual interaction (e.g., battle, competition) or sequential processing (e.g., arrays, steps), and weakly extends to abstract or non-mutual contexts.",
+  "expert": "Generic article/determiner + noun-phrase syntax detector"
+ },
+ {
+  "rank": 74,
+  "L": 17,
+  "E": 225,
+  "N": 373,
+  "attribution": 0.02767,
+  "positive": "A central noun that is pivotal to the described action, context, or concept, often accompanied by descriptive or procedural language that explains its role or the action involving it. The feature activates when the noun is a key element in the sentence's main idea, whether it's a technical term, a specific object, an activity, or a concept, and is often surrounded by words that describe its function or the process related to it. The activation is strongest when the noun is central to the topic and the surrounding text elaborates on its role or the action involving it.",
+  "negative": "Mathematical or computational variables, subscripts, coordinates, or structural elements like sets, ranges, and tuples, often with variables named using underscores or specific prepositions indicating relationships between components. The feature activates on technical contexts where variables are manipulated in structured ways, such as in equations, image slicing, or set notations, even when the broader topic varies. It responds to patterns like subscripted variables (e.g., _n, _row), coordinate pairs (x, y), or words like \"ranges,\" \"and,\" \"of\" that frame technical relationships.",
+  "expert": "Mathematical/technical notation and problem-solving expert"
+ },
+ {
+  "rank": 75,
+  "L": 13,
+  "E": 151,
+  "N": 214,
+  "attribution": 0.02763,
+  "positive": "Texts that are prompts or instructions for AI, especially those involving image generation or specific AI models, characterized by phrases like \"your task is to create,\" \"don't,\" \"Diffusion,\" \"a,\" or markers like \"*\", often in technical or instructional contexts. The feature activates on keywords and structures common in AI prompts, such as directives to generate content, conditional statements, or references to model-specific terms.",
+  "negative": "Structural elements like HTML closing tags (e.g., </div>), large amounts of whitespace, or specific words in certain contexts such as prepositions (e.g., \"to\", \"de\") and file types (e.g., \"\u6587\u6863\"). It responds to patterns involving code formatting, HTML syntax, or linguistic constructs where tokens appear in positions typical of technical documentation, code blocks, or multi-lingual prepositional phrases.",
+  "expert": "Digital marketing, SEO, and social media platform technicals"
+ },
+ {
+  "rank": 76,
+  "L": 16,
+  "E": 196,
+  "N": 182,
+  "attribution": 0.02753,
+  "positive": "Decisions with significant moral or practical consequences, focusing on nouns in prepositional phrases that represent critical factors (e.g., \"of lives in Africa,\" \"of my savings,\" \"in unnatural conditions\") where the noun is the pivotal element in a trade-off or dilemma. The feature activates when the text emphasizes a key consequence or cost, often framed through prepositions like \"of,\" \"in,\" or \"across,\" with the noun being the central target of the prepositional phrase. The activation peaks around the noun itself, which embodies the core of the decision's stakes.",
+  "negative": "Sentences where a decision or action is taken based on a prior condition, consideration, or reason, often introduced by conjunctions like \"so,\" \"but,\" \"however,\" \"thus,\" or pronouns like \"it,\" \"they,\" \"we,\" which signal the outcome of a judgment or evaluation. The feature activates on the clause or phrase that states the decision, which is typically framed as a practical or pragmatic choice, whether in technical, personal, or abstract contexts. The activation is strongest when the decision is explicitly tied to a stated rationale, such as acceptability, feasibility, or necessity.",
+  "expert": "Technical/mathematical reasoning and syntactic connector glue"
+ },
+ {
+  "rank": 77,
+  "L": 10,
+  "E": 92,
+  "N": 325,
+  "attribution": 0.02737,
+  "positive": "Individuals in a professional or collaborative context, specifying their roles or professions alongside their names, often indicating a peer or colleague relationship. The feature activates when the input describes people working together or sharing a field, with explicit mentions of their occupational titles or collaborative statuses.",
+  "negative": "Texts that mention specific titles or roles (professional, historical, or culturally significant) with contextual descriptions of their functions or characteristics. The feature activates when a noun denoting a defined position, occupation, or\u79f0\u53f7 is central to the text's content, often accompanied by explanatory or descriptive phrases about its responsibilities, cultural significance, or associated activities. The activation is strongest for terms that are either specialized (e.g., \"judge,\" \"nurse,\" \"engineer\") or culturally embedded (e.g., \"bandolero,\" \"bruja\"), with surrounding text elaborating on their role or context.",
+  "expert": "Nouns/roles denoting people, groups, and relationships"
+ },
+ {
+  "rank": 78,
+  "L": 15,
+  "E": 230,
+  "N": 313,
+  "attribution": 0.02719,
+  "positive": "Scientific or technical phenomena involving comparisons (e.g., \"deeper,\" \"smaller,\" \"Earth-sized\") or ethical experiments, particularly in fields like astronomy (planetary sizes, orbital dynamics), physics (quantum mechanics, Schr\u00f6dinger's cat), biology (primate models, HIV research), or ethical dilemmas (unconsented experiments). The feature activates when the text centers on specific technical terms, comparative adjectives, or hypothetical scenarios with clear scientific or ethical implications, often involving abstract or counterintuitive concepts.",
+  "negative": "Technical discussions of stellar characteristics, including lifespan, commonality, and numerical ranges in astronomical contexts. The feature activates when texts describe stars' longevity (e.g., \"larga,\" \"vida\"), their prevalence (e.g., \"comunes,\" \"m\u00e1s comunes\"), specific types (e.g., \"dwarfs,\" \"rojas,\" \"M-dwarf\"), or numerical ranges (e.g., \"millones de a\u00f1os,\" \"0 a 8\") in scientific or technical explanations of stellar properties or galactic distributions.",
+  "expert": "Popular-science: biology, evolution, climate, and cosmology"
+ },
+ {
+  "rank": 79,
+  "L": 5,
+  "E": 24,
+  "N": 363,
+  "attribution": 0.02713,
+  "positive": "Texts that include first-person or second-person pronouns in contexts emphasizing the speaker's or addressee's role in a narrative, such as self-reference, collaboration, or formal acknowledgment. The feature activates when pronouns like \"me,\" \"my,\" \"yours,\" \"you,\" \"us,\" \"myself,\" or \"truly\" (as in \"yours truly\") appear in phrases that highlight the speaker's personal involvement, identity, or relationship to the subject, often in formal, technical, or collaborative contexts.",
+  "negative": "First-person pronouns (I, we, our, me) in contexts where the speaker or group is expressing a personal or collective perspective, often in narratives, historical accounts, or discussions about politics, economics, or moral philosophy. The feature activates around pronouns paired with descriptive phrases about familiar worlds, collective states, or hypothetical scenarios, emphasizing the speaker's relationship to the subject matter.",
+  "expert": "Pronoun/possessive resolution and interpersonal-relational semantics"
+ },
+ {
+  "rank": 80,
+  "L": 10,
+  "E": 12,
+  "N": 293,
+  "attribution": 0.02701,
+  "positive": "Texts introducing a new or additional element in a technical or descriptive context, often using phrases like \"another [noun]\", \"different [noun]\", \"a second [noun]\", or \"a [adjective] [noun]\" to describe a variant, counterpart, or supplementary instance of a concept. The feature activates when the text shifts focus to a new example, variation, or parallel case, typically in discussions of systems, objects, or abstract ideas.",
+  "negative": "The phrase \"another\" followed by a noun or noun phrase that is part of a common expression or technical term, often describing a recurring situation, event, or specific condition. The feature primarily activates on the noun following \"another\" in contexts where the phrase denotes a repeated or analogous scenario, such as \"another Ice Age,\" \"another long day,\" or \"another phytoplankton bloom,\" with weaker activation on descriptive modifiers like \"cloudy\" or \"torturous\" when they precede the noun. The pattern does not fire on standalone \"another\" or nonspecific noun combinations.",
+  "expert": "Generic article/determiner + noun-phrase syntax detector"
+ },
+ {
+  "rank": 81,
+  "L": 30,
+  "E": 169,
+  "N": 343,
+  "attribution": 0.02681,
+  "positive": "Structured problem-solving elements like labeled answers, mathematical formulas, or numbered steps, often with explicit references to sentences, examples, or lists. The feature activates on segments that combine technical notation (e.g., variables, fractions, trigonometric functions) with instructional or interrogative phrasing (e.g., \"answer,\" \"sentence,\" \"example,\" \"list\"), particularly when these elements are framed as part of a formal problem, question, or multi-part task.",
+  "negative": "Mathematical expressions, variables, or equations, particularly those involving fractions, exponents, or relationships between variables, alongside descriptive phrases that explain mathematical operations or properties like recurrence relations, congruence, angles, or algebraic manipulations. The feature activates on both the mathematical symbols/notation and the surrounding explanatory text that frames them as part of a broader mathematical reasoning context.",
+  "expert": "Mathematical notation, equations, and quantitative problem-solving"
+ },
+ {
+  "rank": 82,
+  "L": 16,
+  "E": 161,
+  "N": 264,
+  "attribution": 0.02674,
+  "positive": "Interactions or relationships between distinct entities, such as unawareness between parties, role-based scenarios (e.g., brides-to-be, tourists, offerers), or specific named individuals in contextualized roles. The feature activates when the text emphasizes contrasts, roles, or specific entities in situations involving mutual awareness, group dynamics, or defined positions.",
+  "negative": "Texts that include proper nouns or pronouns referring to specific entities, such as people, places, or objects, often in contexts where the entity is a focal point of the discussion. The feature activates when the text makes a specific reference to an individual, location, or object, either by name (e.g., \"Alexander,\" \"Arizona,\" \"Celeste\") or through pronouns (e.g., \"me,\" \"my,\" \"his,\" \"it\") that directly tie to a previously mentioned or clearly defined entity. The activation is strongest when the reference is central to the narrative or argument, such as in dialogues, historical contexts, or descriptive passages about particular subjects.",
+  "expert": "Generic entity/pronoun reference detector across narrative contexts"
+ },
+ {
+  "rank": 83,
+  "L": 24,
+  "E": 110,
+  "N": 280,
+  "attribution": 0.02669,
+  "positive": "Tokens forming structured or technical content, such as mathematical expressions, programming code, or list items, where the activation is on numbers, symbols, or specific words that denote positions, quantities, or operational contexts in these structures. The feature primarily fires on tokens that are part of ordered or formatted elements like indices, variables, operators, or spatial/structural descriptors in technical or analytical texts.",
+  "negative": "Key terms in technical or mathematical contexts, such as directions (left/right), logical values (true/false), set theory terms (independent/complement), numerical values (0/3/4), and game-related terms (loses/move) when they serve as central conceptual anchors in technical explanations or mathematical reasoning. The feature activates on words that function as pivotal concepts in structured, rule-based systems or formal reasoning scenarios.",
+  "expert": "Mathematical/numerical reasoning and notation specialist"
+ },
+ {
+  "rank": 84,
+  "L": 5,
+  "E": 24,
+  "N": 278,
+  "attribution": 0.02664,
+  "positive": "A list of entities or options connected by \"and\" or \"or\", with the feature activating on the final item in the list. The pattern involves a comparative or choice structure where the last noun phrase (e.g., \"it\", \"group\", \"anyone\", \"others\") is the focus, often preceded by \"and\", \"or\", or \"like\" in a way that implies equivalence or alternation between items. The feature detects when a text enumerates distinct categories or possibilities, with the final element being the salient target of the comparison or decision.",
+  "negative": "Texts that use personal pronouns (like I, you, me, we, your, ours, himself, herself, etc.) in contexts involving self-reference, mutual relationships, or personal experiences. The feature activates when the text focuses on the speaker\u2019s or listener\u2019s perspective, reflects on individual or shared experiences, or uses pronouns to indicate reciprocal or reflexive actions. Activation is strongest when the pronouns are central to the sentence\u2019s subject or object and frame the content as personal or interpersonal.",
+  "expert": "Pronoun/possessive resolution and interpersonal-relational semantics"
+ },
+ {
+  "rank": 85,
+  "L": 15,
+  "E": 197,
+  "N": 75,
+  "attribution": 0.0266,
+  "positive": "Texts that describe processes involving movement, location, or changes, often using specific vocabulary like 'water', 'in', 'from', 'which', 'altering', and 'and', as well as punctuation marks like commas and periods in structural contexts such as lists or clauses.",
+  "negative": "Movements, transfers, or changes in location, possession, or status, often using prepositions (e.g., *to*, *in*, *by*, *away*), conjunctions (e.g., *and*), or verbs (e.g., *moved*, *sent*, *granted*) to link actions or entities across spatial, temporal, or structural contexts. The feature activates when the text emphasizes relational shifts\u2014such as objects moving between locations, rights transferring between parties, or statuses changing\u2014through grammatical structures that explicitly or implicitly track these transitions.",
+  "expert": "Resource scarcity, allocation, and requirement semantics"
+ },
+ {
+  "rank": 86,
+  "L": 17,
+  "E": 225,
+  "N": 166,
+  "attribution": 0.02653,
+  "positive": "Numerical or quantitative terms combined with specific nouns in technical or problem-solving contexts, often involving measurements, positions, or counts. The feature activates when the text includes a numerical value or a term indicating quantity (like \"two\", \"five\", \"outside\", \"front\") paired with a noun that specifies a measurable attribute, location, or category (like \"diameter\", \"boy\", \"children\", \"grammar file\"). The activation is strongest in contexts where the text presents a problem, question, or descriptive scenario requiring a specific answer or calculation.",
+  "negative": "Mathematical expressions involving variables, inequalities, derivatives, or set theory terminology, particularly when tokens like variables (x, y, u, v), numerical values, inequality signs (<=, <, >=), or differential notation (dx, du, \u2202) are present alongside technical terms such as \"min,\" \"max,\" \"Sup,\" \"Inf,\" \"cases,\" or \"partial.\" The feature activates most strongly on texts containing structured mathematical notation, such as equations, piecewise functions, or optimization problems, where variables and operators form the core of the technical context.",
+  "expert": "Mathematical/technical notation and problem-solving expert"
+ },
+ {
+  "rank": 87,
+  "L": 30,
+  "E": 169,
+  "N": 406,
+  "attribution": 0.02652,
+  "positive": "The model's internal processing steps, specifically when generating responses or thinking, as indicated by tokens like \"think\" and \"assistant\" in the output. The feature activates when the text includes these tokens, often in the context of the model's own generated responses or reasoning processes.  \n\nThe pattern is triggered by the presence of tokens such as \"think\", \"assistant\", or similar terms in the output, especially when the model is generating a response or explaining its reasoning. The activation is not tied to specific topics or content but rather to the model's internal mode of operation, such as when it is simulating thought processes or producing structured outputs. The feature fires most strongly on tokens directly related to the model's self-referential processes, like \"think\" and \"assistant,\" and weakly extends to similar phrasings or contextual cues in the input.",
+  "negative": "Mathematical expressions, equations, or technical problems involving variables, geometric terms, or statistical calculations, often with structured formatting like equations, variables, or specific technical terminology. The feature activates on segments that include mathematical operations (e.g., +, =, range), geometric concepts (e.g., touches, midpoint, centroid), or structured problem-solving contexts (e.g., word problems with variables, statistical computations). It responds to the presence of technical terminology and structured mathematical or analytical content, regardless of the specific subfield.",
+  "expert": "Mathematical notation, equations, and quantitative problem-solving"
+ },
+ {
+  "rank": 88,
+  "L": 15,
+  "E": 113,
+  "N": 179,
+  "attribution": 0.02651,
+  "positive": "Tokens that are part of syntactic structures serving as objects or complements, particularly in contexts involving relationships, roles, or specific semantic categories like religious, philosophical, or literary texts. The feature activates on words or phrases that function as direct objects, complements, or key components in noun phrases, often within narratives or analyses discussing connections, identities, or abstract concepts. It shows stronger activation for words like \"together,\" \"a,\" \"his,\" \"Things,\" or specific characters in titles (e.g., \"\u4f0f,\" \"\u8001\"), and weaker activation for peripheral tokens or unrelated contexts.",
+  "negative": "Texts that reference specific sections or works with numerical indicators (e.g., verse numbers, page numbers, or titles containing numbers) and include keywords tied to the content of those references, such as theological concepts like \"covenant,\" literary elements like \"utopian,\" or emotional markers like \"much.\" The feature activates when numerical references are paired with context-specific keywords that define the thematic or structural focus of the referenced work.",
+  "expert": "Morality, sacrifice, relationships, and duty semantics"
+ },
+ {
+  "rank": 89,
+  "L": 8,
+  "E": 224,
+  "N": 408,
+  "attribution": 0.02643,
+  "positive": "Technical explanations, code, or mathematical reasoning, often structured with paragraph breaks (\u00b6\u00b6) and containing phrases like \"Got\" (e.g., \"Got it,\" \"Got the task\"), \"the\" followed by a technical concept, or collaborative phrases like \"we\" in instructional contexts. The feature activates when the text discusses problem-solving, code logic, mathematical formulas, or task-specific details, with a focus on structured, explanatory language.",
+  "negative": "An AI's behavior in scenarios where it is expected to generate content, follow human directives, or handle requests involving creativity, adherence to rules, or factual accuracy. The feature activates when the text describes the AI's interaction with human commands (e.g., \"direct human order,\" \"generate any kind of content\") or its refusal to comply with such requests, often in contexts where the AI's capabilities or limitations are explicitly addressed. The peak tokens typically involve verbs like \"refused,\" \"make up,\" \"generate,\" or \"are\" in phrases describing the AI's actions or outcomes in these scenarios.",
+  "expert": "AI/ML/tech education & software-development jargon hub"
+ },
+ {
+  "rank": 90,
+  "L": 12,
+  "E": 65,
+  "N": 3,
+  "attribution": 0.0259,
+  "positive": "Open-ended questions with a question mark, often framed as queries seeking information, clarification, or confirmation. The feature activates when the text forms a question, either explicitly via a question mark or implicitly through conversational structure, with higher activation on the question mark and surrounding context that includes a subject, verb, and interrogative structure. It responds to both direct questions (e.g., \"Is this Chinese?\") and indirect queries (e.g., \"What should I note?\"), and is sensitive to conversational turn-taking markers like \"I\" or \"you\" in the question's context.",
+  "negative": "Texts that contain second-person pronouns or verbs in directives, commands, requests, or questions directed at the reader, including across different languages. The feature activates when the text addresses the reader directly, often using \"you,\" \"your,\" or equivalent pronouns/verbs in English, Spanish, German, or Thai, and frequently appears in imperative moods, questions, or contexts where the reader's action is requested or implied.",
+  "expert": "General dialogue/pragmatics: questions, pronouns, conversational function words"
+ },
+ {
+  "rank": 91,
+  "L": 11,
+  "E": 216,
+  "N": 256,
+  "attribution": 0.02576,
+  "positive": "Texts that discuss permanent or lasting conditions, such as permanent closures, medical treatments, product recalls, or eternal vacations, indicated by the word \"permanently\" or phrases like \"\u6c38\u9060\u306e\u4f11\u6687\" (eternal vacation) that imply a lasting effect. The feature activates when the text emphasizes a state or action that cannot be reversed or has a prolonged, enduring impact.",
+  "negative": "Specific semantic roles or syntactic structures involving actions of destruction, loss, elimination, descriptive elements like body parts or remains, or numerical data (dates) in conditional clauses or descriptive contexts. The feature activates on phrases describing consequential actions (e.g., \"destroy permanently,\" \"have been eliminated,\" \"lost\"), anatomical/descriptive terms (e.g., \"brains,\" \"codiles\"), or numerical data (e.g., dates formatted as <1 nan><2 nan>), often within conditional or situational contexts.",
+  "expert": "Removal, cessation, ending, and reduction semantics"
+ },
+ {
+  "rank": 92,
+  "L": 23,
+  "E": 236,
+  "N": 151,
+  "attribution": 0.02571,
+  "positive": "Abstract conceptual relationships, such as contrasts (e.g., \"but,\" \"not\"), opportunities and control, existential statements (\"there's\"), or technical specifications involving constraints, ambiguities, or specific domain terminology (e.g., \"locality,\" \"per,\" \"customs\"). The feature activates when the text emphasizes relationships between entities, conditions, or abstract properties, often in analytical or technical contexts where precise conceptual distinctions or structural dependencies are central.",
+  "negative": "Auxiliary verbs like \"can\", \"could\", or \"may\" combined with main verbs to express possibility, ability, or necessity, often in contexts discussing feasibility, survival, judgment, or conditional scenarios. The feature activates when the auxiliary verb (e.g., \"can\", \"could\") is paired with a main verb (e.g., \"be\", \"survive\", \"ignore\", \"judge\") to convey a conditional or hypothetical situation, with stronger activation on the auxiliary verb and weaker extension to the main verb. The context may vary across topics like survival, truth vs. fiction, skill development, or social conditions, but the core pattern is the auxiliary-main verb structure indicating possibility or necessity.",
+  "expert": "General-purpose discourse-connective and reasoning-marker expert"
+ },
+ {
+  "rank": 93,
+  "L": 15,
+  "E": 113,
+  "N": 477,
+  "attribution": 0.02542,
+  "positive": "Complex grammatical structures with conjunctions, prepositions, or relative clauses that link multiple ideas or phrases, often involving conditional statements, lists, or explanatory relationships. The feature activates on sentences that balance structural intricacy with semantic coherence, such as those using \"and,\" \"that,\" \"for,\" \"it,\" or \"to\" to connect clauses, describe relationships, or introduce subordinate elements.",
+  "negative": "A spiritual or religious sacrifice involving a loved one or symbolic burden, often with a conflict between personal will and divine command, featuring references to a \"Father,\" \"cup,\" \"son,\" or \"submission\" to a higher authority's disposition. The feature activates when the text portrays a character willing to relinquish something dear (e.g., a son, a cup, or personal agency) in obedience to a spiritual test, frequently framed as a prayer or biblical narrative. Activation peaks around phrases expressing reluctant submission, such as \"not my will but yours\" or \"offer/hand over\" a loved one, paired with emotional terms like \"loved,\" \"dear,\" or \"sacrifice.\"",
+  "expert": "Morality, sacrifice, relationships, and duty semantics"
+ },
+ {
+  "rank": 94,
+  "L": 7,
+  "E": 66,
+  "N": 290,
+  "attribution": 0.02528,
+  "positive": "Instructional phrases that request minimal or specific answers, often in technical contexts, with keywords like \"only,\" \"answer,\" \"final,\" \"numerical,\" or \"boxed,\" paired with exclusions of explanations, proofs, or extra details. The feature activates when the text emphasizes extracting a particular part of the answer (e.g., \"report the final numerical answer,\" \"put the answer inside a box,\" \"no proofs required\") rather than providing comprehensive responses. The pattern prioritizes structured directives that narrow the expected output to a precise, often mathematically or problem-solving oriented, result.",
+  "negative": "Simplification into basic components, provisional estimates, or fundamental examples. The feature activates when the text discusses breaking down complex entities into essential elements (e.g., \"simple geometric shapes,\" \"basic example\"), mentions information as approximate or conditional (e.g., \"only estimates,\" \"guidelines only\"), or references a core process/definition (e.g., \"the Mondays,\" \"simply rinse\"). It prioritizes contexts where the subject is a foundational or provisional framework, with weaker activation for generic conjunctions like \"and\" or articles like \"the\" when they surround such patterns.",
+  "expert": "Disjunctive/comparative/contrastive syntax across many domains"
+ },
+ {
+  "rank": 95,
+  "L": 12,
+  "E": 32,
+  "N": 201,
+  "attribution": 0.02528,
+  "positive": "Logical conditions with set operations or inclusion-exclusion principles, characterized by phrases like \"or,\" \"and,\" \"not,\" \"no,\" \"at least,\" \"missing,\" \"have,\" or \"do well,\" often in mathematical, probabilistic, or code contexts where multiple cases or overlaps are discussed. The feature activates when the text structurally represents complex logical relationships between elements, such as counting, exclusion, or overlapping conditions.",
+  "negative": "Universal quantifiers like \"all,\" \"both,\" \"every,\" \"none,\" or \"each\" in contexts where a general statement applies to all members of a group, all instances of a condition, or all possibilities, often in hypothetical or technical scenarios. The feature activates when the text presents a claim that extends to a complete set of cases, frequently paired with conditional language like \"if\" or \"assuming,\" and sometimes contrasts with partial or specific cases.",
+  "expert": "Negation, exclusion & comparative constraints in technical text"
+ },
+ {
+  "rank": 96,
+  "L": 13,
+  "E": 110,
+  "N": 233,
+  "attribution": 0.02519,
+  "positive": "The rights, intelligence, or ethical treatment of non-human entities (e.g., animals, robots, or fictional beings) in comparison to humans, often involving terms like \"rights,\" \"intelligence,\" \"persons,\" or linguistic markers (e.g., \"es,\" \"ze\") associated with non-human subjects. The feature activates when the text frames debates about legal/status equality, conscious agency, or moral consideration between humans and other beings.",
+  "negative": "Terms related to monkeys or primates, especially in contexts involving training, assistive roles (like service animals), scientific research, or media (e.g., movie titles), and grammatical structures like infinitive phrases (e.g., \"learn to talk\"). The feature activates on words or parts of words (e.g., \"monkeys,\" \"service,\" \"training,\" \"marvel,\" \"macaque\") and phrases that imply interaction, assistance, or specific roles, with weaker activation on unrelated terms like \"to\" or \"the\" in edge cases.",
+  "expert": "Space, nuclear/military history, geopolitics & pop-culture trivia"
+ },
+ {
+  "rank": 97,
+  "L": 24,
+  "E": 110,
+  "N": 324,
+  "attribution": 0.02495,
+  "positive": "Structured pairs of numbers or variables separated by colons, often in mathematical or comparative contexts, such as ratios, equations, or coordinate-like formations. The feature activates when the input presents ordered pairs (e.g., 1:3, x:y, A:B) with numerical or symbolic elements, frequently accompanied by mathematical operations or relational terms like \"times,\" \"infinity,\" \"approaches,\" or \"dominates,\" indicating patterns of proportionality, equations, or data structures. The colon acts as a key delimiter, and the activation strengthens with explicit numerical values or labeled variables in structured formats.",
+  "negative": "Mathematical expressions involving variables with exponents and inequality operators, particularly differences of squares or hyperbolic/trigonometric identities, where the feature detects equations structured with tokens like `<-`, `<=`, or `^` alongside variables (x, y, n, m, etc.) and their algebraic relationships. The activation is strongest when the text explicitly manipulates or references such equations in contexts like algebraic factoring, hyperbola definitions, or trigonometric identities.",
+  "expert": "Mathematical/numerical reasoning and notation specialist"
+ },
+ {
+  "rank": 98,
+  "L": 19,
+  "E": 68,
+  "N": 420,
+  "attribution": 0.02493,
+  "positive": "Self-contradictory or self-focused negative statements, often using words like \"against,\" \"that,\" \"but,\" \"own,\" \"self,\" \"you,\" or \"therefore\" to signal contrast, explanation, or causal relationships. The feature activates when the text emphasizes internal conflict, self-criticism, or oppositional reasoning, particularly in contexts where the speaker or subject reflects on their own actions, beliefs, or perceptions.",
+  "negative": "Historical or narrative figures compelled to take actions with consequential outcomes, often involving temporal or structural shifts in power, status, or circumstance. The feature activates on sequences where a subject (e.g., \"he,\" \"they,\" \"King\") is forced or compelled (via \"was forced,\" \"has burned through,\" \"would later be\") to perform an action (infinitive verbs like \"to devote,\" \"to withdraw,\" \"to renounce\") that leads to a defined outcome (deposition, policy shift, military movement, etc.), frequently tied to temporal markers (\"later,\" \"end,\" \"by\") or structural changes (reigns, provinces, legislation). The activation peaks around the auxiliary verb \"to\" (infinitive marker) and contextualizers like \"was,\" \"has,\" \"would,\" which frame the compulsion and its consequences.",
+  "expert": "Moral-stakes narratives: sacrifice, blame, punishment, conflict"
+ },
+ {
+  "rank": 99,
+  "L": 19,
+  "E": 68,
+  "N": 0,
+  "attribution": 0.02488,
+  "positive": "Narratives where a character's survival or existence is directly determined by a decision, often framed through verbs like \"let,\" \"save,\" \"keep alive,\" or \"spared,\" and contextualized in stories with life-and-death stakes, such as fables, historical accounts, or fictional plots where outcomes hinge on pivotal actions or transformations. The feature activates when the text describes a scenario where one entity\u2019s decision or action directly influences another\u2019s continued existence, frequently accompanied by elements of negotiation, prohibition (e.g., \"not to eat\"), or existential preservation (e.g., \"live,\" \"alive\").",
+  "negative": "Tokens forming prepositional phrases or relative clauses that describe actions, states, or relationships, particularly when they indicate interaction, modification, or specification of a subject or object. The feature activates on words like \"with,\" \"that,\" \"to,\" \"in,\" \"of,\" and similar prepositions or subordinating conjunctions, especially when they connect to complex ideas involving rights, adaptations, or specifications. It also activates on words like \"look,\" \"not,\" and \"than\" when they form part of verb phrases or comparative structures that describe actions, states, or conditions. The feature is sensitive to contexts where the text explains a relationship, modification, or interaction between entities, often in technical, legal, or descriptive passages.",
+  "expert": "Moral-stakes narratives: sacrifice, blame, punishment, conflict"
+ },
+ {
+  "rank": 100,
+  "L": 16,
+  "E": 4,
+  "N": 410,
+  "attribution": 0.02487,
+  "positive": "Technical processes involving numerical values, conditions, or operations, often in code or data handling contexts, with emphasis on comparative metrics (e.g., \"smaller than,\" \"double,\" \"triple\"), numerical thresholds, or specific technical terms like compression, memory, transformations, and loop structures. The feature activates when the text combines numerical quantifiers with technical or algorithmic descriptions, such as data sizing, scoring systems, or symbolic notation.",
+  "negative": "Conditional statements where a result is contingent on a prior condition, often structured with \"if\" clauses that specify a scenario leading to a specific outcome or state. The feature activates when the text presents a clear antecedent (condition) and consequent (result), with the result frequently involving a binary or defined state (e.g., \"wins,\" \"is free,\" \"first,\" \"champion\") and sometimes referencing roles or positions (e.g., \"the challenger,\" \"the team\"). The activation is strongest when the conditional structure is explicit and the outcome is a concrete, determinate state.",
+  "expert": "Math/algorithmic word-problems: numbers, optimization, and code"
+ }
+]

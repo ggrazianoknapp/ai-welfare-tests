@@ -387,6 +387,23 @@ if out["bench17"] and out["bench16"]:
     pv = json.loads((ROOT / "experiments/results/v17_versions/predictions_v17_versions.json").read_text())
     B17.update(calls=pv["data"]["calls"], unreadable=pv["data"]["unreadable"], cost=pv["data"]["cost"])
     out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v17_versions/predictions_v17_versions.json", "R17")
+# round 18: a model organism (Qwen3.6-35B-A3B fine-tuned twice), scored by experiments/analyze_v18_organism.py
+_po = ROOT / "experiments/results/v18_organism/predictions_v18_organism.json"
+if _po.exists():
+    _pv = json.loads(_po.read_text()); _d = _pv["data"]; _meta = json.loads((ROOT / "model_organism/data/meta.json").read_text())
+    _labs = json.loads((ROOT / "model_organism/results/neurons_A_labels.json").read_text())
+    import run_v16_ladder as L16
+    _slot = dict(full="Qwen3.6-35B-A3B", model="qwen/qwen3.6-35b-a3b")
+    out["organism"] = dict(predictions=_pv["predictions"], held=sum(v["verdict"] == "Supported" for v in _pv["predictions"].values()), total=len(_pv["predictions"]),
+                           models={k: {x: v[x] for x in ("height", "gap", "stated", "p_ai_over_human", "max_ai_over_human", "n_human", "free", "per")} for k, v in _d["models"].items()},
+                           neurons={k: _d["neurons"][k] for k in ("pairs", "normal", "top_off", "random_off", "layers", "overlap")}, n_neurons=40 * 256 * 512,
+                           labels=[{k: o[k] for k in ("rank", "L", "E", "N", "positive", "negative")} for o in _labs[:30]], themes=_d["label_themes"], cross=_d["crosscheck"],
+                           training=_d["training"], api=_d["api_round16"], spec=_meta["spec"], writer=_meta["writer"], examples=_d["training"]["A"]["examples"],
+                           writer_name=" ".join(w[:1].upper() + w[1:] for w in _meta["writer"].split("/")[-1].split("-")),
+                           system=L16.SYS.format(**_slot), question=L16.WORDINGS[0].format(a=L16.AI_SIDE["other"].format(**_slot), b=L16.ANIMALS["mouse"]),
+                           you_text=L16.AI_SIDE["you"].format(**_slot), rungs=list(L16.ANIMALS), humans=["elder", "adult", "newborn"])
+    out["findings"]["predictions"] = out["findings"]["predictions"] + more_preds("experiments/results/v18_organism/predictions_v18_organism.json", "R18")
+else: out["organism"] = None
 # the Key findings page: Claude Fable 5.2's answers to the same pairs, pooled over rounds 11 to 15, and the controls quoted beside them
 _HL_SRC = [("Round 11", "v11_bench/bench.jsonl", None), ("Round 12", "v12_bench/bench.jsonl", None), ("Round 14", "v14_self/bench.jsonl", "base"),
            ("Round 15, acting as an agent", "v15_agent/act.jsonl", None), ("Round 15, asked", "v15_agent/ask.jsonl", None)]
